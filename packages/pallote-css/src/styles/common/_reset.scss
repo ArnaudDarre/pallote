@@ -1,0 +1,145 @@
+@use "variables";
+
+// —————————————————————————————————————————————————————————————————
+// custom (for IE)
+// The new CSS Reset - version 1.2.0 (last updated 23.7.2021)
+// Remove inputs icons
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// custom (for IE)
+// —————————————————————————————————————————————————————————————————
+
+body,
+html {
+  margin: 0;
+  accent-color: variables.$primary;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+// remove visited link styling
+button, a  {
+  color: inherit;
+}
+
+// remove space under picture tag
+picture {
+  display: flex;
+}
+
+// —————————————————————————————————————————————————————————————————
+// The new CSS Reset - version 1.2.0 (last updated 23.7.2021)
+// —————————————————————————————————————————————————————————————————
+
+// Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+*:where(:not(iframe, canvas, img, svg, video, pre):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+// Preferred box-sizing value
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+//  Remove list styles (bullets/numbers) in case you use it with normalize.css
+ol, ul {
+  list-style: none;
+}
+
+// For images to not be able to exceed their container
+img {
+  max-width: 100%;
+}
+
+// Removes spacing between cells in tables
+table {
+  border-collapse: collapse;
+}
+
+// Revert the 'white-space' property for textarea elements on Safari
+textarea {
+  white-space: revert;
+}
+
+// Add focus styles
+a[href],
+area[href],
+input,
+input[type="checkbox"],
+input[type='radio'],
+select,
+textarea,
+button,
+iframe,
+[tabindex],
+[contentEditable=true] {
+  outline: revert;
+  
+  &:focus {
+    outline: 2px solid variables.$primary;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// Remove inputs icons
+// —————————————————————————————————————————————————————————————————
+
+// Remove default arrow for input[type=number] in Webkit browsers (Chrome, Safari, etc.)
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 0;
+  margin: 0;
+}
+
+// Remove default arrow for input[type=number] in Firefox
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+// Remove default calendar and time picker icons in Webkit browsers
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+// Remove default calendar icon in Edge and IE
+input[type="date"]::-ms-clear,
+input[type="date"]::-ms-input-placeholder {
+  opacity: 0;
+}
+
+input[type="time"]::-ms-clear,
+input[type="time"]::-ms-input-placeholder {
+  opacity: 0;
+}
+
+// Remove default calendar and time picker icons in Mozilla Firefox
+input[type="date"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="time"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+// For additional browser support
+input[type="date"],
+input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+// Hide the clear button in Edge
+input::-ms-clear {
+  opacity: 0;
+}

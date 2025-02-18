@@ -1,0 +1,79 @@
+@use "sass:list";
+@use "../common/variables";
+@use "../utilities/text";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// color
+// dense
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.tags {
+  display: flex;
+  
+  .tag:not(:last-child) {
+    margin-right: .25rem;
+  }
+
+  &-portrait {
+    flex-direction: column;
+    align-items: flex-start;
+  
+    .tag:not(:last-child) {
+      margin-bottom: .25rem;
+      margin-right: 0;
+    }
+  }
+}
+
+.tag {
+  @extend %caption;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: variables.$font-bold;
+  border-radius: variables.$border-radius-sm;
+  white-space: nowrap; // prevent text to go on multiple lines
+  height: 1.5rem;
+  width: fit-content;
+  min-width: fit-content;
+  padding-right: 0.4em;
+  padding-left: 0.4em;
+}
+
+// —————————————————————————————————————————————————————————————————
+// color
+// —————————————————————————————————————————————————————————————————
+
+@mixin color($prefix, $colors...) {
+
+  @each $i in $colors {
+    .#{$prefix}#{list.nth($i, 1)} {
+      background-color: list.nth($i, 2);
+      color: list.nth($i, 3);
+    }
+  }
+}
+
+@include color('tag',
+  '' variables.$primary variables.$primary-contrast,
+  '-secondary' variables.$secondary variables.$secondary-contrast,
+  '-grey' variables.$text-disabled variables.$text,
+  '-success' variables.$success variables.$success-contrast,
+  '-info' variables.$info variables.$info-contrast,
+  '-warning' variables.$warning variables.$warning-contrast,
+  '-error' variables.$error variables.$error-contrast
+);
+
+// —————————————————————————————————————————————————————————————————
+// dense
+// —————————————————————————————————————————————————————————————————
+
+.tag-dense {
+  @extend %overline;
+  height: 1rem;
+}

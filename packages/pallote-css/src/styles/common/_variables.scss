@@ -1,0 +1,252 @@
+@use "sass:color";
+@use "sass:string";
+
+// —————————————————————————————————————————————————————————————————
+// dependencies
+// color palette
+// spacing
+// typography
+// breakpoints
+// misc
+// components
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// dependencies
+// —————————————————————————————————————————————————————————————————
+
+$fonts-path: './assets/fonts/' !default;
+$icons-path: './assets/icons/' !default;
+
+// —————————————————————————————————————————————————————————————————
+// color palette
+// —————————————————————————————————————————————————————————————————
+
+// main
+
+$main: #FFFFFF !default;
+$contrast: #000A1E !default;
+
+// grey
+
+$grey-90: color.mix($contrast, $main, 90%) !default;
+$grey-80: color.mix($contrast, $main, 80%) !default;
+$grey-70: color.mix($contrast, $main, 70%) !default;
+$grey-60: color.mix($contrast, $main, 60%) !default;
+$grey-50: color.mix($contrast, $main, 50%) !default;
+$grey-40: color.mix($contrast, $main, 40%) !default;
+$grey-30: color.mix($contrast, $main, 30%) !default;
+$grey-20: color.mix($contrast, $main, 20%) !default;
+$grey-10: color.mix($contrast, $main, 10%) !default;
+$grey-5: color.mix($contrast, $main, 5%) !default;
+
+// background
+
+$background-default: $grey-5 !default;
+$background-paper: $main !default;
+
+// text
+
+$text: $contrast !default;
+$text-alt: rgba($text, 0.5) !default;
+$text-disabled: rgba($text, 0.25) !default;
+
+$text-contrast: $main !default;
+$text-contrast-alt: rgba($text-contrast, 0.6) !default;
+$text-contrast-disabled: rgba($text-contrast, 0.3) !default;
+
+// brand
+
+$primary: #0076AC !default;
+$primary-light: color.mix($main, $primary, 70%) !default;
+$primary-dark: color.mix($contrast, $primary, 50%) !default;
+$primary-contrast: $text-contrast !default;
+
+$secondary: #C24889 !default;
+$secondary-light: color.mix($main, $secondary, 70%) !default;
+$secondary-dark: color.mix($contrast, $secondary, 50%) !default;
+$secondary-contrast: $text-contrast !default;
+
+// feedback
+
+$success: #27AE60 !default;
+$success-light: color.mix($main, $success, 70%) !default;
+$success-dark: color.mix($contrast, $success, 50%) !default;
+$success-contrast: $text-contrast !default;
+
+$info: #17A0CC !default;
+$info-light: color.mix($main, $info, 70%) !default;
+$info-dark: color.mix($contrast, $info, 50%) !default;
+$info-contrast: $text-contrast !default;
+
+$warning: #FFDC46 !default;
+$warning-light: color.mix($main, $warning, 70%) !default;
+$warning-dark: color.mix($contrast, $warning, 50%) !default;
+$warning-contrast: $text !default;
+
+$error: #EB5757 !default;
+$error-light: color.mix($main, $error, 70%) !default;
+$error-dark: color.mix($contrast, $error, 50%) !default;
+$error-contrast: $text-contrast !default;
+
+// others
+
+$border-color: rgba($text, 0.2) !default;
+$border: 1px solid $border-color !default;
+$border-color-contrast: rgba($text-contrast, 0.3) !default;
+$border-contrast: 1px solid $border-color-contrast !default;
+
+$hover: rgba($text, 0.12) !default;
+$hover-contrast: rgba($text-contrast, 0.12) !default;
+
+$overlay: rgba($text-contrast, 0.8) !default;
+$overlay-contrast: rgba($text, 0.2) !default;
+
+$input-background: rgba($text, 0.05);
+
+// —————————————————————————————————————————————————————————————————
+// spacing
+// —————————————————————————————————————————————————————————————————
+
+$col: calc(100%/12);
+
+$spacing-xxs: 0.125rem !default;
+$spacing-xs: 0.25rem !default;
+$spacing-sm: 0.5rem !default;
+$spacing-md: 1rem !default;
+$spacing-lg: 2rem !default;
+$spacing-xl: 4rem !default;
+$spacing-xxl: 7rem !default;
+
+$max-width-subtitle: 27.5rem !default;
+$max-width-editor: 40rem !default;
+$max-width-form: 40rem !default;
+
+$navbar-height: 4rem !default;
+$navbar-height-sm: 3rem !default;
+$nav-item: $spacing-md !default;
+
+// —————————————————————————————————————————————————————————————————
+// typography
+// —————————————————————————————————————————————————————————————————
+
+// Functions to unquote and remove spaces
+@function str-replace($string, $search, $replace: "") {
+  $index: string.index($string, $search);
+  
+  @if $index {
+    @return str-replace(
+      string.slice($string, 1, $index - 1) + $replace + string.slice($string, $index + string.length($search), string.length($string)),
+      $search,
+      $replace
+    );
+  }
+
+  @return $string;
+}
+@function clean-string($string) {
+  @return str-replace(string.unquote($string), " ");
+}
+
+// typefaces
+$font: "Source Sans Pro" !default;
+$font-clean: clean-string($font);
+$font-fallback: Arial, sans-serif !default;
+$font-code: monospace !default;
+
+// weight
+
+$font-regular: 400 !default;
+$font-bold: 700 !default;
+
+// styles
+
+$h1-size: 3rem !default;
+$h1-weight: $font-bold !default;
+$h1-line-height: 1.25 !default;
+
+$h2-size: 2.5rem !default;
+$h2-weight: $font-bold !default;
+$h2-line-height: 1.25 !default;
+
+$h3-size: 2rem !default;
+$h3-weight: $font-bold !default;
+$h3-line-height: 1.25 !default;
+
+$h4-size: 1.75rem !default;
+$h4-weight: $font-bold !default;
+$h4-line-height: 1.25 !default;
+
+$h5-size: 1.5rem !default;
+$h5-weight: $font-bold !default;
+$h5-line-height: 1.25 !default;
+
+$h6-size: 1.25rem !default;
+$h6-weight: $font-bold !default;
+$h6-line-height: 1.25 !default;
+
+$subtitle-size: 1.125rem !default;
+$subtitle-weight: $font-regular !default;
+$subtitle-line-height: 1.5 !default;
+
+$body-size: 1rem !default;
+$body-weight: $font-regular !default;
+$body-line-height: 1.5 !default;
+
+$caption-size: 0.875rem !default;
+$caption-weight: $font-regular !default;
+$caption-line-height: 1.5 !default;
+
+$overline-size: 0.75rem !default;
+$overline-weight: $font-regular !default;
+$overline-line-height: 1.5 !default;
+
+// —————————————————————————————————————————————————————————————————
+// breakpoints
+// —————————————————————————————————————————————————————————————————
+
+$desktop-lg: 1440px !default;
+$desktop-lg-down: calc(#{$desktop-lg} - 0.02px);
+
+$desktop: 1280px !default;
+$desktop-down: calc(#{$desktop} - 0.02px);
+
+$laptop: 1024px !default;
+$laptop-down: calc(#{$laptop} - 0.02px);
+
+$tablet: 768px !default;
+$tablet-down: calc(#{$tablet} - 0.02px);
+
+$mobile: 568px !default;
+$mobile-down: calc(#{$mobile} - 0.02px);
+
+$mobile-sm: 350px !default;
+$mobile-sm-down: calc(#{$mobile-sm} - 0.02px);
+
+// —————————————————————————————————————————————————————————————————
+// misc
+// —————————————————————————————————————————————————————————————————
+
+// box-shadow
+
+$box-shadow: 0 0 .5rem 0 rgba($text, 0.2) !default;
+
+// transition
+
+$transition-md: 0.4s ease 0s !default;
+$transition-lg: 0.8s ease 0s !default;
+
+// border-radius
+
+$border-radius-sm: .25rem !default;
+$border-radius-md: .5rem !default;
+$border-radius-lg: 1rem !default;
+
+// —————————————————————————————————————————————————————————————————
+// components
+// —————————————————————————————————————————————————————————————————
+
+// input
+
+$input-height: 2.5rem;
+$checkbox-width: 1.5rem;

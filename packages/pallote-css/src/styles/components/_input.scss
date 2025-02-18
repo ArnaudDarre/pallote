@@ -1,0 +1,298 @@
+@use "../common/mixins";
+@use "../common/variables";
+@use "../utilities/text";
+
+// —————————————————————————————————————————————————————————————————
+// elements / default
+// elements / select
+// elements / textarea
+// elements / checkbox & radio
+// error
+// disabled
+// optional
+// icon
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements / default
+// —————————————————————————————————————————————————————————————————
+
+.input {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  max-width: variables.$max-width-form;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &_label {
+		@include mixins.transition(variables.$transition-md, color);
+		font-weight: variables.$font-bold;
+		text-overflow: ellipsis;
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		position: relative;
+		margin-bottom: .25rem;
+  }
+
+  &_hint {
+		@extend %caption;
+    margin-top: -.125rem;
+		margin-bottom: .5rem;
+  }
+
+  &_control {
+		@include mixins.transition(variables.$transition-md, border-color);
+    font-size: 1rem;
+		font-family: variables.$font-fallback;
+		width: 100%;
+    border-radius: variables.$border-radius-md !important;
+    padding: .325rem .5rem;
+		background-color: variables.$input-background;
+    border: variables.$border;
+
+		@include mixins.responsive(down, mobile) {
+      background-color: variables.$input-background;
+		}
+    
+    &:not(textarea):not(.checkboxes):not(.radios) {
+      display: inline-block;
+      align-items: center;
+      white-space: nowrap;
+		  text-overflow: ellipsis;
+      line-height: 1.2;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &:not(textarea) {
+      height: variables.$input-height;
+    }
+  }
+}
+
+@include mixins.placeholder {
+  color: variables.$text-alt;
+  opacity: 1;
+}
+
+// —————————————————————————————————————————————————————————————————
+// elements / select
+// —————————————————————————————————————————————————————————————————
+
+.select {
+  
+  &:after {
+    content: '';
+    border: solid variables.$text;
+    border-width: 0 .125rem .125rem 0;
+    padding: .2rem;
+    transform: rotate(45deg);
+    margin-left: variables.$nav-item*0.5;
+    position: absolute;
+    bottom: variables.$input-height*.45;
+    right: 1rem;
+  }
+    
+  .input_control {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// elements / textarea
+// —————————————————————————————————————————————————————————————————
+
+textarea {
+  resize: vertical;
+}
+
+// —————————————————————————————————————————————————————————————————
+// elements / checkbox & radio
+// —————————————————————————————————————————————————————————————————
+
+.checkboxes,
+.radios {
+  display: flex;
+  background-color: transparent;
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+  
+  &:not(&-landscape) {
+    flex-direction: column;
+    align-items: flex-start !important;
+    height: auto !important;
+    
+    .checkbox + .checkbox,
+    .radio + .radio {  
+      margin-top: 0.75rem;
+      margin-left: 0;
+    }  
+  }
+  
+  &-landscape {
+    
+    .checkbox + .checkbox,
+    .radio + .radio {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.checkbox,
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"],
+input[type='radio'] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: variables.$checkbox-width;
+  width: variables.$checkbox-width;
+  background-color: variables.$input-background;
+  border: variables.$border;
+  margin-right: .5rem;
+}
+
+input[type='checkbox'] { border-radius: variables.$border-radius-sm; }
+input[type='radio'] { border-radius: 50%; }
+
+input[type='checkbox']:checked {
+  background-color: variables.$primary;
+
+  &:after {
+    content: "✔";
+    font-size: 1rem;
+    color: variables.$text-contrast;
+  }
+}
+
+input[type='radio']:checked {
+
+  &:after {
+    content: "";
+    height: variables.$checkbox-width*.5;
+    width: variables.$checkbox-width*.5;
+    background-color: variables.$primary;
+    border-radius: 50%;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// error
+// —————————————————————————————————————————————————————————————————
+
+.input.js-error {
+  
+  .input {
+    
+    &_label { color: variables.$error; }
+
+    &_control {
+      border: 1px solid variables.$error;
+      
+      &.checkboxes,
+      &.radios {
+        border: 0;
+      }
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// disabled
+// —————————————————————————————————————————————————————————————————
+
+.input-disabled,
+.input:disabled {
+  opacity: 0.5;
+
+  .input {
+
+    &_label,
+    &_control {
+      cursor: not-allowed;
+    }
+  }
+
+  &.select:after {
+    opacity: 0.5;
+  }
+
+  .checkbox,
+  .radio {
+
+    &_control,
+    &_label {
+      pointer-events: none;
+    }
+  }
+}
+
+.checkbox-disabled,
+.radio-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+
+  > * {
+    pointer-events: none;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// optional
+// —————————————————————————————————————————————————————————————————
+
+.input-optional {
+
+  .input_label:after {
+    content: " (optional)";
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// icon
+// —————————————————————————————————————————————————————————————————
+
+.input-withIcon {
+
+  .input_control {
+    padding-right: variables.$input-height*1.25;
+  } 
+}
+
+// remove right padding to allow native input trigger
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+  appearance: initial;
+  padding-right: 0;
+}
+
+.input_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: variables.$input-height;
+  height: variables.$input-height;
+  pointer-events: none;
+  border-left: variables.$border;
+
+  svg {
+    width: 50%;
+    height: 50%;
+  }
+}

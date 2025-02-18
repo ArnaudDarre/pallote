@@ -1,0 +1,164 @@
+@use "sass:list";
+@use "variables";
+
+// —————————————————————————————————————————————————————————————————
+// media queries
+// font
+// form
+// misc
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// media queries
+// —————————————————————————————————————————————————————————————————
+
+@mixin responsive($value, $breakpoint) {
+  @if $value == up {
+    $value: min-width;
+    @if $breakpoint == desktop-lg { $breakpoint: variables.$desktop-lg; } 
+    @else if $breakpoint == desktop { $breakpoint: variables.$desktop; } 
+    @else if $breakpoint == laptop { $breakpoint: variables.$laptop; } 
+    @else if $breakpoint == tablet { $breakpoint: variables.$tablet; } 
+    @else if $breakpoint == mobile { $breakpoint: variables.$mobile; } 
+    @else if $breakpoint == mobile-sm { $breakpoint: variables.$mobile-sm; }
+
+  } @else if $value == down {
+    $value: max-width;
+    @if $breakpoint == desktop-lg { $breakpoint: variables.$desktop-lg-down; } 
+    @else if $breakpoint == desktop { $breakpoint: variables.$desktop-down; } 
+    @else if $breakpoint == laptop { $breakpoint: variables.$laptop-down; } 
+    @else if $breakpoint == tablet { $breakpoint: variables.$tablet-down; } 
+    @else if $breakpoint == mobile { $breakpoint: variables.$mobile-down; } 
+    @else if $breakpoint == mobile-sm { $breakpoint: variables.$mobile-sm-down; }
+  }
+
+  @media ($value: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin responsive-touch {
+	@media (pointer:coarse) {
+		@content;
+	}
+}
+
+@mixin responsive-click {
+	@media not (pointer:coarse) {
+		@content;
+	}
+}
+
+@mixin responsive-touch-landscape {
+	@media only screen and (max-device-width: variables.$laptop-down) and (orientation: landscape) {
+		@content;
+	}
+}
+
+// —————————————————————————————————————————————————————————————————
+// font
+// —————————————————————————————————————————————————————————————————
+
+@mixin fontface($font-name, $font-file, $font-weight, $font-style) {
+
+	@font-face {
+		font-family: $font-name;
+		src: url(variables.$fonts-path + $font-file + '.woff2') format('woff2');
+		font-weight: $font-weight;
+		font-style: $font-style;
+		font-display: swap;
+	}
+}
+
+@mixin text-ellipsis() {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// —————————————————————————————————————————————————————————————————
+// form
+// —————————————————————————————————————————————————————————————————
+
+@mixin placeholder {
+	:-moz-placeholder { @content; }
+	::-moz-placeholder { @content; }
+	:-ms-input-placeholder { @content; }
+	::-webkit-input-placeholder { @content; } 
+}
+
+// —————————————————————————————————————————————————————————————————
+// misc
+// —————————————————————————————————————————————————————————————————
+
+@mixin calc($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+@mixin background($position, $size) {
+	background-position: $position;
+	-webkit-background-size: $size;
+			background-size: $size;
+	background-repeat: no-repeat;
+}
+
+@mixin pseudo-element($content: "", $top: 0, $right: 0, $bottom: 0, $left: 0, $width: 100%, $height: 100%) {
+	content: $content;
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	width: $width;
+	height: $height;
+}
+
+@mixin hover {
+	&:hover, &:active, &:focus {
+		@content;
+	}
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content; 
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	} 
+}
+
+@mixin transition($time, $properties...) {
+	$transition: ();
+	$will-change: ();
+  @each $property in $properties {
+    $transition: list.append(
+        $transition, ($property $time), $separator: comma
+    );
+    $will-change: list.append(
+        $will-change, ($property), $separator: comma
+    );
+  }
+	transition: $transition;
+	will-change: $will-change;
+}
+
+// fallback for clamp css function
+@mixin clamp($property, $min-size, $scaler, $max-size, $viewport: tablet) {
+	#{$property}: clamp($min-size, $scaler, $max-size);
+
+	// @include responsive(up, $viewport) {
+	// 	#{$property}: $max-size;
+	// }
+
+	// @include responsive(down, $viewport) {
+	// 	#{$property}: $min-size;
+	// }
+}

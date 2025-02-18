@@ -1,0 +1,43 @@
+{
+  "name": "pallote-css",
+  "version": "0.3.11",
+  "description": "CSS component library",
+  "main": "pallote.min.css",
+  "styles": "pallote.scss",
+  "files": [
+    "dist/*"
+  ],
+  "publishConfig": {
+    "directory": "dist"
+  },
+  "scripts": {
+    "dev": "onchange 'src/styles/**/*.scss' 'src/scripts/**/*.js' -- npm run build",
+    "build": "npm run build:js && npm run build:css",
+    "build:assets": "ncp src/assets dist/assets",
+    "build:css": "sass src/pallote.scss dist/pallote.min.css --style=compressed && ncp src/styles dist/styles && ncp src/pallote.scss dist/pallote.scss",
+    "build:js": "uglifyjs src/scripts/*.js -o dist/pallote.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnaudDarre/pallote-css.git"
+  },
+  "keywords": [
+    "CSS library",
+    "CSS Components",
+    "SASS"
+  ],
+  "author": "Nocheke",
+  "license": "ISC",
+  "packageManager": "pnpm@10.4.1",
+  "bugs": {
+    "url": "https://github.com/ArnaudDarre/pallote-css/issues"
+  },
+  "homepage": "https://github.com/ArnaudDarre/pallote-css#readme",
+  "devDependencies": {
+    "ncp": "^2.0.0",
+    "onchange": "^7.1.0",
+    "pallote-css": "^0.2.7",
+    "sass": "^1.71.1",
+    "uglify-js": "^3.17.4"
+  }
+}

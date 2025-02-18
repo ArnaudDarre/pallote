@@ -1,0 +1,133 @@
+@use "../common/mixins";
+@use "../common/variables";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// size
+// transparent
+// active
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.accordion {
+  width: 100%;
+
+  &__item {
+    position: relative;
+    background-color: variables.$hover;
+    width: 100%;
+  }
+
+  &__control,
+  &__content {
+    transition: padding variables.$transition-md;
+    will-change: padding;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+
+    &:after {
+      // content: url(variables.$icons-path + 'phosphor/caret-down.svg');
+      transition: transform variables.$transition-md;
+      will-change: transform;
+      position: absolute;
+      height: variables.$spacing-md;
+      width: variables.$spacing-md;
+      transform-origin: center 60%;
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height variables.$transition-md;
+    will-change: max-height;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// size
+// —————————————————————————————————————————————————————————————————
+
+@mixin size($proportion, $size) {
+
+  .accordion {
+
+    &__item {
+      border-radius: calc($size*2/3);
+
+      &:not(:last-child) { margin-bottom: calc($size/3); }
+      &--active { padding-bottom: $size; }
+    }
+    
+    &__control {
+      padding: $size $size*1.5;
+
+      &:after {
+        top: $size;
+        right: $size*1.25;
+      }
+    }
+
+    &__header {
+
+      @if $proportion == sm { margin-bottom: -1px; }
+      @if $proportion == lg { margin: -1px 0 -2px 0; }
+    }
+
+    &__content {
+      padding: 0 $size*1.5;
+      overflow: hidden;
+    }
+  }
+
+  &.accordion--transparent .accordion__item--active:not(:first-child) {
+    margin-top: calc($size/3);
+  }
+}
+
+.accordion {
+
+  @include size(md, variables.$spacing-sm);
+  &--sm { @include size(sm, variables.$spacing-xs); }
+  &--lg { @include size(lg, variables.$spacing-md); }
+}
+
+// —————————————————————————————————————————————————————————————————
+// transparent
+// —————————————————————————————————————————————————————————————————
+
+.accordion--transparent {
+
+  .accordion__item {
+    transition: background-color variables.$transition-md, margin variables.$transition-md;
+    will-change: background-color, margin;
+    background-color: transparent;
+
+    @include mixins.hover { background-color: variables.$hover; }
+    &--active { background-color: variables.$hover; }
+    
+    &:not(:last-child):not(.accordion__item--active) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// active
+// —————————————————————————————————————————————————————————————————
+
+.accordion__item--active {
+
+  .accordion__control:after {
+    transform: rotate(180deg);
+  }
+}

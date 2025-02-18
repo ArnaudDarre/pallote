@@ -1,0 +1,180 @@
+@use "sass:color";
+@use "sass:list";
+@use "../common/mixins";
+@use "../common/variables";
+@use "../utilities/text";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// kind
+// variant
+// size
+// color
+// fullWidth
+// disabled
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.button {
+  cursor: pointer;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: variables.$border-radius-md;
+  position: relative;
+  line-height: 0;
+  text-transform: uppercase;
+  font-weight: variables.$font-bold;
+  white-space: nowrap;
+  outline-offset: 2px;
+  width: fit-content;
+  min-width: fit-content;
+
+  svg {
+    stroke: currentColor;
+    fill: currentColor;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// kind
+// —————————————————————————————————————————————————————————————————
+
+// This property is handled by the size mixin
+
+// —————————————————————————————————————————————————————————————————
+// variant
+// —————————————————————————————————————————————————————————————————
+
+// This property is handled by the color mixin
+
+// —————————————————————————————————————————————————————————————————
+// size
+// —————————————————————————————————————————————————————————————————
+
+@mixin size($value, $size) {
+  height: $size;
+  gap: $size*.25;
+  padding-right: $size*.33;
+  padding-left: $size*.33;
+
+  @if $value == xs or $value == sm {
+    @extend %overline;
+    border-radius: variables.$border-radius-sm;
+  }
+  @if $value == md { @extend %body; }
+  @if $value == lg { @extend %subtitle; }
+
+  svg {
+    width: calc($size/1.75);
+    height: calc($size/1.75);
+    margin-right: -$size*.05;
+    margin-left: -$size*.05;
+  }
+
+  &:not(.button-icon) {
+
+    svg {
+      margin-top: 0.15em;
+    }
+  }
+
+  &.button-icon {
+    width: $size;
+    padding: 0;
+  }
+}
+
+.button {
+
+  @include size(md, 2rem);
+  &-xs { @include size(xs, 1rem); }
+  &-sm { @include size(sm, 1.5rem); }
+  &-lg { @include size(lg, 2.5rem); }
+}
+
+// —————————————————————————————————————————————————————————————————
+// color
+// —————————————————————————————————————————————————————————————————
+
+@mixin color($prefix, $colors...) {
+
+  @each $i in $colors {
+    .#{$prefix}#{list.nth($i, 1)} {
+      background-color: list.nth($i, 2);
+      color: list.nth($i, 3);
+
+      &:focus {
+        outline: 2px solid list.nth($i, 2);
+      }
+    
+      @include mixins.hover {
+
+        &:not(.button-disabled) {
+          background-color: color.mix(black, list.nth($i, 2), 20%);
+        }
+      }
+
+      &.button-stroke {
+        background-color: transparent;
+        border: 1px solid list.nth($i, 2);
+        color: variables.$text;
+
+        @include mixins.hover {
+
+          &:not(.button-disabled) {
+            background-color: variables.$hover;
+          }
+        }
+
+        svg { stroke: variables.$text; }
+      }
+      
+      &.button-transparent {
+        background-color: transparent;
+        color: list.nth($i, 2);
+
+        @include mixins.hover { background-color: variables.$hover; }
+        svg { stroke: list.nth($i, 2); }
+      }
+    }
+  }
+}
+
+@include color('button',
+  '' variables.$primary variables.$primary-contrast,
+  '-secondary' variables.$secondary variables.$secondary-contrast,
+  '-grey' variables.$text-disabled variables.$text,
+  '-success' variables.$success variables.$success-contrast,
+  '-info' variables.$info variables.$info-contrast,
+  '-warning' variables.$warning variables.$warning-contrast,
+  '-error' variables.$error variables.$error-contrast,
+  '-main' variables.$main variables.$text,
+  '-contrast' variables.$contrast variables.$text-contrast
+);
+
+// —————————————————————————————————————————————————————————————————
+// fullWidth
+// —————————————————————————————————————————————————————————————————
+
+.button-fullWidth {
+  width: 100%;
+}
+
+// —————————————————————————————————————————————————————————————————
+// disabled
+// —————————————————————————————————————————————————————————————————
+
+.button {
+
+  &.button-disabled,
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    outline: none;
+  }
+}

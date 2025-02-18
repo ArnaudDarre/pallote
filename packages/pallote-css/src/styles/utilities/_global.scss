@@ -1,0 +1,211 @@
+@use "../common/mixins";
+@use "../common/variables";
+
+// —————————————————————————————————————————————————————————————————
+// responsive
+// spacing and size
+// position
+// display
+// border
+// border-radius
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// responsive
+// —————————————————————————————————————————————————————————————————
+
+.hide {
+	
+	&-desktop { @include mixins.responsive(down, desktop) { display: none !important; } }
+	&-laptop { @include mixins.responsive(down, laptop) { display: none !important; } }
+	&-tablet { @include mixins.responsive(down, tablet) { display: none !important; } }
+	&-mobile { @include mixins.responsive(down, mobile) { display: none !important; } }
+	&-mobileSm { @include mixins.responsive(down, mobile-sm) { display: none !important; } }
+	&-touch { @include mixins.responsive-touch { display: none !important; } }
+}
+
+.show {
+
+  &-desktop { @include mixins.responsive(up, desktop) { display: none !important; } }
+	&-laptop { @include mixins.responsive(up, laptop) { display: none !important; } }
+	&-tablet { @include mixins.responsive(up, tablet) { display: none !important; } }
+	&-mobile { @include mixins.responsive(up, mobile) { display: none !important; } }
+	&-mobileSm { @include mixins.responsive(up, mobile-sm) { display: none !important; } }
+  &-touch { @include mixins.responsive-click { display: none !important; } }
+}
+
+// —————————————————————————————————————————————————————————————————
+// spacing and size
+// —————————————————————————————————————————————————————————————————
+
+.w-full { width: 100% !important; }
+.w-fit { width: fit-content !important; }
+
+.h-full { height: 100% !important; }
+.h-fit { height: fit-content !important; }
+
+.m-auto { margin: auto !important; }
+.mt-auto { margin-top: auto !important; }
+.mr-auto { margin-right: auto !important; }
+.mb-auto { margin-bottom: auto !important; }
+.ml-auto { margin-left: auto !important; }
+.mv-auto { margin-top: auto !important; margin-bottom: auto !important; }
+.mh-auto { margin-right: auto !important; margin-left: auto !important; }
+
+// from .25rem to 5rem, every quarter
+
+$fractions: ( "¼": 0.25, "½": 0.5, "¾": 0.75 );
+
+@for $i from 0 through 5 {
+  .w-#{$i} { width: #{$i}rem !important; }
+  .h-#{$i} { height: #{$i}rem !important; }
+
+  .m-#{$i} { margin: #{$i}rem !important; }
+  .mt-#{$i} { margin-top: #{$i}rem !important; }
+  .mr-#{$i} { margin-right: #{$i}rem !important; }
+  .mb-#{$i} { margin-bottom: #{$i}rem !important; }
+  .ml-#{$i} { margin-left: #{$i}rem !important; }
+  .mv-#{$i} { margin-top: #{$i}rem !important; margin-bottom: #{$i}rem !important; }
+  .mh-#{$i} { margin-right: #{$i}rem !important; margin-left: #{$i}rem !important; }
+
+  .p-#{$i} { padding: #{$i}rem !important; }
+  .pt-#{$i} { padding-top: #{$i}rem !important; }
+  .pr-#{$i} { padding-right: #{$i}rem !important; }
+  .pb-#{$i} { padding-bottom: #{$i}rem !important; }
+  .pl-#{$i} { padding-left: #{$i}rem !important; }
+  .pv-#{$i} { padding-top: #{$i}rem !important; padding-bottom: #{$i}rem !important; }
+  .ph-#{$i} { padding-right: #{$i}rem !important; padding-left: #{$i}rem !important; }
+
+  @each $symbol, $value in $fractions {
+
+    @if $i == 0 {
+      .w-#{$symbol} { width: #{$i + $value}rem !important; }
+      .h-#{$symbol} { height: #{$i + $value}rem !important; }
+      
+      .m-#{$symbol} { margin: #{$i + $value}rem !important; }
+      .mt-#{$symbol} { margin-top: #{$i + $value}rem !important; }
+      .mr-#{$symbol} { margin-right: #{$i + $value}rem !important; }
+      .mb-#{$symbol} { margin-bottom: #{$i + $value}rem !important; }
+      .ml-#{$symbol} { margin-left: #{$i + $value}rem !important; }
+      .mv-#{$symbol} { margin-top: #{$i + $value}rem !important; margin-bottom: #{$i + $value}rem !important; }
+      .mh-#{$symbol} { margin-right: #{$i + $value}rem !important; margin-left: #{$i + $value}rem !important; }
+    
+      .p-#{$symbol} { padding: #{$i + $value}rem !important; }
+      .pt-#{$symbol} { padding-top: #{$i + $value}rem !important; }
+      .pr-#{$symbol} { padding-right: #{$i + $value}rem !important; }
+      .pb-#{$symbol} { padding-bottom: #{$i + $value}rem !important; }
+      .pl-#{$symbol} { padding-left: #{$i + $value}rem !important; }
+      .pv-#{$symbol} { padding-top: #{$i + $value}rem !important; padding-bottom: #{$i + $value}rem !important; }
+      .ph-#{$symbol} { padding-right: #{$i + $value}rem !important; padding-left: #{$i + $value}rem !important; }  
+
+    } @else {
+      .w-#{$i}#{$symbol} { width: #{$i + $value}rem !important; }
+      .h-#{$i}#{$symbol} { height: #{$i + $value}rem !important; }
+    
+      .m-#{$i}#{$symbol} { margin: #{$i + $value}rem !important; }
+      .mt-#{$i}#{$symbol} { margin-top: #{$i + $value}rem !important; }
+      .mr-#{$i}#{$symbol} { margin-right: #{$i + $value}rem !important; }
+      .mb-#{$i}#{$symbol} { margin-bottom: #{$i + $value}rem !important; }
+      .ml-#{$i}#{$symbol} { margin-left: #{$i + $value}rem !important; }
+      .mv-#{$i}#{$symbol} { margin-top: #{$i + $value}rem !important; margin-bottom: #{$i + $value}rem !important; }
+      .mh-#{$i}#{$symbol} { margin-right: #{$i + $value}rem !important; margin-left: #{$i + $value}rem !important; }
+    
+      .p-#{$i}#{$symbol} { padding: #{$i + $value}rem !important; }
+      .pt-#{$i}#{$symbol} { padding-top: #{$i + $value}rem !important; }
+      .pr-#{$i}#{$symbol} { padding-right: #{$i + $value}rem !important; }
+      .pb-#{$i}#{$symbol} { padding-bottom: #{$i + $value}rem !important; }
+      .pl-#{$i}#{$symbol} { padding-left: #{$i + $value}rem !important; }
+      .pv-#{$i}#{$symbol} { padding-top: #{$i + $value}rem !important; padding-bottom: #{$i + $value}rem !important; }
+      .ph-#{$i}#{$symbol} { padding-right: #{$i + $value}rem !important; padding-left: #{$i + $value}rem !important; }  
+    }
+  }
+}
+
+// from 6 to 20 rem, only integer
+
+@for $i from 6 through 20 {
+  .w-#{$i} { width: #{$i}rem !important; }
+  .h-#{$i} { height: #{$i}rem !important; }
+
+  .m-#{$i} { margin: #{$i}rem !important; }
+  .mt-#{$i} { margin-top: #{$i}rem !important; }
+  .mr-#{$i} { margin-right: #{$i}rem !important; }
+  .mb-#{$i} { margin-bottom: #{$i}rem !important; }
+  .ml-#{$i} { margin-left: #{$i}rem !important; }
+  .mv-#{$i} { margin-top: #{$i}rem !important; margin-bottom: #{$i}rem !important; }
+  .mh-#{$i} { margin-right: #{$i}rem !important; margin-left: #{$i}rem !important; }
+
+  .p-#{$i} { padding: #{$i}rem !important; }
+  .pt-#{$i} { padding-top: #{$i}rem !important; }
+  .pr-#{$i} { padding-right: #{$i}rem !important; }
+  .pb-#{$i} { padding-bottom: #{$i}rem !important; }
+  .pl-#{$i} { padding-left: #{$i}rem !important; }
+  .pv-#{$i} { padding-top: #{$i}rem !important; padding-bottom: #{$i}rem !important; }
+  .ph-#{$i} { padding-right: #{$i}rem !important; padding-left: #{$i}rem !important; }
+}
+
+// —————————————————————————————————————————————————————————————————
+// position
+// —————————————————————————————————————————————————————————————————
+
+.pos {
+
+  &-absolute { position: absolute !important; }
+  &-relative { position: relative !important; }
+  &-fixed { position: relative !important; }
+  &-sticky { position: relative !important; }
+}
+
+// —————————————————————————————————————————————————————————————————
+// display
+// —————————————————————————————————————————————————————————————————
+
+// general display
+
+.dis-flex { display: flex !important; }
+.dis-inlineFlex { display: inline-flex !important; }
+.dis-block { display: block !important; }
+.dis-inlineBlock { display: inline-block !important; }
+
+// flexbasis
+
+.fb {
+
+  &-content { flex-basis: content !important; }
+  &-0 { flex-basis: 0 !important; }
+  &-1 { flex-basis: 1 !important; }
+}
+
+// flex-grow
+
+.fg {
+
+  &-0 { flex-grow: 0 !important; }
+  &-1 { flex-grow: 1 !important; }
+}
+
+// flex-shrink
+
+.fs {
+
+  &-0 { flex-shrink: 0 !important; }
+  &-1 { flex-shrink: 1 !important; }
+}
+
+// —————————————————————————————————————————————————————————————————
+// border
+// —————————————————————————————————————————————————————————————————
+
+.b-1 { border: variables.$border; }
+.bt-1 { border-top: variables.$border; }
+.br-1 { border-right: variables.$border; }
+.bb-1 { border-bottom: variables.$border; }
+.bl-1 { border-left: variables.$border; }
+
+// —————————————————————————————————————————————————————————————————
+// border-radius
+// —————————————————————————————————————————————————————————————————
+
+.br-sm { border-radius: variables.$border-radius-sm; }
+.br-md { border-radius: variables.$border-radius-md; }
+.br-lg { border-radius: variables.$border-radius-lg; }

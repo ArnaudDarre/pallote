@@ -1,0 +1,61 @@
+@use "../common/mixins";
+@use "../common/variables";
+@use "../utilities/text";
+
+$sidebar-width: 200px;
+
+.sidebar {
+  transition: left variables.$transition-md;
+  @include mixins.calc(height, '100vh - 'variables.$navbar-height);
+  position: sticky;
+  flex-shrink: 0;
+  border-right: variables.$border;
+  width: $sidebar-width;
+  top: variables.$navbar-height;
+  padding: variables.$spacing-md;
+  overflow-y: scroll;
+  scrollbar-color: light;  
+  z-index: 11;
+  background-color: variables.$background-default;
+  
+  &.js-opened {
+    left: 0;
+  }
+  
+  @include mixins.responsive(down, tablet) {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: -$sidebar-width;
+    padding-top: variables.$navbar-height-sm;
+    z-index: 13;
+  }
+
+  &__button {
+    content: '';
+    border: solid variables.$text;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(-45deg);
+    margin-right: variables.$spacing-md;
+    display: none;
+
+    .page--withSidebar & { display: initial; }
+    @include mixins.responsive(up, tablet) { display: none !important; }
+
+    &--close {
+      position: absolute;
+      top: variables.$navbar-height-sm*0.5;
+      left: variables.$navbar-height-sm*0.5;
+      transform: translateY(-50%) rotate(135deg);
+    }
+  }
+
+  &__title {
+    @extend %overline;
+    color: variables.$text-alt;
+    font-weight: variables.$font-bold;
+    margin-bottom: variables.$spacing-xs;
+    margin-left: 0;
+  }
+}

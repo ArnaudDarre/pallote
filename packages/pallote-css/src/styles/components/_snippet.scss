@@ -1,0 +1,85 @@
+@use "../common/variables";
+@use "../utilities/text";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// default
+// dense
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.snippet {
+  @extend %caption;
+  font-family: "Roboto Mono", Courier, monospace;
+  word-wrap: break-word;
+  width: 100%;
+  position: relative;
+  border-radius: variables.$border-radius-sm;
+  margin: 0;
+  padding: variables.$spacing-sm variables.$spacing-sm*1.5;
+  background-color: variables.$hover;
+  border: variables.$border;
+  
+  & + & {
+    margin-top: variables.$spacing-sm;
+  }
+
+  p > & {
+    margin-right: variables.$spacing-xs;
+    margin-left: variables.$spacing-xs;
+  }
+
+  .tag {
+    font-family: variables.$font-fallback;
+    float: right;
+    margin-top: 1px;
+    margin-right: -(variables.$spacing-xs);
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// default
+// —————————————————————————————————————————————————————————————————
+
+.snippet--default {
+
+  &:after {
+    @extend %overline;
+    content: "Default";
+    font-family: variables.$font-fallback;
+    float: right;
+    margin-top: 1px;
+    margin-right: -(variables.$spacing-xs);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: variables.$font-bold;
+    border-radius: variables.$border-radius-sm;
+    white-space: nowrap; // prevent text to go on multiple lines
+    position: absolute;
+    top: variables.$spacing-sm;
+    right: variables.$spacing-md*0.75;
+    height: variables.$spacing-md;
+    padding-right: variables.$spacing-xs;
+    padding-left: variables.$spacing-xs;
+    padding-bottom: 0.1em;
+    background-color: variables.$text-disabled;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// dense
+// —————————————————————————————————————————————————————————————————
+
+.snippet--dense {
+  @extend %overline;
+  padding: variables.$spacing-xs variables.$spacing-sm !important;
+
+  &.snippet--default:after {
+    top: variables.$spacing-xs;
+    right: variables.$spacing-sm;
+  }
+}

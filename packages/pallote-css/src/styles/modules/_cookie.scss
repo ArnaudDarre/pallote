@@ -1,0 +1,38 @@
+.cookie {
+  z-index: 10;
+
+  &.section {
+    @include transition($transition-md, transform);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: $background-default;
+    text-align: left;
+    
+    .section_container {
+      padding-top: 10px;
+      padding-bottom: 9px;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: flex-start;
+    }
+  }
+
+  &.js-cookie-accepted {
+    @include transition($transition-md, transform);
+    transform: translateY(100%);
+  }
+
+  &__text {
+    width: 100%;
+    display: inline;
+    margin-right: $spacing-xs;
+  }
+
+  .link {
+    flex-basis: 0;
+  }
+}

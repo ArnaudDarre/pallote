@@ -1,0 +1,50 @@
+@use "../common/mixins";
+@use "../common/variables";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// separator
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.breadcrumbs {
+  display: inline-flex;
+  align-items: baseline;
+
+  @include mixins.responsive(down, tablet) {
+    flex-direction: column;
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-left: variables.$spacing-xs;
+
+      &:before {
+        content: "/";
+        margin-right: variables.$spacing-xs;
+        color: variables.$text-alt;
+        display: inline-block; // required to remove underline on hover for before element
+      }
+    }
+
+    @include mixins.hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// separator
+// —————————————————————————————————————————————————————————————————
+
+.breadcrumbs--arrow .breadcrumbs__item:not(:first-child):before {
+  content: "\2039";
+  transform: rotate(180deg);
+  font-size: 1.5em;
+  float: left;
+}

@@ -1,0 +1,84 @@
+@use "../common/mixins";
+@use "../common/variables";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// disabled
+// —————————————————————————————————————————————————————————————————
+
+$spacing-switch: 1rem;
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.switch {
+  display: flex;
+  align-items: center;
+  
+  &_input {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+
+    &:focus + .switch_switch {
+      outline: 2px solid variables.$primary;
+    }
+
+    &:checked + .switch_switch {
+      background-color: variables.$primary-light;
+      
+      .switch_toggle {
+        @include mixins.calc(left, '100% -'($spacing-switch));
+        background-color: variables.$primary;
+      }
+    }
+  }
+
+  &_label {
+    
+    &:first-child { margin-right: .75em; }
+    &:last-child { margin-left: .75em; }
+  }
+
+  &_switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: $spacing-switch*2;
+    height: $spacing-switch;
+    background: variables.$input-background;
+    border: variables.$border;
+    border-radius: $spacing-switch;
+    position: relative;
+
+    &:nth-child(2) { margin-left: .25rem; }
+  }
+
+  &_toggle {
+    position: absolute;
+    left: -(variables.$spacing-xs);
+    width: $spacing-switch*1.25;
+    height: $spacing-switch*1.25;
+    border-radius: $spacing-switch*1.25;
+    background: variables.$grey-50;
+  }
+}
+  
+// —————————————————————————————————————————————————————————————————
+// disabled
+// —————————————————————————————————————————————————————————————————
+
+.switch-disabled {
+  opacity: 0.4;
+
+  * { 
+    cursor: not-allowed;
+  }
+
+  .switch_switch {
+    outline: none !important;
+  }
+}

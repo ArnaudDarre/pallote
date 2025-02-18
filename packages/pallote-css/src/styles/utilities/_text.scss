@@ -1,0 +1,207 @@
+@use "sass:list";
+@use "../common/mixins";
+@use "../common/variables";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// align
+// weight
+// transform
+// italic
+// underline
+// strikeThrough
+// code
+// color
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+@mixin font-size($font-size, $font-weight, $line-height) {
+	font-size: $font-size;
+	font-weight: $font-weight;
+	line-height: $line-height;
+}
+
+.h1, %h1 {
+	@include font-size(
+		variables.$h1-size,
+		variables.$h1-weight,
+		variables.$h1-line-height
+	);
+}
+
+.h2, %h2 {
+	@include font-size(
+		variables.$h2-size,
+		variables.$h2-weight,
+		variables.$h2-line-height
+	);
+}
+
+.h3, %h3 {
+	@include font-size(
+		variables.$h3-size,
+		variables.$h3-weight,
+		variables.$h3-line-height
+	);
+}
+
+.h4, %h4 {
+	@include font-size(
+		variables.$h4-size,
+		variables.$h4-weight,
+		variables.$h4-line-height
+	);
+}
+
+.h5, %h5 {
+	@include font-size(
+		variables.$h5-size,
+		variables.$h5-weight,
+		variables.$h5-line-height
+	);
+}
+
+.h6, %h6 {
+	@include font-size(
+		variables.$h6-size,
+		variables.$h6-weight,
+		variables.$h6-line-height
+	);
+}
+
+.subtitle, %subtitle {
+	@include font-size(
+		variables.$subtitle-size,
+		variables.$subtitle-weight,
+		variables.$subtitle-line-height
+	);
+}
+
+.body, %body {
+	@include font-size(
+		variables.$body-size,
+		variables.$body-weight,
+		variables.$body-line-height
+	);
+}
+
+.caption, %caption {
+	@include font-size(
+		variables.$caption-size,
+		variables.$caption-weight,
+		variables.$caption-line-height
+	);
+}
+
+.overline, %overline {
+	@include font-size(
+		variables.$overline-size,
+		variables.$overline-weight,
+		variables.$overline-line-height
+	);
+}
+
+@mixin gutter {
+
+	& + & {
+		margin-top: .75em;
+	}
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, 
+.subtitle, .body, .caption, .overline {
+	@include gutter;
+}
+
+// —————————————————————————————————————————————————————————————————
+// align
+// —————————————————————————————————————————————————————————————————
+
+.text-left, %text-left { text-align: left !important; }
+.text-center, %text-center { text-align: center !important; }
+.text-right, %text-right { text-align: right !important; }
+
+// —————————————————————————————————————————————————————————————————
+// weight
+// —————————————————————————————————————————————————————————————————
+
+.text-regular, %text-regular { font-weight: variables.$font-regular !important; }
+.text-bold, %text-bold { font-weight: variables.$font-bold !important; }
+
+// —————————————————————————————————————————————————————————————————
+// transform
+// —————————————————————————————————————————————————————————————————
+
+.text-none, %text-none { text-transform: none; }
+.text-capitalize, %text-capitalize { text-transform: capitalize; }
+.text-uppercase, %text-uppercase { text-transform: uppercase; }
+.text-lowercase, %text-lowercase { text-transform: lowercase; }
+.text-initial, %text-initial { text-transform: initial; }
+.text-inherit, %text-inherit { text-transform: inherit; }
+
+// —————————————————————————————————————————————————————————————————
+// italic
+// —————————————————————————————————————————————————————————————————
+
+.text-italic, %text-italic { font-style: italic !important; }
+
+// —————————————————————————————————————————————————————————————————
+// underline
+// —————————————————————————————————————————————————————————————————
+
+.text-underline, %text-underline { text-decoration: underline !important; }
+
+// —————————————————————————————————————————————————————————————————
+// strikeThrough
+// —————————————————————————————————————————————————————————————————
+
+.text-strikeThrough, %text-strikeThrough { text-decoration: line-through !important; }
+
+// —————————————————————————————————————————————————————————————————
+// code
+// —————————————————————————————————————————————————————————————————
+
+.text-code, %text-code { font-family: variables.$font-code !important; }
+
+// —————————————————————————————————————————————————————————————————
+// color
+// —————————————————————————————————————————————————————————————————
+
+@mixin color($prefix, $colors...) {
+	@each $i in $colors {
+		.#{$prefix}#{list.nth($i, 1)} {
+			color: list.nth($i, 2) !important;
+
+			.h1, .h2, .h3, .h4, .h5, .h6 {
+				color: list.nth($i, 2) !important;
+			}
+
+			&.link {
+				text-decoration: underline rgba(list.nth($i, 2), 0.5);
+
+				@include mixins.hover {
+					text-decoration: underline 0.125em;
+				}	
+			}
+		}
+	}
+}
+
+@include color('text-',
+	'default' variables.$text,
+	'alt' variables.$text-alt,
+	'disabled' variables.$text-disabled,
+	'contrast' variables.$text-contrast,
+	'contrastAlt' variables.$text-contrast-alt,
+	'contrastDisabled' variables.$text-contrast-disabled,
+	'primary' variables.$primary,
+	'secondary' variables.$secondary,
+	'primary' variables.$primary,
+	'success' variables.$success,
+	'info' variables.$info,
+	'warning' variables.$warning,
+	'error' variables.$error,
+);

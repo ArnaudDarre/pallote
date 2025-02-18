@@ -1,0 +1,193 @@
+@use "../common/mixins";
+@use "../common/variables";
+@use "../utilities/text";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// align
+// color
+// landing (website title on homepage)
+// header (page title)
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.section {
+  @include mixins.clamp(padding-right, 1rem, 4vw, 4rem);
+  @include mixins.clamp(padding-left, 1rem, 4vw, 4rem);
+  width: 100%;
+  overflow: hidden; // prevent horizontal scroll on mobile
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_container {
+    @include mixins.clamp(padding-top, 2rem, 8vw, 4rem);
+    @include mixins.clamp(padding-bottom, 2rem, 8vw, 4rem);
+    width: 100%;
+    max-width: variables.$desktop;
+    position: relative; // needed to have the content over section-landing:before
+  }
+
+  &_header {
+    display: flex;
+    flex-direction: column;
+
+    & + .section_content { @include mixins.clamp(padding-top, 2rem, 8vw, 4rem); }
+    &-dense + .section_content { padding-top: 2rem; }
+  }
+
+  &_content {
+    width: 100%;
+
+    & + & {
+      @include mixins.clamp(padding-top, 2rem, 8vw, 4rem);
+    }
+  }
+
+  &_label {
+    color: variables.$text-alt;
+    font-weight: variables.$font-bold;
+  }
+  
+  &_title {
+    @extend %h3;
+    color: variables.$primary;
+    max-width: variables.$desktop*0.75;
+    
+    .section_label + & {
+      margin-top: .5rem;
+    }
+  }
+  
+  &_subtitle {
+    @extend %subtitle;
+    max-width: variables.$max-width-subtitle;
+    
+    .section_title + & {
+      margin-top: 2rem - 1rem;
+    }
+
+    & + & {
+      margin-top: 1rem;
+    }
+  }
+
+  &_actions {
+
+    .section_title + &,
+    .section_subtitle + & {
+      margin-top: 2rem;
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// align
+// —————————————————————————————————————————————————————————————————
+
+.section_container {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.section-center .section_container,
+.section-center .section_header,
+.section_content-center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-right .section_container,
+.section-right .section_header,
+.section_content-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+// —————————————————————————————————————————————————————————————————
+// color
+// —————————————————————————————————————————————————————————————————
+
+@mixin color(
+  $background-color,
+  $title-color: variables.$primary,
+  $color: variables.$text,
+  $paper-color: variables.$background-paper,
+  $border-color: variables.$border-color
+) {
+  background-color: $background-color;
+  color: $color;
+
+  & + & {
+
+    .section_container {
+      padding-top: 0;
+    }
+  }
+
+  .section_title { color: $title-color; }
+  .button-stroke { color: $color; }
+  .snippet {
+    border-color: $border-color;
+  }
+}
+
+.section {
+  &-default { @include color(variables.$background-default); }
+  &-paper { @include color(variables.$background-paper); }
+  &-primary { @include color(
+    variables.$primary, // background-color
+    variables.$primary-contrast, // title-color
+    variables.$primary-contrast, // color
+    variables.$hover-contrast, // paper-color
+    variables.$border-color-contrast // border-color
+  );}
+  &-primaryLight { @include color(
+    variables.$primary-light, // background-color
+    variables.$text, // title-color
+    variables.$text, // color
+    variables.$hover-contrast, // paper-color
+    variables.$border-color-contrast // border-color
+  );}
+}
+
+// —————————————————————————————————————————————————————————————————
+// landing (website title on homepage)
+// —————————————————————————————————————————————————————————————————
+
+.section-landing {
+
+  .section {
+
+    &_container {
+      @include mixins.clamp(padding-top, 2rem, 10vw, 7rem);
+      @include mixins.clamp(padding-bottom, 2rem, 10vw, 7rem);
+    }
+
+    &_title { @extend %h1; max-width: variables.$desktop*0.5; }
+    &_subtitle { @extend %h5; }
+    &_title + .section_subtitle { margin-top: 2rem; }
+    &_title + .section_actions,
+    &_subtitle + .section_actions { margin-top: 3rem; }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// header (page title)
+// —————————————————————————————————————————————————————————————————
+
+.section-header {
+
+  .section {
+
+    &_title { @extend %h2; }
+    &_subtitle { @extend %subtitle; }
+    &_title + .section_subtitle { margin-top: 2rem; }
+    &_title + .section_actions,
+    &_subtitle + .section_actions { margin-top: 2.5rem; }
+  }
+}

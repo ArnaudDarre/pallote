@@ -1,0 +1,274 @@
+@use "../common/mixins";
+@use "../common/variables";
+@use "../utilities/text";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// active
+// show
+// direction
+// dense
+// navbar
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.nav ul,
+.nav__group,
+.nav__target {
+  list-style: none;
+}
+
+.nav {
+  width: fit-content;
+
+  &__container,
+  &__group {
+    display: flex;
+  }
+
+  &__item,
+  &__trigger {
+    border-radius: variables.$border-radius-md;
+  }
+
+  &__item {
+    margin: 0;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: variables.$spacing-xs;
+      padding-top: 0;
+    }
+
+    &--dropdown {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__trigger {
+    @extend %caption;
+    font-weight: variables.$font-bold;
+    white-space: nowrap;
+    cursor: pointer;
+    height: variables.$nav-item*2;
+    padding: variables.$nav-item*0.5 variables.$nav-item;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: variables.$hover;
+    }
+
+    .nav__item--dropdown > & {
+      
+      &:after {
+        content: '';
+        border: solid variables.$text;
+        border-width: 0 variables.$spacing-xxs variables.$spacing-xxs 0;
+        padding: variables.$spacing-xxs;
+        transform: rotate(45deg);
+        margin-left: variables.$nav-item*0.5;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.25rem;
+    margin-left: -0.25rem;
+  }
+
+  &__target {
+    display: none;
+    flex-direction: column;
+    padding: variables.$nav-item*0.25 variables.$nav-item*0.5 variables.$nav-item*0.5 variables.$nav-item*0.5;
+
+    .nav {
+
+      &__item {
+
+        &:not(:first-child) {
+          margin-top: variables.$spacing-xs;
+          margin-left: 0;
+        }
+      }
+      
+      &__trigger {
+        padding-right: variables.$nav-item*0.5;
+        padding-left: variables.$nav-item*0.5;        
+        border-radius: variables.$border-radius-sm;
+      }
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// active
+// —————————————————————————————————————————————————————————————————
+
+.nav__trigger--active {
+  color: variables.$primary;
+  background-color: variables.$hover;
+
+  .nav__item--dropdown &:after {
+    border-color: variables.$primary;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// show
+// —————————————————————————————————————————————————————————————————
+
+.nav__item--dropdown.js-show {
+  height: auto;
+  background-color: variables.$hover;
+
+  > .nav {
+
+    &__trigger--active,
+    &__trigger:hover {
+      background-color: transparent;
+    }
+
+    &__target {
+      display: flex;
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// direction
+// —————————————————————————————————————————————————————————————————
+
+.nav--portrait {
+  width: 100%;
+  flex-direction: column;
+
+  .nav {
+    
+    &__item:not(:first-child) {
+      margin-left: 0;
+      margin-top: variables.$spacing-xs;
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      &:not(:first-child) {
+        margin-top: variables.$nav-item;
+      }  
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// dense
+// —————————————————————————————————————————————————————————————————
+
+.nav--dense {
+
+  &.nav--portrait .nav__item:not(:first-child) {
+    margin-top: variables.$spacing-xxs;
+  }
+
+  .nav {
+
+    &__item,
+    &__trigger {
+      border-radius: variables.$border-radius-sm;
+    }
+  
+    &__trigger {
+      padding: variables.$nav-item*0.25 variables.$nav-item*0.5;
+      height: variables.$nav-item*1.5;
+    }
+
+    &__item--dropdown {
+    
+      .nav__target {
+        padding: 0 variables.$nav-item*0.25 variables.$nav-item*0.25 variables.$nav-item*0.25;
+
+        .nav__trigger {
+          padding-right: variables.$nav-item*0.25;
+          padding-left: variables.$nav-item*0.25;
+        }
+      }
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// navbar
+// —————————————————————————————————————————————————————————————————
+
+.navbar {
+
+  .nav {
+
+    @include mixins.responsive(up, tablet) { height: 100%; }
+    @include mixins.responsive(down, tablet) { width: 100%; }
+
+    &__container {
+
+      @include mixins.responsive(up, tablet) {
+        height: 100%;
+        align-items: center;
+      }
+
+      @include mixins.responsive(down, tablet) {
+        @include mixins.calc(max-height, '100vh - 'variables.$spacing-xl*3);
+        align-items: stretch;
+        overflow: scroll;
+        width: 100%;
+        margin-top: variables.$nav-item;
+        margin-bottom: variables.$nav-item;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    &__item:not(:first-child) {
+
+      @include mixins.responsive(down, tablet) {
+        margin-top: variables.$spacing-xs;
+        margin-left: 0;
+      }
+    }
+
+    &__item--dropdown {
+
+      @include mixins.responsive(up, tablet) {
+        
+        .nav__target {
+          @include mixins.calc(top, '100% +' variables.$nav-item*0.5);
+          position: absolute;
+          left: 0;
+          width: variables.$spacing-xl*2.5;
+          padding: variables.$nav-item*0.5;
+          border-radius: variables.$border-radius-md;
+          border: variables.$border;
+          z-index: 1;              
+          background-color: variables.$background-paper;
+        }
+      }
+    }
+
+    &__trigger {
+
+      @include mixins.responsive(down, tablet) {
+        height: auto;
+      }
+    }
+  }
+}

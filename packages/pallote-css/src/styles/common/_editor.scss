@@ -1,0 +1,181 @@
+@use "mixins";
+@use "variables";
+@use "../utilities/text";
+
+// —————————————————————————————————————————————————————————————————
+// text
+// lists
+// table
+// —————————————————————————————————————————————————————————————————
+
+.editor, %editor {
+  max-width: variables.$max-width-editor;
+
+  // —————————————————————————————————————————————————————————————————
+  // text
+  // —————————————————————————————————————————————————————————————————
+
+  h2 { @extend %h3; }
+  h3 { @extend %h4; }
+  h4 { @extend %h5; }
+  h5 { @extend %h6; }
+  h6 { @extend %subtitle; }
+  blockquote { @extend %subtitle; }
+
+  h2 {
+    color: variables.$primary;
+  }
+
+  h2, h3, h4, h5, h6 {
+    
+    &:not(:first-child) { margin-top: 1.5em; }
+    &:not(:last-child) { margin-bottom: .75em; }
+  }
+
+  p,
+  ol, ul,
+  p + a, a + p {
+
+    &:not(:first-child) { margin-top: 0.75em; }
+  }
+
+  .highlighter-rouge,
+  .alert {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  a {
+    color: variables.$primary;
+    text-decoration: underline;
+  }
+
+  strong {
+    font-weight: variables.$font-bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  blockquote {
+    position: relative;
+    background-color: variables.$background-paper;
+    padding: variables.$spacing-md variables.$spacing-lg;
+    border-radius: variables.$border-radius-md;
+
+    &:before {
+      @include mixins.pseudo-element('”', -(variables.$spacing-md), auto, auto, -(variables.$spacing-sm), auto, auto);
+      font-size: variables.$spacing-xxl;
+      color: variables.$primary;
+      line-height: 1;
+    }
+
+    &:not(:first-child) {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  // —————————————————————————————————————————————————————————————————
+  // lists
+  // —————————————————————————————————————————————————————————————————
+
+  ol,
+  ul {
+    margin-left: variables.$spacing-md;
+  }
+
+  ol { list-style: decimal; }
+  ul { list-style: disc; }
+
+  li + li { margin-top: variables.$spacing-xs; }
+
+  li {
+
+    > ul {
+      margin-top: 0.25rem !important;
+      margin-left: 0;
+
+      li + li { margin-top: 0; }
+    }
+
+    &:not(:last-child) {
+
+      > ul {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  // —————————————————————————————————————————————————————————————————
+  // table
+  // —————————————————————————————————————————————————————————————————
+
+  .table {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  table {
+    border-collapse: separate;
+    border: variables.$border;
+    border-radius: variables.$border-radius-sm;
+    width: 100%;
+
+    &.table--dense {
+
+      th { font-size: 0.65rem; }
+      td { font-size: 0.75rem;; }
+      td, th { padding: 1px variables.$spacing-xs; }
+    }
+  }
+
+  thead {
+    background-color: variables.$background-paper;
+
+    tr:first-child {
+
+      th {
+        border-top: none;
+
+        &:first-of-type { border-top-left-radius: variables.$border-radius-sm; }
+        &:last-of-type { border-top-right-radius: variables.$border-radius-sm; }
+      }
+    }
+  }
+
+  tbody {
+
+    tr:last-child {
+
+      th, td {
+
+        &:first-of-type { border-bottom-left-radius: variables.$border-radius-sm; }
+        &:last-of-type { border-bottom-right-radius: variables.$border-radius-sm; }
+      }
+    }
+  }
+
+  td,
+  th {
+    border-top: variables.$border;
+    
+    &:not(:first-child) {
+      border-left: variables.$border;
+    }
+  }
+
+  th {
+    padding: variables.$spacing-xs variables.$spacing-sm;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: variables.$text-alt;
+  }
+
+  td {
+    padding: variables.$spacing-xs variables.$spacing-sm variables.$spacing-sm;
+  }
+}

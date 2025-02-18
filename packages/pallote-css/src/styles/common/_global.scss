@@ -1,0 +1,157 @@
+@use "mixins";
+@use "variables";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: variables.$font-fallback;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: variables.$font-regular;
+	background-color: variables.$background-default;
+	color: variables.$text;
+	// needed for footer margin-top: auto if content smaller than viewport height
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	
+	&:after {
+		transition: opacity variables.$transition-md;
+		content: '';
+		position: fixed;
+		background-color: variables.$overlay;
+		height: 100vh;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: 12;
+		pointer-events: none;
+	}
+	
+	&.js-sidebar,
+	&.js-navbar {
+		overflow: hidden;
+		
+		&:after {
+			opacity: 1;
+			pointer-events: initial;
+		}
+	}
+
+	&.js-navbar:after {
+		z-index: 10;
+	}
+}
+
+// stick to bottom of page when page height smaller than viewport height
+footer {
+	margin-top: auto;
+}
+
+// embed responsively
+
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%;
+	border-radius: variables.$spacing-md;
+	
+	iframe, object, embed { 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+}        
+
+// text selection
+::-moz-selection {
+	background: variables.$primary;
+	color: variables.$primary-contrast;
+}
+
+::selection {
+	background: variables.$primary;
+	color: variables.$primary-contrast;
+}
+
+::-moz-selection {
+	background: variables.$primary;
+	color: variables.$primary-contrast;
+}
+
+// remove autocomplete from webkit browsers
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0px 1000px variables.$primary-light inset;
+	@include mixins.transition(variables.$transition-md, background-color);
+}
+
+// prevent images from stretching with flex 
+
+img {
+	align-self: center;
+	width: 100%;
+	flex-shrink: 0;
+}
+
+// lists
+
+ul {
+	list-style: disc;
+}
+
+li {
+	margin-left: variables.$spacing-md;
+
+	& + & {
+		padding-top: variables.$spacing-xs;
+	}
+}
+
+// buttons and links
+
+button,
+a {
+	outline-color: variables.$primary;
+	cursor: pointer;
+}
+
+// iframe
+
+iframe {
+	display: block; // remove bottom spacing
+	width: 100%;
+	border-radius: variables.$border-radius-md;
+	border: variables.$border;
+}
+
+strong {
+	font-weight: variables.$font-bold;
+}
+
+// z-index
+
+@for $i from 0 through 9 {
+	.z-index--#{$i} { z-index: $i; }
+}
+
+// background
+
+.background-cover {
+	@include mixins.background(50% 50%, cover);
+}

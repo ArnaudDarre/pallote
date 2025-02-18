@@ -1,0 +1,4 @@
+packages:
+  - packages/pallote-css
+  - packages/pallote-react
+  - apps/pallote-docs

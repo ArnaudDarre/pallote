@@ -1,0 +1,52 @@
+@use "../common/mixins";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// direction
+// fullWidth
+// wide
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap; // set on multiple lines if wider than parent width
+  width: 100%;
+  gap: .5rem;
+  
+  // larger spacing on small and touch devices
+  @include mixins.responsive(down, mobile) { gap: 1rem; }
+  @include mixins.responsive-touch { gap: 1rem; }
+}
+
+// —————————————————————————————————————————————————————————————————
+// direction
+// —————————————————————————————————————————————————————————————————
+
+.buttons-portrait {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+// —————————————————————————————————————————————————————————————————
+// fullWidth
+// —————————————————————————————————————————————————————————————————
+
+.buttons-fullWidth .button {
+  width: 100%;
+}
+
+// —————————————————————————————————————————————————————————————————
+// wide
+// —————————————————————————————————————————————————————————————————
+
+.buttons-wide {
+  justify-content: space-between;
+
+  > .buttons {
+    width: fit-content;
+  }
+}

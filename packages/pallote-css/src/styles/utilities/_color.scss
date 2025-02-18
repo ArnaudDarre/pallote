@@ -1,0 +1,119 @@
+@use "sass:list";
+@use "../common/variables";
+
+// —————————————————————————————————————————————————————————————————
+// fill
+// stroke
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// fill
+// —————————————————————————————————————————————————————————————————
+
+@mixin fill($colors...) {
+
+  @each $i in $colors {
+    .fill-#{list.nth($i, 1)} {
+      color: list.nth($i, 3) !important;
+      background-color: list.nth($i, 2) !important;
+
+      .card_title {
+        color: list.nth($i, 3) !important;
+      }
+    }
+  }
+}
+
+@include fill (
+  "main" variables.$main variables.$text,
+  "contrast" variables.$contrast variables.$text-contrast,
+
+  "grey90" variables.$grey-90 variables.$text-contrast,
+  "grey80" variables.$grey-80 variables.$text-contrast,
+  "grey70" variables.$grey-70 variables.$text-contrast,
+  "grey60" variables.$grey-60 variables.$text-contrast,
+  "grey50" variables.$grey-50 variables.$text-contrast,
+  "grey40" variables.$grey-40 variables.$text,
+  "grey30" variables.$grey-30 variables.$text,
+  "grey20" variables.$grey-20 variables.$text,
+  "grey10" variables.$grey-10 variables.$text,
+  "grey5" variables.$grey-5 variables.$text,
+
+  "default" variables.$background-default variables.$text,
+  "paper" variables.$background-paper variables.$text,
+
+  "primaryLight" variables.$primary-light variables.$text,
+  "primary" variables.$primary variables.$text-contrast,
+  "primaryDark" variables.$primary-dark variables.$text-contrast,
+  "secondaryLight" variables.$secondary-light variables.$text,
+  "secondary" variables.$secondary variables.$text-contrast,
+  "secondaryDark" variables.$secondary-dark variables.$text-contrast,
+
+  "successLight" variables.$success-light variables.$text,
+  "success" variables.$success variables.$text-contrast,
+  "successDark" variables.$success-dark variables.$text-contrast,
+  "infoLight" variables.$info-light variables.$text,
+  "info" variables.$info variables.$text-contrast,
+  "infoDark" variables.$info-dark variables.$text-contrast,
+  "warningLight" variables.$warning-light variables.$text,
+  "warning" variables.$warning variables.$text,
+  "warningDark" variables.$warning-dark variables.$text-contrast,
+  "errorLight" variables.$error-light variables.$text,
+  "error" variables.$error variables.$text-contrast,
+  "errorDark" variables.$error-dark variables.$text-contrast,
+
+  "border" variables.$border-color variables.$text
+);
+
+// —————————————————————————————————————————————————————————————————
+// stroke
+// —————————————————————————————————————————————————————————————————
+
+@mixin stroke($colors...) {
+  @each $i in $colors {
+    .stroke-#{list.nth($i, 1)} {
+      border: 1px solid list.nth($i, 2) !important;
+    }
+  }
+}
+
+@include stroke (
+  "main" variables.$main,
+  "contrast" variables.$contrast,
+
+  "grey90" variables.$grey-90,
+  "grey80" variables.$grey-80,
+  "grey70" variables.$grey-70,
+  "grey60" variables.$grey-60,
+  "grey50" variables.$grey-50,
+  "grey40" variables.$grey-40,
+  "grey30" variables.$grey-30,
+  "grey20" variables.$grey-20,
+  "grey10" variables.$grey-10,
+  "grey5" variables.$grey-5 ,
+
+  "default" variables.$background-default,
+  "paper" variables.$background-paper,
+
+  "primaryLight" variables.$primary-light,
+  "primary" variables.$primary,
+  "primaryDark" variables.$primary-dark,
+  "secondaryLight" variables.$secondary-light,
+  "secondary" variables.$secondary,
+  "secondaryDark" variables.$secondary-dark,
+
+  "successLight" variables.$success-light,
+  "success" variables.$success,
+  "successDark" variables.$success-dark,
+  "infoLight" variables.$info-light,
+  "info" variables.$info,
+  "infoDark" variables.$info-dark,
+  "warningLight" variables.$warning-light,
+  "warning" variables.$warning,
+  "warningDark" variables.$warning-dark,
+  "errorLight" variables.$error-light,
+  "error" variables.$error,
+  "errorDark" variables.$error-dark,
+  
+  "border" variables.$border-color
+);

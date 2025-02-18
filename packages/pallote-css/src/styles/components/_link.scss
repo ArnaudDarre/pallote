@@ -1,0 +1,46 @@
+@use "../common/mixins";
+@use "../common/variables";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// color
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: variables.$font-regular;
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+  white-space: nowrap;
+
+  &__icon {
+    display: flex;
+    margin-top: 0.1em;
+    margin-left: 0.25em;
+    
+    svg {
+      height: 1em;
+      width: 1em;
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// color
+// —————————————————————————————————————————————————————————————————
+
+// links color is handled by the color mixins in utilities/_text.scss
+
+.link {
+  color: variables.$primary;
+  text-decoration: underline rgba(variables.$primary, 0.5);
+  
+  @include mixins.hover {
+    text-decoration: underline 0.125em;
+  }
+}

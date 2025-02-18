@@ -1,0 +1,58 @@
+@use "../common/variables";
+@use "../utilities/text";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// dense
+// card
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.form {
+	width: 100%;
+
+	&_title,
+	&_content,
+	&_actions {
+
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	&_title {
+		@extend %subtitle;
+		font-weight: variables.$font-bold;
+	}
+}
+
+// —————————————————————————————————————————————————————————————————
+// dense
+// —————————————————————————————————————————————————————————————————
+
+.form-dense {
+
+	.form {
+
+		&_title,
+		&_content,
+		&_actions {
+			
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+  .input:not(:last-child) {
+    margin-bottom: .5rem;
+  }
+
+	&.form-card {
+		padding: 1rem;
+		border-radius: 1rem;
+	}
+}

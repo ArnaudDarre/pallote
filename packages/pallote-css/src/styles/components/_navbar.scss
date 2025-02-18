@@ -1,0 +1,192 @@
+@use "../common/mixins";
+@use "../common/variables";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// align
+// —————————————————————————————————————————————————————————————————
+
+// button apparition
+@include mixins.keyframes(button-menu-opacity) {
+	0% 		{ opacity: 0; }
+	50% 	{ opacity: 0; }
+	100% 	{ opacity: 100%; }
+}
+
+// lines > close
+@include mixins.keyframes(button-menu-open-before) {
+	0% 		{ transform: translateY(variables.$spacing-xs*1.5); }
+	50% 	{ transform: translateY(0); 
+			  	transform: rotate(0); }
+	100% 	{ transform: rotate(45deg); }
+}
+@include mixins.keyframes(button-menu-open-after) {
+	0% 		{ transform: translateY(-(variables.$spacing-xs)*1.5); }
+	50% 	{ transform: translateY(0); 
+			  	transform: rotate(0); }
+	100% 	{ transform: rotate(-45deg); }
+}
+
+// close > lines
+@include mixins.keyframes(button-menu-close-before) {
+	0% 		{ transform: rotate(45deg); }
+	50% 	{ transform: rotate(0); 
+			  	transform: translateY(0); }
+	100% 	{ transform: translateY(variables.$spacing-xs*1.5); }
+}
+@include mixins.keyframes(button-menu-close-after) {
+	0% 		{ transform: rotate(-45deg); }
+	50% 	{ transform: rotate(0); 
+			  	transform: translateY(0); }
+	100% 	{ transform: translateY(-(variables.$spacing-xs)*1.5); }
+}
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: variables.$background-paper;
+  border-bottom: variables.$border;
+  z-index: 13;
+  
+  @include mixins.responsive(up, tablet) {
+    height: variables.$navbar-height;
+  }
+
+  @include mixins.responsive(down, tablet) {
+    z-index: 11;
+  }
+  
+  &.section {
+    overflow: visible;
+    position: sticky;
+  }
+
+  .section_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include mixins.responsive(up, tablet) {
+      height: 100%;
+    }
+
+    @include mixins.responsive(down, tablet) {
+      flex-direction: column;
+      align-items: stretch;
+      padding-top: 0;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+
+    @include mixins.responsive(down, tablet) {
+      height: variables.$navbar-height-sm;
+    }
+  }
+  
+  &__logo {
+    display: flex;
+    align-items: baseline;
+    font-weight: variables.$font-bold;
+    flex-grow: 1;
+    
+    > * {
+      margin-right: variables.$spacing-xs;
+    }
+  }
+  
+  &__button {
+    @include mixins.transition(variables.$transition-md, opacity);
+    animation: button-menu-opacity variables.$transition-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    width: variables.$spacing-md;
+    height: variables.$spacing-md;
+    
+    @include mixins.responsive(up, tablet) {
+      display: none;
+    }
+
+    &:before,
+    &:after,
+    span {
+      background-color: variables.$text;
+      border-radius: 0.15rem;
+    }
+  
+    &:before,
+    &:after {
+      @include mixins.pseudo-element('', auto, auto, auto, auto, variables.$spacing-md, 2px);
+      @include mixins.transition(variables.$transition-md, transform);
+    }
+  
+    &:before {
+      transform: translateY(variables.$spacing-xs*1.5);
+      animation: button-menu-close-before variables.$transition-lg;
+    }
+  
+    &:after {
+      transform: translateY(-(variables.$spacing-xs)*1.5);
+      animation: button-menu-close-after variables.$transition-lg;
+    }
+  
+    span {
+      @include mixins.transition(variables.$transition-md, opacity);
+      position: absolute;
+      width: variables.$spacing-md;
+      height: 2px;
+    }
+  
+    &.js-opened {
+  
+      &:before { animation: button-menu-open-before variables.$transition-lg forwards; }
+      &:after { animation: button-menu-open-after variables.$transition-lg forwards; }
+      span { opacity: 0; }
+    }
+  }  
+
+  &__nav {
+
+    @include mixins.responsive(down, tablet) {
+      @include mixins.transition(variables.$transition-md, max-height);
+      align-items: flex-start;
+      max-height: 0;
+      overflow: hidden;
+
+      .js-opened & {
+        max-height: 80vh;
+      }
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// align
+// —————————————————————————————————————————————————————————————————
+
+.navbar--right {
+
+  .section_container {
+
+    @include mixins.responsive(up, tablet) {
+      flex-direction: row-reverse;    
+    }
+  }
+
+  .navbar__main {
+    flex-direction: row-reverse;    
+  }
+}

@@ -1,0 +1,118 @@
+@use "../common/variables";
+@use "../utilities/text";
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// active
+// direction
+// dense
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.tabs {
+  width: 100%;
+
+  &__controls {
+    display: flex;
+    width: 100%;
+    border-bottom: variables.$border;
+  }
+  
+  &__item {
+    position: relative;
+    cursor: pointer;
+    padding: variables.$spacing-sm variables.$spacing-md;
+    border-top-left-radius: variables.$border-radius-sm;
+    border-top-right-radius: variables.$border-radius-sm;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+    }
+  }
+
+  &__panel {
+    padding: variables.$spacing-md;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// active
+// —————————————————————————————————————————————————————————————————
+
+.tabs__item:hover,
+.tabs__item--active {
+  background-color: variables.$hover;
+}
+
+.tabs__item--active {
+  color: variables.$primary;
+
+  &:after {
+    background-color: variables.$primary;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// direction
+// —————————————————————————————————————————————————————————————————
+
+.tabs--portrait {
+  display: flex;
+
+  .tabs {
+
+    &__controls {
+      flex-direction: column;
+      width: 160px;
+      border-bottom: 0;
+      border-right: variables.$border;
+    }
+    
+    &__item {
+      text-align: left;
+      border-top-left-radius: variables.$border-radius-sm;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: variables.$border-radius-sm;
+        
+      &:after {
+        top: 0;
+        right: -1px;
+        left: auto;
+        height: 100%;
+        width: 1px;
+      }
+    }
+
+    &__panel {
+      padding-top: variables.$spacing-sm;
+      padding-bottom: variables.$spacing-sm;
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// dense
+// —————————————————————————————————————————————————————————————————
+
+.tabs--dense {
+
+  .tabs {
+
+    &__item {
+      @extend %caption;
+      padding: variables.$spacing-xs variables.$spacing-sm;
+    }
+
+    &__panel {
+      padding: variables.$spacing-sm;
+    }  
+  }
+}

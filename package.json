@@ -1,0 +1,18 @@
+{
+  "name": "pallote",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "build": "pnpm --filter pallote-css build && pnpm --filter pallote-react build",
+    "dev": "pnpm -r start",
+    "storybook": "pnpm --filter library-react storybook",
+    "docs": "pnpm --filter library-docs start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.4.1"
+}
