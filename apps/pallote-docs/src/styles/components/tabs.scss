@@ -1,0 +1,51 @@
+@use 'pallote-css/styles/common/variables';
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// content
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.tabs-container {
+
+  .tabs {
+    border-bottom: variables.$border;
+    overflow: visible;
+  }
+
+  [role="tabpanel"][hidden] {
+    display: none;
+  }
+}
+
+.tabs__item {
+  margin-left: 0;  
+
+  &:hover,
+  &--active {
+    background-color: transparent;
+  }
+
+  &:hover:not(.tabs__item--active) {
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+  
+  &--active {
+    border-color: variables.$primary;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// content
+// —————————————————————————————————————————————————————————————————
+
+[role="tabpanel"] {
+
+  p + [class*="codeBlockContainer"] {
+    margin-top: 1rem;
+  }
+}

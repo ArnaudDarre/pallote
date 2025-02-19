@@ -1,0 +1,103 @@
+@use 'pallote-css/styles/common/variables';
+
+.section {
+
+  // &:after {
+  //   content: "";
+  //   background: repeating-linear-gradient(
+  //     45deg,
+  //     rgba($text, 0.1),
+  //     rgba($text, 0.1) 1px,
+  //     transparent 2px,
+  //     transparent 8px
+  //   );
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   pointer-events: none;
+  //   z-index: 0;
+  // }
+
+  &_container {
+    max-width: unset;
+//     position: relative;
+
+//     &:before,
+//     &:after {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       height: 100%;
+//       width: 1px;
+//       background-color: rgba($text, 0.1);
+//       z-index: 2;
+//     }
+
+//     &:after {
+//       right: 0;
+//     }
+//   }
+
+//   &_title,
+//   &_subtitle,
+//   &_actions,
+//   &_content {
+//     position: relative;
+    
+//     &:before,
+//     &:after {
+//       content: "";
+//       position: absolute;
+//       left: -25vw;
+//       width: 150vw;
+//       height: 1px;
+//       background-color: rgba($text, 0.1);
+//       z-index: 2;
+//     }
+    
+//     &:after {
+//       bottom: 0;
+//     }
+//   }
+// }
+
+// .section {
+
+//   &_title,
+//   &_subtitle,
+//   &_actions,
+//   &_content {
+//     background-color: $background-default;
+//     z-index: 1;
+//   }
+// } 
+
+// .section-primary {
+
+//   .section {
+
+//     &_title,
+//     &_subtitle,
+//     &_actions,
+//     &_content {
+//       background-color: $primary;
+//       z-index: 1;
+//     }
+//   } 
+// }
+
+// .section-paper {
+
+//   .section {
+
+//     &_title,
+//     &_subtitle,
+//     &_actions,
+//     &_content {
+//       background-color: $background-paper;
+//       z-index: 1;
+//     }
+  } 
+}

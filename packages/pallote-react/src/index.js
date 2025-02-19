@@ -12,9 +12,14 @@ export {
 // components
 import { Button } from './components/Button'
 import { Buttons } from './components/Buttons'
+import { Card } from './components/Card'
+import { CardActions } from './components/CardActions'
+import { CardContent } from './components/CardContent'
+import { CardHeader } from './components/CardHeader'
 import { Checkbox } from './components/Checkbox'
 import { Checkboxes } from './components/Checkboxes'
 import { Divider } from './components/Divider'
+import { Grid } from './components/Grid'
 import { Input } from './components/Input'
 import { List } from './components/List'
 import { ListItem } from './components/ListItem'
@@ -32,9 +37,14 @@ import { Textarea } from './components/Textarea'
 export {
   Button,
   Buttons,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
   Checkbox,
   Checkboxes,
   Divider,
+  Grid,
   Input,
   List,
   ListItem,

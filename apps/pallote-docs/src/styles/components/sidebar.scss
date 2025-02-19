@@ -1,0 +1,111 @@
+@use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/common/mixins';
+
+@use 'pallote-css/styles/utilities/text';
+
+[class*="sidebar_"] {
+  padding-top: variables.$navbar-height !important;
+}
+
+.theme-doc-sidebar {
+
+  &-container {
+    border-right: variables.$border !important;
+  }
+
+  &-item-category-level-1 {
+
+    .menu__link {
+      @extend %body;
+      font-weight: variables.$font-bold;
+    }
+  }
+
+  &-item-link-level-2 {
+    margin-top: 0 !important;
+  
+    .menu__link {
+      @extend %caption;
+      font-weight: variables.$font-regular;
+      padding-left: 1.5rem !important;
+    }
+  }
+}
+
+nav.menu {
+  padding-top: 2rem;
+  padding-right: 2rem;
+  @include mixins.clamp(padding-bottom, 2rem, 8vw, 4rem);
+  @include mixins.clamp(padding-left, 1.5rem, 4vw, 4rem);
+
+  li {
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .menu {
+
+    &__list {
+      padding-left: 0;
+      margin-top: 0;
+
+      &-item {
+
+        &, &-collapsible {
+          border-radius: variables.$border-radius-sm;
+          overflow: hidden;
+        }
+
+        &-collapsible--active:before,
+        & > .menu__link--active:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: .25rem;
+          background-color: variables.$primary;
+        }
+
+        &-collapsible:hover:not(.menu__list-item-collapsible--active) {
+          background: none;
+        }
+
+        &--collapsed .menu__caret:before {
+          transform: rotateZ(90deg) scale(0.75);
+        }
+      }
+    }
+
+    &__link {
+      padding: .25rem .75rem;
+      position: relative;
+
+      &--active {
+        color: variables.$primary;
+      }
+
+      &:hover:not(.menu__link--active) {
+        background: none;
+        text-decoration: underline;
+      }
+    }
+
+    &__caret {
+      height: 1.5rem;
+      width: 1.5rem;
+      padding: 0;
+      margin: auto .25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &:before {
+        content: url('/static/icons/phosphor/caret-up.svg');
+        background: none;
+        transform: rotate(180deg) scale(0.75);
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use 'pallote-css/styles/common/variables';
+
+[class*="tableOfContents"] {
+  top: 6rem !important;
+  overflow: visible;
+}
+
+.table-of-contents {
+  border: 0;
+  padding: .5rem;
+  border-left: variables.$border;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    padding-left: 0;
+
+    .table-of-contents__link {
+      padding-left: 1.25rem;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .125rem .5rem;
+    border-radius: variables.$border-radius-sm;
+
+    &:hover {
+      color: inherit;
+
+      &:not(.table-of-contents__link--active) {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__link--active {
+    color: variables.$primary !important;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -.5rem;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background-color: variables.$primary;
+    }
+  }
+}

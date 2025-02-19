@@ -1,0 +1,121 @@
+@use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/common/mixins';
+
+// —————————————————————————————————————————————————————————————————
+// container
+// docs
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// container
+// —————————————————————————————————————————————————————————————————
+
+.main-wrapper {
+  min-height: 100vh;
+  padding-top: variables.$navbar-height !important;
+}
+
+// container
+
+.container {
+  @include mixins.clamp(padding-right, 1.5rem, 4vw, 4rem);
+  padding-bottom: 0 !important;
+  padding-left: 2rem;
+
+  > .row {
+    margin: 0 -2rem;
+
+    > .col:not(.col--3) {
+      padding: 0 2rem;
+    }
+
+    > .col--3 {
+      padding-top: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+// markdown container
+
+.theme-doc-markdown {
+  
+  > h2 {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    border-top: variables.$border;
+  }
+
+  > h2 + p {
+    margin-top: -1rem;
+  }
+  
+  > h3 + p {
+    margin-top: -.5rem;
+  }
+
+  > p, > ul {
+    max-width: 600px;
+  }
+
+  h1.section_title {
+    margin-bottom: 0;
+  }
+}
+
+// grid links on main page
+
+.generatedIndexPage_vN6x {
+
+  .list_eTzJ {
+    margin: 0 -.5rem;
+
+    .col {
+      padding: 0 .5rem;
+      margin-bottom: 1rem !important;
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// docs
+// —————————————————————————————————————————————————————————————————
+
+.docs {
+
+  &_block {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border: variables.$border;
+    border-radius: variables.$border-radius-lg;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    background-color: variables.$background-paper;
+    
+    &-portrait {
+      flex-direction: column;
+    }
+
+    .docs-doc-id-components\/section & {
+      gap: 0;
+    }
+
+  }
+  
+  &_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 100%;
+
+    & + & {
+      margin-top: .5rem;
+    }
+  }
+}
+
+p + .tabs-container {
+  margin-top: 2rem;
+}

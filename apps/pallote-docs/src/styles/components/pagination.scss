@@ -1,0 +1,33 @@
+@use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/common/mixins';
+
+.pagination-nav {
+  margin-top: 3rem;
+  @include mixins.clamp(margin-bottom, 2rem, 8vw, 4rem);
+  padding-top: 2rem;
+  border-top: variables.$border;
+
+  &__link {
+    border-radius: variables.$border-radius-md !important;
+    border: variables.$border;
+    background-color: variables.$background-paper;
+    
+    &:hover {
+      border-color: variables.$primary !important;
+      color: inherit;
+
+      .pagination-nav__label {
+        text-decoration: underline;
+      }
+    }
+    
+    .pagination-nav__label {
+      color: variables.$primary;
+    }
+
+    .pagination-nav__label:before,
+    .pagination-nav__label:after {
+      display: none;
+    }
+  }
+}

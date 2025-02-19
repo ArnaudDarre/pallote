@@ -1,5 +1,70 @@
 @use 'pallote-css/pallote.scss';
+@use 'pallote-css/styles/common/variables';
+
+@use './common/layout.scss';
+
+@use './components/alert.scss';
+@use './components/breadcrumbs.scss';
+@use './components/button.scss';
+@use './components/card.scss';
+@use './components/code-block.scss';
+@use './components/footer.scss';
+@use './components/navbar.scss';
+@use './components/pagination.scss';
+@use './components/section.scss';
+@use './components/sidebar.scss';
+@use './components/table.scss';
+@use './components/table-of-contents.scss';
+@use './components/tabs.scss';
+@use './components/text.scss';
 
 * {
   box-sizing: border-box !important;
+}
+
+:root {
+  // typography
+  --ifm-font-family-base: $font;
+  --ifm-font-weight-light: 400;
+  --ifm-font-weight-normal: 400;
+  --ifm-font-weight-semibold: 700;
+  --ifm-font-weight-bold: 700;
+  --ifm-font-weight-base: var(--ifm-font-weight-normal);
+  --ifm-font-size-base: 1rem;
+  --ifm-line-height-base: 1.5;
+  --ifm-menu-color: #000A1E;
+  --ifm-toc-link-color: #000A1E;
+}
+
+a {
+  text-underline-offset: .2em;
+}
+
+a {
+  border-radius: variables.$border-radius-sm;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.markdown {
+
+  a:not(.button) {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration-thickness: 3px;
+    }
+  }
+}
+
+.hash-link {
+  padding-right: .25rem !important;
+  padding-left: .25rem !important;
+  margin-left: .25rem;
+  border-radius: variables.$border-radius-sm;
+  color: variables.$text-alt;
+  font-weight: 100;
+  font-size: 1rem;
 }

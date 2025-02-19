@@ -1,0 +1,61 @@
+@use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/common/mixins';
+
+@use 'pallote-css/styles/utilities/text';
+
+.footer {
+  @include mixins.clamp(padding-right, 1.5rem, 4vw, 4rem);
+  @include mixins.clamp(padding-left, 1.5rem, 4vw, 4rem);
+  @include mixins.clamp(padding-top, 2rem, 8vw, 4rem);
+  @include mixins.clamp(padding-bottom, 2rem, 8vw, 4rem);
+  background-color: variables.$grey-90;
+
+  .container {
+    padding: 0 !important;
+    max-width: unset;
+  }
+
+  &__title {
+    @extend %caption;
+    font-weight: variables.$font-bold;
+    color: variables.$primary-light;
+    border-bottom: variables.$border-contrast;
+    padding-bottom: .5rem;
+  }
+
+  &__item {
+    margin-left: 0;
+  }
+
+  &__link-item {
+    display: flex;
+    align-items: center;
+    line-height: variables.$body-line-height;
+
+    &:hover {
+      color: variables.$primary-light;
+    }
+  }
+  
+  &__copyright {
+    @include mixins.clamp(margin-top, 2rem, 8vw, 4rem);
+    @extend %caption;
+    text-align: left;
+    border-top: variables.$border-contrast;
+    padding-top: 1rem;
+  }
+
+  @include mixins.responsive(max-width, 996px) {
+
+    .row { margin: 0; }
+
+    .footer__col {
+      padding: 0 !important;
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

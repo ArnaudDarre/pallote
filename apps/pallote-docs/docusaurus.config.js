@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Pallote',
-  tagline: '',
+  tagline: 'Pallote is a handcrafted, simple and stylish CSS and React component library, built with passion and care',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -39,6 +39,16 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
         },
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        // },
         theme: {
           customCss: './src/styles/style.scss',
         },
@@ -57,30 +67,107 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Pallote',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Logo for Pallote',
           src: 'img/logo.svg',
         },
+        items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Documentation',
+          },
+          // {
+          //   to: 'blog',
+          //   label: 'Blog',
+          //   position: 'right'
+          // },
+          {
+            href: 'https://github.com/sponsors/ArnaudDarre',
+            label: 'Sponsor',
+            position: 'right',
+            className: 'navbar__item navbar__link nav-item-custom nav-item-custom-sponsor',
+          },
+          {
+            href: 'https://react.pallote.com/',
+            label: 'Storybook',
+            position: 'right',
+            className: 'navbar__item navbar__link nav-item-custom nav-item-custom-storybook',
+          },
+          {
+            href: 'https://github.com/ArnaudDarre/pallote-docs',
+            label: 'GitHub',
+            position: 'right',
+            className: 'navbar__item navbar__link nav-item-custom nav-item-custom-github',
+          },
+        ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Getting started',
+                to: '/docs/category/getting-started',
+              },
+              {
+                label: 'Variables',
+                to: '/docs/category/variables',
+              },
+              {
+                label: 'Utilities',
+                to: '/docs/category/utilities',
+              },
+              {
+                label: 'Components',
+                to: '/docs/category/components',
               },
             ],
           },
+          {
+            title: 'GitHub',
+            items: [
+              {
+                label: 'Documentation',
+                href: 'https://github.com/ArnaudDarre/pallote-docs',
+                className: 'footer__link-item nav-item-custom nav-item-custom-github',
+              },
+              {
+                label: 'React',
+                href: 'https://github.com/ArnaudDarre/pallote-react',
+                className: 'footer__link-item nav-item-custom nav-item-custom-github',
+              },
+              {
+                label: 'CSS',
+                href: 'https://github.com/ArnaudDarre/pallote-css',
+                className: 'footer__link-item nav-item-custom nav-item-custom-github',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Storybook',
+                href: 'https://react.pallote.com/',
+                className: 'footer__link-item nav-item-custom nav-item-custom-storybook',
+              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Arnaud Darré`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: prismThemes.vsDark,
+        darkTheme: prismThemes.vsDark,
       },
     }),
 };

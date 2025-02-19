@@ -1,0 +1,28 @@
+@use 'pallote-css/styles/common/variables';
+
+.theme-admonition.alert {
+  position: relative;
+  max-width: unset;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: initial;
+
+  [class*="admonitionIcon"] {
+    display: none;
+  }
+  
+  [class*="admonitionHeading"] {
+    text-transform: initial;
+    font-weight: variables.$font-bold;
+    margin-bottom: 0;
+  }
+  
+  [class*="admonitionContent"] {
+    padding-bottom: .2em;
+  }
+}
+
+.markdown .alert {
+  box-shadow: none;
+}

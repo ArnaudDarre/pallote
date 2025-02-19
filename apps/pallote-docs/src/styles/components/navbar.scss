@@ -1,0 +1,89 @@
+@use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/common/mixins';
+
+.navbar {
+  @include mixins.clamp(padding-right, 1.5rem, 4vw, 4rem);
+  @include mixins.clamp(padding-left, 1.5rem, 4vw, 4rem);
+  height: variables.$navbar-height;
+  position: fixed;
+
+  &__brand {
+    display: flex;
+    align-items: flex-end;
+    transform: translateY(-2px);
+  }
+
+  &__logo {
+    height: 1.6rem;
+
+    * {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 1.125rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__items {
+    gap: .5rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    border-radius: variables.$border-radius-sm;
+    
+    &:hover:not(.navbar__link--active) {
+      text-decoration: underline;
+      color: inherit;
+    }
+    
+    &--active {
+      color: variables.$primary !important;
+      background-color: variables.$hover;
+    }
+  }
+}
+
+.nav-item-custom {
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: .25em;
+  }
+  
+  &-github:before {
+    background-image: url("/logos/github-dark.svg");
+
+    .footer & {
+      background-image: url("/logos/github-light.svg");
+    }
+  }
+
+  &-storybook:before {
+    background-image: url("/logos/storybook-dark.svg");
+
+    .footer & {
+      background-image: url("/logos/storybook-light.svg");
+    }
+  }
+
+  &-sponsor:before {
+    background-image: url("/icons/phosphor/heart.svg");
+  }
+
+  svg { display: none; }
+}

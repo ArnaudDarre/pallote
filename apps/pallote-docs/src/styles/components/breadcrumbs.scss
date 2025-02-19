@@ -1,0 +1,43 @@
+@use 'pallote-css/styles/common/variables';
+
+@use 'pallote-css/styles/utilities/text';
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.breadcrumbs__item {
+  margin-left: 0;
+  padding: 0;
+
+  &:before {
+    transform: translateY(1px);
+  }
+}
+
+.breadcrumbs__link {
+  @extend %caption;
+  border-radius: variables.$border-radius-sm;
+  padding: 0;
+
+  &[aria-label="Home page"] {
+    display: flex;
+    height: 1rem;
+  }
+}
+
+.breadcrumbs__link:any-link:hover {
+  background: none;
+  text-decoration: underline;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: none;
+  color: variables.$primary;
+}
+
+.breadcrumbs__item:not(:last-child):after {
+  display: none;
+}

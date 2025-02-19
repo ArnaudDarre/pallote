@@ -1,0 +1,23 @@
+@use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/utilities/text';
+
+h1 {
+  @extend %h2;
+  color: variables.$primary;
+}
+
+h2 { @extend %h3; }
+h3 { @extend %h5; }
+h4 { @extend %h6; }
+h5 { @extend %subtitle; }
+
+.docs-doc-id-utilities\/text .docs_block {
+
+  h1 { color: inherit; }
+  h1, h2, h3, h4, h5, h6,
+  p, span {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+}

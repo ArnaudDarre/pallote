@@ -1,0 +1,108 @@
+@use 'pallote-css/styles/common/variables';
+
+@use 'pallote-css/styles/utilities/text';
+
+// simple code block
+
+code {
+  @extend %overline;
+  padding-right: .4em;
+  padding-left: .4em;
+  border: variables.$border;
+  border-radius: variables.$border-radius-sm;
+  background-color: variables.$grey-90;
+  color: variables.$text-contrast;
+  
+  .token {
+    @extend %caption;
+  }
+}
+
+// markdown highlighter
+
+.theme-code-block {
+  background-color: variables.$grey-90 !important;
+  border: variables.$border;
+  border-radius: variables.$border-radius-md;
+  
+  &[class*="codeBlockContainer_"] {
+    box-shadow: none;
+  }
+  
+  .docs_block & {
+    margin: 1rem -1rem 0 -1rem;
+    border-top: variables.$border;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: none;
+  }
+  
+  pre {
+    border-radius: variables.$border-radius-md;
+    
+    .tabs-container & {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .prism-code {
+    background-color: transparent !important;
+  }
+
+  .tag {
+    background-color: transparent;
+    display: inline-block;
+    font-weight: inherit;
+    border-radius: 0;
+    white-space: pre;
+    height: fit-content;
+    padding: 0;
+  }
+
+  [class*="buttonGroup_"] {
+    height: 2rem;
+    width: fit-content;
+    top: 0.625rem;
+    right: 0.625rem;
+
+    button {
+      background-color: variables.$grey-90;
+      border: variables.$border-contrast;
+    }
+
+    [class*="copyButtonIcon_"], [class*="wordWrapButtonIcon_"] { color: variables.$text-contrast; }
+    [class*="copyButtonSuccessIcon_"] { color: variables.$success; }
+  }
+
+  .plain-text { color: variables.$text-contrast; }
+  .plain { color: variables.$primary-light; }
+  // .class-name,.tag:not(.attr-value):not(.attr-name):not(.punctuation) { color: variables.$primary !important; }
+  // .punctuation { color: variables.$grey-20 !important; }
+  // .attr-name { color: variables.$primary-light !important; }
+}
+
+// code on index page
+
+#section-install {
+
+  pre {
+    background-color: variables.$grey-90;
+    color: variables.$text-contrast;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: .5rem;
+    }
+    
+    .language-shell {
+      color: variables.$primary-light;
+    }
+  }
+}
