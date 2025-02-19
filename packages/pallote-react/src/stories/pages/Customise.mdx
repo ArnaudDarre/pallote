@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Customise" />
+
+# Customise
+
+Pallote is, at it's core. a style library built with SASS. The design tokens (colours, font styles and hierarchy, border radius, etc.) can be overriden to match with your own design system.
+
+## Override variables
+
+The framework has a set of built-in variables that create the design look and feel. To override them, add a variable with the same name in your Sass style file.
+
+Go to the [main documentation](https://www.pallote.com/docs/category/variables) view the full list of available variables.
+
+```css
+$primary: #007A1E;
+
+@import '~/node_modules/pallote-css/dist/pallote.scss';
+````
+
+> The code must be placed above any import of Pallote CSS.
+
+## Custom styles
+
+To change a component style, see the documentation for each component and add create an instance of the class with new properties in your style file.
+
+```css
+@import '~/node_modules/pallote-css/dist/pallote.scss';
+
+.button {
+  text-decoration: underline;
+}
+````
+
+> The class must be placed below any import of Pallote CSS.
+
+## Custom classes
+
+You can add your own classes to any componnent to override the style.
+
+```jsx
+import React from 'react';
+import { Button } from 'palotte-react';
+import 'path/to/custom.css';
+
+export default function ButtonTest() {
+  return <Button className="custom-class">Hello Pallote</Button>;
+}
+```

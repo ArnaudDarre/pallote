@@ -2,13 +2,6 @@
 import { Color } from './utilities/Color'
 import { Display } from './utilities/Display'
 import { Text } from './utilities/Text'
-
-export {
-  Color,
-  Display,
-  Text
-}
-
 // components
 import { Button } from './components/Button'
 import { Buttons } from './components/Buttons'
@@ -29,12 +22,18 @@ import { Section } from './components/Section'
 import { SectionContent } from './components/SectionContent'
 import { SectionHeader } from './components/SectionHeader'
 import { Select } from './components/Select'
+import { Snippet } from './components/Snippet'
 import { Status } from './components/Status'
 import { Switch } from './components/Switch'
 import { Tag } from './components/Tag'
 import { Textarea } from './components/Textarea'
 
 export {
+  // utilities
+  Color,
+  Display,
+  Text,
+  // components
   Button,
   Buttons,
   Card,
@@ -54,6 +53,7 @@ export {
   SectionContent,
   SectionHeader,
   Select,
+  Snippet,
   Status,
   Switch,
   Tag,

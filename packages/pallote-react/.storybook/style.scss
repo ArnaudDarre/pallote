@@ -1,0 +1,159 @@
+@use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/utilities/text';
+
+// —————————————————————————————————————————————————————————————————
+// reset
+// markdown
+// overrides storybook
+// overrides components
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// reset
+// —————————————————————————————————————————————————————————————————
+
+* {
+  box-sizing: border-box;
+}
+
+// reset checkbox and radio styles on props table
+.docblock-argstable {
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    all: revert;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// markdown
+// —————————————————————————————————————————————————————————————————
+
+.sbdocs {
+
+  h1 { @extend %h2; }
+  h2 { @extend %h4; }
+  h3 { @extend %h5; }
+  h4 { @extend %h6; }
+  h5 { @extend %subtitle; }
+  h6 { @extend %subtitle; }
+  p:not(.text) { @extend %body; }
+
+  h2 {
+    padding-bottom: 1rem;
+    margin-top: 2rem !important;
+    border-color: variables.$border-color !important;
+  }
+
+  h3 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  a {
+    text-decoration: underline;
+    color: variables.$primary;
+    font-weight: inherit;
+    font-size: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// overrides storybook
+// —————————————————————————————————————————————————————————————————
+
+.sb-unstyled {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+// stories on components Docs page
+div.css-omrqqn,
+div.css-qhkunw {
+  background-color: variables.$background-paper;
+  box-shadow: none;
+  border: variables.$border;
+}
+
+// table on components Docs page
+.css-1uzo9ve.css-1uzo9ve tbody,
+.css-1pee9bi.css-1pee9bi tbody {
+
+  >tr>* {
+    background-color: variables.$background-paper !important;
+    border-color: variables.$border-color !important;
+    box-shadow: none;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// overrides components
+// —————————————————————————————————————————————————————————————————
+
+.page {
+  width: 100%;
+}
+
+.navBar {
+  position: initial;
+}
+
+// —————————————————————————————————————————————————————————————————
+// code snippets
+// —————————————————————————————————————————————————————————————————
+
+.docblock-source {
+  box-shadow: none !important;
+}
+
+pre.prismjs {
+  padding: 1rem !important;
+  background-color: variables.$grey-90 !important;
+  color: variables.$text-contrast !important;
+
+  .token {
+
+    &.tag {
+      display: revert;
+      background-color: transparent;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-weight: inherit;
+      font-size: inherit;
+    }
+
+    &.punctuation {
+      color: variables.$text-contrast;
+    }
+
+    &.string,
+    &.token.attr-value {
+      color: #CE9178;
+    }
+    
+    &.selector,
+    &.function.maybe-class-name {
+      color: #D7BA7D;
+    }
+
+    &.module,
+    &.keyword {
+      color: #569CD6;
+    }
+
+    &.function,
+    &.property,
+    &.rule,
+    &.imports,
+    &.token.attr-name {
+      color: variables.$primary-light;
+    }
+  }
+}

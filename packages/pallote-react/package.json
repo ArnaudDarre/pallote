@@ -30,6 +30,7 @@
     "pallote-css": "workspace:^",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-syntax-highlighter": "^15.6.1",
     "sass": "^1.71.1"
   },
   "devDependencies": {
@@ -38,9 +39,11 @@
     "@storybook/addon-interactions": "^8.5.6",
     "@storybook/addon-onboarding": "^8.5.6",
     "@storybook/blocks": "^8.5.6",
+    "@storybook/manager-api": "^8.5.8",
     "@storybook/react": "^8.5.6",
     "@storybook/react-vite": "^8.5.6",
     "@storybook/test": "^8.5.6",
+    "@storybook/theming": "^8.5.8",
     "prop-types": "^15.8.1",
     "storybook": "^8.5.6"
   }
