@@ -11,7 +11,7 @@
     "directory": "dist"
   },
   "scripts": {
-    "dev": "onchange 'src/styles/**/*.scss' 'src/scripts/**/*.js' -- npm run build",
+    "watch": "onchange 'src/styles/**/*.scss' 'src/scripts/**/*.js' -- npm run build",
     "build": "npm run build:js && npm run build:css",
     "build:assets": "ncp src/assets dist/assets",
     "build:css": "sass src/pallote.scss dist/pallote.min.css --style=compressed && ncp src/styles dist/styles && ncp src/pallote.scss dist/pallote.scss",

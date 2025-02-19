@@ -7,8 +7,8 @@
   "workspaces": ["packages/*", "apps/*"],
   "scripts": {
     "build": "pnpm --filter pallote-css build && pnpm --filter pallote-react build",
-    "dev": "pnpm -r start",
     "storybook": "pnpm --filter library-react storybook",
+    "watch:css": "pnpm --filter library-css watch",
     "docs": "pnpm --filter library-docs start"
   },
   "keywords": [],
