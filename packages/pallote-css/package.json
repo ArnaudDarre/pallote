@@ -12,7 +12,7 @@
   },
   "scripts": {
     "watch": "onchange 'src/styles/**/*.scss' 'src/scripts/**/*.js' -- npm run build",
-    "build": "pnpm build:js && pnpm build:css",
+    "build": "mkdir -p dist && pnpm build:js && pnpm build:css",
     "build:assets": "ncp src/assets dist/assets",
     "build:css": "sass src/pallote.scss dist/pallote.min.css --style=compressed && ncp src/styles dist/styles && ncp src/pallote.scss dist/pallote.scss",
     "build:js": "uglifyjs src/scripts/*.js -o dist/pallote.min.js"
