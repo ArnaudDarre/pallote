@@ -2,15 +2,16 @@ import React from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
+
 export const Checkboxes = ({
   onChange,
   id,
-  label,
+  label = 'Label',
   hint,
   error,
   disabled,
   optional,
-  direction,
+  direction = 'portrait',
   children,
   className
 }) => {
@@ -64,9 +65,4 @@ Checkboxes.propTypes = {
   ]),
   children: PropTypes.node,
   className: PropTypes.node
-}
-
-Checkboxes.defaultProps = {
-  label: 'Label',
-  direction: 'portrait'
 }

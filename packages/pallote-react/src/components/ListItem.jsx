@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { Text } from '../utilities/Text'
 
-export const ListItem = ({ icon, bold, className, children, ...props }) => {
+export const ListItem = ({ icon, bold, className, children = 'List item', ...props }) => {
 
   return (
     <Text
@@ -28,8 +28,4 @@ ListItem.propTypes = {
   bold: PropTypes.bool,
   className: PropTypes.node,
   children: PropTypes.node
-}
-
-ListItem.defaultProps = {
-  children: 'List item'
 }

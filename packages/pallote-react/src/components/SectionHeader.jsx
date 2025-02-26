@@ -7,7 +7,7 @@ import { Text } from '../utilities/Text'
 export const SectionHeader = ({
   label,
   title,
-  promoteTitle,
+  promoteTitle = false,
   titleComponent,
   subtitle,
   actions,
@@ -55,8 +55,4 @@ SectionHeader.propTypes = {
   subtitle: PropTypes.string,
   actions: PropTypes.node,
   className: PropTypes.node
-}
-
-SectionHeader.defaultProps = {
-  promoteTitle: false
 }

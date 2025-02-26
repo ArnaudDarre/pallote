@@ -18,7 +18,7 @@ export const Text = ({
   ...props
 }) => {
 
-  const Component = component
+  const Component = component || 'p';
 
   return (
     <Component
@@ -107,8 +107,4 @@ Text.propTypes = {
   ]),
   className: PropTypes.node,
   children: PropTypes.node
-}
-
-Text.defaultProps = {
-  component: 'p'
 }

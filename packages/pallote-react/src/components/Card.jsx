@@ -8,14 +8,15 @@ export const SizeContext = createContext('md')
 export const PaddingContext = createContext(false)
 export const DirectionContext = createContext('portrait')
 
+
 export const Card = ({
-  size,
-  fill,
-  direction,
-  align,
-  noPadding,
-  hasShadow,
-  transparent,
+  size = 'md',
+  fill = 'paper',
+  direction = 'portrait',
+  align = 'left',
+  noPadding = false,
+  hasShadow = false,
+  transparent = false,
   className,
   children,
   ...props
@@ -83,14 +84,4 @@ Card.propTypes = {
   transparent: PropTypes.bool,
   className: PropTypes.node,
   children: PropTypes.node
-}
-
-Card.defaultProps = {
-  size: 'md',
-  fill: 'paper',
-  direction: 'portrait',
-  align: 'left',
-  noPadding: false,
-  hasShadow: false,
-  transparent: false
 }

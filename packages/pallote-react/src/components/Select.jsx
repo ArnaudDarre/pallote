@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export const Select = ({
   onChange,
   id,
-  label,
+  label = 'Select',
   isFocused,
   error,
   disabled,
@@ -68,8 +68,4 @@ Select.propTypes = {
   hint: PropTypes.string,
   children: PropTypes.any,
   className: PropTypes.node
-}
-
-Select.defaultProps = {
-  label: 'Select'
 }

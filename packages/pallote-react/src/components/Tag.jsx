@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 import { Text } from '../utilities/Text'
 
 export const Tag = ({
-  color,
+  color = 'primary',
   dense,
   className,
-  children,
+  children = 'Tag',
   ...props
 }) => {
 
@@ -42,9 +42,4 @@ Tag.propTypes = {
   dense: PropTypes.bool,
   className: PropTypes.node,
   children: PropTypes.node
-}
-
-Tag.defaultProps = {
-  color: 'primary',
-  children: 'Tag'
 }

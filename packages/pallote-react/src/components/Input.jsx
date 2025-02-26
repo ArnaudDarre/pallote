@@ -9,10 +9,10 @@ import {
 
 export const Input = ({
   onChange,
-  type,
+  type = 'text',
   id,
   placeholder,
-  label,
+  label = 'Input',
   icon,
   isFocused,
   error,
@@ -90,9 +90,4 @@ Input.propTypes = {
   optional: PropTypes.bool,
   hint: PropTypes.string,
   className: PropTypes.node
-}
-
-Input.defaultProps = {
-  type: 'text',
-  label: 'Input'
 }

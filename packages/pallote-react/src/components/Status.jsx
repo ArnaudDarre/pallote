@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 import { Text } from '../utilities/Text'
 
 export const Status = ({
-  color,
+  color = 'inactive',
   dense,
   className,
-  children,
+  children = 'Status',
   ...props
 }) => {
 
@@ -40,9 +40,4 @@ Status.propTypes = {
   dense: PropTypes.bool,
   className: PropTypes.node,
   children: PropTypes.node
-}
-
-Status.defaultProps = {
-  color: 'inactive',
-  children: 'Status'
 }

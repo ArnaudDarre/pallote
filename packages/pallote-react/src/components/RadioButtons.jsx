@@ -5,12 +5,12 @@ import PropTypes from 'prop-types'
 export const RadioButtons = ({
   onChange,
   id,
-  label,
+  label = 'Label',
   hint,
   error,
   disabled,
   optional,
-  direction,
+  direction = 'portrait',
   children,
   className
 }) => {
@@ -64,9 +64,4 @@ RadioButtons.propTypes = {
   hint: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.node
-}
-
-RadioButtons.defaultProps = {
-  label: 'Label',
-  direction: 'portrait'
 }

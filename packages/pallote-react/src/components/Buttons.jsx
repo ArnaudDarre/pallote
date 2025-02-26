@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 export const Buttons = ({
-  direction,
+  direction = 'landscape',
   fullWidth,
   wide,
   className,
@@ -37,8 +37,4 @@ Buttons.propTypes = {
   wide: PropTypes.bool,
   className: PropTypes.node,
   children: PropTypes.node
-}
-
-Buttons.defaultProps = {
-  direction: 'landscape'
 }

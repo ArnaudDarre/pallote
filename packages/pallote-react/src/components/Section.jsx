@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { SectionHeader } from './SectionHeader'
 
 export const Section = ({
-  align,
-  color,
+  align = 'left',
+  color = 'default',
   landing,
   header,
   className,
@@ -55,9 +55,4 @@ Section.propTypes = {
   header: PropTypes.bool,
   className: PropTypes.node,
   children: PropTypes.node
-}
-
-Section.defaultProps = {
-  align: 'left',
-  color: 'default'
 }

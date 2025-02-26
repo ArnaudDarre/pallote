@@ -6,7 +6,7 @@ export const Textarea = ({
   onChange,
   id,
   placeholder,
-  label,
+  label = 'Textarea',
   isFocused,
   error,
   disabled,
@@ -66,8 +66,4 @@ Textarea.propTypes = {
   optional: PropTypes.bool,
   hint: PropTypes.string,
   className: PropTypes.node
-}
-
-Textarea.defaultProps = {
-  label: 'Text input'
 }

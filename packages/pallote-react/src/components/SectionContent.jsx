@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 export const SectionContent = ({
-  align,
+  align = 'left',
   className,
   children,
   ...props
@@ -32,8 +32,4 @@ SectionContent.propTypes = {
   ]),
   className: PropTypes.node,
   children: PropTypes.node
-}
-
-SectionContent.defaultProps = {
-  align: 'left'
 }

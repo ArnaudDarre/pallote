@@ -3,8 +3,8 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 export const Divider = ({
-  direction,
-  size,
+  direction = 'landscape',
+  size = 'md',
   className,
   ...props
 }) => {
@@ -35,9 +35,4 @@ Divider.propTypes = {
     'lg'
   ]),
   className: PropTypes.node
-}
-
-Divider.defaultProps = {
-  direction: 'landscape',
-  size: 'md'
 }
