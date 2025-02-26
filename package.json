@@ -7,13 +7,13 @@
   "workspaces": ["packages/*", "apps/*"],
   "scripts": {
     "watch:css": "pnpm --filter library-css watch",
-    "start:react": "pnpm --filter library-react start",
-    "start:docs": "pnpm --filter library-docs start",
+    "start-react": "pnpm --filter library-react start",
+    "start-docs": "pnpm --filter library-docs start",
     "build": "build:css && build:react",
-    "build:css": "pnpm --filter pallote-css build",
-    "build:react": "pnpm --filter pallote-react build",
-    "build:storybook": "pnpm --filter pallote-react build-storybook",
-    "build:docs": "pnpm --filter pallote-docs build"
+    "build-css": "pnpm --filter pallote-css build",
+    "build-react": "pnpm --filter pallote-react build",
+    "build-storybook": "pnpm --filter pallote-react build-storybook",
+    "build-docs": "pnpm --filter pallote-docs build"
   },
   "keywords": [],
   "author": "",
