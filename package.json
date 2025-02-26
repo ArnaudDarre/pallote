@@ -6,10 +6,14 @@
   "main": "index.js",
   "workspaces": ["packages/*", "apps/*"],
   "scripts": {
-    "build": "pnpm --filter pallote-css build && pnpm --filter pallote-react build",
-    "storybook": "pnpm --filter library-react storybook",
     "watch:css": "pnpm --filter library-css watch",
-    "docs": "pnpm --filter library-docs start"
+    "start:react": "pnpm --filter library-react start",
+    "start:docs": "pnpm --filter library-docs start",
+    "build": "build:css && build:react",
+    "build:css": "pnpm --filter pallote-css build",
+    "build:react": "pnpm --filter pallote-react build",
+    "build:storybook": "pnpm --filter pallote-react build-storybook",
+    "build:docs": "pnpm --filter pallote-docs build"
   },
   "keywords": [],
   "author": "",
