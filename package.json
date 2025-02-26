@@ -9,10 +9,10 @@
     "watch:css": "pnpm --filter library-css watch",
     "start-react": "pnpm --filter library-react start",
     "start-docs": "pnpm --filter library-docs start",
-    "build": "build:css && build:react",
+    "build": "pnpm build-css && pnpm build-react",
     "build-css": "pnpm --filter pallote-css build",
     "build-react": "pnpm --filter pallote-react build",
-    "build-storybook": "build-css && pnpm --filter pallote-react build-storybook",
+    "build-storybook": "pnpm build-css && pnpm --filter pallote-react build-storybook",
     "build-docs": "pnpm --filter pallote-docs build"
   },
   "keywords": [],
