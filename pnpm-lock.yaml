@@ -62,9 +62,6 @@ importers:
       onchange:
         specifier: ^7.1.0
         version: 7.1.0
-      pallote-css:
-        specifier: ^0.2.7
-        version: 0.2.53
       sass:
         specifier: ^1.71.1
         version: 1.85.0
@@ -4590,9 +4587,6 @@ packages:
   package-json@8.1.1:
     resolution: {integrity: sha512-cbH9IAIJHNj9uXi196JVsRlt7cHKak6u/e6AkL/bkRelZ7rlL3X1YKxsZwa36xipOEKAsdtmaG6aAJoM1fx2zA==}
     engines: {node: '>=14.16'}
-
-  pallote-css@0.2.53:
-    resolution: {integrity: sha512-ekQMstnEfnPG8DO8k0mtbLWh29PJaZ6eEJ499oRTmib8f+y2ZP0LLEwcK0uH3RTLgUT/IsuB41hH11S1HdJofQ==}
 
   param-case@3.0.4:
     resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}
@@ -12052,8 +12046,6 @@ snapshots:
       registry-auth-token: 5.1.0
       registry-url: 6.0.1
       semver: 7.7.1
-
-  pallote-css@0.2.53: {}
 
   param-case@3.0.4:
     dependencies:

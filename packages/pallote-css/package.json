@@ -36,7 +36,6 @@
   "devDependencies": {
     "ncp": "^2.0.0",
     "onchange": "^7.1.0",
-    "pallote-css": "^0.2.7",
     "sass": "^1.71.1",
     "uglify-js": "^3.17.4"
   }

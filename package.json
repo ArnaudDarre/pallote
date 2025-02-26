@@ -12,7 +12,7 @@
     "build": "build:css && build:react",
     "build-css": "pnpm --filter pallote-css build",
     "build-react": "pnpm --filter pallote-react build",
-    "build-storybook": "pnpm --filter pallote-react build-storybook",
+    "build-storybook": "build-css && pnpm --filter pallote-react build-storybook",
     "build-docs": "pnpm --filter pallote-docs build"
   },
   "keywords": [],
