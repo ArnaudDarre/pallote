@@ -10,7 +10,14 @@ export default {
     file: "dist/index.js",
     format: "esm",
   },
-  external: ["react", "react-dom"],
+  external: [
+    "react",
+    "react-dom",
+    "classnames",
+    "@phosphor-icons/react",
+    "react-syntax-highlighter",
+    "prop-types"
+  ],
   plugins: [
     peerDepsExternal(),
     resolve({ extensions: [".js", ".jsx"] }),
