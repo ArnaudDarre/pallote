@@ -56,7 +56,7 @@
 // size
 // —————————————————————————————————————————————————————————————————
 
-@mixin size($value, $size) {
+@mixin button-size($value, $size) {
   height: $size;
   gap: $size*.25;
   padding-right: $size*.33;
@@ -91,17 +91,17 @@
 
 .button {
 
-  @include size(md, 2rem);
-  &-xs { @include size(xs, 1rem); }
-  &-sm { @include size(sm, 1.5rem); }
-  &-lg { @include size(lg, 2.5rem); }
+  @include button-size(md, 2rem);
+  &-xs { @include button-size(xs, 1rem); }
+  &-sm { @include button-size(sm, 1.5rem); }
+  &-lg { @include button-size(lg, 2.5rem); }
 }
 
 // —————————————————————————————————————————————————————————————————
 // color
 // —————————————————————————————————————————————————————————————————
 
-@mixin color($prefix, $colors...) {
+@mixin button-color($prefix, $colors...) {
 
   @each $i in $colors {
     .#{$prefix}#{list.nth($i, 1)} {
@@ -145,7 +145,7 @@
   }
 }
 
-@include color('button',
+@include button-color('button',
   '' variables.$primary variables.$primary-contrast,
   '-secondary' variables.$secondary variables.$secondary-contrast,
   '-grey' variables.$text-disabled variables.$text,

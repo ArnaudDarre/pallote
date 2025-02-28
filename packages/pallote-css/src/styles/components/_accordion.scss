@@ -57,7 +57,7 @@
 // size
 // —————————————————————————————————————————————————————————————————
 
-@mixin size($proportion, $size) {
+@mixin accordion-size($proportion, $size) {
 
   .accordion {
 
@@ -96,9 +96,9 @@
 
 .accordion {
 
-  @include size(md, variables.$spacing-sm);
-  &--sm { @include size(sm, variables.$spacing-xs); }
-  &--lg { @include size(lg, variables.$spacing-md); }
+  @include accordion-size(md, variables.$spacing-sm);
+  &--sm { @include accordion-size(sm, variables.$spacing-xs); }
+  &--lg { @include accordion-size(lg, variables.$spacing-md); }
 }
 
 // —————————————————————————————————————————————————————————————————

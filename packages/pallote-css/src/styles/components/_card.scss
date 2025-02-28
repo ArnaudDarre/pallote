@@ -94,7 +94,7 @@
 // size
 // —————————————————————————————————————————————————————————————————
 
-@mixin size($value, $size) {
+@mixin card-size($value, $size) {
 
   &:not(.card--transparent) {
     border-radius: $size;
@@ -229,11 +229,11 @@
 }
 
 .card {
-  @include size(md, variables.$spacing-md+variables.$spacing-sm);
-  &--xs.card { @include size(xs, variables.$spacing-sm+variables.$spacing-xs); }
-  &--sm.card { @include size(sm, variables.$spacing-md); }
-  &--lg.card { @include size(lg, variables.$spacing-lg); }
-  &--xl.card { @include size(xl, variables.$spacing-lg+variables.$spacing-sm); }
+  @include card-size(md, variables.$spacing-md+variables.$spacing-sm);
+  &--xs.card { @include card-size(xs, variables.$spacing-sm+variables.$spacing-xs); }
+  &--sm.card { @include card-size(sm, variables.$spacing-md); }
+  &--lg.card { @include card-size(lg, variables.$spacing-lg); }
+  &--xl.card { @include card-size(xl, variables.$spacing-lg+variables.$spacing-sm); }
 }
 
 // —————————————————————————————————————————————————————————————————

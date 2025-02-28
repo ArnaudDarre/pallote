@@ -112,7 +112,7 @@
 // color
 // —————————————————————————————————————————————————————————————————
 
-@mixin color(
+@mixin section-color(
   $background-color,
   $title-color: variables.$primary,
   $color: variables.$text,
@@ -137,16 +137,16 @@
 }
 
 .section {
-  &-default { @include color(variables.$background-default); }
-  &-paper { @include color(variables.$background-paper); }
-  &-primary { @include color(
+  &-default { @include section-color(variables.$background-default); }
+  &-paper { @include section-color(variables.$background-paper); }
+  &-primary { @include section-color(
     variables.$primary, // background-color
     variables.$primary-contrast, // title-color
     variables.$primary-contrast, // color
     variables.$hover-contrast, // paper-color
     variables.$border-color-contrast // border-color
   );}
-  &-primaryLight { @include color(
+  &-primaryLight { @include section-color(
     variables.$primary-light, // background-color
     variables.$text, // title-color
     variables.$text, // color

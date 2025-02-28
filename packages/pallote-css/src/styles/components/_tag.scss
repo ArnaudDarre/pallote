@@ -49,7 +49,7 @@
 // color
 // —————————————————————————————————————————————————————————————————
 
-@mixin color($prefix, $colors...) {
+@mixin tag-color($prefix, $colors...) {
 
   @each $i in $colors {
     .#{$prefix}#{list.nth($i, 1)} {
@@ -59,7 +59,7 @@
   }
 }
 
-@include color('tag',
+@include tag-color('tag',
   '' variables.$primary variables.$primary-contrast,
   '-secondary' variables.$secondary variables.$secondary-contrast,
   '-grey' variables.$text-disabled variables.$text,

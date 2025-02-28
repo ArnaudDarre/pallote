@@ -86,7 +86,7 @@ $spacing-alert: variables.$spacing-sm;
 // color
 // —————————————————————————————————————————————————————————————————
 
-@mixin color($color, $background-color: variables.$info-light, $border-color: variables.$info) {
+@mixin alert-color($color, $background-color: variables.$info-light, $border-color: variables.$info) {
   @if $color == success { $background-color: variables.$success-light; $border-color: variables.$success; } 
   @else if $color == info { $background-color: variables.$info-light; $border-color: variables.$info; } 
   @else if $color == warning { $background-color: variables.$warning-light; $border-color: variables.$warning; } 
@@ -107,10 +107,10 @@ $spacing-alert: variables.$spacing-sm;
 
 .alert {
 
-  &--success { @include color(success); }
-  &--info { @include color(info); }
-  &--warning { @include color(warning); }
-  &--error { @include color(error); }
+  &--success { @include alert-color(success); }
+  &--info { @include alert-color(info); }
+  &--warning { @include alert-color(warning); }
+  &--error { @include alert-color(error); }
 }
 
 // —————————————————————————————————————————————————————————————————

@@ -170,7 +170,7 @@
 // color
 // —————————————————————————————————————————————————————————————————
 
-@mixin color($prefix, $colors...) {
+@mixin text-color($prefix, $colors...) {
 	@each $i in $colors {
 		.#{$prefix}#{list.nth($i, 1)} {
 			color: list.nth($i, 2) !important;
@@ -190,7 +190,7 @@
 	}
 }
 
-@include color('text-',
+@include text-color('text-',
 	'default' variables.$text,
 	'alt' variables.$text-alt,
 	'disabled' variables.$text-disabled,

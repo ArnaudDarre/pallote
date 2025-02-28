@@ -33,7 +33,7 @@
 // size
 // —————————————————————————————————————————————————————————————————
 
-@mixin size($size) {
+@mixin divider-size($size) {
   margin-top: $size;
   margin-bottom: $size;
 
@@ -46,7 +46,7 @@
 }
 
 .divider {
-  @include size(1rem);
-  &-sm { @include size(.5rem); }
-  &-lg { @include size(2rem); }
+  @include divider-size(1rem);
+  &-sm { @include divider-size(.5rem); }
+  &-lg { @include divider-size(2rem); }
 }

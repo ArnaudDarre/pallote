@@ -31,7 +31,7 @@ $spacing-status: .5rem;
 // color
 // —————————————————————————————————————————————————————————————————
 
-@mixin color($color) {
+@mixin status-color($color) {
 
   &:before {
     background-color: $color;
@@ -40,10 +40,10 @@ $spacing-status: .5rem;
 
 .status {
 
-  &-success { @include color(variables.$success); }
-  &-info { @include color(variables.$info); }
-  &-warning { @include color(variables.$warning); }
-  &-error { @include color(variables.$error); }
+  &-success { @include status-color(variables.$success); }
+  &-info { @include status-color(variables.$info); }
+  &-warning { @include status-color(variables.$warning); }
+  &-error { @include status-color(variables.$error); }
 }
 
 // —————————————————————————————————————————————————————————————————
