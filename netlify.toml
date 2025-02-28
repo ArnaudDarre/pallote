@@ -1,7 +1,0 @@
-[build]
-  command = "pnpm build-storybook"
-  publish = "packages/pallote-react/storybook-static"
-
-[build.environment]
-  NPM_FLAGS = "--version"
-  PNPM_FLAGS = "--recursive"
