@@ -9,6 +9,7 @@ import { Card } from './components/Card'
 import { CardActions } from './components/CardActions'
 import { CardContent } from './components/CardContent'
 import { CardHeader } from './components/CardHeader'
+import { CardMedia } from './components/CardMedia'
 import { Checkbox } from './components/Checkbox'
 import { Checkboxes } from './components/Checkboxes'
 import { Divider } from './components/Divider'
@@ -40,6 +41,7 @@ export {
   CardActions,
   CardContent,
   CardHeader,
+  CardMedia,
   Checkbox,
   Checkboxes,
   Divider,

@@ -7,9 +7,9 @@ export const CardActions = ({ direction, className, children, ...props }) => {
   return (
     <div
       className={classnames([
-        'card__actions',
+        'card_actions',
         {
-          [`card__actions--${direction}`]: direction
+          [`card_actions-${direction}`]: direction
         },
         className
       ])}

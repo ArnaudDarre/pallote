@@ -14,10 +14,7 @@ export const CardExample = ({
   return (
     <Card {...props}>
       <CardMedia image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" height="66.666%" width={width} />
-      <CardHeader
-        title={title}
-        subtitle="Edible mushrooms"
-      />
+      <CardHeader title={title} />
     </Card>
   )
 }

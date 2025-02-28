@@ -11,7 +11,7 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
-.buttons {
+.buttons, %buttons {
   display: flex;
   flex-wrap: wrap; // set on multiple lines if wider than parent width
   width: 100%;

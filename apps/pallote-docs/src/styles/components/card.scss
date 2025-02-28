@@ -1,8 +1,11 @@
 @use 'pallote-css/styles/common/variables';
-
 @use 'pallote-css/styles/utilities/text';
 
 .card {
+
+  &:not(.card-hasShadow) {
+    box-shadow: none;
+  }
 
   &.padding--lg {
     padding: 1.5rem !important;
@@ -16,11 +19,8 @@
     text-indent: -23px;
     color: variables.$primary;
   }
-
-  p {
-    @extend %body;
-  }
 }
+
 .card[class*="cardContainer_"] {
   box-shadow: none;
   border: variables.$border;
