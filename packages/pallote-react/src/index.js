@@ -3,6 +3,7 @@ import { Color } from './utilities/Color'
 import { Display } from './utilities/Display'
 import { Text } from './utilities/Text'
 // components
+import { Breadcrumbs } from './components/Breadcrumbs'
 import { Button } from './components/Button'
 import { Buttons } from './components/Buttons'
 import { Card } from './components/Card'
@@ -35,6 +36,7 @@ export {
   Display,
   Text,
   // components
+  Breadcrumbs,
   Button,
   Buttons,
   Card,

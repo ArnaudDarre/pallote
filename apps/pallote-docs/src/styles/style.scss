@@ -48,17 +48,6 @@ a {
   }
 }
 
-.markdown {
-
-  a:not(.button) {
-    text-decoration: underline;
-    
-    &:hover {
-      text-decoration-thickness: 3px;
-    }
-  }
-}
-
 .hash-link {
   padding-right: .25rem !important;
   padding-left: .25rem !important;

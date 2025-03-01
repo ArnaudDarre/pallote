@@ -61,6 +61,14 @@
   h1.section_title {
     margin-bottom: 0;
   }
+
+  > p > a {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration-thickness: 3px;
+    }
+  }
 }
 
 // grid links on main page
