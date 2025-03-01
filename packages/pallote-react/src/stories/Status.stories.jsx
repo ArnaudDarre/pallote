@@ -22,7 +22,7 @@ Playground.args = {
 }
 
 export const Color = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item><Status>Inactive</Status></Grid>
     <Grid item><Status color="success">Success</Status></Grid>
     <Grid item><Status color="info">Info</Status></Grid>

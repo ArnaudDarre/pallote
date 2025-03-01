@@ -31,7 +31,7 @@ Playground.args = {
 }
 
 export const FullWidth = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item md={4} sm={12}>
       <Card>
         <CardHeader

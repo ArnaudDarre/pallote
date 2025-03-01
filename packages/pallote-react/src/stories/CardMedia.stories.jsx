@@ -32,7 +32,7 @@ Playground.args = {
 }
 
 export const Width = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item sm={12}>
       <Card direction="landscape">
         <CardMedia width={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
@@ -51,7 +51,7 @@ Width.parameters = {
 }
 
 export const Height = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item md={4} sm={12}>
       <Card>
         <CardMedia height={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
@@ -70,7 +70,7 @@ Height.parameters = {
 }
 
 export const FullWidth = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item md={4} sm={12}>
       <Card>
         <CardMedia fullWidth height={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />

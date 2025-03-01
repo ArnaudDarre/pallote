@@ -39,7 +39,7 @@ Playground.args = {
 }
 
 export const Direction = () => (
-  <Grid wrapper spacing={4} direction="column">
+  <Grid spacing={4} direction="column">
     <Grid item>
       <CardActions direction="portrait">
         <Button color="grey">Portrait</Button>

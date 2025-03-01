@@ -36,7 +36,7 @@ Playground.args = {
 }
 
 export const Directions = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item>
       <Buttons>
         <Button>Landscape</Button>

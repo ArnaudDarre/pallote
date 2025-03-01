@@ -29,8 +29,8 @@ Playground.args = {
 }
 
 export const Variant = () => (
-  <Grid wrapper spacing={2}>
-    <Grid item wrapper spacing={2} alignItems="baseline">
+  <Grid spacing={4}>
+    <Grid item spacing={2} alignItems="baseline">
       <Grid item><Text variant="h1">h1</Text></Grid>
       <Grid item><Text variant="h2">h2</Text></Grid>
       <Grid item><Text variant="h3">h3</Text></Grid>
@@ -38,7 +38,7 @@ export const Variant = () => (
       <Grid item><Text variant="h5">h5</Text></Grid>
       <Grid item><Text variant="h6">h6</Text></Grid>
     </Grid>
-    <Grid item wrapper spacing={2} alignItems="baseline">
+    <Grid item spacing={2} alignItems="baseline">
       <Grid item><Text variant="subtitle">Subtitle</Text></Grid>
       <Grid item><Text variant="body">Body</Text></Grid>
       <Grid item><Text variant="caption">Caption</Text></Grid>
@@ -48,23 +48,23 @@ export const Variant = () => (
 )
 
 export const Align = () => (
-  <Grid wrapper spacing={2} direction="column">
-    <Grid item><Text align="left" className="w-100">Left</Text></Grid>
-    <Grid item><Text align="center" className="w-100">Center</Text></Grid>
-    <Grid item><Text align="right" className="w-100">Right</Text></Grid>
-    <Grid item><Text align="justify" className="w-100">Justify</Text></Grid>
+  <Grid spacing={4} direction="column">
+    <Grid item><Text align="left" className="w-full">Left</Text></Grid>
+    <Grid item><Text align="center" className="w-full">Center</Text></Grid>
+    <Grid item><Text align="right" className="w-full">Right</Text></Grid>
+    <Grid item><Text align="justify" className="w-full">Justify</Text></Grid>
   </Grid>
 )
 
 export const Weight = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item><Text weight="regular">Regular</Text></Grid>
     <Grid item><Text weight="bold">Bold</Text></Grid>
   </Grid>
 )
 
 export const Transform = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item><Text transform="none">None</Text></Grid>
     <Grid item><Text transform="capitalize">Capitalize</Text></Grid>
     <Grid item><Text transform="uppercase">Uppercase</Text></Grid>
@@ -91,22 +91,22 @@ export const Code = () => (
 )
 
 export const Color = () => (
-  <Grid wrapper spacing={2}>
-    <Grid item wrapper spacing={2}>
+  <Grid spacing={4}>
+    <Grid item spacing={2}>
       <Grid item><Text color="default">Default</Text></Grid>
       <Grid item><Text color="alt">Alt</Text></Grid>
       <Grid item><Text color="disabled">Disabled</Text></Grid>
     </Grid>
-    <Grid item wrapper spacing={2}>
+    <Grid item spacing={2}>
       <Grid item className="fill-contrast"><Text color="contrast">Contrast</Text></Grid>
       <Grid item className="fill-contrast"><Text color="contrastAlt">Contrast alt</Text></Grid>
       <Grid item className="fill-contrast"><Text color="contrastDisabled">Contrast disabled</Text></Grid>
     </Grid>
-    <Grid item wrapper spacing={2}>
+    <Grid item spacing={2}>
       <Grid item><Text color="primary">Primary</Text></Grid>
       <Grid item><Text color="secondary">Secondary</Text></Grid>
     </Grid>
-    <Grid item wrapper spacing={2}>
+    <Grid item spacing={2}>
       <Grid item><Text color="success">Success</Text></Grid>
       <Grid item><Text color="info">Info</Text></Grid>
       <Grid item><Text color="warning">Warning</Text></Grid>

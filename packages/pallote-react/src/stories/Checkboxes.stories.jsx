@@ -31,7 +31,7 @@ Playground.args = {
 }
 
 export const Direction = () => (
-  <Grid wrapper direction="column" spacing={2}>
+  <Grid direction="column" spacing={2}>
     <Grid item>
       <Checkboxes id="portrait" label="Portrait">
         <Checkbox id="portrait_1" value="1" label="Option 1" />

@@ -33,8 +33,8 @@ Playground.args = {
 }
 
 export const Show = () => (
-  <Grid wrapper spacing={2}>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+  <Grid spacing={4}>
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="show='mobile-sm'" dense /></Grid>
       <Display show="mobile-sm">
         <Grid item>
@@ -42,7 +42,7 @@ export const Show = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="show='mobile'" dense /></Grid>
       <Display show="mobile">
         <Grid item>
@@ -50,7 +50,7 @@ export const Show = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="show='tablet'" dense /></Grid>
       <Display show="tablet">
         <Grid item>
@@ -58,7 +58,7 @@ export const Show = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="show='laptop'" dense /></Grid>
       <Display show="laptop">
         <Grid item>
@@ -66,7 +66,7 @@ export const Show = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="show='desktop'" dense /></Grid>
       <Display show="desktop">
         <Grid item>
@@ -74,7 +74,7 @@ export const Show = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="show='touch'" dense /></Grid>
       <Display show="touch">
         <Grid item>
@@ -94,8 +94,8 @@ Show.parameters = {
 }
 
 export const Hide = () => (
-  <Grid wrapper spacing={2}>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+  <Grid spacing={4}>
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="hide='mobile-sm'" dense /></Grid>
       <Display hide="mobile-sm">
         <Grid item>
@@ -103,7 +103,7 @@ export const Hide = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="hide='mobile'" dense /></Grid>
       <Display hide="mobile">
         <Grid item>
@@ -111,7 +111,7 @@ export const Hide = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="hide='tablet'" dense /></Grid>
       <Display hide="tablet">
         <Grid item>
@@ -119,7 +119,7 @@ export const Hide = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="hide='laptop'" dense /></Grid>
       <Display hide="laptop">
         <Grid item>
@@ -127,7 +127,7 @@ export const Hide = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="hide='desktop'" dense /></Grid>
       <Display hide="desktop">
         <Grid item>
@@ -135,7 +135,7 @@ export const Hide = () => (
         </Grid>
       </Display>
     </Grid>
-    <Grid item wrapper col={4} spacing={1} direction="column">
+    <Grid item col={4} spacing={1} direction="column">
       <Grid item><Snippet content="hide='touch'" dense /></Grid>
       <Display hide="touch">
         <Grid item>

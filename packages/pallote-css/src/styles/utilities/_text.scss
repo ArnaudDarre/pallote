@@ -24,6 +24,38 @@
 	line-height: $line-height;
 }
 
+.body, %body {
+	@include font-size(
+		variables.$body-size,
+		variables.$body-weight,
+		variables.$body-line-height
+	);
+}
+
+.subtitle, %subtitle {
+	@include font-size(
+		variables.$subtitle-size,
+		variables.$subtitle-weight,
+		variables.$subtitle-line-height
+	);	
+}	
+
+.caption, %caption {
+	@include font-size(
+		variables.$caption-size,
+		variables.$caption-weight,
+		variables.$caption-line-height
+	);
+}
+
+.overline, %overline {
+	@include font-size(
+		variables.$overline-size,
+		variables.$overline-weight,
+		variables.$overline-line-height
+	);
+}
+
 .h1, %h1 {
 	@include font-size(
 		variables.$h1-size,
@@ -69,38 +101,6 @@
 		variables.$h6-size,
 		variables.$h6-weight,
 		variables.$h6-line-height
-	);
-}
-
-.subtitle, %subtitle {
-	@include font-size(
-		variables.$subtitle-size,
-		variables.$subtitle-weight,
-		variables.$subtitle-line-height
-	);
-}
-
-.body, %body {
-	@include font-size(
-		variables.$body-size,
-		variables.$body-weight,
-		variables.$body-line-height
-	);
-}
-
-.caption, %caption {
-	@include font-size(
-		variables.$caption-size,
-		variables.$caption-weight,
-		variables.$caption-line-height
-	);
-}
-
-.overline, %overline {
-	@include font-size(
-		variables.$overline-size,
-		variables.$overline-weight,
-		variables.$overline-line-height
 	);
 }
 

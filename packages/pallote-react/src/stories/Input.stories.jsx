@@ -23,7 +23,7 @@ const Template = (args) => <Input {...args} />
 export const Playground = Template.bind({})
 
 export const Type = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item md={4}><Input type="date" id="date" label="Date" /></Grid>
     <Grid item md={4}><Input type="email" id="email" label="Email" /></Grid>
     <Grid item md={4}><Input type="number" id="number" label="Number" /></Grid>

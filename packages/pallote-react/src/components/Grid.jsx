@@ -3,14 +3,13 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 export const Grid = ({
-  wrapper,
   item,
   wrap,
   direction,
   justifyContent,
   alignItems,
   alignSelf,
-  flexGrow,
+  col,
   xs,
   sm,
   md,
@@ -24,21 +23,20 @@ export const Grid = ({
   return (
     <div
       className={classnames(
+        item ? 'grid_item' : 'grid',
         {
-          'grid': wrapper,
-          'grid__item': item,
-          'grid--wrap': wrap,
-          [`grid--${direction}`]: direction,
-          [`grid--jc-${justifyContent}`]: justifyContent,
-          [`grid--ai-${alignItems}`]: alignItems,
-          [`grid--as-${alignSelf}`]: alignSelf,
-          [`grid--fg-${flexGrow}`]: flexGrow,
-          [`grid--xs${xs}`]: xs,
-          [`grid--sm${sm}`]: sm,
-          [`grid--md${md}`]: md,
-          [`grid--lg${lg}`]: lg,
-          [`grid--xl${xl}`]: xl,
-          [`grid--spacing${spacing}`]: spacing
+          'grid-wrap': wrap,
+          [`grid-${direction}`]: direction,
+          [`grid-jc-${justifyContent}`]: justifyContent,
+          [`grid-ai-${alignItems}`]: alignItems,
+          [`grid-as-${alignSelf}`]: alignSelf,
+          [`grid_item-${col}`]: col,
+          [`grid_item-xs-${xs}`]: xs,
+          [`grid_item-sm-${sm}`]: sm,
+          [`grid_item-md-${md}`]: md,
+          [`grid_item-lg-${lg}`]: lg,
+          [`grid_item-xl-${xl}`]: xl,
+          [`grid-spacing-${spacing}`]: spacing
         },
         className
       )}
@@ -50,7 +48,6 @@ export const Grid = ({
 }
 
 Grid.propTypes = {
-  wrapper: PropTypes.bool,
   item: PropTypes.bool,
   wrap: PropTypes.bool,
   direction: PropTypes.oneOf([
@@ -81,10 +78,8 @@ Grid.propTypes = {
     'start',
     'baseline'
   ]),
-  flexGrow: PropTypes.oneOf([
-    0,
-    1,
-    'auto'
+  col: PropTypes.oneOf([
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
   ]),
   xs: PropTypes.oneOf([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12

@@ -57,7 +57,7 @@ Playground.args = {
 }
 
 export const Size = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4} alignItems="start">
     <Grid item sm={2}><CardExample size="xs" title="XSmall" /></Grid>
     <Grid item sm={3}><CardExample size="sm" title="Small" /></Grid>
     <Grid item sm={4}><CardExample title="Medium (default)" /></Grid>
@@ -67,7 +67,7 @@ export const Size = () => (
 )
 
 export const Fill = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item sm={4}><CardExample title="Default" fill="default" /></Grid>
     <Grid item sm={4}><CardExample title="Paper" /></Grid>
     <Grid item sm={4}><CardExample title="Primary" fill="primary" /></Grid>
@@ -80,14 +80,14 @@ export const Fill = () => (
 )
 
 export const Direction = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4} alignItems="start">
     <Grid item sm={4}><CardExample title="Portrait" /></Grid>
     <Grid item sm={8}><CardExample title="Landscape" direction="landscape" width={100} /></Grid>
   </Grid>
 )
 
 export const Align = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item sm={4}><CardExample title="Left (default)" /></Grid>
     <Grid item sm={4}><CardExample title="Center" align="center" /></Grid>
     <Grid item sm={4}><CardExample title="Right" align="right" /></Grid>
@@ -95,13 +95,13 @@ export const Align = () => (
 )
 
 export const HasShadow = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item sm={4}><CardExample title="With box shadow" hasShadow /></Grid>
   </Grid>
 )
 
 export const Transparent = () => (
-  <Grid wrapper spacing={2}>
+  <Grid spacing={4}>
     <Grid item sm={4}><CardExample title="Transparent" transparent /></Grid>
   </Grid>
 )

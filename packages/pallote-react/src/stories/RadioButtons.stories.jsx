@@ -31,7 +31,7 @@ Playground.args = {
 }
 
 export const Direction = () => (
-  <Grid wrapper spacing={2} direction="column">
+  <Grid spacing={4} direction="column">
     <Grid item>
       <RadioButtons direction="portrait" id="portrait" label="Portrait">
         <Radio name="portrait" id="portrait_1" value="1" label="Option 1" />

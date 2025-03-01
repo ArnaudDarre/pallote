@@ -21,13 +21,13 @@ Playground.args = {
 }
 
 export const Color = () => (
-  <Grid wrapper spacing={2}>
-    <Grid item wrapper spacing={2}>
+  <Grid spacing={4}>
+    <Grid item spacing={2}>
       <Grid item><Tag>Primary</Tag></Grid>
       <Grid item><Tag color="secondary">Secondary</Tag></Grid>
       <Grid item><Tag color="grey">Grey</Tag></Grid>
     </Grid>
-    <Grid item wrapper spacing={2}>
+    <Grid item spacing={2}>
       <Grid item><Tag color="success">Success</Tag></Grid>
       <Grid item><Tag color="info">Info</Tag></Grid>
       <Grid item><Tag color="warning">Warning</Tag></Grid>

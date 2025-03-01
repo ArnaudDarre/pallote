@@ -40,7 +40,7 @@ Checked.parameters = {
 }
 
 export const Disabled = () => (
-  <Grid wrapper spacing={2} direction="column">
+  <Grid spacing={4} direction="column">
     <Grid item><Radio label="Disabled" id="disabled" name="disabled" value="disabled" disabled></Radio></Grid>
     <Grid item><Radio label="Disabled" id="disabled" name="disabled" value="disabled" checked disabled></Radio></Grid>
   </Grid>
