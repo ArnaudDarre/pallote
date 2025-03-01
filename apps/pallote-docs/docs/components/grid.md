@@ -9,6 +9,8 @@ import { GridExample } from "./partials/grid"
 
 # Grid
 
+Container element to arrange items on a page and create a responsive layout.
+
 <div class="docs_block">
   <Grid spacing={2}>
     <Grid item><GridExample fill="grey5" content="1" /></Grid>

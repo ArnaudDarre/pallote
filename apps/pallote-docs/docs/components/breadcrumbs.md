@@ -9,6 +9,8 @@ import { breadcrumbItems } from "./partials/breadcrumbs"
 
 # Breadcrumbs
 
+List of links to allow users to navigate the page tree.
+
 <div class="docs_block">
   <Breadcrumbs items={breadcrumbItems} />
 </div>
