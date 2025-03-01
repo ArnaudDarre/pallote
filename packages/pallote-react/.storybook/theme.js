@@ -11,8 +11,8 @@ export default create({
   brandImage: 'https://storybook.js.org/images/placeholders/350x150.png',
   brandTarget: '_self',
 
-  colorPrimary: '#C24889',
-  colorSecondary: '#0076AC',
+  colorPrimary: '#9E6D04',
+  colorSecondary: '#3C6BF4',
 
   appBg: '#F2F3F4',
   appContentBg: '#F2F3F4',
@@ -24,7 +24,7 @@ export default create({
   textInverseColor: '#FFFFFF',
 
   barTextColor: '#000A1E',
-  barSelectedColor: '#0076AC',
+  barSelectedColor: '#3C6BF4',
   barHoverColor: '#585C6D',
   barBg: '#FFFFFF',
 

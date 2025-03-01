@@ -57,12 +57,12 @@ $text-contrast-disabled: rgba($text-contrast, 0.3) !default;
 
 // brand
 
-$primary: #0076AC !default;
+$primary: #3C6BF4 !default;
 $primary-light: color.mix($main, $primary, 70%) !default;
 $primary-dark: color.mix($contrast, $primary, 50%) !default;
 $primary-contrast: $text-contrast !default;
 
-$secondary: #C24889 !default;
+$secondary: #9E6D04 !default;
 $secondary-light: color.mix($main, $secondary, 70%) !default;
 $secondary-dark: color.mix($contrast, $secondary, 50%) !default;
 $secondary-contrast: $text-contrast !default;

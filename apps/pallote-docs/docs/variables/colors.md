@@ -51,8 +51,8 @@ These are the default color style, which you can override them to match your own
 
 | Name | Value | |
 | - | - | - |
-| `$primary`<br></br>`$primary-contrast` | `#0076AC`<br></br>`$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/0076AC?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
-| `$secondary`<br></br>`$secondary-contrast` | `#C24889`<br></br>`$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/C24889?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
+| `$primary`<br></br>`$primary-contrast` | `#3C6BF4`<br></br>`$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/3C6BF4?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
+| `$secondary`<br></br>`$secondary-contrast` | `#9E6D04`<br></br>`$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/9E6D04?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
 
 ### Status
 
