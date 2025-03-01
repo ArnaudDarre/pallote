@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Checkbox } from '../components/Checkbox'
 import { Checkboxes } from '../components/Checkboxes'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/Checkboxes',
@@ -31,7 +31,7 @@ Playground.args = {
 }
 
 export const Direction = () => (
-  <Grid direction="column" spacing={2}>
+  <Grid direction="column" gap={2}>
     <Grid item>
       <Checkboxes id="portrait" label="Portrait">
         <Checkbox id="portrait_1" value="1" label="Option 1" />

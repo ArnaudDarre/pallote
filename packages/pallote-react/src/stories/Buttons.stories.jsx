@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Button } from '../components/Button'
 import { Buttons } from '../components/Buttons'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/Buttons',
@@ -36,7 +36,7 @@ Playground.args = {
 }
 
 export const Directions = () => (
-  <Grid spacing={4}>
+  <Grid gap={4}>
     <Grid item>
       <Buttons>
         <Button>Landscape</Button>

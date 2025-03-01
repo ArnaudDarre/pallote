@@ -1,12 +1,16 @@
+// common
 @use "styles/common/_variables";
 @use "styles/common/_mixins";
 @use "styles/common/_reset";
 @use "styles/common/_editor";
 // @use "styles/common/_fontface";
 @use "styles/common/_global";
+// utilities
 @use "styles/utilities/_color";
 @use "styles/utilities/_global" as global2;
+@use "styles/utilities/_grid";
 @use "styles/utilities/_text";
+// components
 @use "styles/components/_accordion";
 @use "styles/components/_alert";
 @use "styles/components/_breadcrumbs";
@@ -15,7 +19,6 @@
 @use "styles/components/_card";
 @use "styles/components/_divider";
 @use "styles/components/_form";
-@use "styles/components/_grid";
 @use "styles/components/_input";
 @use "styles/components/_link";
 @use "styles/components/_list";

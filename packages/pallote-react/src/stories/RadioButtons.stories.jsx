@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Radio } from '../components/Radio'
 import { RadioButtons } from '../components/RadioButtons'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/RadioButtons',
@@ -31,7 +31,7 @@ Playground.args = {
 }
 
 export const Direction = () => (
-  <Grid spacing={4} direction="column">
+  <Grid gap={4} direction="column">
     <Grid item>
       <RadioButtons direction="portrait" id="portrait" label="Portrait">
         <Radio name="portrait" id="portrait_1" value="1" label="Option 1" />

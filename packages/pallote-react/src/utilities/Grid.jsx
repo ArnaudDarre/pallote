@@ -6,16 +6,16 @@ export const Grid = ({
   item,
   wrap,
   direction,
-  justifyContent,
-  alignItems,
-  alignSelf,
+  justify,
+  items,
+  self,
+  gap,
   col,
-  xs,
-  sm,
-  md,
-  lg,
-  xl,
-  spacing,
+  colxs,
+  colsm,
+  colmd,
+  collg,
+  colxl,
   className,
   children,
   ...props
@@ -23,20 +23,20 @@ export const Grid = ({
   return (
     <div
       className={classnames(
-        item ? 'grid_item' : 'grid',
+        item ? 'flex_item' : 'flex',
         {
-          'grid-wrap': wrap,
-          [`grid-${direction}`]: direction,
-          [`grid-jc-${justifyContent}`]: justifyContent,
-          [`grid-ai-${alignItems}`]: alignItems,
-          [`grid-as-${alignSelf}`]: alignSelf,
-          [`grid_item-${col}`]: col,
-          [`grid_item-xs-${xs}`]: xs,
-          [`grid_item-sm-${sm}`]: sm,
-          [`grid_item-md-${md}`]: md,
-          [`grid_item-lg-${lg}`]: lg,
-          [`grid_item-xl-${xl}`]: xl,
-          [`grid-spacing-${spacing}`]: spacing
+          'flex-wrap': wrap,
+          [`direction-${direction}`]: direction,
+          [`justify-${justify}`]: justify,
+          [`items-${items}`]: items,
+          [`slef-${self}`]: self,
+          [`col-${col}`]: col,
+          [`col-xs-${colxs}`]: colxs,
+          [`col-sm-${colsm}`]: colsm,
+          [`col-md-${colmd}`]: colmd,
+          [`col-lg-${collg}`]: collg,
+          [`col-xl-${colxl}`]: colxl,
+          [`gap-${gap}`]: gap
         },
         className
       )}
@@ -56,7 +56,7 @@ Grid.propTypes = {
     'row',
     'rowReverse'
   ]),
-  justifyContent: PropTypes.oneOf([
+  justify: PropTypes.oneOf([
     'center',
     'end',
     'start',
@@ -64,14 +64,14 @@ Grid.propTypes = {
     'spaceBetween',
     'spaceEvenly'
   ]),
-  alignItems: PropTypes.oneOf([
+  items: PropTypes.oneOf([
     'stretch',
     'center',
     'end',
     'start',
     'baseline'
   ]),
-  alignSelf: PropTypes.oneOf([
+  self: PropTypes.oneOf([
     'stretch',
     'center',
     'end',
@@ -81,22 +81,22 @@ Grid.propTypes = {
   col: PropTypes.oneOf([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
   ]),
-  xs: PropTypes.oneOf([
+  colxs: PropTypes.oneOf([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
   ]),
-  sm: PropTypes.oneOf([
+  colsm: PropTypes.oneOf([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
   ]),
-  md: PropTypes.oneOf([
+  colmd: PropTypes.oneOf([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
   ]),
-  lg: PropTypes.oneOf([
+  collg: PropTypes.oneOf([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
   ]),
-  xl: PropTypes.oneOf([
+  colxl: PropTypes.oneOf([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
   ]),
-  spacing: PropTypes.oneOf([
+  gap: PropTypes.oneOf([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
   ]),
   className: PropTypes.node,

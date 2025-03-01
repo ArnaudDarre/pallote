@@ -5,18 +5,18 @@
 // elements
 // wrap
 // direction
-// justifyContent
-// alignItems
-// alignSelf
-// spacing and width
+// justify
+// items
+// self
+// gap and col
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
 // elements
 // —————————————————————————————————————————————————————————————————
 
-.grid,
-.grid_item {
+.flex,
+.flex_item {
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
@@ -28,10 +28,10 @@
 // —————————————————————————————————————————————————————————————————
 
 // have children wrap automatically
-.grid-wrap {
+.flex-wrap {
   justify-content: center;
 
-  > .grid_item {
+  > .flex_item {
     flex: 1 0 0;
 
     > * {
@@ -44,44 +44,44 @@
 // direction
 // —————————————————————————————————————————————————————————————————
 
-.grid-column { flex-direction: column; }
-.grid-columnReverse { flex-direction: column-reverse; }
-.grid-row { flex-direction: row; flex-wrap: wrap; }
-.grid-rowReverse { flex-direction: row-reverse; flex-wrap: wrap; }
+.direction-column { flex-direction: column; }
+.direction-columnReverse { flex-direction: column-reverse; }
+.direction-row { flex-direction: row; flex-wrap: wrap; }
+.direction-rowReverse { flex-direction: row-reverse; flex-wrap: wrap; }
 
 // —————————————————————————————————————————————————————————————————
-// justifyContent
+// justify
 // —————————————————————————————————————————————————————————————————
 
-.grid-jc-center { justify-content: center;}
-.grid-jc-end { justify-content: flex-end;}
-.grid-jc-start { justify-content: flex-start;}
-.grid-jc-spaceAround { justify-content: space-around;}
-.grid-jc-spaceBetween { justify-content: space-between;}
-.grid-jc-spaceEvenly { justify-content: space-evenly;}
+.justify-center { justify-content: center;}
+.justify-end { justify-content: flex-end;}
+.justify-start { justify-content: flex-start;}
+.justify-spaceAround { justify-content: space-around;}
+.justify-spaceBetween { justify-content: space-between;}
+.justify-spaceEvenly { justify-content: space-evenly;}
 
 // —————————————————————————————————————————————————————————————————
-// alignItems
+// items
 // —————————————————————————————————————————————————————————————————
 
-.grid-ai-stretch { align-items: stretch; }
-.grid-ai-center { align-items: center; }
-.grid-ai-end { align-items: flex-end; }
-.grid-ai-start { align-items: flex-start; }
-.grid-ai-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+.items-start { align-items: flex-start; }
+.items-baseline { align-items: baseline; }
 
 // —————————————————————————————————————————————————————————————————
-// alignSelf
+// self
 // —————————————————————————————————————————————————————————————————
 
-.grid-as-stretch { align-self: stretch; }
-.grid-as-center { align-self: center; }
-.grid-as-end { align-self: flex-end; }
-.grid-as-start { align-self: flex-start; }
-.grid-as-baseline { align-self: baseline; }
+.self-stretch { align-self: stretch; }
+.self-center { align-self: center; }
+.self-end { align-self: flex-end; }
+.self-start { align-self: flex-start; }
+.self-baseline { align-self: baseline; }
 
 // —————————————————————————————————————————————————————————————————
-// spacing and width
+// gap and col
 // —————————————————————————————————————————————————————————————————
 
 $columns: 12;
@@ -94,26 +94,22 @@ $breakpoints: (
 );
 
 @for $i from 1 through $columns {
-  .grid_item-#{$i} {
+  .col-#{$i} {
     width: variables.$col * $i;
   }
 }
 
-[class*="grid-spacing"],
-[class*="grid_item-xs"],
-[class*="grid_item-sm"],
-[class*="grid_item-md"],
-[class*="grid_item-lg"],
-[class*="grid_item-xl"] {
+[class*="gap-"],
+[class*="col-"] {
   width: 100%;
 }
 
 @for $i from 1 through $columns {
-  .grid-spacing-#{$i} {
+  .gap-#{$i} {
     gap: #{$i * .25}rem;
     
     @for $j from 1 through $columns {
-      > .grid_item-#{$j} {
+      > .col-#{$j} {
         width: calc((variables.$col * $j) - (#{$i * .25}rem * (($columns / $j - 1) / ($columns / $j))));
       }
     }
@@ -121,7 +117,7 @@ $breakpoints: (
     @each $suffix, $breakpoint in $breakpoints {
       @include mixins.responsive(up, $breakpoint) {
         @for $j from 1 through $columns {
-          > .grid_item-#{$suffix}-#{$j} {
+          > .col-#{$suffix}-#{$j} {
             width: calc((variables.$col * $j) - (#{$i * .25}rem * (($columns / $j - 1) / ($columns / $j))));
           }
         }

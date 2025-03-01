@@ -45,7 +45,7 @@ For the CSS library, you do not need to add the `required` property to the form 
 Change the input type property.
 
 <div class="docs_block">
-  <Grid spacing={4}>
+  <Grid gap={4}>
     <Grid item xs="6"><Input type="date" id="date" label="Date" /></Grid>
     <Grid item xs="6"><Input type="email" id="email" label="Email" /></Grid>
     <Grid item xs="6"><Input type="number" id="number" label="Number" /></Grid>

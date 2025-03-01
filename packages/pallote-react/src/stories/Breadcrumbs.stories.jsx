@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Breadcrumbs } from '../components/Breadcrumbs'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/Breadcrumbs',
@@ -34,7 +34,7 @@ Playground.args = {
 }
 
 export const Separator = () => (
-  <Grid spacing={4} direction="column">
+  <Grid gap={4} direction="column">
     <Grid item><Breadcrumbs items={breadcrumbItems} /></Grid>
     <Grid item><Breadcrumbs items={breadcrumbItems} separator="arrow" /></Grid>
   </Grid>

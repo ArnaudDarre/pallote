@@ -1,6 +1,7 @@
 // utilities
 import { Color } from './utilities/Color'
 import { Display } from './utilities/Display'
+import { Grid } from './utilities/Grid'
 import { Text } from './utilities/Text'
 // components
 import { Breadcrumbs } from './components/Breadcrumbs'
@@ -14,7 +15,6 @@ import { CardMedia } from './components/CardMedia'
 import { Checkbox } from './components/Checkbox'
 import { Checkboxes } from './components/Checkboxes'
 import { Divider } from './components/Divider'
-import { Grid } from './components/Grid'
 import { Input } from './components/Input'
 import { List } from './components/List'
 import { ListItem } from './components/ListItem'
@@ -34,6 +34,7 @@ export {
   // utilities
   Color,
   Display,
+  Grid,
   Text,
   // components
   Breadcrumbs,
@@ -47,7 +48,6 @@ export {
   Checkbox,
   Checkboxes,
   Divider,
-  Grid,
   Input,
   List,
   ListItem,

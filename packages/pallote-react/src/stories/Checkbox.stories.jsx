@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Checkbox } from '../components/Checkbox'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/Checkbox',
@@ -39,7 +39,7 @@ Checked.parameters = {
 }
 
 export const Disabled = () => (
-  <Grid spacing={4} direction="column">
+  <Grid gap={4} direction="column">
     <Grid item><Checkbox label="Disabled" id="disabled" value="disabled" disabled></Checkbox></Grid>
     <Grid item><Checkbox label="Disabled" id="disabled" value="disabled" checked disabled></Checkbox></Grid>
   </Grid>

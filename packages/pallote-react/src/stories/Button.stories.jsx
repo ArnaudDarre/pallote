@@ -3,7 +3,7 @@ import { Coffee, Moon, Sun } from '@phosphor-icons/react'
 
 import { Text } from '../utilities/Text'
 import { Button } from '../components/Button'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/Button',
@@ -22,7 +22,7 @@ const Template = (args) => <Button {...args} />
 export const Playground = Template.bind({})
 
 export const Component = () => (
-  <Grid spacing={4}>
+  <Grid gap={4}>
     <Grid item><Button>Button</Button></Grid>
     <Grid item><Button component="a">Anchor link</Button></Grid>
     <Grid item><Button component={Text}>Component</Button></Grid>
@@ -38,7 +38,7 @@ Component.parameters = {
 }
 
 export const Kind = () => (
-  <Grid spacing={4}>
+  <Grid gap={4}>
     <Grid item><Button>Text</Button></Grid>
     <Grid item><Button kind="icon"><Coffee /></Button></Grid>
   </Grid>
@@ -53,7 +53,7 @@ Kind.parameters = {
 }
 
 export const Variant = () => (
-  <Grid spacing={4}>
+  <Grid gap={4}>
     <Grid item><Button>Fill</Button></Grid>
     <Grid item><Button variant="stroke">Stroke</Button></Grid>
     <Grid item><Button variant="transparent">Transparent</Button></Grid>
@@ -69,7 +69,7 @@ Variant.parameters = {
 }
 
 export const Size = () => (
-  <Grid spacing={4}>
+  <Grid gap={4}>
     <Grid item><Button size="xs">XSmall</Button></Grid>
     <Grid item><Button size="sm">Small</Button></Grid>
     <Grid item><Button>Medium</Button></Grid>
@@ -78,18 +78,18 @@ export const Size = () => (
 )
 
 export const Color = () => (
-  <Grid spacing={4}>
-    <Grid item spacing={2}>
+  <Grid gap={4}>
+    <Grid item gap={2}>
       <Grid item><Button>Primary</Button></Grid>
       <Grid item><Button color="secondary">Secondary</Button></Grid>
     </Grid>
-    <Grid item spacing={2}>
+    <Grid item gap={2}>
       <Grid item><Button color="success">Success</Button></Grid>
       <Grid item><Button color="info">Info</Button></Grid>
       <Grid item><Button color="warning">Warning</Button></Grid>
       <Grid item><Button color="error">Error</Button></Grid>
     </Grid>
-    <Grid item spacing={2}>
+    <Grid item gap={2}>
       <Grid item><Button color="grey">Grey</Button></Grid>
       <Grid item><Button color="main">Main</Button></Grid>
       <Grid item><Button color="contrast">Contrast</Button></Grid>
@@ -114,7 +114,7 @@ Disabled.parameters = {
 }
 
 export const Icons = () => (
-  <Grid spacing={4}>
+  <Grid gap={4}>
     <Grid item><Button iconLeft={<Sun />}>Icon left</Button></Grid>
     <Grid item><Button iconRight={<Moon />}>Icon right</Button></Grid>
   </Grid>

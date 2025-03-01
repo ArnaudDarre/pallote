@@ -3,7 +3,7 @@ import React from 'react'
 import { Button } from '../components/Button'
 import { Buttons } from '../components/Buttons'
 import { CardActions } from '../components/CardActions'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/CardActions',
@@ -39,7 +39,7 @@ Playground.args = {
 }
 
 export const Direction = () => (
-  <Grid spacing={4} direction="column">
+  <Grid gap={4} direction="column">
     <Grid item>
       <CardActions direction="portrait">
         <Button color="grey">Portrait</Button>

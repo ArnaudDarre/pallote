@@ -4,7 +4,7 @@ import { Button } from '../components/Button'
 import { Buttons } from '../components/Buttons'
 import { Card } from '../components/Card'
 import { CardHeader } from '../components/CardHeader'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/CardHeader',

@@ -3,7 +3,7 @@ import React from 'react'
 import { Card } from '../components/Card'
 import { CardHeader } from '../components/CardHeader'
 import { CardMedia } from '../components/CardMedia'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/CardMedia',
@@ -32,8 +32,8 @@ Playground.args = {
 }
 
 export const Width = () => (
-  <Grid spacing={4}>
-    <Grid item sm={12}>
+  <Grid gap={4}>
+    <Grid item colsm={12}>
       <Card direction="landscape">
         <CardMedia width={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
         <CardHeader title="Override width" />
@@ -51,8 +51,8 @@ Width.parameters = {
 }
 
 export const Height = () => (
-  <Grid spacing={4}>
-    <Grid item md={4} sm={12}>
+  <Grid gap={4}>
+    <Grid item colmd={4} colsm={12}>
       <Card>
         <CardMedia height={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
         <CardHeader title="Override height" />
@@ -70,8 +70,8 @@ Height.parameters = {
 }
 
 export const FullWidth = () => (
-  <Grid spacing={4}>
-    <Grid item md={4} sm={12}>
+  <Grid gap={4}>
+    <Grid item colmd={4} colsm={12}>
       <Card>
         <CardMedia fullWidth height={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
         <CardHeader title="Full width" />

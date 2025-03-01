@@ -4,7 +4,7 @@ import { Text } from '../utilities/Text'
 import { Card } from '../components/Card'
 import { CardContent } from '../components/CardContent'
 import { CardHeader } from '../components/CardHeader'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/CardContent',
@@ -31,8 +31,8 @@ Playground.args = {
 }
 
 export const FullWidth = () => (
-  <Grid spacing={4}>
-    <Grid item md={4} sm={12}>
+  <Grid gap={4}>
+    <Grid item colmd={4} colsm={12}>
       <Card>
         <CardHeader
           title="Full width content (remove left and right padding)"
