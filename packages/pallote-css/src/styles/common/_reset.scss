@@ -82,7 +82,7 @@ iframe,
   outline: revert;
   
   &:focus {
-    outline: 2px solid variables.$primary;
+    outline: 2px solid currentColor;
   }
 }
 

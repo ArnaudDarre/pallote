@@ -178,14 +178,6 @@
 			.h1, .h2, .h3, .h4, .h5, .h6 {
 				color: list.nth($i, 2) !important;
 			}
-
-			&.link {
-				text-decoration: underline rgba(list.nth($i, 2), 0.5);
-
-				@include mixins.hover {
-					text-decoration: underline 0.125em;
-				}	
-			}
 		}
 	}
 }

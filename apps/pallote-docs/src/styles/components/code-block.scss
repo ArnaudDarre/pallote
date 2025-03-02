@@ -4,7 +4,7 @@
 
 // simple code block
 
-code {
+p > code {
   @extend %overline;
   padding-right: .4em;
   padding-left: .4em;
@@ -12,7 +12,6 @@ code {
   border-radius: variables.$border-radius-sm;
   background-color: variables.$grey-90;
   color: variables.$text-contrast;
-  white-space: nowrap;
   
   .token {
     @extend %caption;

@@ -17,6 +17,7 @@ import { Checkbox } from './components/Checkbox'
 import { Checkboxes } from './components/Checkboxes'
 import { Divider } from './components/Divider'
 import { Input } from './components/Input'
+import { Link } from './components/Link'
 import { List } from './components/List'
 import { ListItem } from './components/ListItem'
 import { Radio } from './components/Radio'
@@ -57,6 +58,7 @@ export {
   Checkboxes,
   Divider,
   Input,
+  Link,
   List,
   ListItem,
   Radio,

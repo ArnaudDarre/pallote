@@ -2,6 +2,7 @@
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Link from '@docusaurus/Link';
 
 import { Coffee, Moon, Sun } from '@phosphor-icons/react'
 import { Button } from "pallote-react"
@@ -33,11 +34,12 @@ Component for every call-to-action.
 
 ### Component
 
-Change the HTML tag of the component
+Change the HTML tag of the component or use another component.
 
 <div class="docs_block">
   <Button>Button</Button>
-  <Button component="a">Anchor link</Button>
+  <Button component="a">Anchor</Button>
+  <Button component={Link}>React component</Button>
 </div>
 
 <Tabs groupId="package" queryString>
@@ -45,7 +47,8 @@ Change the HTML tag of the component
   
 ```jsx
 <Button>Button</Button>
-<Button component="a">Anchor link</Button>
+<Button component="a">Anchor</Button>
+<Button component={Link}>React component</Button>
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
