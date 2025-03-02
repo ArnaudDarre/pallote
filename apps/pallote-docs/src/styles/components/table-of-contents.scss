@@ -8,7 +8,9 @@
 .table-of-contents {
   border: 0;
   padding: .5rem;
-  border-left: variables.$border;
+  border: variables.$border;
+  background-color: variables.$background-paper;
+  border-radius: variables.$border-radius-md;
 
   li {
     margin: 0;

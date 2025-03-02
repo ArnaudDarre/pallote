@@ -4,7 +4,8 @@
 
 // simple code block
 
-p > code {
+p > code,
+td > code {
   @extend %overline;
   padding-right: .4em;
   padding-left: .4em;

@@ -131,7 +131,7 @@
 @mixin card-size($value, $size) {
 
   &:not(.card-transparent) {
-    border-radius: $size;
+    border-radius: calc($size/2);
   } 
   
   &.card-hasShadow {
@@ -212,7 +212,7 @@
     }
 
     &_mediaInner {
-      border-radius: $size*0.25;
+      border-radius: calc($size/8);
     }
   }
 
@@ -221,7 +221,7 @@
   }
 
   &.card-transparent > .card_media-fullWidth .card_mediaInner {
-    border-radius: $size*0.5;
+    border-radius: calc($size/2);
   }
 
   &.card-landscape {

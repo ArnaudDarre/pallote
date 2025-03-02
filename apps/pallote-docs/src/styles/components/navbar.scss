@@ -6,6 +6,7 @@
   @include mixins.clamp(padding-left, 1.5rem, 4vw, 4rem);
   height: variables.$navbar-height;
   position: fixed;
+  box-shadow: none;
 
   &__brand {
     display: flex;
