@@ -18,7 +18,7 @@ $spacing-alert: .5rem;
 // —————————————————————————————————————————————————————————————————
 
 .alert {
-  border-radius: .5rem;
+  border-radius: $spacing-alert;
   padding: $spacing-alert $spacing-alert*2;
   position: fixed;
   top: 1rem;
@@ -33,7 +33,7 @@ $spacing-alert: .5rem;
 
   @include mixins.responsive(down, mobile) {
     @include mixins.calc(max-width, '100vw - '1rem);
-    right: 8px;
+    right: .5rem;
     top: .5rem;
   }
   
@@ -45,9 +45,9 @@ $spacing-alert: .5rem;
     content: "";
     position: absolute;
     top: $spacing-alert;
-    left: .5rem;
-    height: 1rem*1.5;
-    width: 1rem*1.5;
+    left: $spacing-alert;
+    height: $spacing-alert*3;
+    width: $spacing-alert*3;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -58,7 +58,6 @@ $spacing-alert: .5rem;
 
   &_subtitle {
     @extend .caption;
-    padding-bottom: 0.2em;
     margin-top: 0.125rem !important;
   }
 
@@ -85,15 +84,15 @@ $spacing-alert: .5rem;
 // color
 // —————————————————————————————————————————————————————————————————
 
-@mixin alert-color($color, $background-color: variables.$success-light, $border-color: variables.$success-dark) {
-  @if $color == success { $background-color: variables.$success-light; $border-color: variables.$success-dark; } 
-  @else if $color == info { $background-color: variables.$info-light; $border-color: variables.$info-dark; } 
-  @else if $color == warning { $background-color: variables.$warning-light; $border-color: variables.$warning-dark; } 
-  @else if $color == error { $background-color: variables.$error-light; $border-color: variables.$error-dark; } 
+@mixin alert-color($color, $title-color: variables.$success-dark, $background-color: variables.$success-light, $border-color: variables.$success) {
+  @if $color == success { $title-color: variables.$success-dark; $background-color: variables.$success-light; $border-color: variables.$success; } 
+  @else if $color == info { $title-color: variables.$info-dark; $background-color: variables.$info-light; $border-color: variables.$info; } 
+  @else if $color == warning { $title-color: variables.$warning-dark; $background-color: variables.$warning-light; $border-color: variables.$warning; } 
+  @else if $color == error { $title-color: variables.$error-dark; $background-color: variables.$error-light; $border-color: variables.$error; } 
 
   background-color: $background-color;
   border: 1px solid $border-color;
-  color: variables.$text;
+  color: $title-color;
 
   &:not(.alert-bar):before {
 

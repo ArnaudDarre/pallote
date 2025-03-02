@@ -10,6 +10,7 @@
 // error
 // disabled
 // optional
+// dense
 // icon
 // —————————————————————————————————————————————————————————————————
 
@@ -25,7 +26,7 @@
   width: 100%;
   max-width: variables.$max-width-form;
 
-  &:not(:last-child) {
+  & + & {
     margin-bottom: 1rem;
   }
 
@@ -102,6 +103,7 @@
   .input_control {
     display: flex;
     align-items: center;
+    padding-right: 2rem;
   }
 }
 
@@ -257,6 +259,29 @@ input[type='radio']:checked {
 
   .input_label:after {
     content: " (optional)";
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// dense
+// —————————————————————————————————————————————————————————————————
+
+.input-dense {
+
+  .input_control:not(textarea) {
+    height: 2rem;
+  }
+
+  &.select {
+
+    &:after {
+      bottom: 0.9rem;
+      right: 0.75rem;
+    }
+ 
+    .input_control {
+      padding-right: 1.5rem;
+    }
   }
 }
 

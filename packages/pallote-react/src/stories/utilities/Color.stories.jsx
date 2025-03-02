@@ -68,7 +68,7 @@ export const Fill = () => (
       <Grid item><Color fill="error" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">error</Text></Color></Grid>
     </Grid>
     <Grid item gap={2}>
-      <Grid item><Color fill="border" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">success</Text></Color></Grid>
+      <Grid item><Color fill="border" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">border</Text></Color></Grid>
     </Grid>
   </Grid>
 )
@@ -106,7 +106,7 @@ export const Stroke = () => (
       <Grid item><Color stroke="error" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">error</Text></Color></Grid>
     </Grid>
     <Grid item gap={2}>
-      <Grid item><Color stroke="border" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">success</Text></Color></Grid>
+      <Grid item><Color stroke="border" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">border</Text></Color></Grid>
     </Grid>
   </Grid>
 )
