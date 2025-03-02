@@ -1,0 +1,22 @@
+@use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/common/mixins';
+
+[class*="list_"].row {
+  margin: 0;
+  gap: 1rem;
+
+  article.col {
+    padding: 0;
+    margin-bottom: 0 !important;
+    max-width: unset;
+    flex: initial;
+    
+    @include mixins.responsive(up, mobile) {
+      width: calc(50% - .5rem);
+    }
+  }
+
+  .card {
+    border-radius: variables.$border-radius-md;
+  }
+}

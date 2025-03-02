@@ -18,6 +18,8 @@
 @use './components/tabs.scss';
 @use './components/text.scss';
 
+@use './layouts/category.scss';
+
 * {
   box-sizing: border-box !important;
 }

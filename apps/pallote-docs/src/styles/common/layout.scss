@@ -21,17 +21,24 @@
   @include mixins.clamp(padding-right, 1.5rem, 4vw, 4rem);
   padding-bottom: 0 !important;
   padding-left: 2rem;
+  
+  @include mixins.responsive(down, 996.98px) {
+    @include mixins.clamp(padding-left, 1.5rem, 4vw, 4rem);
+  }
 
-  > .row {
-    margin: 0 -2rem;
+  @include mixins.responsive(up, 997px) {
 
-    > .col:not(.col--3) {
-      padding: 0 2rem;
-    }
-
-    > .col--3 {
-      padding-top: 2rem;
-      padding-right: 2rem;
+    > .row {
+      margin: 0 -2rem;
+      
+      > .col:not(.col--3) {
+        padding: 0 2rem;
+      }
+      
+      > .col--3 {
+        padding-top: 2rem;
+        padding-right: 2rem;
+      }
     }
   }
 }
