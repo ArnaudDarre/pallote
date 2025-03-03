@@ -50,7 +50,7 @@ const config = {
         //   onUntruncatedBlogPosts: 'warn',
         // },
         theme: {
-          customCss: './src/styles/style.scss',
+          customCss: './src/styles/pallote-docs.scss',
         },
       }),
     ],
