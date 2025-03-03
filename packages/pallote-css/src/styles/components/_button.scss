@@ -111,11 +111,12 @@
       &:focus {
         outline: 2px solid list.nth($i, 2);
       }
-    
+
       @include mixins.hover {
 
         &:not(.button-disabled) {
           background-color: color.mix(black, list.nth($i, 2), 20%);
+          color: list.nth($i, 3);
         }
       }
 
