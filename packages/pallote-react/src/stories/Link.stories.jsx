@@ -63,3 +63,8 @@ Color.parameters = {
     }
   }
 }
+
+export const IsExternal = () => (
+  <Link isExternal href="https://pallote.com">External link</Link>
+)
+

@@ -33,7 +33,7 @@ Reference to a resource, either external (a link to a different website) or inte
 
 ### Component
 
-Use another React component, usually an internal routing Link component.
+Use another React component, usually an internal routing Link component such as `Link` from `react-router-dom`.
 
 <div class="docs_block">
   <Link>Anchor</Link>
@@ -44,8 +44,10 @@ Use another React component, usually an internal routing Link component.
    <TabItem value="react" label="React">
   
 ```jsx
-<Link>Anchor</Link>
-<Link component={Link}>React component</Link>
+import { ReactComponent } from 'package'
+
+<Link href="">Anchor</Link>
+<Link component={ReactComponent} to="">React component</Link>
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -142,3 +144,25 @@ Overrides the link color. The inherit value means that the link will inherit the
 ```
   </TabItem>
 </Tabs>
+
+### IsExternal
+
+<div class="docs_block">
+  <Link isExternal href="https://pallote.com">External link</Link>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Link isExternal href="">External link</Link>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<a href="" target="_blank" rel="noopener noreferrer" class="link">External link</a>
+```
+  </TabItem>
+</Tabs>
+

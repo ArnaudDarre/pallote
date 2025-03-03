@@ -82,8 +82,9 @@ nav.menu {
       padding: .25rem .75rem;
       position: relative;
 
-      &--active {
+      &--active:not(.menu__link--sublist) {
         color: variables.$primary;
+        background-color: variables.$hover;
       }
 
       &:hover:not(.menu__link--active) {

@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
+import { ArrowSquareOut } from '@phosphor-icons/react'
 
 export const Link = ({
   component = 'a',
@@ -22,11 +23,14 @@ export const Link = ({
         {[`text-${color}`]: color},
         className
       ])}
-      href={href}
+      href={isExternal ? href : undefined}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       {...props}
     >
       {children}
-      {icon && <span className={'link_icon'}>{icon}</span>}
+      {icon && !isExternal && <span className={'link_icon'}>{icon}</span>}
+      {isExternal && <span className={'link_icon'}><ArrowSquareOut /></span>}
     </Component>
   )
 }
