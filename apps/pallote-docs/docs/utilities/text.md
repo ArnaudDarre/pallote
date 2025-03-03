@@ -14,7 +14,7 @@ Use these utility props and classes to override the text style of an element.
 ### Variant
 
 <div class="docs_block docs_block-portrait">
-  <div class="docs_row grid-ai-baseline">
+  <div class="docs_row items-baseline">
     <Text variant="h1">Heading 1</Text>
     <Text variant="h2">Heading 2</Text>
     <Text variant="h3">Heading 3</Text>
@@ -22,7 +22,7 @@ Use these utility props and classes to override the text style of an element.
     <Text variant="h5">Heading 5</Text>
     <Text variant="h6">Heading 6</Text>
   </div>
-  <div class="docs_row grid-ai-baseline">
+  <div class="docs_row items-baseline">
     <Text variant="subtitle">Subtitle</Text>
     <Text variant="body">Body</Text>
     <Text variant="caption">Caption</Text>
@@ -72,7 +72,7 @@ In order to use the correct semantic component, you need to combine it with the 
 ### Component
 
 <div class="docs_block docs_block-portrait">
-  <div class="docs_row grid-ai-baseline">
+  <div class="docs_row items-baseline">
     <Text component="h1" variant="body">h1</Text>
     <Text component="h2" variant="body">h2</Text>
     <Text component="h3" variant="body">h3</Text>
@@ -80,7 +80,7 @@ In order to use the correct semantic component, you need to combine it with the 
     <Text component="h5" variant="body">h5</Text>
     <Text component="h6" variant="body">h6</Text>
   </div>
-  <div class="docs_row grid-ai-baseline">
+  <div class="docs_row items-baseline">
     <Text component="p">p (default)</Text>
     <Text component="span">span</Text>
     <Text component="label">label</Text>

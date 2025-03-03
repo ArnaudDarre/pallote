@@ -50,7 +50,7 @@
   &_control {
 		@include mixins.transition(variables.$transition-md, border-color);
     font-size: 1rem;
-		font-family: variables.$font-fallback;
+		font-family: variables.$font, variables.$font-fallback;
 		width: 100%;
     border-radius: variables.$border-radius-md !important;
     padding: .325rem .5rem;

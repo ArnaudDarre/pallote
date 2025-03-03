@@ -15,8 +15,8 @@
 // dependencies
 // —————————————————————————————————————————————————————————————————
 
-$fonts-path: './assets/fonts/' !default;
-$icons-path: './assets/icons/' !default;
+// $fonts-path: './assets/fonts/' !default;
+// $icons-path: './assets/icons/' !default;
 
 // —————————————————————————————————————————————————————————————————
 // color palette
@@ -131,27 +131,27 @@ $nav-item: $spacing-md !default;
 // —————————————————————————————————————————————————————————————————
 
 // Functions to unquote and remove spaces
-@function str-replace($string, $search, $replace: "") {
-  $index: string.index($string, $search);
+// @function str-replace($string, $search, $replace: "") {
+//   $index: string.index($string, $search);
   
-  @if $index {
-    @return str-replace(
-      string.slice($string, 1, $index - 1) + $replace + string.slice($string, $index + string.length($search), string.length($string)),
-      $search,
-      $replace
-    );
-  }
+//   @if $index {
+//     @return str-replace(
+//       string.slice($string, 1, $index - 1) + $replace + string.slice($string, $index + string.length($search), string.length($string)),
+//       $search,
+//       $replace
+//     );
+//   }
 
-  @return $string;
-}
-@function clean-string($string) {
-  @return str-replace(string.unquote($string), " ");
-}
+//   @return $string;
+// }
+// @function clean-string($string) {
+//   @return str-replace(string.unquote($string), " ");
+// }
 
 // typefaces
 $font: "Source Sans Pro" !default;
-$font-clean: clean-string($font);
-$font-fallback: Arial, sans-serif !default;
+// $font-clean: clean-string($font);
+$font-fallback: "Arial, sans-serif" !default;
 $font-code: monospace !default;
 
 // weight

@@ -57,7 +57,7 @@ Playground.args = {
 }
 
 export const Size = () => (
-  <Grid gap={4} alignItems="start">
+  <Grid gap={4} items="start">
     <Grid item colsm={2}><CardExample size="xs" title="XSmall" /></Grid>
     <Grid item colsm={3}><CardExample size="sm" title="Small" /></Grid>
     <Grid item colsm={4}><CardExample title="Medium (default)" /></Grid>
@@ -80,7 +80,7 @@ export const Fill = () => (
 )
 
 export const Direction = () => (
-  <Grid gap={4} alignItems="start">
+  <Grid gap={4} items="start">
     <Grid item colsm={4}><CardExample title="Portrait" /></Grid>
     <Grid item colsm={8}><CardExample title="Landscape" direction="landscape" width={100} /></Grid>
   </Grid>

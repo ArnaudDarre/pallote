@@ -6,7 +6,7 @@ html {
 }
 
 body {
-	font-family: variables.$font-fallback;
+	font-family: variables.$font, variables.$font-fallback;
 	font-size: 16px;
 	line-height: 1.5;
 	font-weight: variables.$font-regular;

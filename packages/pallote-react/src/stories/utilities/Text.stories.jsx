@@ -30,7 +30,7 @@ Playground.args = {
 
 export const Variant = () => (
   <Grid gap={4}>
-    <Grid item gap={2} alignItems="baseline">
+    <Grid item gap={2} items="baseline">
       <Grid item><Text variant="h1">h1</Text></Grid>
       <Grid item><Text variant="h2">h2</Text></Grid>
       <Grid item><Text variant="h3">h3</Text></Grid>
@@ -38,7 +38,7 @@ export const Variant = () => (
       <Grid item><Text variant="h5">h5</Text></Grid>
       <Grid item><Text variant="h6">h6</Text></Grid>
     </Grid>
-    <Grid item gap={2} alignItems="baseline">
+    <Grid item gap={2} items="baseline">
       <Grid item><Text variant="subtitle">Subtitle</Text></Grid>
       <Grid item><Text variant="body">Body</Text></Grid>
       <Grid item><Text variant="caption">Caption</Text></Grid>

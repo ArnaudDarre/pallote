@@ -76,6 +76,10 @@
       text-decoration-thickness: 3px;
     }
   }
+
+  table + .alert {
+    margin-top: 1rem;
+  }
 }
 
 // grid links on main page

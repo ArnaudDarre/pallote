@@ -75,6 +75,8 @@ Make all child elements automatically the same width.
 
 ### Direction
 
+This prop overrides the `flex-direction` value of the component.
+
 <div class="docs_block">
   <Grid gap={4}>
     <Grid item colsm={6} gap={2} direction="column">
@@ -133,7 +135,9 @@ Make all child elements automatically the same width.
   </TabItem>
 </Tabs>
 
-### JustifyContent
+### Justify
+
+This prop overrides the `justify-content` value of the component.
 
 <div class="docs_block">
   <Grid gap={4}>
@@ -215,6 +219,8 @@ Make all child elements automatically the same width.
 
 ### AlignItems
 
+This prop overrides the `align-items` value of the component.
+
 <div class="docs_block">
   <Grid gap={4}>
     <Grid item colsm={4} gap={2} direction="column">
@@ -284,6 +290,8 @@ Make all child elements automatically the same width.
 </Tabs>
 
 ### AlignSelf
+
+This prop overrides the `align-self` value of the component.
 
 <div class="docs_block">
   <Grid gap={4}>

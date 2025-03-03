@@ -59,7 +59,7 @@ export default function Home() {
             subtitle="Get started by installing the packages in your project."
           />
           <SectionContent>
-            <Grid gap={3} alignItems="stretch">
+            <Grid gap={3} items="stretch">
               {InstallList.map((props, idx) => (
                 <Grid colsm={4} key={idx} item>
                   <Card className="h-full">
