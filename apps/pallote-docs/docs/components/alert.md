@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Alert } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Alert
 
-List of links to allow users to navigate the page tree.
+Display a short message to either notify users about an action he performed or should perform. It can also be used inside the page content to convey important information.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2785-5876&t=THAVryo6YfO8gzYa-11"
+  storybook="https://react.pallote.com/?path=/docs/components-alert--docs"
+/>
 
 <div class="docs_block">
   <Alert title="Alert" variant="notice" />
@@ -34,7 +41,7 @@ List of links to allow users to navigate the page tree.
 
 ### Color
 
-Convey the severity of the alert.
+Change the colour to convey the severity of the alert.
 
 <div class="docs_block">
   <Alert title="Success" variant="notice" />

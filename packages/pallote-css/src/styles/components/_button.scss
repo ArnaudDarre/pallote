@@ -124,11 +124,12 @@
         background-color: transparent;
         border: 1px solid list.nth($i, 2);
         color: variables.$text;
-
+        
         @include mixins.hover {
-
+          
           &:not(.button-disabled) {
             background-color: variables.$hover;
+            color: variables.$text;
           }
         }
 
@@ -138,8 +139,12 @@
       &.button-transparent {
         background-color: transparent;
         color: list.nth($i, 2);
+        
+        @include mixins.hover {
+          background-color: variables.$hover;
+          color: list.nth($i, 2);
+        }
 
-        @include mixins.hover { background-color: variables.$hover; }
         svg { stroke: list.nth($i, 2); }
       }
     }

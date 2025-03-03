@@ -8,6 +8,13 @@ export default {
   title: 'Components/Alert',
   component: Alert,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Display a short message to either notify users about an action he performed or should perform. It can also be used inside the page content to convey important information.',
+      },
+    },
+  },
   argTypes: {
     show: { control: false },
     onClose: { control: false },
@@ -37,7 +44,7 @@ Color.parameters = {
   controls: { disable: true },
   docs: {
     description: {
-      story: 'Convey the severity of the alert.'
+      story: 'Change the colour to convey the severity of the alert.'
     }
   }
 }

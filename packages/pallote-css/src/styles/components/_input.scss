@@ -168,6 +168,7 @@ input[type='radio'] {
   background-color: variables.$input-background;
   border: variables.$border;
   margin-right: .5rem;
+  color: variables.$primary;
 }
 
 input[type='checkbox'] { border-radius: variables.$border-radius-sm; }

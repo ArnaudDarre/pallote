@@ -8,16 +8,16 @@ import InstallCSS from '../components/index/InstallCSS.mdx'
 
 const InstallList = [
   {
-    title: 'Pallote React',
-    subtitle: "Leverage the power of the CSS library included in simple, easy to use React components.",
-    markdownComponent: <InstallReact />,
-    linkURL: "/docs/getting-started/installation?package=react"
-  },
-  {
     title: 'Pallote CSS',
     subtitle: "Stylish CSS library for all your web projects.",
     markdownComponent: <InstallCSS />,
     linkURL: "/docs/getting-started/installation?package=css"
+  },
+  {
+    title: 'Pallote React',
+    subtitle: "Leverage the power of the CSS library included in simple, easy to use React components.",
+    markdownComponent: <InstallReact />,
+    linkURL: "/docs/getting-started/installation?package=react"
   }
 ]
 

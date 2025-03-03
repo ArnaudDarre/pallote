@@ -19,6 +19,7 @@
 
 .container {
   @include mixins.clamp(padding-right, 1.5rem, 4vw, 4rem);
+  padding-top: 0 !important;
   padding-bottom: 0 !important;
   padding-left: 2rem;
   
@@ -107,7 +108,7 @@
     margin-bottom: 1rem;
     padding: 1.5rem;
     border: variables.$border;
-    border-radius: variables.$border-radius-lg;
+    border-radius: variables.$border-radius-md;
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
