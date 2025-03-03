@@ -219,7 +219,7 @@ If you are using pallote-css, use the `fill` modifier.
 ### HasShadow
 
 <div class="docs_block">
-  <Card hasShadow><CardHeader title="Left" /></Card>
+  <Card hasShadow><CardHeader title="HasShadow" /></Card>
 </div>
 
 <Tabs groupId="package" queryString>
@@ -242,7 +242,7 @@ If you are using pallote-css, use the `fill` modifier.
 Remove background color and padding around the edges.
 
 <div class="docs_block">
-  <Card transparent><CardHeader title="Left" /></Card>
+  <Card transparent><CardHeader title="Transparent" /></Card>
 </div>
 
 <Tabs groupId="package" queryString>
