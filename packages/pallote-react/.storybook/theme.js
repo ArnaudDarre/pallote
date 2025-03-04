@@ -7,8 +7,8 @@ export default create({
   fontCode: 'monospace',
 
   brandTitle: 'Pallote',
-  brandUrl: 'https://pallote.com',
-  brandImage: 'https://storybook.js.org/images/placeholders/350x150.png',
+  brandUrl: 'https://react.pallote.com',
+  brandImage: '/pallote-logo.svg',
   brandTarget: '_self',
 
   colorPrimary: '#9E6D04',

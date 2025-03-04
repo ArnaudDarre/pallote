@@ -104,7 +104,7 @@ nav.menu {
       position: relative;
 
       &:before {
-        content: url('/static/icons/phosphor/caret-up.svg');
+        content: url('/static/icons/caret-up.svg');
         background: none;
         transform: rotate(180deg) scale(0.75);
       }

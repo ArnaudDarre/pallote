@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Pallote',
   tagline: 'Pallote is a handcrafted, simple and stylish CSS and React component library, built with passion and care',
-  favicon: 'img/favicon.ico',
+  favicon: '/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://pallote.com',
@@ -70,12 +70,12 @@ const config = {
         respectPrefersColorScheme: false,
       },
         // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'images/og-image.jpg',
       navbar: {
         title: 'Pallote',
         logo: {
           alt: 'Logo for Pallote',
-          src: 'img/logo.svg',
+          src: 'logos/pallote-logo.svg',
         },
         items: [
           {

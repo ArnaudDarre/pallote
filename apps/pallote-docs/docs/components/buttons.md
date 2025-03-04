@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Button, Buttons } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Buttons
 
-Component for every call-to-action.
+Set automated and responsive spacing and wrapping behaviour for a list of Button components.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2787-4781&t=SoxLdCKcHv5EKR6q-11"
+  storybook="https://react.pallote.com/?path=/docs/components-buttons--docs"
+/>
 
 <div class="docs_block">
   <Buttons>

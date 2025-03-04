@@ -23,6 +23,7 @@
   }
 
   &__title {
+    display: none;
     font-weight: 900;
     font-size: 1.125rem;
     line-height: 1;
@@ -83,7 +84,7 @@
   }
 
   &-sponsor:before {
-    background-image: url("/icons/phosphor/heart.svg");
+    background-image: url("/icons/heart.svg");
   }
 
   svg { display: none; }

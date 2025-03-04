@@ -21,6 +21,7 @@ const config = {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
+  staticDirs: ['../public'],
   viteFinal: async (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,

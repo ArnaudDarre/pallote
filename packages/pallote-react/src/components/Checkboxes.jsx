@@ -7,11 +7,11 @@ export const Checkboxes = ({
   onChange,
   id,
   label = 'Label',
-  hint,
+  direction = 'portrait',
   error,
   disabled,
   optional,
-  direction = 'portrait',
+  hint,
   children,
   className
 }) => {
@@ -55,14 +55,14 @@ Checkboxes.propTypes = {
   onChange: PropTypes.func,
   id: PropTypes.string,
   label: PropTypes.string,
-  hint: PropTypes.string,
-  error: PropTypes.bool,
-  disabled: PropTypes.bool,
-  optional: PropTypes.bool,
   direction: PropTypes.oneOf([
     'portrait',
     'landscape'
   ]),
+  error: PropTypes.bool,
+  disabled: PropTypes.bool,
+  optional: PropTypes.bool,
+  hint: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.node
 }

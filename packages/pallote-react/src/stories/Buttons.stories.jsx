@@ -11,7 +11,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Sets automated spacing and wrapping behaviour on small devices for a list of `<Button />` components.'
+        component: 'Set automated and responsive spacing and wrapping behaviour for a list of Button components.'
       }
     }
   },

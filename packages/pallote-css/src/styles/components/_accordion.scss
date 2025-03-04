@@ -34,7 +34,6 @@
     cursor: pointer;
 
     &:after {
-      // content: url(variables.$icons-path + 'phosphor/caret-down.svg');
       transition: transform variables.$transition-md;
       will-change: transform;
       position: absolute;

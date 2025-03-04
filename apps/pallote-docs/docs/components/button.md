@@ -7,9 +7,16 @@ import Link from '@docusaurus/Link';
 import { Coffee, Moon, Sun } from '@phosphor-icons/react'
 import { Button } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Button
 
 Component for every call-to-action.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2785-7099&t=SoxLdCKcHv5EKR6q-11"
+  storybook="https://react.pallote.com/?path=/docs/components-button--docs"
+/>
 
 <div class="docs_block">
   <Button>Button</Button>
