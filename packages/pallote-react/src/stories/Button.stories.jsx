@@ -47,7 +47,7 @@ export const Kind = () => (
 Kind.parameters = {
   docs: {
     description: {
-      story: 'Set the button content type.'
+      story: 'Set the type of content.'
     }
   }
 }

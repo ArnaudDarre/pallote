@@ -62,7 +62,7 @@ Change the HTML tag of the component or use another component.
 
 ### Kind
 
-Change the button style.
+Set the type of content.
 
 <div class="docs_block">
   <Button>Text</Button>
