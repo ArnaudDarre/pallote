@@ -3,7 +3,7 @@ import { create } from '@storybook/theming'
 export default create({
   base: 'light',
 
-  fontBase: '"Source Sans", sans-serif',
+  fontBase: '"Source Sans 3", sans-serif',
   fontCode: 'monospace',
 
   brandTitle: 'Pallote',
