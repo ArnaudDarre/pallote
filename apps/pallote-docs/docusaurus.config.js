@@ -133,6 +133,19 @@ const config = {
               },
             ],
           },
+          // {
+          //   title: 'Other links',
+          //   items: [
+          //     {
+          //       label: 'Blog',
+          //       to: '/blog',
+          //     },
+          //     {
+          //       label: 'Contact',
+          //       to: '/contact',
+          //     },
+          //   ],
+          // },
           {
             title: 'GitHub',
             items: [
@@ -154,17 +167,18 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Resources',
             items: [
               {
                 label: 'Storybook',
                 href: 'https://react.pallote.com/',
                 className: 'footer__link-item nav-item-custom nav-item-custom-storybook',
               },
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
+              {
+                label: 'Figma',
+                href: 'https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2416-5497&p=f&t=HNPTcIwHCvEtWVsQ-11',
+                className: 'footer__link-item nav-item-custom nav-item-custom-figma',
+              },
             ],
           },
         ],

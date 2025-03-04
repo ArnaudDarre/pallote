@@ -133,10 +133,6 @@
   &:not(.card-transparent) {
     border-radius: calc($size/2);
   } 
-  
-  &.card-hasShadow {
-    box-shadow: 0 0 $size*0.33 $size*0.25 rgba(variables.$contrast ,0.1);
-  }
 
   > .card_media,
   > .card_header,
@@ -317,3 +313,7 @@
 // —————————————————————————————————————————————————————————————————
 
 // the shadow styling is handled by the size mixin
+
+.card-hasShadow {
+  box-shadow: 0 1px .5rem rgba(variables.$text, 0.15);
+}

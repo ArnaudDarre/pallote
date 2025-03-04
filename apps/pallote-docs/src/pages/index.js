@@ -5,6 +5,7 @@ import { Button, Buttons, Card, CardActions, CardContent, CardHeader, Grid, Sect
 
 import InstallReact from '../components/index/InstallReact.mdx'
 import InstallCSS from '../components/index/InstallCSS.mdx'
+import Cover from '@site/static/images/cover.png';
 
 const InstallList = [
   {
@@ -30,6 +31,7 @@ export default function Home() {
     >
       <main>
         <Section color='primary' landing>
+          <img src={Cover} title="Component examples" className="coverImage" />
           <SectionHeader
             title="Introducing Pallote"
             subtitle={
@@ -62,7 +64,7 @@ export default function Home() {
             <Grid gap={3} items="stretch">
               {InstallList.map((props, idx) => (
                 <Grid colsm={4} key={idx} item>
-                  <Card className="h-full">
+                  <Card className="h-full" hasShadow>
                     <CardHeader
                       title={props.title}
                       subtitle={props.subtitle}

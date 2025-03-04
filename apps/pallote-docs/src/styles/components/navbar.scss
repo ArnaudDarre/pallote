@@ -83,6 +83,14 @@
     }
   }
 
+  &-figma:before {
+    background-image: url("/logos/figma-dark.svg");
+
+    .footer & {
+      background-image: url("/logos/figma-light.svg");
+    }
+  }
+
   &-sponsor:before {
     background-image: url("/icons/heart.svg");
   }
