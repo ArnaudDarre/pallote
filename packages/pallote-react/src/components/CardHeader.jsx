@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 import { SizeContext } from './Card'
 
-import { Buttons } from './Buttons'
 import { Text } from '../utilities/Text'
 
 export const CardHeader = ({ label, title, subtitle, actions, className, ...props }) => {
@@ -41,29 +40,27 @@ export const CardHeader = ({ label, title, subtitle, actions, className, ...prop
   return (
     <div
       className={classnames([
-        'card__header',
+        'card_header',
         className
       ])}
       {...props}
     >
-      <div className={classnames('card__headerInner')}>
-        {label ? ( <Text variant={labelComponent} weight='bold'>{label}</Text> ) : null}
-        <Text className={classnames('card__title')} variant={titleComponent} weight='bold'>{title}</Text>
-        {subtitle ? (
-          <Text
-            className={classnames('card__subtitle')}
-            variant={subtitleComponent}
-            weight='regular'
-          >
-            {subtitle}
-          </Text>
-        ) : null}
-      </div>
       {actions && (
-        <Buttons>
+        <div className="card_headerActions">
           {actions}
-        </Buttons>
+        </div>
       )}
+      {label ? ( <Text variant={labelComponent} weight='bold'>{label}</Text> ) : null}
+      <Text className={classnames('card_title')} variant={titleComponent} weight='bold'>{title}</Text>
+      {subtitle ? (
+        <Text
+          className={classnames('card_subtitle')}
+          variant={subtitleComponent}
+          weight='regular'
+        >
+          {subtitle}
+        </Text>
+      ) : null}
     </div>
   )
 }

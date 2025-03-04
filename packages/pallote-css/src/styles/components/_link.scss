@@ -1,5 +1,5 @@
-@use "../common/mixins";
-@use "../common/variables";
+@use '../common/mixins';
+@use '../common/variables';
 
 // —————————————————————————————————————————————————————————————————
 // elements
@@ -14,11 +14,12 @@
   display: inline-flex;
   align-items: center;
   font-weight: variables.$font-regular;
+  border-radius: variables.$border-radius-sm;
   text-decoration: underline;
-  text-underline-offset: 0.1em;
+  text-underline-offset: 0.15em;
   white-space: nowrap;
 
-  &__icon {
+  &_icon {
     display: flex;
     margin-top: 0.1em;
     margin-left: 0.25em;
@@ -34,13 +35,17 @@
 // color
 // —————————————————————————————————————————————————————————————————
 
-// links color is handled by the color mixins in utilities/_text.scss
+// change the link colour using text utililty classes
 
 .link {
   color: variables.$primary;
-  text-decoration: underline rgba(variables.$primary, 0.5);
-  
-  @include mixins.hover {
-    text-decoration: underline 0.125em;
+  text-decoration: underline currentColor;
+
+  &:hover {
+    text-decoration: underline 3px;
+  }
+
+  &.text-inherit {
+    color: inherit;
   }
 }

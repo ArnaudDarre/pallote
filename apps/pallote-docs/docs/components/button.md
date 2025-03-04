@@ -2,13 +2,21 @@
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Link from '@docusaurus/Link';
 
 import { Coffee, Moon, Sun } from '@phosphor-icons/react'
 import { Button } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Button
 
 Component for every call-to-action.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2785-7099&t=SoxLdCKcHv5EKR6q-11"
+  storybook="https://react.pallote.com/?path=/docs/components-button--docs"
+/>
 
 <div class="docs_block">
   <Button>Button</Button>
@@ -33,11 +41,12 @@ Component for every call-to-action.
 
 ### Component
 
-Change the HTML tag of the component
+Change the HTML tag of the component or use another component.
 
 <div class="docs_block">
   <Button>Button</Button>
-  <Button component="a">Anchor link</Button>
+  <Button component="a">Anchor</Button>
+  <Button component={Link}>React component</Button>
 </div>
 
 <Tabs groupId="package" queryString>
@@ -45,7 +54,8 @@ Change the HTML tag of the component
   
 ```jsx
 <Button>Button</Button>
-<Button component="a">Anchor link</Button>
+<Button component="a">Anchor</Button>
+<Button component={Link}>React component</Button>
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -59,7 +69,7 @@ Change the HTML tag of the component
 
 ### Kind
 
-Change the button style.
+Set the type of content.
 
 <div class="docs_block">
   <Button>Text</Button>

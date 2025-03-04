@@ -120,11 +120,19 @@ pre.prismjs {
 
   .token {
 
+    &.atrule,
+    &.function,
+    &.property,
+    &.rule,
+    &.imports,
+    &.token.attr-name {
+      color: variables.$primary-light;
+    }
+
     &.tag {
       display: revert;
       background-color: transparent;
-      padding-top: 0;
-      padding-bottom: 0;
+      padding: 0;
       font-weight: inherit;
       font-size: inherit;
     }
@@ -146,14 +154,6 @@ pre.prismjs {
     &.module,
     &.keyword {
       color: #569CD6;
-    }
-
-    &.function,
-    &.property,
-    &.rule,
-    &.imports,
-    &.token.attr-name {
-      color: variables.$primary-light;
     }
   }
 }

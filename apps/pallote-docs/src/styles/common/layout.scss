@@ -19,19 +19,27 @@
 
 .container {
   @include mixins.clamp(padding-right, 1.5rem, 4vw, 4rem);
+  padding-top: 0 !important;
   padding-bottom: 0 !important;
   padding-left: 2rem;
+  
+  @include mixins.responsive(down, 996.98px) {
+    @include mixins.clamp(padding-left, 1.5rem, 4vw, 4rem);
+  }
 
-  > .row {
-    margin: 0 -2rem;
+  @include mixins.responsive(up, 997px) {
 
-    > .col:not(.col--3) {
-      padding: 0 2rem;
-    }
-
-    > .col--3 {
-      padding-top: 2rem;
-      padding-right: 2rem;
+    > .row {
+      margin: 0 -2rem;
+      
+      > .col:not(.col--3) {
+        padding: 0 2rem;
+      }
+      
+      > .col--3 {
+        padding-top: 2rem;
+        padding-right: 2rem;
+      }
     }
   }
 }
@@ -61,6 +69,18 @@
   h1.section_title {
     margin-bottom: 0;
   }
+
+  > p > a {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  table + .alert {
+    margin-top: 1rem;
+  }
 }
 
 // grid links on main page
@@ -88,7 +108,7 @@
     margin-bottom: 1rem;
     padding: 1.5rem;
     border: variables.$border;
-    border-radius: variables.$border-radius-lg;
+    border-radius: variables.$border-radius-md;
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;

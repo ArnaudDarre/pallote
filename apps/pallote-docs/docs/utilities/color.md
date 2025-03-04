@@ -265,10 +265,10 @@ Add the following classes to an element to override the background color or bord
 
 <div class="docs_block">
   <div class="docs_row">
-    <Color fill="border" className={'mt-0 ph-1 pv-½ br-sm w-10'}><Text variant="caption">success</Text></Color>
+    <Color fill="border" className={'mt-0 ph-1 pv-½ br-sm w-10'}><Text variant="caption">border</Text></Color>
   </div>
   <div class="docs_row">
-    <Color stroke="border" className={'mt-0 ph-1 pv-½ br-sm w-10'}><Text variant="caption">success</Text></Color>
+    <Color stroke="border" className={'mt-0 ph-1 pv-½ br-sm w-10'}><Text variant="caption">border</Text></Color>
   </div>
 </div>
 

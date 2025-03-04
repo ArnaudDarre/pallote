@@ -1,6 +1,6 @@
-@use "../common/mixins";
-@use "../common/variables";
-@use "../utilities/text";
+@use '../common/mixins';
+@use '../common/variables';
+@use '../utilities/text';
 
 // —————————————————————————————————————————————————————————————————
 // elements / default
@@ -10,6 +10,7 @@
 // error
 // disabled
 // optional
+// dense
 // icon
 // —————————————————————————————————————————————————————————————————
 
@@ -25,7 +26,7 @@
   width: 100%;
   max-width: variables.$max-width-form;
 
-  &:not(:last-child) {
+  & + & {
     margin-bottom: 1rem;
   }
 
@@ -49,7 +50,7 @@
   &_control {
 		@include mixins.transition(variables.$transition-md, border-color);
     font-size: 1rem;
-		font-family: variables.$font-fallback;
+		font-family: variables.$font, variables.$font-fallback;
 		width: 100%;
     border-radius: variables.$border-radius-md !important;
     padding: .325rem .5rem;
@@ -59,6 +60,10 @@
 		@include mixins.responsive(down, mobile) {
       background-color: variables.$input-background;
 		}
+    
+    &:focus {
+      outline: 2px solid variables.$primary;
+    }
     
     &:not(textarea):not(.checkboxes):not(.radios) {
       display: inline-block;
@@ -86,7 +91,7 @@
 // —————————————————————————————————————————————————————————————————
 
 .select {
-  
+
   &:after {
     content: '';
     border: solid variables.$text;
@@ -102,6 +107,7 @@
   .input_control {
     display: flex;
     align-items: center;
+    padding-right: 2rem;
   }
 }
 
@@ -162,6 +168,7 @@ input[type='radio'] {
   background-color: variables.$input-background;
   border: variables.$border;
   margin-right: .5rem;
+  color: variables.$primary;
 }
 
 input[type='checkbox'] { border-radius: variables.$border-radius-sm; }
@@ -257,6 +264,29 @@ input[type='radio']:checked {
 
   .input_label:after {
     content: " (optional)";
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// dense
+// —————————————————————————————————————————————————————————————————
+
+.input-dense {
+
+  .input_control:not(textarea) {
+    height: 2rem;
+  }
+
+  &.select {
+
+    &:after {
+      bottom: 0.9rem;
+      right: 0.75rem;
+    }
+ 
+    .input_control {
+      padding-right: 1.5rem;
+    }
   }
 }
 

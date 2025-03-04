@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Button } from '../components/Button'
 import { Buttons } from '../components/Buttons'
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 
 export default {
   title: 'Components/Buttons',
@@ -11,7 +11,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Sets automated spacing and wrapping behaviour on small devices for a list of `<Button />` components.'
+        component: 'Set automated and responsive spacing and wrapping behaviour for a list of Button components.'
       }
     }
   },
@@ -36,7 +36,7 @@ Playground.args = {
 }
 
 export const Directions = () => (
-  <Grid wrapper spacing={2}>
+  <Grid gap={4}>
     <Grid item>
       <Buttons>
         <Button>Landscape</Button>

@@ -1,8 +1,8 @@
-@use "sass:color";
-@use "sass:list";
-@use "../common/mixins";
-@use "../common/variables";
-@use "../utilities/text";
+@use 'sass:color';
+@use 'sass:list';
+@use '../common/mixins';
+@use '../common/variables';
+@use '../utilities/text';
 
 // —————————————————————————————————————————————————————————————————
 // elements
@@ -24,7 +24,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: variables.$border-radius-md;
+  border-radius: variables.$border-radius-sm;
   position: relative;
   line-height: 0;
   text-transform: uppercase;
@@ -111,11 +111,12 @@
       &:focus {
         outline: 2px solid list.nth($i, 2);
       }
-    
+
       @include mixins.hover {
 
         &:not(.button-disabled) {
           background-color: color.mix(black, list.nth($i, 2), 20%);
+          color: list.nth($i, 3);
         }
       }
 
@@ -123,11 +124,12 @@
         background-color: transparent;
         border: 1px solid list.nth($i, 2);
         color: variables.$text;
-
+        
         @include mixins.hover {
-
+          
           &:not(.button-disabled) {
             background-color: variables.$hover;
+            color: variables.$text;
           }
         }
 
@@ -137,8 +139,12 @@
       &.button-transparent {
         background-color: transparent;
         color: list.nth($i, 2);
+        
+        @include mixins.hover {
+          background-color: variables.$hover;
+          color: list.nth($i, 2);
+        }
 
-        @include mixins.hover { background-color: variables.$hover; }
         svg { stroke: list.nth($i, 2); }
       }
     }

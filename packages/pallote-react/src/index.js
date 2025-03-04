@@ -1,19 +1,23 @@
 // utilities
 import { Color } from './utilities/Color'
 import { Display } from './utilities/Display'
+import { Grid } from './utilities/Grid'
 import { Text } from './utilities/Text'
 // components
+import { Alert } from './components/Alert'
+import { Breadcrumbs } from './components/Breadcrumbs'
 import { Button } from './components/Button'
 import { Buttons } from './components/Buttons'
 import { Card } from './components/Card'
 import { CardActions } from './components/CardActions'
 import { CardContent } from './components/CardContent'
 import { CardHeader } from './components/CardHeader'
+import { CardMedia } from './components/CardMedia'
 import { Checkbox } from './components/Checkbox'
 import { Checkboxes } from './components/Checkboxes'
 import { Divider } from './components/Divider'
-import { Grid } from './components/Grid'
 import { Input } from './components/Input'
+import { Link } from './components/Link'
 import { List } from './components/List'
 import { ListItem } from './components/ListItem'
 import { Radio } from './components/Radio'
@@ -25,6 +29,12 @@ import { Select } from './components/Select'
 import { Snippet } from './components/Snippet'
 import { Status } from './components/Status'
 import { Switch } from './components/Switch'
+import { Table } from './components/Table'
+import { TableBody } from './components/TableBody'
+import { TableCell } from './components/TableCell'
+import { TableFooter } from './components/TableFooter'
+import { TableHead } from './components/TableHead'
+import { TableRow } from './components/TableRow'
 import { Tag } from './components/Tag'
 import { Textarea } from './components/Textarea'
 
@@ -32,19 +42,23 @@ export {
   // utilities
   Color,
   Display,
+  Grid,
   Text,
   // components
+  Alert,
+  Breadcrumbs,
   Button,
   Buttons,
   Card,
   CardActions,
   CardContent,
   CardHeader,
+  CardMedia,
   Checkbox,
   Checkboxes,
   Divider,
-  Grid,
   Input,
+  Link,
   List,
   ListItem,
   Radio,
@@ -57,5 +71,11 @@ export {
   Status,
   Switch,
   Tag,
+  Table,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableRow,
   Textarea
 }

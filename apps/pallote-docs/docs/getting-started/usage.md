@@ -29,58 +29,33 @@ Pallote is, at it's core. a style library built with SASS. The design tokens (co
 
 The framework has a set of built-in variables that create the design look and feel. To override them, add a variable with the same name in your Sass style file. To see details of each variable, see [Variables](/docs/category/variables/) pages.
 
-<Tabs groupId="package" queryString>
-  <TabItem value="react" label="React">
-
 ```css
-$primary: #007A1E;
+@use 'pallote-css/styles/common/variables' with (
+  $primary: blue,
+  $secondary: purple
+);
 
-@import '~/node_modules/pallote-css/dist/pallote.scss';
+@use 'pallote-css/pallote';
 ```
-  </TabItem>
-  <TabItem value="css" label="CSS">
-
-```css
-$primary: #007A1E;
-
-@import '~/node_modules/pallote-css/dist/pallote.scss';
-```
-  </TabItem>
-</Tabs>
 
 :::info Code order
-The code must be placed above any import of Pallote CSS.
+The custom variables must be placed before importing the global Pallote CSS style.
 :::
 
 ### Custom styles
 
 To change a component style, see the documentation for each component and add create an instance of the class with new properties in your style file.
 
-<Tabs groupId="package" queryString>
-  <TabItem value="react" label="React">
-
 ```css
-@import '~/node_modules/pallote-css/dist/pallote.scss';
+@use 'pallote-css/pallote';
 
 .button {
   text-decoration: underline;
 }
 ```
-  </TabItem>
-  <TabItem value="css" label="CSS">
-
-```css
-@import '~/node_modules/pallote-css/dist/pallote.scss';
-
-.button {
-  text-decoration: underline;
-}
-```
-  </TabItem>
-</Tabs>
 
 :::info Code order
-The class must be placed below any import of Pallote CSS.
+The custom style must be placed after importing the global Pallote CSS style.
 :::
 
 ### Custom classes

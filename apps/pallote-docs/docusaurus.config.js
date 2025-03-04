@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Pallote',
   tagline: 'Pallote is a handcrafted, simple and stylish CSS and React component library, built with passion and care',
-  favicon: 'img/favicon.ico',
+  favicon: '/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://pallote.com',
@@ -50,7 +50,7 @@ const config = {
         //   onUntruncatedBlogPosts: 'warn',
         // },
         theme: {
-          customCss: './src/styles/style.scss',
+          customCss: './src/styles/pallote-docs.scss',
         },
       }),
     ],
@@ -64,13 +64,18 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
+        // Replace with your project's social card
+      image: 'images/og-image.jpg',
       navbar: {
         title: 'Pallote',
         logo: {
           alt: 'Logo for Pallote',
-          src: 'img/logo.svg',
+          src: 'logos/pallote-logo.svg',
         },
         items: [
           {
@@ -128,6 +133,19 @@ const config = {
               },
             ],
           },
+          // {
+          //   title: 'Other links',
+          //   items: [
+          //     {
+          //       label: 'Blog',
+          //       to: '/blog',
+          //     },
+          //     {
+          //       label: 'Contact',
+          //       to: '/contact',
+          //     },
+          //   ],
+          // },
           {
             title: 'GitHub',
             items: [
@@ -149,17 +167,18 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Resources',
             items: [
               {
                 label: 'Storybook',
                 href: 'https://react.pallote.com/',
                 className: 'footer__link-item nav-item-custom nav-item-custom-storybook',
               },
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
+              {
+                label: 'Figma',
+                href: 'https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2416-5497&p=f&t=HNPTcIwHCvEtWVsQ-11',
+                className: 'footer__link-item nav-item-custom nav-item-custom-figma',
+              },
             ],
           },
         ],

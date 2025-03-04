@@ -4,7 +4,8 @@
 
 // simple code block
 
-code {
+p > code,
+td > code {
   @extend %overline;
   padding-right: .4em;
   padding-left: .4em;
@@ -75,7 +76,7 @@ code {
     [class*="copyButtonSuccessIcon_"] { color: variables.$success; }
   }
 
-  .plain-text { color: variables.$text-contrast; }
+  .plain-text { color: variables.$text-contrast !important; }
   .plain { color: variables.$primary-light; }
   // .class-name,.tag:not(.attr-value):not(.attr-name):not(.punctuation) { color: variables.$primary !important; }
   // .punctuation { color: variables.$grey-20 !important; }

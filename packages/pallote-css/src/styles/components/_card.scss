@@ -1,9 +1,12 @@
-@use "../common/variables";
-@use "../utilities/text";
+@use '../common/variables';
+@use '../common/mixins';
+@use '../utilities/text';
+@use '../components/buttons';
 
 // —————————————————————————————————————————————————————————————————
 // elements
 // size
+// fill
 // direction
 // align
 // transparent
@@ -20,14 +23,20 @@
   align-items: stretch;
   width: 100%;
   overflow: hidden; // hide corners when CardMedia has fullWidth prop set to true
-  border: variables.$border;
-
-  &:not(.card--transparent) {
+  
+  &:not(.card-transparent) {
     background-color: variables.$background-paper;
+    border: variables.$border;
   }
 
-  &__media {
-    flex-basis: 0;
+  &_media,
+  &_header,
+  &_content,
+  &_actions {
+    width: 100%;
+  }
+
+  &_media {
     
     &Inner {
       background-size: cover;
@@ -39,40 +48,57 @@
       overflow: hidden;
       padding-bottom: 50%;
       
-      .card--transparent & {
+      .card-transparent & {
         background-color: variables.$overlay-contrast;
       }
     }
   }
 
-  &__label,
-  &__title {
+  &_header {
+
+    @include mixins.responsive(down, tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &_headerActions {
+    @extend %buttons;
+    width: fit-content;
+    justify-content: flex-end;
+    
+    @include mixins.responsive(up, tablet) { float: right; }
+    @include mixins.responsive(down, tablet) { order: 4; }
+  }
+
+  &_label,
+  &_title {
     @extend %text-bold;
   }
 
-  &__title {
+  &_title {
     line-height: 1.25;
   }
   
-  &__subtitle {
+  &_subtitle {
     @extend %text-regular;
   }
   
-  &__content {
+  &_content {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
 
-    &--fullWidth {
+    &-fullWidth {
 
-      .card > &.card__content {
+      .card > &.card_content {
         padding-right: 0;
         padding-left: 0;
       }
     }
   }
 
-  &__actions {
+  &_actions {
     display: flex;
     justify-content: space-between;
 
@@ -80,12 +106,20 @@
       margin-left: auto;
     }
 
-    &--portrait {
+    &-portrait {
       flex-direction: column;
 
-      >*:not(:last-child) {
-        margin-bottom: variables.$spacing-md;
+      .button {
+        width: 100%;
       }
+
+      >*:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .buttons {
+      width: fit-content;
     }
   }
 }
@@ -96,18 +130,14 @@
 
 @mixin card-size($value, $size) {
 
-  &:not(.card--transparent) {
-    border-radius: $size;
+  &:not(.card-transparent) {
+    border-radius: calc($size/2);
   } 
-  
-  &.card--hasShadow {
-    box-shadow: 0 0 $size $size*0.25 rgba(variables.$main ,0.3);
-  }
 
-  > .card__media,
-  > .card__header,
-  > .card__content,
-  > .card__actions {
+  > .card_media,
+  > .card_header,
+  > .card_content,
+  > .card_actions {
     padding: $size;
 
     &:not(:first-child) {
@@ -115,16 +145,16 @@
     }
   }
 
-  > .card__actions {
+  > .card_actions {
     margin-top: auto;
   }
 
-  &.card--transparent {
+  &.card-transparent {
 
-    > .card__media,
-    > .card__header,
-    > .card__content,
-    > .card__actions {
+    > .card_media,
+    > .card_header,
+    > .card_content,
+    > .card_actions {
       padding: 0;
         
       &:not(:first-child) {
@@ -132,12 +162,12 @@
       }
     }
 
-    > .card__media .card__mediaInner {
+    > .card_media .card_mediaInner {
       border-radius: calc($size/2);
     }
   }
 
-  .card__media--fullWidth {
+  .card_media-fullWidth {
     padding-right: 0;
     padding-top: 0;
     padding-left: 0;
@@ -145,7 +175,14 @@
 
   .card {
 
-    &__label {
+    &_headerActions {
+
+      @include mixins.responsive(down, tablet) {
+        margin-top: $size*0.75;
+      }
+    }
+
+    &_label {
       @if $value == xs { @extend %overline; }
       @else if $value == sm { @extend %overline; }
       @else if $value == md { @extend %overline; }
@@ -153,7 +190,7 @@
       @else if $value == xl { @extend %body; }
     }
 
-    &__title {
+    &_title {
       @if $value == xs { @extend %body; }
       @else if $value == sm { @extend %subtitle; }
       @else if $value == md { @extend %h6; }
@@ -161,7 +198,7 @@
       @else if $value == xl { @extend %h4; }
     }
 
-    &__subtitle {
+    &_subtitle {
       @if $value == xs { @extend %caption; }
       @else if $value == sm { @extend %body; }
       @else if $value == md { @extend %subtitle; }
@@ -170,25 +207,25 @@
       margin-top: calc($size / 3);
     }
 
-    &__mediaInner {
-      border-radius: $size*0.25;
+    &_mediaInner {
+      border-radius: calc($size/8);
     }
   }
 
-  > .card__media--fullWidth .card__mediaInner {
+  > .card_media-fullWidth .card_mediaInner {
     border-radius: 0;
   }
 
-  &.card--transparent > .card__media--fullWidth .card__mediaInner {
-    border-radius: $size*0.5;
+  &.card-transparent > .card_media-fullWidth .card_mediaInner {
+    border-radius: calc($size/2);
   }
 
-  &.card--landscape {
+  &.card-landscape {
 
-    > .card__media,
-    > .card__header,
-    > .card__content,
-    > .card__actions {
+    > .card_media,
+    > .card_header,
+    > .card_content,
+    > .card_actions {
       padding-top: $size;
 
       &:not(:first-child) {
@@ -196,18 +233,18 @@
       }
     }
 
-    > .card__actions {
+    > .card_actions {
       margin-left: auto;
       flex-direction: column;
       justify-content: flex-start;
     }
 
-    &.card--transparent {
+    &.card-transparent {
 
-      > .card__media,
-      > .card__header,
-      > .card__content,
-      > .card__actions {
+      > .card_media,
+      > .card_header,
+      > .card_content,
+      > .card_actions {
         padding: 0;
         
         &:not(:first-child) {
@@ -215,12 +252,12 @@
         }
       }
 
-      > .card__media .card__mediaInner {
+      > .card_media .card_mediaInner {
         border-radius: calc($size/2);
       }
     }
 
-    .card__media--fullWidth {
+    .card_media-fullWidth {
       padding-top: 0;
       padding-bottom: 0;
       padding-left: 0;
@@ -229,12 +266,18 @@
 }
 
 .card {
-  @include card-size(md, variables.$spacing-md+variables.$spacing-sm);
-  &--xs.card { @include card-size(xs, variables.$spacing-sm+variables.$spacing-xs); }
-  &--sm.card { @include card-size(sm, variables.$spacing-md); }
-  &--lg.card { @include card-size(lg, variables.$spacing-lg); }
-  &--xl.card { @include card-size(xl, variables.$spacing-lg+variables.$spacing-sm); }
+  @include card-size(md, 1.5rem);
+  &-xs.card { @include card-size(xs, .75rem); }
+  &-sm.card { @include card-size(sm, 1rem); }
+  &-lg.card { @include card-size(lg, 2rem); }
+  &-xl.card { @include card-size(xl, 2.5rem); }
 }
+
+// —————————————————————————————————————————————————————————————————
+// fill
+// —————————————————————————————————————————————————————————————————
+
+// the fill styling is handled by the color utility file
 
 // —————————————————————————————————————————————————————————————————
 // direction
@@ -242,8 +285,12 @@
 
 // most of the direction styling is handled by the size mixin
 
-.card--landscape {
+.card-landscape {
   flex-direction: row;
+
+  .card_media {
+    flex-basis: 0;
+  }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -252,8 +299,8 @@
 
 .card {
 
-  &--center { text-align: center; }
-  &--right { text-align: right; }
+  &-center { text-align: center; }
+  &-right { text-align: right; }
 }
 // —————————————————————————————————————————————————————————————————
 // transparent
@@ -266,3 +313,7 @@
 // —————————————————————————————————————————————————————————————————
 
 // the shadow styling is handled by the size mixin
+
+.card-hasShadow {
+  box-shadow: 0 1px .5rem rgba(variables.$text, 0.15);
+}

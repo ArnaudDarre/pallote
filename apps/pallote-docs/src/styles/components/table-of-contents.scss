@@ -8,7 +8,9 @@
 .table-of-contents {
   border: 0;
   padding: .5rem;
-  border-left: variables.$border;
+  border: variables.$border;
+  background-color: variables.$background-paper;
+  border-radius: variables.$border-radius-md;
 
   li {
     margin: 0;
@@ -29,6 +31,8 @@
     align-items: center;
     padding: .125rem .5rem;
     border-radius: variables.$border-radius-sm;
+    overflow: hidden;
+    border-left: variables.$border-radius-sm solid transparent;
 
     &:hover {
       color: inherit;
@@ -37,19 +41,11 @@
         text-decoration: underline;
       }
     }
-  }
-
-  &__link--active {
-    color: variables.$primary !important;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: -.5rem;
-      top: 0;
-      height: 100%;
-      width: 2px;
-      background-color: variables.$primary;
+    
+    &--active {
+      color: variables.$primary !important;
+      background-color: variables.$hover !important;
+      border-left-color: variables.$primary;
     }
   }
 }

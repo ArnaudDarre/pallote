@@ -1,0 +1,126 @@
+@use '../common/mixins';
+@use '../common/variables';
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// wrap
+// direction
+// justify
+// items
+// self
+// gap and col
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.flex,
+.flex_item {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+// —————————————————————————————————————————————————————————————————
+// wrap
+// —————————————————————————————————————————————————————————————————
+
+// have children wrap automatically
+.flex-wrap {
+
+  > .flex_item {
+    flex: 1 0 0;
+
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// direction
+// —————————————————————————————————————————————————————————————————
+
+.direction-column { flex-direction: column; }
+.direction-columnReverse { flex-direction: column-reverse; }
+.direction-row { flex-direction: row; flex-wrap: wrap; }
+.direction-rowReverse { flex-direction: row-reverse; flex-wrap: wrap; }
+
+// —————————————————————————————————————————————————————————————————
+// justify
+// —————————————————————————————————————————————————————————————————
+
+.justify-center { justify-content: center;}
+.justify-end { justify-content: flex-end;}
+.justify-start { justify-content: flex-start;}
+.justify-spaceAround { justify-content: space-around;}
+.justify-spaceBetween { justify-content: space-between;}
+.justify-spaceEvenly { justify-content: space-evenly;}
+
+// —————————————————————————————————————————————————————————————————
+// items
+// —————————————————————————————————————————————————————————————————
+
+.items-stretch { align-items: stretch; }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+.items-start { align-items: flex-start; }
+.items-baseline { align-items: baseline; }
+
+// —————————————————————————————————————————————————————————————————
+// self
+// —————————————————————————————————————————————————————————————————
+
+.self-stretch { align-self: stretch; }
+.self-center { align-self: center; }
+.self-end { align-self: flex-end; }
+.self-start { align-self: flex-start; }
+.self-baseline { align-self: baseline; }
+
+// —————————————————————————————————————————————————————————————————
+// gap and col
+// —————————————————————————————————————————————————————————————————
+
+$columns: 12;
+$breakpoints: (
+  xs: mobile-sm,
+  sm: mobile,
+  md: tablet,
+  lg: laptop,
+  xl: desktop
+);
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: variables.$col * $i;
+  }
+}
+
+[class*="gap-"],
+[class*="col-"] {
+  width: 100%;
+}
+
+@for $i from 1 through $columns {
+  .gap-#{$i} {
+    gap: #{$i * .25}rem;
+    
+    @for $j from 1 through $columns {
+      > .col-#{$j} {
+        width: calc((variables.$col * $j) - (#{$i * .25}rem * (($columns / $j - 1) / ($columns / $j))));
+      }
+    }
+
+    @each $suffix, $breakpoint in $breakpoints {
+      @include mixins.responsive(up, $breakpoint) {
+        @for $j from 1 through $columns {
+          > .col-#{$suffix}-#{$j} {
+            width: calc((variables.$col * $j) - (#{$i * .25}rem * (($columns / $j - 1) / ($columns / $j))));
+          }
+        }
+      }
+    }
+  }
+}

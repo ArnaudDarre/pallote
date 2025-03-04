@@ -7,9 +7,9 @@ export const CardContent = ({ fullWidth, className, children, ...props }) => {
   return (
     <div
       className={classnames([
-        'card__content',
+        'card_content',
         {
-          'card__content--fullWidth': fullWidth
+          'card_content-fullWidth': fullWidth
         },
         className
       ])}

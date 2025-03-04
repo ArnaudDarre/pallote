@@ -6,11 +6,11 @@ export const RadioButtons = ({
   onChange,
   id,
   label = 'Label',
-  hint,
+  direction = 'portrait',
   error,
   disabled,
   optional,
-  direction = 'portrait',
+  hint,
   children,
   className
 }) => {

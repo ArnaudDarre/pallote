@@ -14,7 +14,7 @@ Use these utility props and classes to override the text style of an element.
 ### Variant
 
 <div class="docs_block docs_block-portrait">
-  <div class="docs_row grid--ai-baseline">
+  <div class="docs_row items-baseline">
     <Text variant="h1">Heading 1</Text>
     <Text variant="h2">Heading 2</Text>
     <Text variant="h3">Heading 3</Text>
@@ -22,7 +22,7 @@ Use these utility props and classes to override the text style of an element.
     <Text variant="h5">Heading 5</Text>
     <Text variant="h6">Heading 6</Text>
   </div>
-  <div class="docs_row grid--ai-baseline">
+  <div class="docs_row items-baseline">
     <Text variant="subtitle">Subtitle</Text>
     <Text variant="body">Body</Text>
     <Text variant="caption">Caption</Text>
@@ -72,7 +72,7 @@ In order to use the correct semantic component, you need to combine it with the 
 ### Component
 
 <div class="docs_block docs_block-portrait">
-  <div class="docs_row grid--ai-baseline">
+  <div class="docs_row items-baseline">
     <Text component="h1" variant="body">h1</Text>
     <Text component="h2" variant="body">h2</Text>
     <Text component="h3" variant="body">h3</Text>
@@ -80,7 +80,7 @@ In order to use the correct semantic component, you need to combine it with the 
     <Text component="h5" variant="body">h5</Text>
     <Text component="h6" variant="body">h6</Text>
   </div>
-  <div class="docs_row grid--ai-baseline">
+  <div class="docs_row items-baseline">
     <Text component="p">p (default)</Text>
     <Text component="span">span</Text>
     <Text component="label">label</Text>
@@ -126,10 +126,10 @@ In order to use the correct semantic component, you need to combine it with the 
 ### Align
 
 <div class="docs_block docs_block-portrait">
-  <Text align="left" className="w-100">Align left and rub whiskers on bare skin act innocent. Catto munch salmono while happily ignoring when being called terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry eat from dog's food.</Text>
-  <Text align="center" className="w-100">Align center and stare at ceiling cough hairball on conveniently placed pants and break lamps and curl up into a ball, so get scared by sudden appearance of cucumber hack step on your keyboard while you're gaming and then turn in a circle.</Text>
-  <Text align="right" className="w-100">Align right lick master's hand at first then bite because im moody chew the plant scratch my tummy actually i hate you now fight me. Sun bathe steal the warm chair right after you get up.</Text>
-  <Text align="justify" className="w-100">Align justify meow in empty rooms mew mew. I love cats i am one wake up scratch humans leg for food then purr then i have a and relax lick master's hand at first then bite because im moody dismember a mouse and then regurgitate parts of it on the family room floor.</Text>
+  <Text align="left" className="w-full">Align left and rub whiskers on bare skin act innocent. Catto munch salmono while happily ignoring when being called terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry eat from dog's food.</Text>
+  <Text align="center" className="w-full">Align center and stare at ceiling cough hairball on conveniently placed pants and break lamps and curl up into a ball, so get scared by sudden appearance of cucumber hack step on your keyboard while you're gaming and then turn in a circle.</Text>
+  <Text align="right" className="w-full">Align right lick master's hand at first then bite because im moody chew the plant scratch my tummy actually i hate you now fight me. Sun bathe steal the warm chair right after you get up.</Text>
+  <Text align="justify" className="w-full">Align justify meow in empty rooms mew mew. I love cats i am one wake up scratch humans leg for food then purr then i have a and relax lick master's hand at first then bite because im moody dismember a mouse and then regurgitate parts of it on the family room floor.</Text>
 </div>
 
 <Tabs groupId="package" queryString>

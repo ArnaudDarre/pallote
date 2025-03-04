@@ -5,11 +5,12 @@ import PropTypes from 'prop-types'
 export const Select = ({
   onChange,
   id,
-  label = 'Select',
+  label,
   isFocused,
   error,
   disabled,
   optional,
+  dense,
   hint,
   children,
   className,
@@ -33,7 +34,8 @@ export const Select = ({
           'input-focused': isFocused,
           'js-error': error,
           'input-disabled': disabled,
-          'input-optional': optional
+          'input-optional': optional,
+          'input-dense': dense,
         },
         className
       ])}
@@ -65,6 +67,7 @@ Select.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
+  dense: PropTypes.bool,
   hint: PropTypes.string,
   children: PropTypes.any,
   className: PropTypes.node

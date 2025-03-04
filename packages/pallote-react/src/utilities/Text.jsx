@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 export const Text = ({
-  variant,
+  variant = "body",
   align,
   weight,
   transform,
@@ -23,7 +23,6 @@ export const Text = ({
   return (
     <Component
       className={classnames([
-        'text',
         {
           [`${variant}`]: variant,
           [`text-${align}`]: align,

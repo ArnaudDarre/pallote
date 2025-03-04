@@ -1,6 +1,6 @@
-@use "../common/mixins";
-@use "../common/variables";
-@use "../utilities/text";
+@use '../common/mixins';
+@use '../common/variables';
+@use '../utilities/text';
 
 // —————————————————————————————————————————————————————————————————
 // elements
@@ -11,68 +11,66 @@
 // noIcon
 // —————————————————————————————————————————————————————————————————
 
-$spacing-alert: variables.$spacing-sm;
+$spacing-alert: .5rem;
 
 // —————————————————————————————————————————————————————————————————
 // elements
 // —————————————————————————————————————————————————————————————————
 
 .alert {
-  border-radius: variables.$spacing-sm;
-  background-color: variables.$info-light;
-  color: variables.$text;
+  border-radius: $spacing-alert;
   padding: $spacing-alert $spacing-alert*2;
   position: fixed;
-  top: variables.$spacing-md;
-  right: variables.$spacing-md;
-  width: fit-content;
-  max-width: variables.$spacing-xxl*3;
+  top: 1rem;
+  right: 1rem;
+  width: 100%;
+  max-width: 20rem;
   z-index: 20;
 
-  &:not(.alert--bar) {
-    padding-left: variables.$spacing-lg + variables.$spacing-sm;
+  &:not(.alert-bar) {
+    padding-left: 2.5rem;
   }
 
   @include mixins.responsive(down, mobile) {
-    @include mixins.calc(max-width, '100vw - 'variables.$spacing-md);
-    right: 8px;
-    top: variables.$spacing-sm;
+    @include mixins.calc(max-width, '100vw - '1rem);
+    right: .5rem;
+    top: .5rem;
   }
   
   @include mixins.responsive(down, mobile-sm) {
-    @include mixins.calc(width, '100vw - 'variables.$spacing-md);
+    @include mixins.calc(width, '100vw - '1rem);
   }
 
   &:before {
     content: "";
     position: absolute;
     top: $spacing-alert;
-    left: variables.$spacing-sm;
-    height: variables.$spacing-md*1.5;
-    width: variables.$spacing-md*1.5;
+    left: $spacing-alert;
+    height: $spacing-alert*3;
+    width: $spacing-alert*3;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
-  &__title {
+  &_title {
     font-weight: variables.$font-bold !important;
   }
 
-  &__subtitle {
+  &_subtitle {
     @extend .caption;
-    padding-bottom: 0.2em;
+    margin-top: 0.125rem !important;
   }
 
-  &__close {
+  &_close {
     transition: opacity variables.$transition-md;
     position: absolute;
-    top: variables.$spacing-sm;
-    right: variables.$spacing-sm;
+    top: .5rem;
+    right: .5rem;
     line-height: 0;
 
     svg {
-      width: variables.$spacing-sm;
-      height: variables.$spacing-sm;
+      width: .5rem;
+      height: .5rem;
       fill: variables.$success-dark
     }
 
@@ -86,31 +84,31 @@ $spacing-alert: variables.$spacing-sm;
 // color
 // —————————————————————————————————————————————————————————————————
 
-@mixin alert-color($color, $background-color: variables.$info-light, $border-color: variables.$info) {
-  @if $color == success { $background-color: variables.$success-light; $border-color: variables.$success; } 
-  @else if $color == info { $background-color: variables.$info-light; $border-color: variables.$info; } 
-  @else if $color == warning { $background-color: variables.$warning-light; $border-color: variables.$warning; } 
-  @else if $color == error { $background-color: variables.$error-light; $border-color: variables.$error; } 
+@mixin alert-color($color, $title-color: variables.$success-dark, $background-color: variables.$success-light, $border-color: variables.$success) {
+  @if $color == success { $title-color: variables.$success-dark; $background-color: variables.$success-light; $border-color: variables.$success; } 
+  @else if $color == info { $title-color: variables.$info-dark; $background-color: variables.$info-light; $border-color: variables.$info; } 
+  @else if $color == warning { $title-color: variables.$warning-dark; $background-color: variables.$warning-light; $border-color: variables.$warning; } 
+  @else if $color == error { $title-color: variables.$error-dark; $background-color: variables.$error-light; $border-color: variables.$error; } 
 
   background-color: $background-color;
   border: 1px solid $border-color;
-  color: variables.$text;
+  color: $title-color;
 
-  // &:not(.alert--bar):before {
+  &:not(.alert-bar):before {
 
-  //   @if $color == success { content: url(variables.$icons-path + 'phosphor/check-circle.svg'); }
-  //   @else if $color == info { content: url(variables.$icons-path + 'phosphor/info.svg'); }
-  //   @else if $color == warning { content: url(variables.$icons-path + 'phosphor/warning.svg'); }
-  //   @else if $color == error { content: url(variables.$icons-path + 'phosphor/x-circle.svg'); }
-  // }
+    @if $color == success { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%230C5F3F' viewBox='0 0 256 256'%3E%3Cpath d='M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z'%3E%3C/path%3E%3C/svg%3E"); }
+    @else if $color == info { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%230B5F11' viewBox='0 0 256 256'%3E%3Cpath d='M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z'%3E%3C/path%3E%3C/svg%3E"); }
+    @else if $color == warning { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%237F7332' viewBox='0 0 256 256'%3E%3Cpath d='M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z'%3E%3C/path%3E%3C/svg%3E"); }
+    @else if $color == error { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%2375303A' viewBox='0 0 256 256'%3E%3Cpath d='M165.66,101.66,139.31,128l26.35,26.34a8,8,0,0,1-11.32,11.32L128,139.31l-26.34,26.35a8,8,0,0,1-11.32-11.32L116.69,128,90.34,101.66a8,8,0,0,1,11.32-11.32L128,116.69l26.34-26.35a8,8,0,0,1,11.32,11.32ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z'%3E%3C/path%3E%3C/svg%3E"); }
+  }
 }
 
 .alert {
 
-  &--success { @include alert-color(success); }
-  &--info { @include alert-color(info); }
-  &--warning { @include alert-color(warning); }
-  &--error { @include alert-color(error); }
+  &-success { @include alert-color(success); }
+  &-info { @include alert-color(info); }
+  &-warning { @include alert-color(warning); }
+  &-error { @include alert-color(error); }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -119,7 +117,7 @@ $spacing-alert: variables.$spacing-sm;
 
 .alert {
   
-  &--notice {
+  &-notice {
     position: relative;
     max-width: none;
     z-index: 1;
@@ -134,7 +132,7 @@ $spacing-alert: variables.$spacing-sm;
 
 .alert {
   
-  &--bar {
+  &-bar {
     position: fixed;
     top: 0;
     right: 0;
@@ -152,30 +150,30 @@ $spacing-alert: variables.$spacing-sm;
 // dense
 // —————————————————————————————————————————————————————————————————
 
-.alert--dense {
+.alert-dense {
   padding: $spacing-alert*0.5 $spacing-alert;
 
   &:before {
     top: $spacing-alert*0.5;
     left: $spacing-alert*0.5;
-    height: variables.$spacing-md*1.25;
-    width: variables.$spacing-md*1.25;
+    height: 1rem*1.25;
+    width: 1rem*1.25;
   }
 
-  &:not(.alert--bar) {
-    padding-left: variables.$spacing-md*1.75;
+  &:not(.alert-bar) {
+    padding-left: 1rem*1.75;
   }
 
-  .alert__title {
+  .alert_title {
 
-    + .alert__title,
-    + .alert__subtitle {
+    + .alert_title,
+    + .alert_subtitle {
       margin-top: 0;
     }
   }
 
-  .alert__title { @extend .caption; }
-  .alert__subtitle { @extend .overline; }
+  .alert_title { @extend .caption; }
+  .alert_subtitle { @extend .overline; }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -184,11 +182,11 @@ $spacing-alert: variables.$spacing-sm;
 
 .alert.alert {
 
-  &--noIcon {    
-    padding-left: variables.$spacing-md;
+  &-noIcon {    
+    padding-left: 1rem;
     
-    &.alert--dense {
-      padding-left: variables.$spacing-sm;
+    &.alert-dense {
+      padding-left: .5rem;
     }
     
     &:before {

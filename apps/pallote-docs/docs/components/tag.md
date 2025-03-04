@@ -35,7 +35,7 @@ Small label representing date like status or property.
 Change the Tag style.
 
 <div class="docs_block">
-  <Tag color="primary">Primary</Tag>
+  <Tag>Primary</Tag>
   <Tag color="secondary">Secondary</Tag>
   <Tag color="grey">Grey</Tag>
   <Tag color="success">Success</Tag>
@@ -48,7 +48,7 @@ Change the Tag style.
   <TabItem value="react" label="React">
 
 ```jsx
-<Tag color="primary">Primary</Tag>
+<Tag>Primary</Tag>
 <Tag color="secondary">Secondary</Tag>
 <Tag color="grey">Grey</Tag>
 <Tag color="success">Success</Tag>

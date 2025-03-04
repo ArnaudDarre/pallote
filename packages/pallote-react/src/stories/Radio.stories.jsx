@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 import { Radio } from '../components/Radio'
 
 export default {
@@ -40,7 +40,7 @@ Checked.parameters = {
 }
 
 export const Disabled = () => (
-  <Grid wrapper spacing={2} direction="column">
+  <Grid gap={4} direction="column">
     <Grid item><Radio label="Disabled" id="disabled" name="disabled" value="disabled" disabled></Radio></Grid>
     <Grid item><Radio label="Disabled" id="disabled" name="disabled" value="disabled" checked disabled></Radio></Grid>
   </Grid>

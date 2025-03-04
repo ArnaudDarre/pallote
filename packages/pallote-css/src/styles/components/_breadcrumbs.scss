@@ -1,5 +1,6 @@
-@use "../common/mixins";
-@use "../common/variables";
+@use '../common/mixins';
+@use '../common/variables';
+@use '../utilities/text';
 
 // —————————————————————————————————————————————————————————————————
 // elements
@@ -11,29 +12,38 @@
 // —————————————————————————————————————————————————————————————————
 
 .breadcrumbs {
-  display: inline-flex;
-  align-items: baseline;
-
-  @include mixins.responsive(down, tablet) {
-    flex-direction: column;
+  
+  ol {
+    display: inline-flex;
+    align-items: baseline;
   }
 
-  &__item {
-    cursor: pointer;
+  li {
+    margin-left: 0;
+  }
 
+  &_item {
+    
     &:not(:first-child) {
-      margin-left: variables.$spacing-xs;
-
+      @extend %caption;
+      margin-left: .25rem;
+      
       &:before {
         content: "/";
-        margin-right: variables.$spacing-xs;
+        margin-right: .25rem;
         color: variables.$text-alt;
         display: inline-block; // required to remove underline on hover for before element
       }
     }
 
-    @include mixins.hover {
+    p {
+      display: inline-block;
+      color: variables.$primary;
+    }
+
+    a:hover {
       text-decoration: underline;
+      text-underline-offset: 15em;
     }
   }
 }
@@ -42,9 +52,12 @@
 // separator
 // —————————————————————————————————————————————————————————————————
 
-.breadcrumbs--arrow .breadcrumbs__item:not(:first-child):before {
-  content: "\2039";
-  transform: rotate(180deg);
-  font-size: 1.5em;
-  float: left;
+.breadcrumbs-arrow .breadcrumbs_item:not(:first-child):before {
+  content: '';
+  border: solid variables.$text-alt;
+  border-width: 0 1px 1px 0;
+  padding: .2em;
+  transform: rotate(-45deg);
+  margin-right: .5rem;
+  margin-bottom: .1em;
 }

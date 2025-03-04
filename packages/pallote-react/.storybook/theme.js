@@ -3,16 +3,16 @@ import { create } from '@storybook/theming'
 export default create({
   base: 'light',
 
-  fontBase: '"Source Sans", sans-serif',
+  fontBase: '"Source Sans 3", sans-serif',
   fontCode: 'monospace',
 
   brandTitle: 'Pallote',
-  brandUrl: 'https://pallote.com',
-  brandImage: 'https://storybook.js.org/images/placeholders/350x150.png',
+  brandUrl: 'https://react.pallote.com',
+  brandImage: '/pallote-logo.svg',
   brandTarget: '_self',
 
-  colorPrimary: '#C24889',
-  colorSecondary: '#0076AC',
+  colorPrimary: '#9E6D04',
+  colorSecondary: '#3C6BF4',
 
   appBg: '#F2F3F4',
   appContentBg: '#F2F3F4',
@@ -24,7 +24,7 @@ export default create({
   textInverseColor: '#FFFFFF',
 
   barTextColor: '#000A1E',
-  barSelectedColor: '#0076AC',
+  barSelectedColor: '#3C6BF4',
   barHoverColor: '#585C6D',
   barBg: '#FFFFFF',
 

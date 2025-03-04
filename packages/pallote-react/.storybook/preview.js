@@ -1,7 +1,7 @@
 /** @type { import('@storybook/react').Preview } */
 import theme from './theme'
 import './style.scss'
-import '../src/index.scss'
+import '../src/pallote-react.scss'
 
 const preview = {
   parameters: {

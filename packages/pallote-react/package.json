@@ -11,6 +11,7 @@
     "directory": "dist"
   },
   "scripts": {
+    "watch": "rollup -c --watch",
     "start": "storybook dev -p 6006",
     "build": "rollup -c",
     "build-storybook": "storybook build"

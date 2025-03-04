@@ -1,0 +1,153 @@
+@use '../common/variables';
+@use '../common/mixins';
+@use '../utilities/text';
+
+// —————————————————————————————————————————————————————————————————
+// variables
+// elements
+// striped
+// hasHover
+// dense
+// border
+// kind (for table cell component)
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// variables
+// —————————————————————————————————————————————————————————————————
+
+$padding-vertical: .5rem;
+$padding-horizontal: .75rem;
+$padding-dense-vertical: .25rem;
+$padding-dense-horizontal: .5rem;
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  overflow: hidden;
+  background-color: variables.$background-paper;
+
+  &_content {
+    width: 100%;
+  }
+
+  &_head {
+    @extend %caption;
+    font-weight: bold;
+    color: variables.$text-alt;
+  }
+  
+  &_cell {
+    padding: $padding-vertical $padding-horizontal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .buttons {
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+    }
+  }
+ 
+  &_footer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: variables.$overlay;
+    padding: $padding-vertical;
+    border-top: variables.$border;
+  }
+
+  &_pagination {
+    width: fit-content;
+  }
+
+  &_rowSelect {
+    width: 5rem;
+    margin-bottom: 0;
+  }
+}
+
+td.table_cell { border-top: variables.$border; }
+th.table_cell { background-color: rgba(variables.$contrast, 0.05); }
+
+// —————————————————————————————————————————————————————————————————
+// striped
+// —————————————————————————————————————————————————————————————————
+
+.table-striped {
+
+  .table_row:nth-child(even) {
+    background-color: rgba(variables.$contrast, 0.03);
+  }
+}
+// —————————————————————————————————————————————————————————————————
+// hasHover
+// —————————————————————————————————————————————————————————————————
+
+.table-hasHover {
+
+  .table {
+    
+    &_head .table_row:hover { background-color: transparent; }
+    &_row:hover { background-color: variables.$hover; }
+  }
+}
+// —————————————————————————————————————————————————————————————————
+// dense
+// —————————————————————————————————————————————————————————————————
+
+.table-dense {
+
+  .table {
+
+    &_cell {
+      @extend %caption;
+      padding: $padding-dense-vertical $padding-dense-horizontal;
+    }
+
+    &_footer {
+      padding: $padding-dense-vertical;
+    }
+  }
+
+  th.table_cell {
+    @extend %overline;
+    font-weight: variables.$font-bold;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// border
+// —————————————————————————————————————————————————————————————————
+
+.table-border {
+  border: variables.$border;
+  border-radius: variables.$border-radius-md;
+}
+
+// —————————————————————————————————————————————————————————————————
+// kind (for table cell component)
+// —————————————————————————————————————————————————————————————————
+
+.table_cell {
+
+  &-number {
+    text-align: right;
+  }
+  
+  &-action {
+    text-align: right;
+    width: 1%;
+    white-space: nowrap;
+
+    .buttons {
+      justify-content: flex-end;
+    }
+  }
+}

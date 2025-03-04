@@ -15,8 +15,12 @@ These are the default typographic style, which you can override them to match yo
 
 | Name | Value | |
 | - | - | - |
-| `$font` | `"Source Sans Pro"` | This is the default text |
-| `$font-fallback` | `Arial, sans-serif` | |
+| `$font` | `"Source Sans Pro"` | This is the default font |
+| `$font-fallback` | `"Arial, sans-serif"` | |
+
+:::info Change default font
+In order to override the default font, you need to change the `$font` variable and to embed your font files.
+:::
 
 ### Weight
 

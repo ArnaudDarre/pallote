@@ -5,16 +5,12 @@ import PropTypes from 'prop-types'
 import { Color } from '../utilities/Color'
 
 export const SizeContext = createContext('md')
-export const PaddingContext = createContext(false)
-export const DirectionContext = createContext('portrait')
-
 
 export const Card = ({
   size = 'md',
   fill = 'paper',
   direction = 'portrait',
   align = 'left',
-  noPadding = false,
   hasShadow = false,
   transparent = false,
   className,
@@ -24,28 +20,24 @@ export const Card = ({
 
   return (
     <SizeContext.Provider value={size}>
-      <PaddingContext.Provider value={noPadding}>
-        <DirectionContext.Provider value={direction}>
-          <Color fill={transparent || noPadding ? null : fill}>
-            <div
-              className={classnames([
-                'card',
-                {
-                  [`card--${size}`]: size,
-                  [`card--${direction}`]: direction,
-                  [`card--${align}`]: align,
-                  'card--hasShadow': hasShadow,
-                  'card--transparent': transparent
-                },
-                className
-              ])}
-              {...props}
-            >
-              {children}
-            </div>
-          </Color>
-        </DirectionContext.Provider>
-      </PaddingContext.Provider>
+      <Color fill={transparent ? null : fill}>
+        <div
+          className={classnames([
+            'card',
+            {
+              [`card-${size}`]: size,
+              [`card-${direction}`]: direction,
+              [`card-${align}`]: align,
+              'card-hasShadow': hasShadow,
+              'card-transparent': transparent
+            },
+            className
+          ])}
+          {...props}
+        >
+          {children}
+        </div>
+      </Color>
     </SizeContext.Provider>
   )
 }
@@ -59,8 +51,6 @@ Card.propTypes = {
     'xl'
   ]),
   fill: PropTypes.oneOf([
-    'main',
-    'contrast',
     'default',
     'paper',
     'primary',
@@ -79,7 +69,6 @@ Card.propTypes = {
     'center',
     'right'
   ]),
-  noPadding: PropTypes.bool,
   hasShadow: PropTypes.bool,
   transparent: PropTypes.bool,
   className: PropTypes.node,

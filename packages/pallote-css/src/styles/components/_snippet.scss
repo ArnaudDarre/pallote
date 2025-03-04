@@ -1,5 +1,5 @@
-@use "../common/variables";
-@use "../utilities/text";
+@use '../common/variables';
+@use '../utilities/text';
 
 // —————————————————————————————————————————————————————————————————
 // elements
@@ -33,7 +33,7 @@
   }
 
   .tag {
-    font-family: variables.$font-fallback;
+    font-family: variables.$font, variables.$font-fallback;
     float: right;
     margin-top: 1px;
     margin-right: -(variables.$spacing-xs);
@@ -49,7 +49,7 @@
   &:after {
     @extend %overline;
     content: "Default";
-    font-family: variables.$font-fallback;
+    font-family: variables.$font, variables.$font-fallback;
     float: right;
     margin-top: 1px;
     margin-right: -(variables.$spacing-xs);

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Grid } from '../components/Grid'
+import { Grid } from '../utilities/Grid'
 import { Status } from '../components/Status'
 
 export default {
@@ -22,7 +22,7 @@ Playground.args = {
 }
 
 export const Color = () => (
-  <Grid wrapper spacing={2}>
+  <Grid gap={4}>
     <Grid item><Status>Inactive</Status></Grid>
     <Grid item><Status color="success">Success</Status></Grid>
     <Grid item><Status color="info">Info</Status></Grid>

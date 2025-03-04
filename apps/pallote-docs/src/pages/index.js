@@ -5,19 +5,20 @@ import { Button, Buttons, Card, CardActions, CardContent, CardHeader, Grid, Sect
 
 import InstallReact from '../components/index/InstallReact.mdx'
 import InstallCSS from '../components/index/InstallCSS.mdx'
+import Cover from '@site/static/images/cover.png';
 
 const InstallList = [
-  {
-    title: 'Pallote React',
-    subtitle: "Leverage the power of the CSS library included in simple, easy to use React components.",
-    markdownComponent: <InstallReact />,
-    linkURL: "/docs/getting-started/installation?package=react"
-  },
   {
     title: 'Pallote CSS',
     subtitle: "Stylish CSS library for all your web projects.",
     markdownComponent: <InstallCSS />,
     linkURL: "/docs/getting-started/installation?package=css"
+  },
+  {
+    title: 'Pallote React',
+    subtitle: "Leverage the power of the CSS library included in simple, easy to use React components.",
+    markdownComponent: <InstallReact />,
+    linkURL: "/docs/getting-started/installation?package=react"
   }
 ]
 
@@ -30,6 +31,7 @@ export default function Home() {
     >
       <main>
         <Section color='primary' landing>
+          <img src={Cover} title="Component examples" className="coverImage" />
           <SectionHeader
             title="Introducing Pallote"
             subtitle={
@@ -59,10 +61,10 @@ export default function Home() {
             subtitle="Get started by installing the packages in your project."
           />
           <SectionContent>
-            <Grid wrapper spacing={3} alignItems="stretch">
+            <Grid gap={3} items="stretch">
               {InstallList.map((props, idx) => (
-                <Grid sm={4} key={idx} item>
-                  <Card hasShadow className="h-full">
+                <Grid colsm={4} key={idx} item>
+                  <Card className="h-full" hasShadow>
                     <CardHeader
                       title={props.title}
                       subtitle={props.subtitle}
