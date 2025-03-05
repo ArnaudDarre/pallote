@@ -10,6 +10,10 @@
 // —————————————————————————————————————————————————————————————————
 
 .tabs-container {
+  border: variables.$border;
+  background-color: variables.$background-paper;
+  border-radius: variables.$border-radius-md;
+  overflow: hidden;
 
   .tabs {
     border-bottom: variables.$border;
@@ -18,6 +22,11 @@
 
   [role="tabpanel"][hidden] {
     display: none;
+  }
+
+  .margin-top--md {
+    margin-top: 0 !important;
+    padding: 1rem;
   }
 }
 
@@ -47,5 +56,9 @@
 
   p + [class*="codeBlockContainer"] {
     margin-top: 1rem;
+  }
+
+  [class*="codeBlockContainer"] {
+    border-radius: variables.$border-radius-sm;
   }
 }

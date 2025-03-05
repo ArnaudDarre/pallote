@@ -1,14 +1,6 @@
 @use 'pallote-css/styles/common/variables';
 @use 'pallote-css/styles/common/mixins';
-
-// —————————————————————————————————————————————————————————————————
-// container
-// docs
-// —————————————————————————————————————————————————————————————————
-
-// —————————————————————————————————————————————————————————————————
-// container
-// —————————————————————————————————————————————————————————————————
+@use 'pallote-css/styles/utilities/text';
 
 .main-wrapper {
   min-height: 100vh;
@@ -42,100 +34,4 @@
       }
     }
   }
-}
-
-// markdown container
-
-.theme-doc-markdown {
-  
-  > h2 {
-    margin-bottom: 2rem;
-    padding-top: 2rem;
-    border-top: variables.$border;
-  }
-
-  > h2 + p {
-    margin-top: -1rem;
-  }
-  
-  > h3 + p {
-    margin-top: -.5rem;
-  }
-
-  > p, > ul {
-    max-width: 600px;
-  }
-
-  h1.section_title {
-    margin-bottom: 0;
-  }
-
-  > p > a {
-    text-decoration: underline;
-    
-    &:hover {
-      text-decoration-thickness: 3px;
-    }
-  }
-
-  table + .alert {
-    margin-top: 1rem;
-  }
-}
-
-// grid links on main page
-
-.generatedIndexPage_vN6x {
-
-  .list_eTzJ {
-    margin: 0 -.5rem;
-
-    .col {
-      padding: 0 .5rem;
-      margin-bottom: 1rem !important;
-    }
-  }
-}
-
-// —————————————————————————————————————————————————————————————————
-// docs
-// —————————————————————————————————————————————————————————————————
-
-.docs {
-
-  &_block {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    padding: 1.5rem;
-    border: variables.$border;
-    border-radius: variables.$border-radius-md;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    background-color: variables.$background-paper;
-    
-    &-portrait {
-      flex-direction: column;
-    }
-
-    .docs-doc-id-components\/section & {
-      gap: 0;
-    }
-
-  }
-  
-  &_row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    width: 100%;
-
-    & + & {
-      margin-top: .5rem;
-    }
-  }
-}
-
-p + .tabs-container {
-  margin-top: 2rem;
 }

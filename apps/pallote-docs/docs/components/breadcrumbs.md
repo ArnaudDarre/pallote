@@ -46,7 +46,7 @@ export const breadcrumbItems = [
 
 ### Separator
 
-<div class="docs_block docs_block-portrait" style={{gap: '2rem'}}>
+<div class="docs_block docs_block-portrait" style={{gap: '1rem'}}>
 
   <Breadcrumbs items={breadcrumbItems} />
   <Breadcrumbs items={breadcrumbItems} separator="arrow" />

@@ -1,5 +1,22 @@
 @use 'pallote-css/styles/common/variables';
 @use 'pallote-css/styles/common/mixins';
+@use 'pallote-css/styles/utilities/text';
+
+// if changing any of this values you need to also change them in docs.scss
+[class*="generatedIndexPage_"] {
+
+  header {
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @extend %subtitle;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
 
 [class*="list_"].row {
   margin: 0;

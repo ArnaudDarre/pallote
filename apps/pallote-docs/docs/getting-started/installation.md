@@ -6,10 +6,9 @@ import TabItem from '@theme/TabItem';
 
 # Installation
 
-Pallote is a design system that has two library:
+Pallote is a comprehensive design system and component library.
 
-- **Pallote CSS**, a CSS library
-- **Pallote React**, a React component library, which uses Pallote CSS to style React UI components.
+It has two packages, **Pallote CSS**, a CSS library, and **Pallote React**, a React component library, which uses Pallote CSS to style React UI components.
 
 This documentation presents both packages, and each component has code examples both, depending on the technology you use. If you project is built with React, use Pallote React, and if you use pure HTML, use the code examples and CSS classes of Pallote CSS.
 

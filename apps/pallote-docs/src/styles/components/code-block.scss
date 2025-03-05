@@ -24,9 +24,9 @@ td > code {
 .theme-code-block {
   background-color: variables.$grey-90 !important;
   border: variables.$border;
-  border-radius: variables.$border-radius-md;
   
   &[class*="codeBlockContainer_"] {
+    border-radius: variables.$border-radius-md;
     box-shadow: none;
   }
   

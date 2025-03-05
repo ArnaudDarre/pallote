@@ -1,0 +1,96 @@
+@use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/utilities/text';
+
+// if changing any of this values you need to also change them in category.scss
+.theme-doc-markdown {
+
+  header {
+    margin-bottom: 1rem;
+    
+    h1 {
+      margin-bottom: 0 !important;
+    }
+    
+    + p {
+      @extend %subtitle;
+      margin-bottom: 2.5rem;
+
+      + .docs_links {
+        margin-top: -1.5rem;
+      }
+    }
+  }
+  
+  > h2 {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    border-top: variables.$border;
+  }
+
+  > h2 + p {
+    margin-top: -1rem;
+  }
+  
+  > h3 + p {
+    margin-top: -.5rem;
+  }
+
+  > p, > ul {
+    max-width: 600px;
+  }
+
+  h1.section_title {
+    margin-bottom: 0;
+  }
+
+  > p > a {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  table + .alert {
+    margin-top: 1rem;
+  }
+}
+
+.docs {
+
+  &_links {
+    margin-bottom: 2.5rem;
+  }
+
+  &_block {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: variables.$border;
+    border-radius: variables.$border-radius-md;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    background-color: variables.$background-paper;
+    
+    &-portrait {
+      flex-direction: column;
+    }
+
+    .docs-doc-id-components\/section & {
+      gap: 0;
+    }
+
+  }
+  
+  &_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 100%;
+
+    & + & {
+      margin-top: .5rem;
+    }
+  }
+}

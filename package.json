@@ -6,10 +6,9 @@
   "main": "index.js",
   "workspaces": ["packages/*", "apps/*"],
   "scripts": {
-    "watch-css": "pnpm --filter library-css watch",
-    "watch-react": "pnpm --filter library-react watch",
-    "start-react": "pnpm --filter library-react start",
-    "start-docs": "pnpm --filter library-docs start",
+    "watch-css": "pnpm --filter pallote-css watch",
+    "start-react": "pnpm --filter pallote-react start",
+    "start-docs": "pnpm --filter ./apps/pallote-docs start",
     "build-css": "pnpm --filter pallote-css build",
     "build-react": "pnpm --filter pallote-react build",
     "build-packages": "pnpm build-css && pnpm build-react",

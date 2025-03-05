@@ -164,16 +164,8 @@ $spacing-alert: .5rem;
     padding-left: 1rem*1.75;
   }
 
-  .alert_title {
-
-    + .alert_title,
-    + .alert_subtitle {
-      margin-top: 0;
-    }
-  }
-
   .alert_title { @extend .caption; }
-  .alert_subtitle { @extend .overline; }
+  .alert_subtitle { @extend .overline; margin-top: 0 !important; }
 }
 
 // —————————————————————————————————————————————————————————————————

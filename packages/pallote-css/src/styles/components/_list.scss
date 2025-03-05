@@ -39,7 +39,6 @@
 .list-dense .list_item,
 .list_item-dense {
   @extend %caption;
-  margin-top: 0 !important;
 
   &:not(:first-child) {
     margin-top: .25rem;

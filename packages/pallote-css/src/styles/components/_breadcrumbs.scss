@@ -12,20 +12,23 @@
 // —————————————————————————————————————————————————————————————————
 
 .breadcrumbs {
-  
+  text-transform: uppercase;
+
   ol {
     display: inline-flex;
-    align-items: baseline;
+    flex-wrap: wrap;
   }
 
   li {
     margin-left: 0;
+    padding-top: 0;
   }
 
   &_item {
+    @extend %caption;
+    font-weight: variables.$font-bold;
     
     &:not(:first-child) {
-      @extend %caption;
       margin-left: .25rem;
       
       &:before {
@@ -36,14 +39,18 @@
       }
     }
 
+    a {
+      border-radius: variables.$border-radius-sm;
+      text-underline-offset: .15em;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     p {
       display: inline-block;
       color: variables.$primary;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      text-underline-offset: 15em;
     }
   }
 }

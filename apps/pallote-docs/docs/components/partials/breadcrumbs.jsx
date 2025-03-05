@@ -1,5 +1,5 @@
 export const breadcrumbItems = [
   { label: "Home", href: "/" },
-  { label: "Customise", href: "/?path=/docs/customise--docs" },
+  { label: "Components", href: "/docs/category/components" },
   { label: "Breadcrumbs" },
 ];

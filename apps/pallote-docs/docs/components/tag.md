@@ -71,7 +71,7 @@ Change the Tag style.
   </TabItem>
 </Tabs>
 
-### Size
+### Dense
 
 <div class="docs_block">
   <Tag dense>Dense</Tag>

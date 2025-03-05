@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 export const Text = ({
-  variant = "body",
+  variant,
   align,
   weight,
   transform,
