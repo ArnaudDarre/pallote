@@ -8,7 +8,7 @@ export default create({
 
   brandTitle: 'Pallote',
   brandUrl: 'https://react.pallote.com',
-  brandImage: '/pallote-logo.svg',
+  brandImage: 'https://pallote.com/logos/pallote-logo.svg',
   brandTarget: '_self',
 
   colorPrimary: '#9E6D04',
