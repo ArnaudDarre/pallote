@@ -109,8 +109,16 @@ div.css-qhkunw {
 // code snippets
 // —————————————————————————————————————————————————————————————————
 
-.docblock-source {
-  box-shadow: none !important;
+.docblock-source.css-oju4ka,
+.css-byjoi9 {
+  box-shadow: none;
+  background-color: variables.$grey-90 !important;
+}
+
+.css-byjoi9 {
+  font-size: variables.$overline-size !important;
+  border-radius: variables.$border-radius-sm !important;
+  color: variables.$text-contrast !important;
 }
 
 pre.prismjs {

@@ -23,11 +23,20 @@ const config = {
   },
   staticDirs: ['../public'],
   viteFinal: async (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "pallote-css": require("path").resolve("node_modules/pallote-css"),
+    return {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve?.alias,
+          "pallote-css": require("path").resolve("node_modules/pallote-css"),
+        },
+      },
+      optimizeDeps: {
+        ...config.optimizeDeps,
+        exclude: ["@storybook/mdx1-csf", "@storybook/addon-docs"],
+      },
     };
-    return config;
   },
   docs: {
     autodocs: "tag",
