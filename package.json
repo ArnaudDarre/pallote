@@ -13,7 +13,9 @@
     "build-react": "pnpm --filter pallote-react build",
     "build-packages": "pnpm build-css && pnpm build-react",
     "build-storybook": "pnpm build-css && pnpm --filter pallote-react build-storybook",
-    "build-docs": "pnpm build-css && pnpm build-react && pnpm --filter ./apps/pallote-docs build"
+    "build-docs": "pnpm build-css && pnpm build-react && pnpm --filter ./apps/pallote-docs build",
+    "publish-css": "pnpm --filter pallote-css publish",
+    "publish-react": "pnpm --filter pallote-react publish"
   },
   "keywords": [],
   "author": "",
