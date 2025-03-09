@@ -25,16 +25,16 @@ export const Playground = Template.bind({})
 
 export const Direction = () => (
   <Grid direction="column" gap={2}>
-    <Grid item className="fg-1"><Divider /></Grid>
-    <Grid item><Divider direction="portrait" className="h-4" /></Grid>
+    <Grid className="fg-1"><Divider /></Grid>
+    <Grid><Divider direction="portrait" className="h-4" /></Grid>
   </Grid>
 )
 
 export const Padding = () => (
   <Grid gap={4} direction="column">
-    <Grid item><Divider padding="none" /></Grid>
-    <Grid item><Divider padding="sm" /></Grid>
-    <Grid item><Divider padding="md" /></Grid>
-    <Grid item><Divider padding="lg" /></Grid>
+    <Grid><Divider padding="none" /></Grid>
+    <Grid><Divider padding="sm" /></Grid>
+    <Grid><Divider padding="md" /></Grid>
+    <Grid><Divider padding="lg" /></Grid>
   </Grid>
 )

@@ -30,11 +30,11 @@ Playground.args = {
 
 export const Color = () => (
   <Grid gap={4}>
-    <Grid item><Status>Inactive</Status></Grid>
-    <Grid item><Status color="success">Success</Status></Grid>
-    <Grid item><Status color="info">Info</Status></Grid>
-    <Grid item><Status color="warning">Warning</Status></Grid>
-    <Grid item><Status color="error">Error</Status></Grid>
+    <Grid><Status>Inactive</Status></Grid>
+    <Grid><Status color="success">Success</Status></Grid>
+    <Grid><Status color="info">Info</Status></Grid>
+    <Grid><Status color="warning">Warning</Status></Grid>
+    <Grid><Status color="error">Error</Status></Grid>
   </Grid>
 )
 

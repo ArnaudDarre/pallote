@@ -1,11 +1,24 @@
 @use 'pallote-css/styles/common/variables';
 
+.coverExamples {
+  // position: absolute;
+  // top: 1.5rem;
+  // right: 0;
+  // min-width: 600px;
+  transform: scale(.75);
+
+  .card {
+    background-color: transparent;
+  }
+}
+
 .coverImage {
   position: absolute;
   top: 1.5rem;
   right: 0;
   width: 72%;
   min-width: 600px;
+  // opacity: .2;
 
   ~ .section_header {
     position: relative; // need for index

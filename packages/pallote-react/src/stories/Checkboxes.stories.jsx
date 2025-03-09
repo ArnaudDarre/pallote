@@ -39,13 +39,13 @@ Playground.args = {
 
 export const Direction = () => (
   <Grid direction="column" gap={2}>
-    <Grid item>
+    <Grid>
       <Checkboxes id="portrait" label="Portrait">
         <Checkbox id="portrait_1" value="1" label="Option 1" />
         <Checkbox id="portrait_2" value="2" label="Option 2" />
       </Checkboxes>
     </Grid>
-    <Grid item>
+    <Grid>
       <Checkboxes direction="landscape" id="landscape" label="Landscape">
         <Checkbox id="landscape_1" value="1" label="Option 1" />
         <Checkbox id="landscape_2" value="2" label="Option 2" />

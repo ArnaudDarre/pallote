@@ -34,50 +34,50 @@ Playground.args = {
 
 export const Show = () => (
   <Grid gap={4}>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="show='mobile-sm'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="show='mobile-sm'" dense /></Grid>
       <Display show="mobile-sm">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Show on small mobile</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="show='mobile'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="show='mobile'" dense /></Grid>
       <Display show="mobile">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Show on mobile</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="show='tablet'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="show='tablet'" dense /></Grid>
       <Display show="tablet">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Show on tablet</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="show='laptop'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="show='laptop'" dense /></Grid>
       <Display show="laptop">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Show on laptop</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="show='desktop'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="show='desktop'" dense /></Grid>
       <Display show="desktop">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Show on desktop</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="show='touch'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="show='touch'" dense /></Grid>
       <Display show="touch">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Show on touch devices</Text></Color>
         </Grid>
       </Display>
@@ -95,50 +95,50 @@ Show.parameters = {
 
 export const Hide = () => (
   <Grid gap={4}>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="hide='mobile-sm'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="hide='mobile-sm'" dense /></Grid>
       <Display hide="mobile-sm">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Hide on small mobile</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="hide='mobile'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="hide='mobile'" dense /></Grid>
       <Display hide="mobile">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Hide on mobile</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="hide='tablet'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="hide='tablet'" dense /></Grid>
       <Display hide="tablet">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Hide on tablet</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="hide='laptop'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="hide='laptop'" dense /></Grid>
       <Display hide="laptop">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Hide on laptop</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="hide='desktop'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="hide='desktop'" dense /></Grid>
       <Display hide="desktop">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Hide on desktop</Text></Color>
         </Grid>
       </Display>
     </Grid>
-    <Grid item col={4} gap={2} direction="column">
-      <Grid item><Snippet content="hide='touch'" dense /></Grid>
+    <Grid col={4} gap={2} direction="column">
+      <Grid><Snippet content="hide='touch'" dense /></Grid>
       <Display hide="touch">
-        <Grid item>
+        <Grid>
           <Color fill="default" stroke="border" className={'ph-1 pv-½ br-sm'}><Text variant="caption">Hide on touch devices</Text></Color>
         </Grid>
       </Display>

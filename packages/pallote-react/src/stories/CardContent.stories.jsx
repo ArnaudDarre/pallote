@@ -39,7 +39,7 @@ Playground.args = {
 
 export const FullWidth = () => (
   <Grid gap={4}>
-    <Grid item colmd={4} colsm={12}>
+    <Grid colmd={4} colsm={12}>
       <Card>
         <CardHeader
           title="Full width content (remove left and right padding)"

@@ -30,7 +30,6 @@ Playground.args = {
   id: 'Switch',
   name: 'Switch',
   value: 'Switch',
-  label: 'Switch'
 }
 
 export const StartLabel = () => (

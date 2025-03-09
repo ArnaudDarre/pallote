@@ -64,13 +64,13 @@ For the CSS library, you do not need to add the `required` property to the form 
 ### Direction
 
 <div class="docs_block">
-  <Checkboxes label="Landscape">
-    <Checkbox id="landscape_1" value="1" label="Option 1" />
-    <Checkbox id="landscape_2" value="2" label="Option 2" />
-  </Checkboxes>
-  <Checkboxes label="Portrait" direction="portrait">
+  <Checkboxes label="Portrait">
     <Checkbox id="portrait_1" value="1" label="Option 1" />
     <Checkbox id="portrait_2" value="2" label="Option 2" />
+  </Checkboxes>
+  <Checkboxes label="Landscape" direction="landscape">
+    <Checkbox id="landscape_1" value="1" label="Option 1" />
+    <Checkbox id="landscape_2" value="2" label="Option 2" />
   </Checkboxes>
 </div>
 
@@ -78,14 +78,14 @@ For the CSS library, you do not need to add the `required` property to the form 
   <TabItem value="react" label="React">
 
 ```jsx
-<Checkboxes label="Landscape">
-  <Checkbox id="landscape_1" value="1" label="Option 1" />
-  <Checkbox id="landscape_2" value="2" label="Option 2" />
-</Checkboxes>
-
-<Checkboxes label="Portrait" direction="portrait">
+<Checkboxes label="Portrait">
   <Checkbox id="portrait_1" value="1" label="Option 1" />
   <Checkbox id="portrait_2" value="2" label="Option 2" />
+</Checkboxes>
+
+<Checkboxes label="Landscape" direction="landscape">
+  <Checkbox id="landscape_1" value="1" label="Option 1" />
+  <Checkbox id="landscape_2" value="2" label="Option 2" />
 </Checkboxes>
 ```
   </TabItem>
@@ -93,6 +93,20 @@ For the CSS library, you do not need to add the `required` property to the form 
 
 ```html
 <div class="input">
+  <legend class="input_label">Portrait</legend>
+  <div class="input_control checkboxes">
+    <div class="checkbox">
+      <input type="checkbox" id="landscape_1" value="landscape_1" class="checkbox_control" />
+      <label for="landscape_1" class="checkbox_label">Option 1</label>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox" id="landscape_2" value="landscape_2" class="checkbox_control" />
+      <label for="landscape_2" class="checkbox_label">Option 2</label>
+    </div>
+  </div>
+</div>
+
+<div class="input input-landscape">
   <legend class="input_label">Landscape</legend>
   <div class="input_control checkboxes">
     <div class="checkbox">
@@ -106,19 +120,6 @@ For the CSS library, you do not need to add the `required` property to the form 
   </div>
 </div>
 
-<div class="input input-portrait">
-  <legend class="input_label">Portrait</legend>
-  <div class="input_control checkboxes">
-    <div class="checkbox">
-      <input type="checkbox" id="landscape_1" value="landscape_1" class="checkbox_control" />
-      <label for="landscape_1" class="checkbox_label">Option 1</label>
-    </div>
-    <div class="checkbox">
-      <input type="checkbox" id="landscape_2" value="landscape_2" class="checkbox_control" />
-      <label for="landscape_2" class="checkbox_label">Option 2</label>
-    </div>
-  </div>
-</div>
 ```
   </TabItem>
 </Tabs>

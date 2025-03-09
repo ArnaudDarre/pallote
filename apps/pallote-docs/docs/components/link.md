@@ -95,22 +95,22 @@ Overrides the link color. The inherit value means that the link will inherit the
 
 <div class="docs_block">
   <Grid gap={2}>
-    <Grid item gap={2}>
-      <Grid item><Link color="default">Default</Link></Grid>
-      <Grid item><Link color="alt">Alt</Link></Grid>
-      <Grid item><Link color="disabled">Disabled</Link></Grid>
+    <Grid gap={2}>
+      <Grid><Link color="default">Default</Link></Grid>
+      <Grid><Link color="alt">Alt</Link></Grid>
+      <Grid><Link color="disabled">Disabled</Link></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item className="fill-contrast"><Link color="contrast">Contrast</Link></Grid>
-      <Grid item className="fill-contrast"><Link color="contrastAlt">Contrast alt</Link></Grid>
-      <Grid item className="fill-contrast"><Link color="contrastDisabled">Contrast disabled</Link></Grid>
+    <Grid gap={2}>
+      <Grid className="fill-contrast"><Link color="contrast">Contrast</Link></Grid>
+      <Grid className="fill-contrast"><Link color="contrastAlt">Contrast alt</Link></Grid>
+      <Grid className="fill-contrast"><Link color="contrastDisabled">Contrast disabled</Link></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item><Link color="primary">Primary</Link></Grid>
-      <Grid item><Link color="secondary">Secondary</Link></Grid>
+    <Grid gap={2}>
+      <Grid><Link color="primary">Primary</Link></Grid>
+      <Grid><Link color="secondary">Secondary</Link></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item><Link color="inherit">Inherit</Link></Grid>
+    <Grid gap={2}>
+      <Grid><Link color="inherit">Inherit</Link></Grid>
     </Grid>
   </Grid>
 </div>

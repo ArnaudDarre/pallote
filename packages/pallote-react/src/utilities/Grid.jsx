@@ -23,7 +23,7 @@ export const Grid = ({
   return (
     <div
       className={classnames(
-        item ? 'flex_item' : 'flex',
+        'flex',
         {
           'flex-wrap': wrap,
           [`direction-${direction}`]: direction,

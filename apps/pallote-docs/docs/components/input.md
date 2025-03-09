@@ -52,12 +52,12 @@ Change the input type property.
 
 <div class="docs_block">
   <Grid gap={4}>
-    <Grid item xs="6"><Input type="date" id="date" label="Date" /></Grid>
-    <Grid item xs="6"><Input type="email" id="email" label="Email" /></Grid>
-    <Grid item xs="6"><Input type="number" id="number" label="Number" /></Grid>
-    <Grid item xs="6"><Input type="tel" id="tel" label="Telephone" /></Grid>
-    <Grid item xs="6"><Input type="text" id="text" label="Text" /></Grid>
-    <Grid item xs="6"><Input type="time" id="time" label="Time" /></Grid>
+    <Grid xs="6"><Input type="date" id="date" label="Date" /></Grid>
+    <Grid xs="6"><Input type="email" id="email" label="Email" /></Grid>
+    <Grid xs="6"><Input type="number" id="number" label="Number" /></Grid>
+    <Grid xs="6"><Input type="tel" id="tel" label="Telephone" /></Grid>
+    <Grid xs="6"><Input type="text" id="text" label="Text" /></Grid>
+    <Grid xs="6"><Input type="time" id="time" label="Time" /></Grid>
   </Grid>
 </div>
 

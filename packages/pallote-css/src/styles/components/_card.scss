@@ -73,17 +73,13 @@
 
   &_label,
   &_title {
-    @extend %text-bold;
+    font-weight: variables.$font-bold;
   }
 
   &_title {
     line-height: 1.25;
   }
-  
-  &_subtitle {
-    @extend %text-regular;
-  }
-  
+    
   &_content {
     display: inline-flex;
     flex-direction: column;
@@ -183,27 +179,28 @@
     }
 
     &_label {
-      @if $value == xs { @extend %overline; }
-      @else if $value == sm { @extend %overline; }
-      @else if $value == md { @extend %overline; }
-      @else if $value == lg { @extend %caption; }
-      @else if $value == xl { @extend %body; }
+      @if $value == xs { font-size: variables.$overline-size; }
+      @else if $value == sm { font-size: variables.$overline-size; }
+      @else if $value == md { font-size: variables.$overline-size; }
+      @else if $value == lg { font-size: variables.$caption-size; }
+      @else if $value == xl { font-size: variables.$body-size; }
+      margin-bottom: calc($size / 4);
     }
 
     &_title {
-      @if $value == xs { @extend %body; }
-      @else if $value == sm { @extend %subtitle; }
-      @else if $value == md { @extend %h6; }
-      @else if $value == lg { @extend %h5; }
-      @else if $value == xl { @extend %h4; }
+      @if $value == xs { font-size: variables.$body-size; }
+      @else if $value == sm { font-size: variables.$subtitle-size; }
+      @else if $value == md { font-size: variables.$h6-size; }
+      @else if $value == lg { font-size: variables.$h5-size; }
+      @else if $value == xl { font-size: variables.$h4-size; }
     }
 
     &_subtitle {
-      @if $value == xs { @extend %caption; }
-      @else if $value == sm { @extend %body; }
-      @else if $value == md { @extend %subtitle; }
-      @else if $value == lg { @extend %h6; }
-      @else if $value == xl { @extend %h5; }
+      @if $value == xs { font-size: variables.$caption-size; }
+      @else if $value == sm { font-size: variables.$body-size; }
+      @else if $value == md { font-size: variables.$subtitle-size; }
+      @else if $value == lg { font-size: variables.$h6-size; }
+      @else if $value == xl { font-size: variables.$h5-size; }
       margin-top: calc($size / 3);
     }
 

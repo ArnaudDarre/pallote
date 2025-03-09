@@ -64,13 +64,13 @@ For the CSS library, you do not need to add the `required` property to the form 
 ### Direction
 
 <div class="docs_block">
-  <RadioButtons label="Landscape">
-    <Radio name="landscape" id="landscape_1" value="1" label="Option 1" />
-    <Radio name="landscape" id="landscape_2" value="2" label="Option 2" />
-  </RadioButtons>
-  <RadioButtons label="Portrait" direction="portrait">
+  <RadioButtons label="Portrait">
     <Radio name="portrait" id="portrait_1" value="1" label="Option 1" />
     <Radio name="portrait" id="portrait_2" value="2" label="Option 2" />
+  </RadioButtons>
+  <RadioButtons label="Landscape" direction="landscape">
+    <Radio name="landscape" id="landscape_1" value="1" label="Option 1" />
+    <Radio name="landscape" id="landscape_2" value="2" label="Option 2" />
   </RadioButtons>
 </div>
 
@@ -78,14 +78,14 @@ For the CSS library, you do not need to add the `required` property to the form 
   <TabItem value="react" label="React">
 
 ```jsx
-<RadioButtons label="Landscape">
-  <Radio name="landscape" id="landscape_1" value="1" label="Option 1" />
-  <Radio name="landscape" id="landscape_2" value="2" label="Option 2" />
-</RadioButtons>
-
-<RadioButtons label="Portrait" direction="portrait">
+<RadioButtons label="Portrait">
   <Radio name="portrait" id="portrait_1" value="1" label="Option 1" />
   <Radio name="portrait" id="portrait_2" value="2" label="Option 2" />
+</RadioButtons>
+
+<RadioButtons label="Landscape" direction="landscape">
+  <Radio name="landscape" id="landscape_1" value="1" label="Option 1" />
+  <Radio name="landscape" id="landscape_2" value="2" label="Option 2" />
 </RadioButtons>
 ```
   </TabItem>
@@ -93,20 +93,6 @@ For the CSS library, you do not need to add the `required` property to the form 
 
 ```html
 <div class="input">
-  <legend class="input_label">Landscape</legend>
-  <div class="input_control radios">
-    <div class="radio">
-      <input type="radio" name="landscape" id="landscape_1" value="landscape_1" class="radio_control" />
-      <label for="landscape_1" class="radio_label">Option 1</label>
-    </div>
-    <div class="radio">
-      <input type="radio" name="landscape" id="landscape_2" value="landscape_2" class="radio_control" />
-      <label for="landscape_2" class="radio_label">Option 2</label>
-    </div>
-  </div>
-</div>
-
-<div class="input input-portrait">
   <legend class="input_label">Portrait</legend>
   <div class="input_control radios">
     <div class="radio">
@@ -116,6 +102,20 @@ For the CSS library, you do not need to add the `required` property to the form 
     <div class="radio">
       <input type="radio" name="portrait" id="portrait_2" value="portrait_2" class="radio_control" />
       <label for="portrait_2" class="radio_label">Option 2</label>
+    </div>
+  </div>
+</div>
+        
+<div class="input input-landscape">
+  <legend class="input_label">Landscape</legend>
+  <div class="input_control radios">
+    <div class="radio">
+      <input type="radio" name="landscape" id="landscape_1" value="landscape_1" class="radio_control" />
+      <label for="landscape_1" class="radio_label">Option 1</label>
+    </div>
+    <div class="radio">
+      <input type="radio" name="landscape" id="landscape_2" value="landscape_2" class="radio_control" />
+      <label for="landscape_2" class="radio_label">Option 2</label>
     </div>
   </div>
 </div>

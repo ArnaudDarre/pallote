@@ -18,8 +18,8 @@
   &_item {
     display: flex;
     align-items: center;
-    
-    &:not(:first-child) {
+
+    & + & {
       margin-top: .5rem;
     }
 
@@ -40,7 +40,7 @@
 .list_item-dense {
   @extend %caption;
 
-  &:not(:first-child) {
+  + .list_item {
     margin-top: .25rem;
   }
 }

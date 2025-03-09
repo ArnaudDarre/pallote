@@ -15,8 +15,7 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
-.flex,
-.flex_item {
+.flex {
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
@@ -30,7 +29,7 @@
 // have children wrap automatically
 .flex-wrap {
 
-  > .flex_item {
+  > .flex {
     flex: 1 0 0;
 
     > * {
@@ -98,7 +97,6 @@ $breakpoints: (
   }
 }
 
-[class*="gap-"],
 [class*="col-"] {
   width: 100%;
 }

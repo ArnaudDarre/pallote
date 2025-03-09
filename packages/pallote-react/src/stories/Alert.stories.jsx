@@ -62,14 +62,14 @@ Color.parameters = {
 
 //   return (
 //     <Grid gap={2} direction="column">
-//       <Grid item items="start">
+//       <Grid items="start">
 //         <Button color="primary" onClick={() => openAlert('toast')}>Open toast alert</Button>
 //         <Alert title="Toast" show={alerts['toast']} />
 //       </Grid>
-//       <Grid item items="start">
+//       <Grid items="start">
 //         <Alert variant="notice" title="Notice" subtitle="Inlined alert without absolute positionning to highlight content on the page" />
 //       </Grid>
-//       <Grid item items="start">
+//       <Grid items="start">
 //         <Button color="primary" onClick={() => openAlert('bar')}>Open bar alert</Button>
 //         <Alert variant="bar" title="Bar" show={alerts['bar']} />
 //       </Grid>

@@ -50,17 +50,9 @@ export const CardHeader = ({ label, title, subtitle, actions, className, ...prop
           {actions}
         </div>
       )}
-      {label ? ( <Text variant={labelComponent} weight='bold'>{label}</Text> ) : null}
-      <Text className={classnames('card_title')} variant={titleComponent} weight='bold'>{title}</Text>
-      {subtitle ? (
-        <Text
-          className={classnames('card_subtitle')}
-          variant={subtitleComponent}
-          weight='regular'
-        >
-          {subtitle}
-        </Text>
-      ) : null}
+      {label ? ( <Text className={classnames('card_label')}>{label}</Text> ) : null}
+      <Text className={classnames('card_title')}>{title}</Text>
+      {subtitle ? ( <Text className={classnames('card_subtitle')}>{subtitle}</Text> ) : null}
     </div>
   )
 }

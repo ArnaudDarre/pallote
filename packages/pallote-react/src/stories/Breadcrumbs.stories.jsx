@@ -35,7 +35,7 @@ Playground.args = {
 
 export const Separator = () => (
   <Grid gap={4} direction="column">
-    <Grid item><Breadcrumbs items={breadcrumbItems} /></Grid>
-    <Grid item><Breadcrumbs items={breadcrumbItems} separator="arrow" /></Grid>
+    <Grid><Breadcrumbs items={breadcrumbItems} /></Grid>
+    <Grid><Breadcrumbs items={breadcrumbItems} separator="arrow" /></Grid>
   </Grid>
 )

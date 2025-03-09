@@ -36,22 +36,22 @@ export const Icon = () => (
 
 export const Color = () => (
   <Grid gap={2}>
-    <Grid item gap={2}>
-      <Grid item><Link href="/" color="default">Default</Link></Grid>
-      <Grid item><Link href="/" color="alt">Alt</Link></Grid>
-      <Grid item><Link href="/" color="disabled">Disabled</Link></Grid>
+    <Grid gap={2}>
+      <Grid><Link href="/" color="default">Default</Link></Grid>
+      <Grid><Link href="/" color="alt">Alt</Link></Grid>
+      <Grid><Link href="/" color="disabled">Disabled</Link></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item className="fill-contrast"><Link href="/" color="contrast">Contrast</Link></Grid>
-      <Grid item className="fill-contrast"><Link href="/" color="contrastAlt">Contrast alt</Link></Grid>
-      <Grid item className="fill-contrast"><Link href="/" color="contrastDisabled">Contrast disabled</Link></Grid>
+    <Grid gap={2}>
+      <Grid className="fill-contrast"><Link href="/" color="contrast">Contrast</Link></Grid>
+      <Grid className="fill-contrast"><Link href="/" color="contrastAlt">Contrast alt</Link></Grid>
+      <Grid className="fill-contrast"><Link href="/" color="contrastDisabled">Contrast disabled</Link></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item><Link href="/" color="primary">Primary</Link></Grid>
-      <Grid item><Link href="/" color="secondary">Secondary</Link></Grid>
+    <Grid gap={2}>
+      <Grid><Link href="/" color="primary">Primary</Link></Grid>
+      <Grid><Link href="/" color="secondary">Secondary</Link></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item><Link href="/" color="inherit">Inherit</Link></Grid>
+    <Grid gap={2}>
+      <Grid><Link href="/" color="inherit">Inherit</Link></Grid>
     </Grid>
   </Grid>
 )

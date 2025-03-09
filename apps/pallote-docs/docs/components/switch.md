@@ -17,14 +17,14 @@ Allow user to toggle between two states.
 />
 
 <div class="docs_block">
-  <Switch id="switch" label="Switch" />
+  <Switch id="switch" />
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<Switch id="switch" label="Switch" />
+<Switch id="switch" />
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -43,14 +43,14 @@ Allow user to toggle between two states.
 ### Start label
 
 <div class="docs_block">
-  <Switch startLabel="Start label" id="startLabel" label="Switch with a start label"></Switch>
+  <Switch startLabel="Start label" id="startLabel"></Switch>
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<Switch startLabel="Start label" id="startLabel" label="Switch with a start label"></Switch>
+<Switch startLabel="Start label" id="startLabel"></Switch>
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -72,14 +72,14 @@ You can combine the `startLabel` and `endLabel` props.
 ### End label
 
 <div class="docs_block">
-  <Switch endLabel="End label" id="endLabel" label="Switch with an end label" />
+  <Switch endLabel="End label" id="endLabel" />
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<Switch endLabel="End label" id="endLabel" label="Switch with an end label" />
+<Switch endLabel="End label" id="endLabel" />
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -97,14 +97,14 @@ You can combine the `startLabel` and `endLabel` props.
 ### Checked
 
 <div class="docs_block">
-  <Switch id="checked" checked label="Switch checked by default" />
+  <Switch id="checked" checked />
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<Switch id="checked" checked label="Switch checked by default" />
+<Switch id="checked" checked />
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -121,14 +121,14 @@ You can combine the `startLabel` and `endLabel` props.
 ### Disabled
 
 <div class="docs_block">
-  <Switch id="disabled" disabled label="Disabled switch" />
+  <Switch id="disabled" disabled />
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<Switch id="disabled" disabled label="Disabled switch" />
+<Switch id="disabled" disabled />
 ```
   </TabItem>
   <TabItem value="css" label="CSS">

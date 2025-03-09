@@ -40,13 +40,13 @@ Playground.args = {
 
 export const Direction = () => (
   <Grid gap={4} direction="column">
-    <Grid item>
+    <Grid>
       <CardActions direction="portrait">
         <Button color="grey">Portrait</Button>
         <Button color="primary">Portrait</Button>
       </CardActions>
     </Grid>
-    <Grid item>
+    <Grid>
       <CardActions>
         <Button color="grey">Landscape</Button>
         <Button color="primary">Landscape</Button>

@@ -58,50 +58,50 @@ Playground.args = {
 
 export const Size = () => (
   <Grid gap={4} items="start">
-    <Grid item colsm={2}><CardExample size="xs" title="XSmall" /></Grid>
-    <Grid item colsm={3}><CardExample size="sm" title="Small" /></Grid>
-    <Grid item colsm={4}><CardExample title="Medium (default)" /></Grid>
-    <Grid item colsm={5}><CardExample size="lg" title="Large" /></Grid>
-    <Grid item colsm={6}><CardExample size="xl" title="XLarge" /></Grid>
+    <Grid colsm={2}><CardExample size="xs" title="XSmall" /></Grid>
+    <Grid colsm={3}><CardExample size="sm" title="Small" /></Grid>
+    <Grid colsm={4}><CardExample title="Medium (default)" /></Grid>
+    <Grid colsm={5}><CardExample size="lg" title="Large" /></Grid>
+    <Grid colsm={6}><CardExample size="xl" title="XLarge" /></Grid>
   </Grid>
 )
 
 export const Fill = () => (
   <Grid gap={4}>
-    <Grid item colsm={4}><CardExample title="Default" fill="default" /></Grid>
-    <Grid item colsm={4}><CardExample title="Paper" /></Grid>
-    <Grid item colsm={4}><CardExample title="Primary" fill="primary" /></Grid>
-    <Grid item colsm={4}><CardExample title="Secondary" fill="secondary" /></Grid>
-    <Grid item colsm={4}><CardExample title="Success" fill="success" /></Grid>
-    <Grid item colsm={4}><CardExample title="Info" fill="info" /></Grid>
-    <Grid item colsm={4}><CardExample title="Warning" fill="warning" /></Grid>
-    <Grid item colsm={4}><CardExample title="Error" fill="error" /></Grid>
+    <Grid colsm={4}><CardExample title="Default" fill="default" /></Grid>
+    <Grid colsm={4}><CardExample title="Paper" /></Grid>
+    <Grid colsm={4}><CardExample title="Primary" fill="primary" /></Grid>
+    <Grid colsm={4}><CardExample title="Secondary" fill="secondary" /></Grid>
+    <Grid colsm={4}><CardExample title="Success" fill="success" /></Grid>
+    <Grid colsm={4}><CardExample title="Info" fill="info" /></Grid>
+    <Grid colsm={4}><CardExample title="Warning" fill="warning" /></Grid>
+    <Grid colsm={4}><CardExample title="Error" fill="error" /></Grid>
   </Grid>
 )
 
 export const Direction = () => (
   <Grid gap={4} items="start">
-    <Grid item colsm={4}><CardExample title="Portrait" /></Grid>
-    <Grid item colsm={8}><CardExample title="Landscape" direction="landscape" width={100} /></Grid>
+    <Grid colsm={4}><CardExample title="Portrait" /></Grid>
+    <Grid colsm={8}><CardExample title="Landscape" direction="landscape" width={100} /></Grid>
   </Grid>
 )
 
 export const Align = () => (
   <Grid gap={4}>
-    <Grid item colsm={4}><CardExample title="Left (default)" /></Grid>
-    <Grid item colsm={4}><CardExample title="Center" align="center" /></Grid>
-    <Grid item colsm={4}><CardExample title="Right" align="right" /></Grid>
+    <Grid colsm={4}><CardExample title="Left (default)" /></Grid>
+    <Grid colsm={4}><CardExample title="Center" align="center" /></Grid>
+    <Grid colsm={4}><CardExample title="Right" align="right" /></Grid>
   </Grid>
 )
 
 export const HasShadow = () => (
   <Grid gap={4}>
-    <Grid item colsm={4}><CardExample title="With box shadow" hasShadow /></Grid>
+    <Grid colsm={4}><CardExample title="With box shadow" hasShadow /></Grid>
   </Grid>
 )
 
 export const Transparent = () => (
   <Grid gap={4}>
-    <Grid item colsm={4}><CardExample title="Transparent" transparent /></Grid>
+    <Grid colsm={4}><CardExample title="Transparent" transparent /></Grid>
   </Grid>
 )

@@ -31,12 +31,12 @@ export const Playground = Template.bind({})
 
 export const Type = () => (
   <Grid gap={4}>
-    <Grid item colmd={4}><Input type="date" id="date" label="Date" /></Grid>
-    <Grid item colmd={4}><Input type="email" id="email" label="Email" /></Grid>
-    <Grid item colmd={4}><Input type="number" id="number" label="Number" /></Grid>
-    <Grid item colmd={4}><Input type="tel" id="tel" label="Telephone" /></Grid>
-    <Grid item colmd={4}><Input type="text" id="text" label="Text" /></Grid>
-    <Grid item colmd={4}><Input type="time" id="time" label="Time" /></Grid>
+    <Grid colmd={4}><Input type="date" id="date" label="Date" /></Grid>
+    <Grid colmd={4}><Input type="email" id="email" label="Email" /></Grid>
+    <Grid colmd={4}><Input type="number" id="number" label="Number" /></Grid>
+    <Grid colmd={4}><Input type="tel" id="tel" label="Telephone" /></Grid>
+    <Grid colmd={4}><Input type="text" id="text" label="Text" /></Grid>
+    <Grid colmd={4}><Input type="time" id="time" label="Time" /></Grid>
   </Grid>
 )
 

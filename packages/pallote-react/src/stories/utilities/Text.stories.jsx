@@ -30,47 +30,47 @@ Playground.args = {
 
 export const Variant = () => (
   <Grid gap={4}>
-    <Grid item gap={2} items="baseline">
-      <Grid item><Text variant="h1">h1</Text></Grid>
-      <Grid item><Text variant="h2">h2</Text></Grid>
-      <Grid item><Text variant="h3">h3</Text></Grid>
-      <Grid item><Text variant="h4">h4</Text></Grid>
-      <Grid item><Text variant="h5">h5</Text></Grid>
-      <Grid item><Text variant="h6">h6</Text></Grid>
+    <Grid gap={2} items="baseline">
+      <Grid><Text variant="h1">h1</Text></Grid>
+      <Grid><Text variant="h2">h2</Text></Grid>
+      <Grid><Text variant="h3">h3</Text></Grid>
+      <Grid><Text variant="h4">h4</Text></Grid>
+      <Grid><Text variant="h5">h5</Text></Grid>
+      <Grid><Text variant="h6">h6</Text></Grid>
     </Grid>
-    <Grid item gap={2} items="baseline">
-      <Grid item><Text variant="subtitle">Subtitle</Text></Grid>
-      <Grid item><Text variant="body">Body</Text></Grid>
-      <Grid item><Text variant="caption">Caption</Text></Grid>
-      <Grid item><Text variant="overline">Overline</Text></Grid>
+    <Grid gap={2} items="baseline">
+      <Grid><Text variant="subtitle">Subtitle</Text></Grid>
+      <Grid><Text variant="body">Body</Text></Grid>
+      <Grid><Text variant="caption">Caption</Text></Grid>
+      <Grid><Text variant="overline">Overline</Text></Grid>
     </Grid>
   </Grid>
 )
 
 export const Align = () => (
   <Grid gap={4} direction="column">
-    <Grid item><Text align="left" className="w-full">Left</Text></Grid>
-    <Grid item><Text align="center" className="w-full">Center</Text></Grid>
-    <Grid item><Text align="right" className="w-full">Right</Text></Grid>
-    <Grid item><Text align="justify" className="w-full">Justify</Text></Grid>
+    <Grid><Text align="left" className="w-full">Left</Text></Grid>
+    <Grid><Text align="center" className="w-full">Center</Text></Grid>
+    <Grid><Text align="right" className="w-full">Right</Text></Grid>
+    <Grid><Text align="justify" className="w-full">Justify</Text></Grid>
   </Grid>
 )
 
 export const Weight = () => (
   <Grid gap={4}>
-    <Grid item><Text weight="regular">Regular</Text></Grid>
-    <Grid item><Text weight="bold">Bold</Text></Grid>
+    <Grid><Text weight="regular">Regular</Text></Grid>
+    <Grid><Text weight="bold">Bold</Text></Grid>
   </Grid>
 )
 
 export const Transform = () => (
   <Grid gap={4}>
-    <Grid item><Text transform="none">None</Text></Grid>
-    <Grid item><Text transform="capitalize">Capitalize</Text></Grid>
-    <Grid item><Text transform="uppercase">Uppercase</Text></Grid>
-    <Grid item><Text transform="lowercase">Lowercase</Text></Grid>
-    <Grid item><Text transform="initial">Initial</Text></Grid>
-    <Grid item><Text transform="inherit">Inherit</Text></Grid>
+    <Grid><Text transform="none">None</Text></Grid>
+    <Grid><Text transform="capitalize">Capitalize</Text></Grid>
+    <Grid><Text transform="uppercase">Uppercase</Text></Grid>
+    <Grid><Text transform="lowercase">Lowercase</Text></Grid>
+    <Grid><Text transform="initial">Initial</Text></Grid>
+    <Grid><Text transform="inherit">Inherit</Text></Grid>
   </Grid>
 )
 
@@ -92,25 +92,25 @@ export const Code = () => (
 
 export const Color = () => (
   <Grid gap={4}>
-    <Grid item gap={2}>
-      <Grid item><Text color="default">Default</Text></Grid>
-      <Grid item><Text color="alt">Alt</Text></Grid>
-      <Grid item><Text color="disabled">Disabled</Text></Grid>
+    <Grid gap={2}>
+      <Grid><Text color="default">Default</Text></Grid>
+      <Grid><Text color="alt">Alt</Text></Grid>
+      <Grid><Text color="disabled">Disabled</Text></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item className="fill-contrast"><Text color="contrast">Contrast</Text></Grid>
-      <Grid item className="fill-contrast"><Text color="contrastAlt">Contrast alt</Text></Grid>
-      <Grid item className="fill-contrast"><Text color="contrastDisabled">Contrast disabled</Text></Grid>
+    <Grid gap={2}>
+      <Grid className="fill-contrast"><Text color="contrast">Contrast</Text></Grid>
+      <Grid className="fill-contrast"><Text color="contrastAlt">Contrast alt</Text></Grid>
+      <Grid className="fill-contrast"><Text color="contrastDisabled">Contrast disabled</Text></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item><Text color="primary">Primary</Text></Grid>
-      <Grid item><Text color="secondary">Secondary</Text></Grid>
+    <Grid gap={2}>
+      <Grid><Text color="primary">Primary</Text></Grid>
+      <Grid><Text color="secondary">Secondary</Text></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item><Text color="success">Success</Text></Grid>
-      <Grid item><Text color="info">Info</Text></Grid>
-      <Grid item><Text color="warning">Warning</Text></Grid>
-      <Grid item><Text color="error">Error</Text></Grid>
+    <Grid gap={2}>
+      <Grid><Text color="success">Success</Text></Grid>
+      <Grid><Text color="info">Info</Text></Grid>
+      <Grid><Text color="warning">Warning</Text></Grid>
+      <Grid><Text color="error">Error</Text></Grid>
     </Grid>
   </Grid>
 )

@@ -47,7 +47,7 @@ Checked.parameters = {
 
 export const Disabled = () => (
   <Grid gap={4} direction="column">
-    <Grid item><Checkbox label="Disabled" id="disabled" value="disabled" disabled></Checkbox></Grid>
-    <Grid item><Checkbox label="Disabled" id="disabled" value="disabled" checked disabled></Checkbox></Grid>
+    <Grid><Checkbox label="Disabled" id="disabled" value="disabled" disabled></Checkbox></Grid>
+    <Grid><Checkbox label="Disabled" id="disabled" value="disabled" checked disabled></Checkbox></Grid>
   </Grid>
 )

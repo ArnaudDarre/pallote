@@ -29,16 +29,16 @@ Playground.args = {
 
 export const Color = () => (
   <Grid gap={4}>
-    <Grid item gap={2}>
-      <Grid item><Tag>Primary</Tag></Grid>
-      <Grid item><Tag color="secondary">Secondary</Tag></Grid>
-      <Grid item><Tag color="grey">Grey</Tag></Grid>
+    <Grid gap={2}>
+      <Grid><Tag>Primary</Tag></Grid>
+      <Grid><Tag color="secondary">Secondary</Tag></Grid>
+      <Grid><Tag color="grey">Grey</Tag></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item><Tag color="success">Success</Tag></Grid>
-      <Grid item><Tag color="info">Info</Tag></Grid>
-      <Grid item><Tag color="warning">Warning</Tag></Grid>
-      <Grid item><Tag color="error">Error</Tag></Grid>
+    <Grid gap={2}>
+      <Grid><Tag color="success">Success</Tag></Grid>
+      <Grid><Tag color="info">Info</Tag></Grid>
+      <Grid><Tag color="warning">Warning</Tag></Grid>
+      <Grid><Tag color="error">Error</Tag></Grid>
     </Grid>
   </Grid>
 )

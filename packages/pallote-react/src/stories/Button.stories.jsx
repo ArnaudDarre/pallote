@@ -30,9 +30,9 @@ export const Playground = Template.bind({})
 
 export const Component = () => (
   <Grid gap={4}>
-    <Grid item><Button>Button</Button></Grid>
-    <Grid item><Button component="a">Anchor link</Button></Grid>
-    <Grid item><Button component={Text}>Component</Button></Grid>
+    <Grid><Button>Button</Button></Grid>
+    <Grid><Button component="a">Anchor link</Button></Grid>
+    <Grid><Button component={Text}>Component</Button></Grid>
   </Grid>    
 )
 
@@ -46,8 +46,8 @@ Component.parameters = {
 
 export const Kind = () => (
   <Grid gap={4}>
-    <Grid item><Button>Text</Button></Grid>
-    <Grid item><Button kind="icon"><Coffee /></Button></Grid>
+    <Grid><Button>Text</Button></Grid>
+    <Grid><Button kind="icon"><Coffee /></Button></Grid>
   </Grid>
 )
 
@@ -61,9 +61,9 @@ Kind.parameters = {
 
 export const Variant = () => (
   <Grid gap={4}>
-    <Grid item><Button>Fill</Button></Grid>
-    <Grid item><Button variant="stroke">Stroke</Button></Grid>
-    <Grid item><Button variant="transparent">Transparent</Button></Grid>
+    <Grid><Button>Fill</Button></Grid>
+    <Grid><Button variant="stroke">Stroke</Button></Grid>
+    <Grid><Button variant="transparent">Transparent</Button></Grid>
   </Grid>
 )
 
@@ -77,29 +77,29 @@ Variant.parameters = {
 
 export const Size = () => (
   <Grid gap={4}>
-    <Grid item><Button size="xs">XSmall</Button></Grid>
-    <Grid item><Button size="sm">Small</Button></Grid>
-    <Grid item><Button>Medium</Button></Grid>
-    <Grid item><Button size="lg">Large</Button></Grid>
+    <Grid><Button size="xs">XSmall</Button></Grid>
+    <Grid><Button size="sm">Small</Button></Grid>
+    <Grid><Button>Medium</Button></Grid>
+    <Grid><Button size="lg">Large</Button></Grid>
   </Grid>
 )
 
 export const Color = () => (
   <Grid gap={4}>
-    <Grid item gap={2}>
-      <Grid item><Button>Primary</Button></Grid>
-      <Grid item><Button color="secondary">Secondary</Button></Grid>
+    <Grid gap={2}>
+      <Grid><Button>Primary</Button></Grid>
+      <Grid><Button color="secondary">Secondary</Button></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item><Button color="success">Success</Button></Grid>
-      <Grid item><Button color="info">Info</Button></Grid>
-      <Grid item><Button color="warning">Warning</Button></Grid>
-      <Grid item><Button color="error">Error</Button></Grid>
+    <Grid gap={2}>
+      <Grid><Button color="success">Success</Button></Grid>
+      <Grid><Button color="info">Info</Button></Grid>
+      <Grid><Button color="warning">Warning</Button></Grid>
+      <Grid><Button color="error">Error</Button></Grid>
     </Grid>
-    <Grid item gap={2}>
-      <Grid item><Button color="grey">Grey</Button></Grid>
-      <Grid item><Button color="main">Main</Button></Grid>
-      <Grid item><Button color="contrast">Contrast</Button></Grid>
+    <Grid gap={2}>
+      <Grid><Button color="grey">Grey</Button></Grid>
+      <Grid><Button color="main">Main</Button></Grid>
+      <Grid><Button color="contrast">Contrast</Button></Grid>
     </Grid>
   </Grid>
 )
@@ -122,8 +122,8 @@ Disabled.parameters = {
 
 export const Icons = () => (
   <Grid gap={4}>
-    <Grid item><Button iconLeft={<Sun />}>Icon left</Button></Grid>
-    <Grid item><Button iconRight={<Moon />}>Icon right</Button></Grid>
+    <Grid><Button iconLeft={<Sun />}>Icon left</Button></Grid>
+    <Grid><Button iconRight={<Moon />}>Icon right</Button></Grid>
   </Grid>
 )
 

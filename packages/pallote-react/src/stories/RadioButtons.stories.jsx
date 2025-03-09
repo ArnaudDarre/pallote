@@ -39,13 +39,13 @@ Playground.args = {
 
 export const Direction = () => (
   <Grid gap={4} direction="column">
-    <Grid item>
+    <Grid>
       <RadioButtons direction="portrait" id="portrait" label="Portrait">
         <Radio name="portrait" id="portrait_1" value="1" label="Option 1" />
         <Radio name="portrait" id="portrait_2" value="2" label="Option 2" />
       </RadioButtons>
     </Grid>
-    <Grid item>
+    <Grid>
       <RadioButtons direction="landscape" id="landscape" label="Landscape">
         <Radio name="landscape" id="landscape_1" value="1" label="Option 1" />
         <Radio name="landscape" id="landscape_2" value="2" label="Option 2" />
