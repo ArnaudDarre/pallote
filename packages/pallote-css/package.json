@@ -2,11 +2,9 @@
   "name": "pallote-css",
   "version": "0.4.0",
   "description": "CSS component library",
-  "main": "pallote.min.css",
-  "styles": "pallote.scss",
-  "files": [
-    "dist/*"
-  ],
+  "main": "dist/pallote.min.css",
+  "styles": "dist/pallote.scss",
+  "files": ["dist"],
   "publishConfig": {
     "directory": "dist"
   },
