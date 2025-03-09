@@ -7,6 +7,13 @@ export default {
   title: 'Components/Divider',
   component: Divider,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Line to separate content.'
+      }
+    }
+  },
   argTypes: {
     className: { control: false }
   }
@@ -23,10 +30,11 @@ export const Direction = () => (
   </Grid>
 )
 
-export const Size = () => (
+export const Padding = () => (
   <Grid gap={4} direction="column">
-    <Grid item><Divider size="sm" /></Grid>
-    <Grid item><Divider size="md" /></Grid>
-    <Grid item><Divider size="lg" /></Grid>
+    <Grid item><Divider padding="none" /></Grid>
+    <Grid item><Divider padding="sm" /></Grid>
+    <Grid item><Divider padding="md" /></Grid>
+    <Grid item><Divider padding="lg" /></Grid>
   </Grid>
 )

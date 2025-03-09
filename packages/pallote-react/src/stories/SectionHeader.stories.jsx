@@ -7,6 +7,13 @@ export default {
   title: 'Components/SectionHeader',
   component: SectionHeader,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Child of the Section component. Each Section should have one SectionHeader component.'
+      }
+    }
+  },
   argTypes: {
     actions: { control: false },
     className: { control: false },

@@ -3,7 +3,7 @@
 
 # Typography
 
-Typography is at the core of every design system. Having consistent font styles is paramount to make sure that users scan and consume your information well.
+List of the default typography variables. Since typography is at the core of every design system, having consistent font styles is paramount to make sure that users scan and consume your information well.
 
 ## Override variables
 

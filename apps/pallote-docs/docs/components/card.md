@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Button, Buttons, Card, CardActions, CardContent, CardHeader, CardMedia } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Card
 
 Wrapper for all card elements, one of the most common component in a UI.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2813-6710&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-card--docs"
+/>
 
 <div class="docs_block">
   <Card>

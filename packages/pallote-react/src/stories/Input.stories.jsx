@@ -8,6 +8,13 @@ export default {
   title: 'Components/Input',
   component: Input,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Allow users to enter text that will fit on a single line. This is the most basic form field.'
+      }
+    }
+  },
   argTypes: {
     onChange: { control: false },
     icon:{ control: false },

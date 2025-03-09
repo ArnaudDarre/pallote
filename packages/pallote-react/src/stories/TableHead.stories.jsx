@@ -12,6 +12,13 @@ export default {
   title: 'Components/TableHead',
   component: TableHead,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'The header of a table with the column names.'
+      }
+    }
+  },
   argTypes: {
     className: { control: false },
     children: { control: false }

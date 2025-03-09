@@ -11,7 +11,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: ''
+        component: 'Reference to a resource, either external (a link to a different website) or internal (a link to another page or document).'
       }
     }
   },

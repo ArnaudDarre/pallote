@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Radio, RadioButtons } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Radio buttons
 
 Allow users to select one option from a list. This component uses the base structure of the [Input](/docs/components/input) component.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2792-3935&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-radiobuttons--docs"
+/>
 
 <div class="docs_block">
   <RadioButtons label="Legend">

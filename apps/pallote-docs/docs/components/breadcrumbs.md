@@ -6,10 +6,16 @@ import TabItem from '@theme/TabItem';
 import { Breadcrumbs } from "pallote-react"
 
 import { breadcrumbItems } from "./partials/breadcrumbs"
+import { DocLinks } from './partials/DocLinks'
 
 # Breadcrumbs
 
 List of links to allow users to navigate the page tree.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2789-3137&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-breadcrumbs--docs"
+/>
 
 <div class="docs_block">
   <Breadcrumbs items={breadcrumbItems} />

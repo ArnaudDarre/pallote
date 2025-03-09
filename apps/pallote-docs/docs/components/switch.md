@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Switch } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Switch
 
 Allow user to toggle between two states.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2792-6880&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-switch--docs"
+/>
 
 <div class="docs_block">
   <Switch id="switch" label="Switch" />

@@ -13,6 +13,13 @@ export default {
   title: 'Components/Table',
   component: Table,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Display data in ordered rows and columns.'
+      }
+    }
+  },
   argTypes: {
     children: { control: false },
     className: { control: false }

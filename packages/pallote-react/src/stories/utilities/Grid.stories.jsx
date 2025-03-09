@@ -10,6 +10,13 @@ export default {
   title: 'Utilities/Grid',
   component: Grid,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Container element to arrange items on a page and create a responsive layout.'
+      }
+    }
+  },
   argTypes: {
     item: { control: false },
     xs: { control: false },

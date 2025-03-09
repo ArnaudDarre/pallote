@@ -9,6 +9,13 @@ export default {
   title: 'Components/Button',
   component: Button,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Component for every call-to-action.'
+      }
+    }
+  },
   argTypes: {
     iconLeft: { control: false },
     iconRight: { control: false },

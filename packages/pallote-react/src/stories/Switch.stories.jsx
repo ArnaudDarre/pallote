@@ -6,6 +6,13 @@ export default {
   title: 'Components/Switch',
   component: Switch,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Allow user to toggle between two states.'
+      }
+    }
+  },
   argTypes: {
     id: { control: false },
     startLabel: { defaultValue: '' },

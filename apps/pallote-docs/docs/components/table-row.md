@@ -6,11 +6,17 @@ import TabItem from '@theme/TabItem';
 import { CopySimple, PencilSimple } from '@phosphor-icons/react'
 import { Button, Buttons, Table, TableBody, TableCell, TableRow } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
 import { TableBodyExample } from "./partials/table"
 
 # TableRow
 
-The content of a table component.
+A row in a table.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2819-5157&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-tablerow--docs"
+/>
 
 <div class="docs_block">
   <Table>

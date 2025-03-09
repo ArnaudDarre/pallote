@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Divider, Grid } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Divider
 
 Line to separate content.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2792-8166&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-divider--docs"
+/>
 
 <div class="docs_block">
   <Divider/>

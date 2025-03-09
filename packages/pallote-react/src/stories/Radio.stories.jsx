@@ -7,6 +7,13 @@ export default {
   title: 'Components/Radio',
   component: Radio,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Single radio button component.'
+      }
+    }
+  },
   argTypes: {
     id: { control: false },
     name: { control: false },

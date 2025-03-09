@@ -10,7 +10,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: ''
+        component: 'Use these utility props and classes to override the text style of an element.'
       }
     }
   },

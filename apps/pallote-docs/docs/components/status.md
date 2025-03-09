@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Status } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Status
 
 Indicate the status of an object.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2819-5685&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-status--docs"
+/>
 
 <div class="docs_block">
   <Status>Status</Status>

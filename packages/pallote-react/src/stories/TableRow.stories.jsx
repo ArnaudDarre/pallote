@@ -12,6 +12,13 @@ export default {
   title: 'Components/TableRow',
   component: TableRow,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'A row in a table.'
+      }
+    }
+  },
   argTypes: {
     className: { control: false },
     children: { control: false }

@@ -5,11 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Table, TableBody } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
 import { TableBodyExample } from "./partials/table"
 
 # TableBody
 
 The content of a table component.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-tablebody--docs"
+/>
 
 <div class="docs_block">
   <Table>

@@ -12,6 +12,13 @@ export default {
   title: 'Components/TableBody',
   component: TableBody,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'The content of a table component.'
+      }
+    }
+  },
   argTypes: {
     className: { control: false },
     children: { control: false }

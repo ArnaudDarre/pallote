@@ -5,14 +5,20 @@ import TabItem from '@theme/TabItem';
 
 import { Grid, Input } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Input
 
 Allow users to enter text that will fit on a single line. This is the most basic form field.
 
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2789-6111&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-input--docs"
+/>
+
 <div class="docs_block">
   <Input id="input" label="Input" />
 </div>
-
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">

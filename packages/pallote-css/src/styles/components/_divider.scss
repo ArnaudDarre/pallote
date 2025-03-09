@@ -3,7 +3,7 @@
 // —————————————————————————————————————————————————————————————————
 // elements
 // direction
-// size
+// padding
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
@@ -30,23 +30,24 @@
 }
 
 // —————————————————————————————————————————————————————————————————
-// size
+// padding
 // —————————————————————————————————————————————————————————————————
 
-@mixin divider-size($size) {
-  margin-top: $size;
-  margin-bottom: $size;
+@mixin divider-padding($padding) {
+  margin-top: $padding;
+  margin-bottom: $padding;
 
   &.divider-portrait {
     margin-top: 0;
-    margin-right: $size;
+    margin-right: $padding;
     margin-bottom: 0;
-    margin-left: $size;
+    margin-left: $padding;
   }
 }
 
 .divider {
-  @include divider-size(1rem);
-  &-sm { @include divider-size(.5rem); }
-  &-lg { @include divider-size(2rem); }
+  @include divider-padding(1rem);
+  &-none { @include divider-padding(0); }
+  &-sm { @include divider-padding(.5rem); }
+  &-lg { @include divider-padding(2rem); }
 }

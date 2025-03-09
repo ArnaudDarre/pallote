@@ -7,6 +7,13 @@ export default {
   title: 'Components/ListItem',
   component: ListItem,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Child of the List component.'
+      }
+    }
+  },
   argTypes: {
     icon: { control: false },
     bold: { defaultValue: false },
@@ -19,7 +26,7 @@ const Template = (args) => <ListItem {...args} />
 export const Playground = Template.bind({})
 
 Playground.args = {
-  children: 'ListItem'
+  children: 'List item'
 }
 
 export const Icon = () => (

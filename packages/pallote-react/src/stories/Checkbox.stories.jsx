@@ -7,6 +7,13 @@ export default {
   title: 'Components/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Single checkbox component.'
+      }
+    }
+  },
   argTypes: {
     id: { control: false },
     value: { control: false },

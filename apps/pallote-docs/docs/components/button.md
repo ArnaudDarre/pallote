@@ -14,7 +14,7 @@ import { DocLinks } from './partials/DocLinks'
 Component for every call-to-action.
 
 <DocLinks
-  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2785-7099&t=SoxLdCKcHv5EKR6q-11"
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2785-7099&t=ZYFabUeMuvoaOdby-11"
   storybook="https://react.pallote.com/?path=/docs/components-button--docs"
 />
 

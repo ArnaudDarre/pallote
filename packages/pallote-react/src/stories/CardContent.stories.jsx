@@ -10,6 +10,13 @@ export default {
   title: 'Components/CardContent',
   component: CardContent,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Repeatable element to add the card main content.'
+      }
+    }
+  },
   argTypes: {
     fullWidth: { defaultValue: false },
     className: { control: false },

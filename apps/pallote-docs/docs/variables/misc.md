@@ -3,6 +3,8 @@
 
 # Misc
 
+Other type of variables, for example default border-radius or breakpoints.
+
 ## Override variables
 
 These are the default typographic style, which you can override them to match your own design system. See [Usage](/docs/getting-started/usage) for more information on how to override variables.

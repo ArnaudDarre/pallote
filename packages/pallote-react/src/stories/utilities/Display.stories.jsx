@@ -13,7 +13,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: ''
+        component: 'This utility allows to show or hide elements depending on certain conditions.'
       }
     }
   },

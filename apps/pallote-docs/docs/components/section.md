@@ -5,11 +5,15 @@ import TabItem from '@theme/TabItem';
 
 import { Button, Section, SectionContent, SectionHeader, Text } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Section
 
-Defines a section on a page.
+Defines a section on a page. A section will always have one [SectionHeader](/docs/components/section-header.md) and at least one [SectionContent](/docs/components/section-content.md) child component.
 
-A section will always have one [SectionHeader](/docs/components/section-header.md) and at least one [SectionContent](/docs/components/section-content.md) child component.
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-section--docs"
+/>
 
 <div class="docs_block">
   <Section>

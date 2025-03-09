@@ -5,11 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Table } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
 import { TableExample } from "./partials/table"
 
 # Table
 
 Display data in ordered rows and columns.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-table--docs"
+/>
 
 <div class="docs_block">
   <Table>

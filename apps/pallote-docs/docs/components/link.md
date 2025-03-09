@@ -6,9 +6,16 @@ import TabItem from '@theme/TabItem';
 import { ArrowRight } from '@phosphor-icons/react'
 import { Grid, Link } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Link
 
 Reference to a resource, either external (a link to a different website) or internal (a link to another page or document).
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2789-3311&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-link--docs"
+/>
 
 <div class="docs_block">
   <Link>Link</Link>

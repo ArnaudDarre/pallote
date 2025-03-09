@@ -6,6 +6,13 @@ export default {
   title: 'Components/Textarea',
   component: Textarea,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Allow users to enter text on multiple lines. This component uses the base structure of the Input component.'
+      }
+    }
+  },
   argTypes: {
     onChange: { control: false },
     icon:{ control: false },

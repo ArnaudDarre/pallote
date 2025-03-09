@@ -8,6 +8,13 @@ export default {
   title: 'Components/Checkboxes',
   component: Checkboxes,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Allow users to select multiple options from a list. This component uses the base structure of the Input component.'
+      }
+    }
+  },
   argTypes: {
     onChange: { control: false },
     onFocus:{ control: false },

@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Textarea } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Textarea
 
 Allow users to enter text on multiple lines. This component uses the base structure of the [Input](/docs/components/input) component.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2816-3738&t=7wh6JxBXzqn3XdaJ-11"
+  storybook="https://react.pallote.com/?path=/docs/components-textarea--docs"
+/>
 
 <div class="docs_block">
   <Textarea id="textarea" label="Textarea" />

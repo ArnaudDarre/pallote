@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Tag } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Tag
 
-Small label representing date like status or property.
+Small label representing data like a status or a property.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2819-3812&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-tag--docs"
+/>
 
 <div class="docs_block">
   <Tag>Tag</Tag>
@@ -31,8 +38,6 @@ Small label representing date like status or property.
 ## Props
 
 ### Color
-
-Change the Tag style.
 
 <div class="docs_block">
   <Tag>Primary</Tag>

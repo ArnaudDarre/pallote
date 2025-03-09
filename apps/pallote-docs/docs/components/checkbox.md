@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Checkbox } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Checkbox
 
-This component is mainly used as a child of the [Checkboxes](/docs/components/checkboxes.md) component.
+Single checkbox component.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2789-4826&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-checkbox--docs"
+/>
 
 <div class="docs_block">
   <Checkbox id="checkbox" value="checkbox" label="Checkbox" />

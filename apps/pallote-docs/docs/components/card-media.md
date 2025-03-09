@@ -5,9 +5,15 @@ import TabItem from '@theme/TabItem';
 
 import { Card, CardHeader, CardMedia } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # CardMedia
 
 Container for an image illustrating the card, for example on a list of blog posts.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-cardmedia--docs"
+/>
 
 <div class="docs_block">
   <CardMedia image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />

@@ -51,37 +51,23 @@
   &_label {
     color: variables.$text-alt;
     font-weight: variables.$font-bold;
+    margin-bottom: .5rem;
   }
-  
+
   &_title {
     @extend %h3;
     color: variables.$primary;
     max-width: variables.$desktop*0.75;
-    
-    .section_label + & {
-      margin-top: .5rem;
-    }
   }
   
   &_subtitle {
     @extend %subtitle;
     max-width: variables.$max-width-subtitle;
-    
-    .section_title + & {
-      margin-top: 2rem - 1rem;
-    }
-
-    & + & {
-      margin-top: 1rem;
-    }
+    margin-top: 1rem;
   }
 
   &_actions {
-
-    .section_title + &,
-    .section_subtitle + & {
-      margin-top: 2rem;
-    }
+    margin-top: 2rem;
   }
 }
 
@@ -168,11 +154,10 @@
       @include mixins.clamp(padding-bottom, 2rem, 10vw, 7rem);
     }
 
+    &_label { margin-bottom: 1rem; }
     &_title { @extend %h1; max-width: variables.$desktop*0.5; }
-    &_subtitle { @extend %h5; }
-    &_title + .section_subtitle { margin-top: 2rem; }
-    &_title + .section_actions,
-    &_subtitle + .section_actions { margin-top: 3rem; }
+    &_subtitle { @extend %h5; margin-top: 2rem; }
+    &_actions { margin-top: 4rem; }
   }
 }
 
@@ -184,10 +169,9 @@
 
   .section {
 
+    &_label { margin-bottom: .75rem; }
     &_title { @extend %h2; }
-    &_subtitle { @extend %subtitle; }
-    &_title + .section_subtitle { margin-top: 2rem; }
-    &_title + .section_actions,
-    &_subtitle + .section_actions { margin-top: 2.5rem; }
+    &_subtitle { margin-top: 1.5rem; }
+    &_actions { margin-top: 2.5rem; }
   }
 }

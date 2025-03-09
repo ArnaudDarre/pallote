@@ -7,6 +7,13 @@ export default {
   title: 'Components/Tag',
   component: Tag,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Small label representing data like a status or a property.'
+      }
+    }
+  },
   argTypes: {
     className: { control: false }
   }

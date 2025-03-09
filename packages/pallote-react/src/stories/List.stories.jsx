@@ -8,6 +8,13 @@ export default {
   title: 'Components/List',
   component: List,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Collection of related items.'
+      }
+    }
+  },
   argTypes: {
     children: { control: false },
     className: { control: false }

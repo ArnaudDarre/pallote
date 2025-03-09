@@ -6,6 +6,13 @@ export default {
   title: 'Components/Select',
   component: Select,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Allow users to select an option from a long list. This component uses the base structure of the Input component.'
+      }
+    }
+  },
   argTypes: {
     onChange: { control: false },
     onFocus:{ control: false },

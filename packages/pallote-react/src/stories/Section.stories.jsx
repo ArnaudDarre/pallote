@@ -10,6 +10,13 @@ export default {
   title: 'Components/Section',
   component: Section,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Defines a section on a page. A section will always have one SectionHeader and at least one SectionContent child component.'
+      }
+    }
+  },
   argTypes: {
     className: { control: false },
     children: { control: false }

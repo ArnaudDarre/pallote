@@ -5,7 +5,15 @@ import TabItem from '@theme/TabItem';
 
 import { Card, CardHeader, CardContent, Text } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # CardContent
+
+Repeatable element to add the card main content.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-cardcontent--docs"
+/>
 
 <div class="docs_block">
   <CardContent>

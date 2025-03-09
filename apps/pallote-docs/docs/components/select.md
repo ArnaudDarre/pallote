@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Select } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Select
 
 Allow users to select an option from a long list. This component uses the base structure of the [Input](/docs/components/input) component.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2792-6456&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-select--docs"
+/>
 
 <div class="docs_block">
   <Select id="select" label="Select">
@@ -16,7 +23,6 @@ Allow users to select an option from a long list. This component uses the base s
     <option value="2">Option 2</option>
   </Select>
 </div>
-
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">

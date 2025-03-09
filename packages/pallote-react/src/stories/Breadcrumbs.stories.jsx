@@ -10,7 +10,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: ''
+        component: 'List of links to allow users to navigate the page tree.'
       }
     }
   },

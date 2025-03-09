@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Button, Section, SectionHeader } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # SectionHeader
 
 Child of the [Section](/docs/components/section.md) component. Each Section should have one SectionHeader component.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2827-4517&t=VLV1GkaDtqQB1JUb-11"
+  storybook="https://react.pallote.com/?path=/docs/components-sectionheader--docs"
+/>
 
 <div class="docs_block">
   <SectionHeader

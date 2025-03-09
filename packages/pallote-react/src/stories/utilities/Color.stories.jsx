@@ -11,7 +11,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: ''
+        component: 'Use this utility props and classes to apply a custom background or stroke colour to an element.'
       }
     }
   },

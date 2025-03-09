@@ -5,11 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Table } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
 import { TableHeadExample } from "./partials/table"
 
 # TableHead
 
 The header of a table with the column names.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-tablehead--docs"
+/>
 
 <div class="docs_block">
   <Table>

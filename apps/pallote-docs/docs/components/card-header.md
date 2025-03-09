@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Button, Card, CardHeader } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # CardHeader
 
 Contains the card title. You can add an optional label or subtitle. The font sizes are automatically set by the Card size prop.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2813-7079&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-cardheader--docs"
+/>
 
 <div class="docs_block">
   <Card transparent>

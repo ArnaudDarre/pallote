@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Radio } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Radio
 
-This component is mainly used as a child of the [Radio buttons](/docs/components/radio-buttons.md) component.
+Single radio button component.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2792-3893&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-radio--docs"
+/>
 
 <div class="docs_block">
   <Radio name="radio" id="radio_1" value="1" label="Radio" />

@@ -5,9 +5,15 @@ import TabItem from '@theme/TabItem';
 
 import { SectionContent, Text } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # SectionContent
 
 Child of the [Section](/docs/components/section.md) component to display content. You can have multiple SectionContent per Section.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-radiocontent--docs"
+/>
 
 <div class="docs_block">
   <SectionContent>

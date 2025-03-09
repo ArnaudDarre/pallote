@@ -5,9 +5,16 @@ import TabItem from '@theme/TabItem';
 
 import { Checkbox, Checkboxes } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # Checkboxes
 
 Allow users to select multiple options from a list. This component uses the base structure of the [Input](/docs/components/input) component.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2789-5175&t=ZYFabUeMuvoaOdby-11"
+  storybook="https://react.pallote.com/?path=/docs/components-checkboxes--docs"
+/>
 
 <div class="docs_block">
   <Checkboxes label="Legend">

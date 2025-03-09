@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export const Divider = ({
   direction = 'landscape',
-  size = 'md',
+  padding = 'md',
   className,
   ...props
 }) => {
@@ -15,7 +15,7 @@ export const Divider = ({
         'divider',
         {
           [`divider-${direction}`]: direction,
-          [`divider-${size}`]: size
+          [`divider-${padding}`]: padding
         },
         className
       ])}
@@ -29,7 +29,8 @@ Divider.propTypes = {
     'landscape',
     'portrait'
   ]),
-  size: PropTypes.oneOf([
+  padding: PropTypes.oneOf([
+    'none',
     'sm',
     'md',
     'lg'

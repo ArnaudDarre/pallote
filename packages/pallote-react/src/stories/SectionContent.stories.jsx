@@ -7,6 +7,13 @@ export default {
   title: 'Components/SectionContent',
   component: SectionContent,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Child of the Section component to display content. You can have multiple SectionContent per Section.'
+      }
+    }
+  },
   argTypes: {
     className: { control: false },
     children: { control: false }

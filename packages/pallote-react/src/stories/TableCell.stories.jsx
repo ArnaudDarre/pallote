@@ -13,6 +13,13 @@ export default {
   title: 'Components/TableCell',
   component: TableCell,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'A single cell containing data in a table.'
+      }
+    }
+  },
   argTypes: {
     className: { control: false },
     children: { control: false }

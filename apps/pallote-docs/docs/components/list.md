@@ -6,9 +6,16 @@ import TabItem from '@theme/TabItem';
 import { Coffee } from '@phosphor-icons/react'
 import { List, ListItem } from "pallote-react"
 
+import { DocLinks } from './partials/DocLinks'
+
 # List
 
 Collection of related items.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2831-3671&t=VLV1GkaDtqQB1JUb-11"
+  storybook="https://react.pallote.com/?path=/docs/components-list--docs"
+/>
 
 <div class="docs_block">
   <List>
