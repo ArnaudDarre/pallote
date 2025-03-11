@@ -3,6 +3,7 @@
 // —————————————————————————————————————————————————————————————————
 // elements
 // content
+// override in docs_block
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
@@ -31,7 +32,8 @@
 }
 
 .tabs__item {
-  margin-left: 0;  
+  margin-left: 0;
+  padding: .5rem 1rem;
 
   &:hover,
   &--active {
@@ -60,5 +62,22 @@
 
   [class*="codeBlockContainer"] {
     border-radius: variables.$border-radius-sm;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// override in docs_block
+// —————————————————————————————————————————————————————————————————
+
+.docs_block {
+
+  .tabs {
+    color: inherit;
+    font-weight: inherit;
+    overflow-x: initial;
+
+    &:not(.tabs-landscape) {
+      display: initial;
+    }
   }
 }

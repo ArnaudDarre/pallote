@@ -15,7 +15,7 @@ td > code {
   color: variables.$text-contrast;
   
   .token {
-    @extend %caption;
+    font-size: variables.$caption-size;
   }
 }
 
@@ -46,9 +46,13 @@ td > code {
       border-top-right-radius: 0;
     }
   }
-
+  
   .prism-code {
     background-color: transparent !important;
+  }
+
+  .token {
+    font-size: variables.$caption-size;
   }
 
   .tag {

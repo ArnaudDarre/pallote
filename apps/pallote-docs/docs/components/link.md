@@ -4,7 +4,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 import { ArrowRight } from '@phosphor-icons/react'
-import { Grid, Link } from "pallote-react"
+import { Grid, Link } from 'pallote-react'
 
 import { DocLinks } from './partials/DocLinks'
 

@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import { Table } from "pallote-react"
+import { Table } from 'pallote-react'
 
 import { DocLinks } from './partials/DocLinks'
 import { TableHeadExample } from "./partials/table"

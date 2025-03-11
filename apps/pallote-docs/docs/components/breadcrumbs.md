@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import { Breadcrumbs } from "pallote-react"
+import { Breadcrumbs } from 'pallote-react'
 
 import { breadcrumbItems } from "./partials/breadcrumbs"
 import { DocLinks } from './partials/DocLinks'

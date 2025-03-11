@@ -4,7 +4,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 import { CopySimple, PencilSimple } from '@phosphor-icons/react'
-import { Button, Buttons, Table, TableBody, TableCell, TableRow } from "pallote-react"
+import { Button, Buttons, Table, TableBody, TableCell, TableRow } from 'pallote-react'
 
 import { DocLinks } from './partials/DocLinks'
 import { TableBodyExample } from "./partials/table"

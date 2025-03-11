@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import { Checkbox } from "pallote-react"
+import { Checkbox } from 'pallote-react'
 
 import { DocLinks } from './partials/DocLinks'
 

@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import { Tag } from "pallote-react"
+import { Tag } from 'pallote-react'
 
 import { DocLinks } from './partials/DocLinks'
 

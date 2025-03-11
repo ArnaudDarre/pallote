@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 import Link from '@docusaurus/Link';
 
 import { Coffee, Moon, Sun } from '@phosphor-icons/react'
-import { Button } from "pallote-react"
+import { Button } from 'pallote-react'
 
 import { DocLinks } from './partials/DocLinks'
 

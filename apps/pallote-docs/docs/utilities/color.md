@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import { Color, Text } from "pallote-react"
+import { Color, Text } from 'pallote-react'
 
 # Color
 

@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import { Color, Grid, Text, Snippet } from "pallote-react"
+import { Color, Grid, Text, Snippet } from 'pallote-react'
 
 import { GridExample } from "./partials/grid"
 

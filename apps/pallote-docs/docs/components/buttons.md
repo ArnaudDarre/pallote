@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import { Button, Buttons } from "pallote-react"
+import { Button, Buttons } from 'pallote-react'
 
 import { DocLinks } from './partials/DocLinks'
 

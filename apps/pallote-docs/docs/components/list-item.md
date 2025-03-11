@@ -4,7 +4,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 import { Coffee } from '@phosphor-icons/react'
-import { List, ListItem } from "pallote-react"
+import { List, ListItem } from 'pallote-react'
 
 import { DocLinks } from './partials/DocLinks'
 

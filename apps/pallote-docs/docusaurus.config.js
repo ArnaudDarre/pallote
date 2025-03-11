@@ -13,24 +13,14 @@ const config = {
   title: 'Pallote',
   tagline: 'Pallote is a handcrafted, simple and stylish CSS and React component library, built with passion and care',
   favicon: '/favicon.ico',
-
-  // Set the production url of your site here
   url: 'https://pallote.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
     [
       'classic',
