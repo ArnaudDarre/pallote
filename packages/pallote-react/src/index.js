@@ -20,6 +20,9 @@ import { Input } from './components/Input'
 import { Link } from './components/Link'
 import { List } from './components/List'
 import { ListItem } from './components/ListItem'
+import { Nav } from './components/Nav'
+import { NavBar } from './components/NavBar'
+import { NavItem } from './components/NavItem'
 import { Radio } from './components/Radio'
 import { RadioButtons } from './components/RadioButtons'
 import { Section } from './components/Section'
@@ -65,6 +68,9 @@ export {
   Link,
   List,
   ListItem,
+  Nav,
+  NavBar,
+  NavItem,
   Radio,
   RadioButtons,
   Section,

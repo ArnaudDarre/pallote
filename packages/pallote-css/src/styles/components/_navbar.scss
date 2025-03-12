@@ -45,6 +45,10 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
+header {
+  width: 100%;
+}
+
 .navbar {
   top: 0;
   left: 0;
@@ -85,27 +89,29 @@
     }
   }
 
-  &__main {
+  &_main {
     display: flex;
     align-items: center;
 
     @include mixins.responsive(down, tablet) {
       height: variables.$navbar-height-sm;
+      justify-content: space-between;
     }
   }
   
-  &__logo {
+  &_logo {
     display: flex;
     align-items: baseline;
     font-weight: variables.$font-bold;
-    flex-grow: 1;
+    border-radius: variables.$border-radius-sm;
+    color: variables.$primary;
     
-    > * {
-      margin-right: variables.$spacing-xs;
+    img {
+      max-height: 2rem;
     }
   }
   
-  &__button {
+  &_button {
     @include mixins.transition(variables.$transition-md, opacity);
     animation: button-menu-opacity variables.$transition-lg;
     display: flex;
@@ -115,6 +121,8 @@
     position: relative;
     width: variables.$spacing-md;
     height: variables.$spacing-md;
+    border-radius: calc(variables.$border-radius-sm/2);
+    outline-offset: .25rem;
     
     @include mixins.responsive(up, tablet) {
       display: none;
@@ -158,7 +166,8 @@
     }
   }  
 
-  &__nav {
+  &_nav {
+    display: flex;
 
     @include mixins.responsive(down, tablet) {
       @include mixins.transition(variables.$transition-md, max-height);
@@ -171,13 +180,65 @@
       }
     }
   }
+
+  .nav {
+    display: flex;
+
+    @include mixins.responsive(up, tablet) { height: 100%; align-items: center; }
+    @include mixins.responsive(down, tablet) { width: 100%; }
+
+    &_container {
+
+      @include mixins.responsive(up, tablet) {
+        height: 100%;
+        align-items: center;
+      }
+
+      @include mixins.responsive(down, tablet) {
+        @include mixins.calc(max-height, '100vh - 12rem');
+        align-items: stretch;
+        overflow: scroll;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    &_item:not(:first-child) {
+
+      @include mixins.responsive(down, tablet) {
+        margin-top: .25rem;
+        margin-left: 0;
+      }
+    }
+
+    &_item-dropdown {
+
+      @include mixins.responsive(up, tablet) {
+        
+        .nav_target {
+          @include mixins.calc(top, '100% +' variables.$nav-item*0.5);
+          position: absolute;
+          left: -(variables.$nav-item*.5);
+          width: 10rem;
+          padding: variables.$nav-item*.5;
+          border-radius: variables.$border-radius-md;
+          border: variables.$border;
+          z-index: 1;
+          background-color: variables.$background-paper;
+        }
+      }
+    }
+  }
 }
 
 // —————————————————————————————————————————————————————————————————
 // align
 // —————————————————————————————————————————————————————————————————
 
-.navbar--right {
+.navbar-right {
 
   .section_container {
 
@@ -186,7 +247,7 @@
     }
   }
 
-  .navbar__main {
+  .navbar_main {
     flex-direction: row-reverse;    
   }
 }

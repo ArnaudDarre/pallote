@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "styles": "dist/index.css",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "directory": "dist"
   },
@@ -28,6 +30,7 @@
     "pallote-css": "workspace:^",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router-dom": "^7.3.0",
     "react-syntax-highlighter": "^15.6.1",
     "sass": "^1.71.1"
   },

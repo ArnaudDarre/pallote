@@ -12,7 +12,7 @@ import { DocLinks } from './partials/DocLinks'
 Single tab item.
 
 <DocLinks
-  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=0-1&p=f&t=VMTut2PgZWCIjJGZ-11"
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2848-9239&t=eWNWESf2DeSjVzq5-11"
   storybook="https://react.pallote.com/?path=/docs/components-tab--docs"
 />
 

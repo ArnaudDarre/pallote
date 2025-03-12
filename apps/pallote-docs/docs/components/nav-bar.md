@@ -1,0 +1,168 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { NavBar, NavItem } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# NavBar
+
+The header of the website, which includes the logo and navigation items.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2845-6055&t=eWNWESf2DeSjVzq5-11"
+  storybook="https://react.pallote.com/?path=/docs/components-tablebody--docs"
+/>
+
+<div class="docs_block">
+  <NavBar homeLinkComponent='a'>
+    <NavItem label='Home' active component='a' href='' />
+    <NavItem
+      label='About'
+      dropdown={
+        <>
+          <NavItem label='Services'  component='a' href='' />
+          <NavItem label='Teams'  component='a' href='' />
+        </>
+      }
+    />
+    <NavItem label='Contact'  component='a' href='' />
+  </NavBar>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<NavBar>
+  <NavItem label='Home' active component='a' href='' />
+  <NavItem
+    label='About'
+    dropdown={
+      <>
+        <NavItem label='Services'  component='a' href='' />
+        <NavItem label='Teams'  component='a' href='' />
+      </>
+    }
+  />
+  <NavItem label='Contact'  component='a' href='' />
+</NavBar>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<header>
+  <div class="section navbar">
+    <div class="section_container">
+      <div class="navbar_main">
+        <a href="/" class="navbar_logo">
+          <img alt="Logo for Pallote" src="https://pallote.com/logos/pallote-logo.svg">
+        </a>
+        <button aria-label="Open mobile menu" class="navbar_button">
+          <span></span>
+        </button>
+      </div>
+      <nav aria-label="main-nav" class="navbar_nav nav">
+        <div class="nav_container">
+          <div class="nav_item">
+            <a class="nav_trigger nav_trigger-active" href="">Home</a>
+          </div>
+          <div class="nav_item nav_item-dropdown">
+            <button class="nav_trigger">About</button>
+            <div class="nav_target">
+              <div class="nav_item">
+                <a class="nav_trigger" href="">Services</a>
+              </div>
+              <div class="nav_item">
+                <a class="nav_trigger" href="">Teams</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav_item">
+            <a class="nav_trigger" href="">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### Align
+
+<div class="docs_block">
+  <NavBar homeLinkComponent='a'>
+    <NavItem label='Align' active  component='a' href='' />
+    <NavItem label='Left'  component='a' href='' />
+  </NavBar>
+  <NavBar align="right" homeLinkComponent='a'>
+    <NavItem label='Align' active  component='a' href='' />
+    <NavItem label='Right'  component='a' href='' />
+  </NavBar>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<NavBar>
+  {/* insert nav items */}
+</NavBar>
+
+<NavBar align="right">
+  {/* insert nav items */}
+</NavBar>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<header>
+  <div class="section navbar">
+    <div class="section_container">
+      <div class="navbar_main">
+        <a href="/" class="navbar_logo">
+          <img alt="Logo for Pallote" src="https://pallote.com/logos/pallote-logo.svg">
+        </a>
+        <button aria-label="Open mobile menu" class="navbar_button">
+          <span></span>
+        </button>
+      </div>
+      <nav aria-label="main-nav" class="navbar_nav nav">
+        <div class="nav_container">
+          <!-- insert nav items -->
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<header>
+  <div class="section navbar navbar-right">
+    <div class="section_container">
+      <div class="navbar_main">
+        <a href="/" class="navbar_logo">
+          <img alt="Logo for Pallote" src="https://pallote.com/logos/pallote-logo.svg">
+        </a>
+        <button aria-label="Open mobile menu" class="navbar_button">
+          <span></span>
+        </button>
+      </div>
+      <nav aria-label="main-nav" class="navbar_nav nav">
+        <div class="nav_container">
+          <!-- insert nav items -->
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+```
+  </TabItem>
+</Tabs>

@@ -36,8 +36,9 @@ $spacing-dense: .5rem;
   padding: $spacing*.5 $spacing;
   border-top-left-radius: variables.$border-radius-md;
   border-top-right-radius: variables.$border-radius-md;
-  font-weight: variables.$font-bold;
-  font-size: variables.$caption-size;
+  text-transform: variables.$button-transform;
+  font-weight: variables.$button-weight;
+  font-size: variables.$button-sm-size;
 
   &:not(.tab-active):hover {
     text-decoration: underline;

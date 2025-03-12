@@ -124,7 +124,7 @@ $max-width-form: 40rem !default;
 
 $navbar-height: 4rem !default;
 $navbar-height-sm: 3rem !default;
-$nav-item: $spacing-md !default;
+$nav-item: 1rem !default;
 
 // —————————————————————————————————————————————————————————————————
 // typography
@@ -200,6 +200,13 @@ $caption-line-height: 1.5 !default;
 $overline-size: 0.75rem !default;
 $overline-weight: $font-regular !default;
 $overline-line-height: 1.5 !default;
+
+$button-size: 1rem !default;
+$button-xs-size: 0.75rem !default;
+$button-sm-size: 0.875rem !default;
+$button-lg-size: 1.25rem !default;
+$button-transform: uppercase !default;
+$button-weight: $font-bold !default;
 
 // —————————————————————————————————————————————————————————————————
 // breakpoints

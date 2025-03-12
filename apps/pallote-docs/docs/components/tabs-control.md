@@ -12,7 +12,7 @@ import { DocLinks } from './partials/DocLinks'
 Container for the list of tab elements.
 
 <DocLinks
-  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2834-6260&t=VMTut2PgZWCIjJGZ-11"
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2834-6260&t=eWNWESf2DeSjVzq5-11"
   storybook="https://react.pallote.com/?path=/docs/components-tabscontrols--docs"
 />
 
