@@ -12,6 +12,9 @@
 }
 
 .breadcrumbs__item {
+  text-transform: variables.$button-transform;
+  font-weight: variables.$button-weight;
+  font-size: variables.$button-sm-size;
   margin-left: 0;
   padding: 0;
   
