@@ -92,7 +92,7 @@ const config = {
             className: 'navbar__item navbar__link nav-item-custom nav-item-custom-storybook',
           },
           {
-            href: 'https://github.com/ArnaudDarre/pallote-docs',
+            href: 'https://github.com/ArnaudDarre/pallote',
             label: 'GitHub',
             position: 'right',
             className: 'navbar__item navbar__link nav-item-custom nav-item-custom-github',
@@ -137,32 +137,17 @@ const config = {
           //   ],
           // },
           {
-            title: 'GitHub',
-            items: [
-              {
-                label: 'Documentation',
-                href: 'https://github.com/ArnaudDarre/pallote-docs',
-                className: 'footer__link-item nav-item-custom nav-item-custom-github',
-              },
-              {
-                label: 'React',
-                href: 'https://github.com/ArnaudDarre/pallote-react',
-                className: 'footer__link-item nav-item-custom nav-item-custom-github',
-              },
-              {
-                label: 'CSS',
-                href: 'https://github.com/ArnaudDarre/pallote-css',
-                className: 'footer__link-item nav-item-custom nav-item-custom-github',
-              },
-            ],
-          },
-          {
-            title: 'Resources',
+            title: 'External resources',
             items: [
               {
                 label: 'Storybook',
                 href: 'https://react.pallote.com/',
                 className: 'footer__link-item nav-item-custom nav-item-custom-storybook',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/ArnaudDarre/pallote',
+                className: 'footer__link-item nav-item-custom nav-item-custom-github',
               },
               {
                 label: 'Figma',
