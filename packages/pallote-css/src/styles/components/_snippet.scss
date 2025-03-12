@@ -19,24 +19,24 @@
   position: relative;
   border-radius: variables.$border-radius-sm;
   margin: 0;
-  padding: variables.$spacing-sm variables.$spacing-sm*1.5;
+  padding: .5rem .75rem;
   background-color: variables.$hover;
   border: variables.$border;
   
   & + & {
-    margin-top: variables.$spacing-sm;
+    margin-top: .5rem;
   }
 
   p > & {
-    margin-right: variables.$spacing-xs;
-    margin-left: variables.$spacing-xs;
+    margin-right: .25rem;
+    margin-left: .25rem;
   }
 
   .tag {
     font-family: variables.$font, variables.$font-fallback;
     float: right;
     margin-top: 1px;
-    margin-right: -(variables.$spacing-xs);
+    margin-right: -.25rem;
   }
 }
 
@@ -52,7 +52,7 @@
     font-family: variables.$font, variables.$font-fallback;
     float: right;
     margin-top: 1px;
-    margin-right: -(variables.$spacing-xs);
+    margin-right: -.25rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -60,11 +60,11 @@
     border-radius: variables.$border-radius-sm;
     white-space: nowrap; // prevent text to go on multiple lines
     position: absolute;
-    top: variables.$spacing-sm;
-    right: variables.$spacing-md*0.75;
-    height: variables.$spacing-md;
-    padding-right: variables.$spacing-xs;
-    padding-left: variables.$spacing-xs;
+    top: .5rem;
+    right: .75rem;
+    height: 1rem;
+    padding-right: .25rem;
+    padding-left: .25rem;
     padding-bottom: 0.1em;
     background-color: variables.$text-disabled;
   }
@@ -76,10 +76,10 @@
 
 .snippet-dense {
   @extend %overline;
-  padding: variables.$spacing-xs variables.$spacing-sm !important;
+  padding: .25rem .5rem !important;
 
   &.snippet-default:after {
-    top: variables.$spacing-xs;
-    right: variables.$spacing-sm;
+    top: .25rem;
+    right: .5rem;
   }
 }

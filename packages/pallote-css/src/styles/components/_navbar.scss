@@ -15,13 +15,13 @@
 
 // lines > close
 @include mixins.keyframes(button-menu-open-before) {
-	0% 		{ transform: translateY(variables.$spacing-xs*1.5); }
+	0% 		{ transform: translateY(.325rem); }
 	50% 	{ transform: translateY(0); 
 			  	transform: rotate(0); }
 	100% 	{ transform: rotate(45deg); }
 }
 @include mixins.keyframes(button-menu-open-after) {
-	0% 		{ transform: translateY(-(variables.$spacing-xs)*1.5); }
+	0% 		{ transform: translateY(-.325rem); }
 	50% 	{ transform: translateY(0); 
 			  	transform: rotate(0); }
 	100% 	{ transform: rotate(-45deg); }
@@ -32,13 +32,13 @@
 	0% 		{ transform: rotate(45deg); }
 	50% 	{ transform: rotate(0); 
 			  	transform: translateY(0); }
-	100% 	{ transform: translateY(variables.$spacing-xs*1.5); }
+	100% 	{ transform: translateY(.325rem); }
 }
 @include mixins.keyframes(button-menu-close-after) {
 	0% 		{ transform: rotate(-45deg); }
 	50% 	{ transform: rotate(0); 
 			  	transform: translateY(0); }
-	100% 	{ transform: translateY(-(variables.$spacing-xs)*1.5); }
+	100% 	{ transform: translateY(-.325rem); }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -119,8 +119,8 @@ header {
     justify-content: center;
     cursor: pointer;
     position: relative;
-    width: variables.$spacing-md;
-    height: variables.$spacing-md;
+    width: 1rem;
+    height: 1rem;
     border-radius: calc(variables.$border-radius-sm/2);
     outline-offset: .25rem;
     
@@ -137,24 +137,24 @@ header {
   
     &:before,
     &:after {
-      @include mixins.pseudo-element('', auto, auto, auto, auto, variables.$spacing-md, 2px);
+      @include mixins.pseudo-element('', auto, auto, auto, auto, 1rem, 2px);
       @include mixins.transition(variables.$transition-md, transform);
     }
   
     &:before {
-      transform: translateY(variables.$spacing-xs*1.5);
+      transform: translateY(.325rem);
       animation: button-menu-close-before variables.$transition-lg;
     }
   
     &:after {
-      transform: translateY(-(variables.$spacing-xs)*1.5);
+      transform: translateY(-.325rem);
       animation: button-menu-close-after variables.$transition-lg;
     }
   
     span {
       @include mixins.transition(variables.$transition-md, opacity);
       position: absolute;
-      width: variables.$spacing-md;
+      width: 1rem;
       height: 2px;
     }
   

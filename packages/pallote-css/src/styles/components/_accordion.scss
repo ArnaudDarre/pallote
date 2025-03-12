@@ -37,8 +37,8 @@
       transition: transform variables.$transition-md;
       will-change: transform;
       position: absolute;
-      height: variables.$spacing-md;
-      width: variables.$spacing-md;
+      height: 1rem;
+      width: 1rem;
       transform-origin: center 60%;
       pointer-events: none;
     }
@@ -95,9 +95,9 @@
 
 .accordion {
 
-  @include accordion-size(md, variables.$spacing-sm);
-  &-sm { @include accordion-size(sm, variables.$spacing-xs); }
-  &-lg { @include accordion-size(lg, variables.$spacing-md); }
+  @include accordion-size(md, .5rem);
+  &-sm { @include accordion-size(sm, .25rem); }
+  &-lg { @include accordion-size(lg, 1rem); }
 }
 
 // —————————————————————————————————————————————————————————————————

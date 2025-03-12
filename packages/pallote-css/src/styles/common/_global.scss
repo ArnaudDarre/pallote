@@ -59,7 +59,7 @@ footer {
 	height: 0; 
 	overflow: hidden; 
 	max-width: 100%;
-	border-radius: variables.$spacing-md;
+	border-radius: 1rem;
 	
 	iframe, object, embed { 
 		position: absolute; 
@@ -116,10 +116,10 @@ ul {
 }
 
 li {
-	margin-left: variables.$spacing-md;
+	margin-left: 1rem;
 
 	& + & {
-		padding-top: variables.$spacing-xs;
+		padding-top: .25rem;
 	}
 }
 
