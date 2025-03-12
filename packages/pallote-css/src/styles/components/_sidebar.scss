@@ -31,7 +31,7 @@ $sidebar-width: 200px;
     z-index: 13;
   }
 
-  &__button {
+  &_button {
     content: '';
     border: solid variables.$text;
     border-width: 0 2px 2px 0;
@@ -40,10 +40,10 @@ $sidebar-width: 200px;
     margin-right: variables.$spacing-md;
     display: none;
 
-    .page--withSidebar & { display: initial; }
+    .page-withSidebar & { display: initial; }
     @include mixins.responsive(up, tablet) { display: none !important; }
 
-    &--close {
+    &-close {
       position: absolute;
       top: variables.$navbar-height-sm*0.5;
       left: variables.$navbar-height-sm*0.5;
@@ -51,7 +51,7 @@ $sidebar-width: 200px;
     }
   }
 
-  &__title {
+  &_title {
     @extend %overline;
     color: variables.$text-alt;
     font-weight: variables.$font-bold;

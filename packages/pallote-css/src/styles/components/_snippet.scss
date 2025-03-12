@@ -44,7 +44,7 @@
 // default
 // —————————————————————————————————————————————————————————————————
 
-.snippet--default {
+.snippet-default {
 
   &:after {
     @extend %overline;
@@ -74,11 +74,11 @@
 // dense
 // —————————————————————————————————————————————————————————————————
 
-.snippet--dense {
+.snippet-dense {
   @extend %overline;
   padding: variables.$spacing-xs variables.$spacing-sm !important;
 
-  &.snippet--default:after {
+  &.snippet-default:after {
     top: variables.$spacing-xs;
     right: variables.$spacing-sm;
   }

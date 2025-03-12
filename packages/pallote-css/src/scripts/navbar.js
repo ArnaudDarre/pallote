@@ -3,7 +3,7 @@ const navbar = document.querySelector('.navbar');
 const buttonNavbar = document.querySelector('.navbar_button');
 const sidebar = document.querySelector('.sidebar');
 const buttonSidebarOpen = document.querySelector('.sidebar_button');
-const buttonSidebarClose = document.querySelector('.sidebar_button--close');
+const buttonSidebarClose = document.querySelector('.sidebar_button-close');
 
 if (buttonNavbar !== null) {
   buttonNavbar.addEventListener('click', function () {
