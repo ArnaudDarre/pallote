@@ -140,14 +140,14 @@ Focus on a input on page load.
 Notify users that the field has an error.
 
 <div class="docs_block">
-  <Input id="error" label="Error" error />
+  <Input id="error" label="Error" error="This is the error message" />
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<Input id="error" label="Error" error />
+<Input id="error" label="Error" error="This is the error message" />
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -155,6 +155,7 @@ Notify users that the field has an error.
 ```html
 <div class="input input-error">
   <label for="error" class="input_label">Error</label>
+  <p class="input_error">This is the error message</p>
   <input type="text" id="error" class="input_control">
 </div>
 ```
@@ -206,6 +207,31 @@ Add this class to signal users the field is disabled.
 <div class="input input-optional">
   <label for="optional" class="input_label">Optional</label>
   <input type="text" id="optional" class="input_control">
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Hint
+
+<div class="docs_block">
+  <Input id="hint" label="Hint" hint="This is a hint to give more details" />
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Input id="hint" label="Hint" hint="This is a hint to give more details" />
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input">
+  <label for="hint" class="input_label">Hint</label>
+  <p class="input_hint">This is a hint to give more details</p>
+  <input type="text" id="hint" class="input_control">
 </div>
 ```
   </TabItem>

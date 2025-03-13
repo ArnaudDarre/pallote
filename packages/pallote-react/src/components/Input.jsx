@@ -7,6 +7,8 @@ import {
   Clock
 } from '@phosphor-icons/react'
 
+import { InputLabel } from './InputLabel'
+
 export const Input = ({
   onChange,
   type = 'text',
@@ -51,8 +53,12 @@ export const Input = ({
       ])}
       onChange={onChange}
     >
-      {label && <label className={'input_label'} htmlFor={id}>{label}</label>}
-      {hint && <p className={'input_hint'}>{hint}</p>}
+      <InputLabel
+        htmlFor={id}
+        label={label}
+        hint={hint}
+        error={error}
+      />
       {customIcon && <div className={'input_icon'}>{customIcon}</div>}
       <input
         ref={inputRef}

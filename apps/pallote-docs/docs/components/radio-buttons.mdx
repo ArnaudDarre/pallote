@@ -126,7 +126,7 @@ For the CSS library, you do not need to add the `required` property to the form 
 ### Error
 
 <div class="docs_block">
-  <RadioButtons label="Error" error>
+  <RadioButtons label="Error" error="This is the error message">
     <Radio name="error" id="error_1" value="1" label="Option 1" />
     <Radio name="error" id="error_2" value="2" label="Option 2" />
   </RadioButtons>
@@ -136,7 +136,7 @@ For the CSS library, you do not need to add the `required` property to the form 
   <TabItem value="react" label="React">
 
 ```jsx
-<RadioButtons label="Error" error>
+<RadioButtons label="Error" error="This is the error message">
   <Radio name="error" id="error_1" value="1" label="Option 1" />
   <Radio name="error" id="error_2" value="2" label="Option 2" />
 </RadioButtons>
@@ -147,6 +147,7 @@ For the CSS library, you do not need to add the `required` property to the form 
 ```html
 <div class="input input-error">
   <legend class="input_label">Error</legend>
+  <p class="input_error">This is the error message</p>
   <div class="input_control radios">
     <div class="radio">
       <input type="radio" name="error" id="error_1" value="error_1" class="radio_control" />
@@ -233,6 +234,46 @@ For the CSS library, you do not need to add the `required` property to the form 
     <div class="radio">
       <input type="radio" name="optional" id="optional_2" value="optional_2" class="radio_control" />
       <label for="optional_2" class="radio_label">Option 2</label>
+    </div>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Hint
+
+<div class="docs_block">
+  <RadioButtons label="Hont" hint="This is a hint to give more details">
+    <Radio name="hint" id="hint_1" value="1" label="Option 1" />
+    <Radio name="hint" id="hint_2" value="2" label="Option 2" />
+  </RadioButtons>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<RadioButtons label="Hont" hint="This is a hint to give more details">
+  <Radio name="hint" id="hint_1" value="1" label="Option 1" />
+  <Radio name="hint" id="hint_2" value="2" label="Option 2" />
+</RadioButtons>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input">
+  <legend class="input_label">Hint</legend>
+  <p class="input_hint">This is a hint to give more details</p>
+  <div class="input_control radios">
+    <div class="radio">
+      <input type="radio" name="hint" id="hint_1" value="hint_1" class="radio_control" />
+      <label for="hint_1" class="radio_label">Option 1</label>
+    </div>
+    <div class="radio">
+      <input type="radio" name="hint" id="hint_2" value="hint_2" class="radio_control" />
+      <label for="hint_2" class="radio_label">Option 2</label>
     </div>
   </div>
 </div>

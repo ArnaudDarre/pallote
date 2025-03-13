@@ -29,6 +29,7 @@ const Template = (args) => <RadioButtons {...args} />
 export const Playground = Template.bind({})
 
 Playground.args = {
+  id: "radio-buttons",
   children: (
     <>
       <Radio name="checkbox" id="checkbox_1" value="1" label="Option 1" />
@@ -55,7 +56,7 @@ export const Direction = () => (
 )
 
 export const Error = () => (
-  <RadioButtons id="error" label="Error" error>
+  <RadioButtons id="error" label="Error" error="This is the error message">
     <Radio name="error" id="error_1" value="1" label="Option 1" />
     <Radio name="error" id="error_2" value="2" label="Option 2" />
   </RadioButtons>

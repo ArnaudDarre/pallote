@@ -127,7 +127,7 @@ For the CSS library, you do not need to add the `required` property to the form 
 ### Error
 
 <div class="docs_block">
-  <Checkboxes label="Error" error>
+  <Checkboxes label="Error" error="This is the error message">
     <Checkbox id="error_1" value="1" label="Option 1" />
     <Checkbox id="error_2" value="2" label="Option 2" />
   </Checkboxes>
@@ -137,7 +137,7 @@ For the CSS library, you do not need to add the `required` property to the form 
   <TabItem value="react" label="React">
 
 ```jsx
-<Checkboxes label="Error" error>
+<Checkboxes label="Error" error="This is the error message">
   <Checkbox id="error_1" value="1" label="Option 1" />
   <Checkbox id="error_2" value="2" label="Option 2" />
 </Checkboxes>
@@ -148,6 +148,7 @@ For the CSS library, you do not need to add the `required` property to the form 
 ```html
 <div class="input input-error">
   <legend class="input_label">Error</legend>
+  <p class="input_error">This is the error message</p>
   <div class="input_control checkboxes">
     <div class="checkbox">
       <input type="checkbox" id="error_1" value="error_1" class="checkbox_control" />
@@ -234,6 +235,46 @@ For the CSS library, you do not need to add the `required` property to the form 
     <div class="checkbox">
       <input type="checkbox" id="optional_2" value="optional_2" class="checkbox_control" />
       <label for="optional_2" class="checkbox_label">Option 2</label>
+    </div>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Hint
+
+<div class="docs_block">
+  <Checkboxes label="Hint" hint="This is a hint to give more details">
+    <Checkbox id="hint_1" value="1" label="Option 1" />
+    <Checkbox id="hint_2" value="2" label="Option 2" />
+  </Checkboxes>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Checkboxes label="Hint" hint="This is a hint to give more details">
+  <Checkbox id="hint_1" value="1" label="Option 1" />
+  <Checkbox id="hint_2" value="2" label="Option 2" />
+</Checkboxes>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input">
+  <legend class="input_label">Hint</legend>
+  <p class="input_hint">This is a hint to give more details</p>
+  <div class="input_control checkboxes">
+    <div class="checkbox">
+      <input type="checkbox" id="hint_1" value="hint_1" class="checkbox_control" />
+      <label for="hint_1" class="checkbox_label">Option 1</label>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox" id="hint_2" value="hint_2" class="checkbox_control" />
+      <label for="hint_2" class="checkbox_label">Option 2</label>
     </div>
   </div>
 </div>

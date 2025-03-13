@@ -29,6 +29,7 @@ const Template = (args) => <Checkboxes {...args} />
 export const Playground = Template.bind({})
 
 Playground.args = {
+  id: "checkboxes",
   children: (
     <>
       <Checkbox id="checkbox_1" value="1" label="Option 1" />
@@ -55,7 +56,7 @@ export const Direction = () => (
 )
 
 export const Error = () => (
-  <Checkboxes id="error" label="Error" error>
+  <Checkboxes id="error" label="Error" error="This is the error message">
     <Checkbox id="error_1" value="1" label="Option 1" />
     <Checkbox id="error_2" value="2" label="Option 2" />
   </Checkboxes>

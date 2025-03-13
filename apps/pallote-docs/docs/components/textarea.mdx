@@ -77,14 +77,14 @@ Focus on a input on page load.
 Notify users that the field has an error.
 
 <div class="docs_block">
-  <Textarea id="error" label="Error" error />
+  <Textarea id="error" label="Error" error="This is the error message" />
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<Textarea id="error" label="Error" error />
+<Textarea id="error" label="Error" error="This is the error message" />
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -92,6 +92,7 @@ Notify users that the field has an error.
 ```html
 <div class="input input-error textarea">
   <label for="error" class="input_label">Error</label>
+  <p class="input_error">This is the error message</p>
   <textarea id="error" rows="4" class="input_control"></textarea>
 </div>
 ```
@@ -143,6 +144,31 @@ Add this class to signal users the field is disabled.
 <div class="input input-optional textarea">
   <label for="optional" class="input_label">Optional</label>
   <textarea id="optional" rows="4" class="input_control"></textarea>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Hint
+
+<div class="docs_block">
+  <Textarea id="hint" label="Hint" hint="This is a hint to give more details" />
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Textarea id="hint" label="Hint" hint="This is a hint to give more details" />
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input textarea">
+  <label for="hint" class="input_label">Hint</label>
+  <p class="input_hint">This is a hint to give more details</p>
+  <textarea id="hint" rows="4" class="input_control"></textarea>
 </div>
 ```
   </TabItem>

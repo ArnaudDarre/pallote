@@ -101,7 +101,7 @@ Focus on a input on page load.
 Notify users that the field has an error.
 
 <div class="docs_block">
-  <Select id="error" label="Error" error>
+  <Select id="error" label="Error" error="This is the error message">
     <option value=""></option>
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
@@ -112,7 +112,7 @@ Notify users that the field has an error.
   <TabItem value="react" label="React">
 
 ```jsx
-<Select id="error" label="Error" error>
+<Select id="error" label="Error" error="This is the error message">
   <option value=""></option>
   <option value="1">Option 1</option>
   <option value="2">Option 2</option>
@@ -124,6 +124,7 @@ Notify users that the field has an error.
 ```html
 <div class="input input-error select">
   <label for="error" class="input_label">Error</label>
+  <p class="input_error">This is the error message</p>
   <select name="error" id="error" class="input_control">
     <option value=""></option>
     <option value="Option 1">Option 1</option>
@@ -199,6 +200,43 @@ Add this class to signal users the field is disabled.
 <div class="input input-optional select">
   <label for="optional" class="input_label">Optional</label>
   <select name="optional" id="optional" class="input_control">
+    <option value=""></option>
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+  </select>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Hint
+
+<div class="docs_block">
+  <Select id="hint" label="Hint" hint="This is a hint to give more details">
+    <option value=""></option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </Select>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Select id="hint" label="Hint" hint="This is a hint to give more details">
+  <option value=""></option>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</Select>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input select">
+  <label for="hint" class="input_label">Hint</label>
+  <p class="input_hint">This is a hint to give more details</p>
+  <select name="hint" id="hint" class="input_control">
     <option value=""></option>
     <option value="Option 1">Option 1</option>
     <option value="Option 2">Option 2</option>

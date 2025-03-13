@@ -1,0 +1,89 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { InputLabel } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# InputLabel
+
+The content of a table component.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2789-18327&t=tOYUaoJ7MQ7ScSgt-11"
+  storybook="https://react.pallote.com/?path=/docs/components-tablebody--docs"
+/>
+
+<div class="docs_block">
+  <div>
+    <InputLabel
+      htmlFor="id"
+      label="Input label"
+      hint="Link"
+      error="Error message"
+    />
+  </div>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<InputLabel
+  htmlFor="id"
+  label="Input label"
+  hint="Link"
+  error="Error message"
+/>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<label class="input_label">Input label</label>
+<p class="input_hint">Link</p>
+<p class="input_error">Error message</p>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### IsLegend
+
+Add this prop when the component is used in a fieldset, for example on the `Checkboxes` or `RadioButtons` components.
+
+<div class="docs_block">
+  <div>
+    <InputLabel
+      isLegend
+      label="Input label"
+      hint="Link"
+      error="Error message"
+    />
+  </div>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<InputLabel
+  isLegend
+  label="Input label"
+  hint="Link"
+  error="Error message"
+/>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<legend class="input_label">Input label</legend>
+<p class="input_hint">Link</p>
+<p class="input_error">Error message</p>
+```
+  </TabItem>
+</Tabs>

@@ -17,6 +17,7 @@ import { Checkbox } from './components/Checkbox'
 import { Checkboxes } from './components/Checkboxes'
 import { Divider } from './components/Divider'
 import { Input } from './components/Input'
+import { InputLabel } from './components/InputLabel'
 import { Link } from './components/Link'
 import { List } from './components/List'
 import { ListItem } from './components/ListItem'
@@ -65,6 +66,7 @@ export {
   Checkboxes,
   Divider,
   Input,
+  InputLabel,
   Link,
   List,
   ListItem,

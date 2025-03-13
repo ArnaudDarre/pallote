@@ -30,21 +30,34 @@
     margin-top: 1rem;
   }
 
+  &_label,
+  &_hint,
+  &_error {
+    display: block;
+  }
+
+  &_hint,
+  &_error {
+    font-size: variables.$caption-size;
+    margin-top: -.125rem;
+    margin-bottom: .5rem;
+  }
+
   &_label {
 		@include mixins.transition(variables.$transition-md, color);
 		font-weight: variables.$font-bold;
 		text-overflow: ellipsis;
-		display: block;
 		overflow: hidden;
 		white-space: nowrap;
 		position: relative;
 		margin-bottom: .25rem;
   }
 
-  &_hint {
-		@extend %caption;
-    margin-top: -.125rem;
-		margin-bottom: .5rem;
+  &_error {
+    font-weight: variables.$font-bold;
+    color: variables.$error;
+    border-left: .25rem solid variables.$error;
+    padding-left: .5rem;
   }
 
   &_control {
