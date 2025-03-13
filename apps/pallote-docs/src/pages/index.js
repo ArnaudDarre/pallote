@@ -5,8 +5,7 @@ import { Button, Buttons, Card, CardActions, CardContent, CardHeader, Grid, Sect
 
 import InstallReact from '../components/index/InstallReact.mdx'
 import InstallCSS from '../components/index/InstallCSS.mdx'
-// import { Cover } from '../components/index/Cover';
-import CoverImage from '@site/static/images/cover.png';
+import { Cover } from '../components/index/Cover';
 
 const InstallList = [
   {
@@ -31,8 +30,8 @@ export default function Home() {
       description={siteConfig.tagline}
     >
       <main>
-        <Section color='primary' landing>
-          <img src={CoverImage} title="Component examples" className="coverImage" />
+        <Section landing>
+          <Cover />
           <SectionHeader
             title="Introducing Pallote"
             subtitle={
@@ -47,7 +46,6 @@ export default function Home() {
             actions={
               <Button
                 component={Link}
-                color="main"
                 size="lg"
                 to="/docs/getting-started/installation"
               >
@@ -55,9 +53,8 @@ export default function Home() {
               </Button>
             }
           />
-          {/* <Cover /> */}
         </Section>
-        <Section id="section-install">
+        <Section color='paper' id="section-install">
           <SectionHeader
             title="Install the packages"
             subtitle="Get started by installing the packages in your project."
@@ -66,7 +63,7 @@ export default function Home() {
             <Grid gap={3} items="stretch">
               {InstallList.map((props, idx) => (
                 <Grid colsm={4} key={idx} item>
-                  <Card className="h-full" hasShadow>
+                  <Card className="h-full">
                     <CardHeader
                       title={props.title}
                       subtitle={props.subtitle}
@@ -83,7 +80,7 @@ export default function Home() {
             </Grid>
           </SectionContent>
         </Section>
-        <Section color="paper">
+        <Section color="primary">
           <SectionHeader
             title="Contribute and support"
             subtitle="Pallote is a passion project born of a love for coding and design. All contributions and feedback are welcome to help the project grow."

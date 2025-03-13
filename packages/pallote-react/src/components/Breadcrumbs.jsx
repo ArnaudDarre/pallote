@@ -36,6 +36,3 @@ Breadcrumbs.propTypes = {
   ]),
   className: PropTypes.node
 }
-
-Breadcrumbs.defaultProps = {
-}

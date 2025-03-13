@@ -1,42 +1,18 @@
 @use 'pallote-css/styles/common/variables';
 
 .coverExamples {
-  // position: absolute;
-  // top: 1.5rem;
-  // right: 0;
-  // min-width: 600px;
-  transform: scale(.75);
-
-  .card {
-    background-color: transparent;
-  }
-}
-
-.coverImage {
   position: absolute;
-  top: 1.5rem;
+  top: 2rem;
   right: 0;
-  width: 72%;
   min-width: 600px;
-  // opacity: .2;
+  transform: scale(.8);
+  transform-origin: top right;
+
+  .flex {
+    flex-wrap: nowrap;
+  }
 
   ~ .section_header {
     position: relative; // need for index
-
-    .section {
-
-      &_title,
-      &_subtitle {
-        border-radius: variables.$border-radius-md;
-        background-color: rgba(variables.$primary, 1);
-        width: fit-content;
-        padding-top: .25rem;
-        padding-right: .25rem;
-        padding-bottom: .25rem;
-      }
-      
-      &_title { margin-top: -.25rem; margin-bottom: -.5rem; }
-      &_subtitle { margin-bottom: -.25rem; }
-    }
   }
 }

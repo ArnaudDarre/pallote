@@ -66,15 +66,11 @@ export const NavItem = ({
 }
 
 NavItem.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
   active: PropTypes.bool,
   dropdown: PropTypes.object,
   icon: PropTypes.node,
   end: PropTypes.node,
   to: PropTypes.node,
   className: PropTypes.node
-}
-
-NavItem.defaultProps = {
-  label: 'Nav item'
 }
