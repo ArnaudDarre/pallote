@@ -26,5 +26,5 @@ CardActions.propTypes = {
     'landscape'
   ]),
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

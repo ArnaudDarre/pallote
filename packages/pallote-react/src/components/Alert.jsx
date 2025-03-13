@@ -87,7 +87,7 @@ Alert.propTypes = {
     'toast',
     'notice'
   ]),
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   dense: PropTypes.bool,
   noIcon: PropTypes.bool,

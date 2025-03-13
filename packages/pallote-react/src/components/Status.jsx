@@ -39,5 +39,5 @@ Status.propTypes = {
   ]),
   dense: PropTypes.bool,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

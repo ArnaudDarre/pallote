@@ -94,5 +94,5 @@ Button.propTypes = {
   iconLeft: PropTypes.node,
   iconRight: PropTypes.node,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

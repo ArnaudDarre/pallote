@@ -54,5 +54,5 @@ Section.propTypes = {
   landing: PropTypes.bool,
   header: PropTypes.bool,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

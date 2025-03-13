@@ -18,5 +18,5 @@ export const TableRow = ({ className, children, ...props }) => {
 
 TableRow.propTypes = {
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

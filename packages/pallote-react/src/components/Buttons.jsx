@@ -36,5 +36,5 @@ Buttons.propTypes = {
   fullWidth: PropTypes.bool,
   wide: PropTypes.bool,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

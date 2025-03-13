@@ -61,14 +61,14 @@ export const Select = ({
 
 Select.propTypes = {
   onChange: PropTypes.func,
-  id: PropTypes.string,
-  label: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   isFocused: PropTypes.bool,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
   dense: PropTypes.bool,
   hint: PropTypes.string,
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
   className: PropTypes.node
 }

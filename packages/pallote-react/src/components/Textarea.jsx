@@ -57,9 +57,9 @@ export const Textarea = ({
 
 Textarea.propTypes = {
   onChange: PropTypes.func,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
   isFocused: PropTypes.bool,
   error: PropTypes.bool,
   disabled: PropTypes.bool,

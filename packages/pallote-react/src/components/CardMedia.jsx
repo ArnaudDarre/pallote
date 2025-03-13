@@ -30,7 +30,7 @@ export const CardMedia = ({ width, height, image, fullWidth, className, ...props
 CardMedia.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
-  image: PropTypes.string,
+  image: PropTypes.string.isRequired,
   fullWidth: PropTypes.bool,
   className: PropTypes.node
 }

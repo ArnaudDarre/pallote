@@ -80,9 +80,9 @@ Input.propTypes = {
     'text',
     'time'
   ]),
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
   icon: PropTypes.node,
   isFocused: PropTypes.bool,
   error: PropTypes.bool,

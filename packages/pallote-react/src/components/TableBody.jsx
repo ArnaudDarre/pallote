@@ -18,5 +18,5 @@ export const TableBody = ({ className, children, ...props }) => {
 
 TableBody.propTypes = {
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

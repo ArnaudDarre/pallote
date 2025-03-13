@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { TableCellComponentContext } from './TableHead'
 
-export const TableCell = ({ kind, className, children, ...props }) => {
+export const TableCell = ({ kind = 'default', className, children, ...props }) => {
 
   const useTableCellComponent = () => useContext(TableCellComponentContext)
   const Component = useTableCellComponent()
@@ -32,5 +32,5 @@ TableCell.propTypes = {
     'action'
   ]),
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

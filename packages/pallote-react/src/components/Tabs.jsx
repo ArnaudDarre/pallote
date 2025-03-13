@@ -34,5 +34,5 @@ Tabs.propTypes = {
   dense: PropTypes.bool,
   hasBorder: PropTypes.bool,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

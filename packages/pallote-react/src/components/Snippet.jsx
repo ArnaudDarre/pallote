@@ -32,7 +32,7 @@ export const Snippet = ({
 }
 
 Snippet.propTypes = {
-  content: PropTypes.string,
+  content: PropTypes.string.isRequired,
   isDefault: PropTypes.bool,
   dense: PropTypes.bool,
   className: PropTypes.node

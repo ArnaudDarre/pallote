@@ -36,5 +36,5 @@ export const Tab = ({
 
 Tab.propTypes = {
   label: PropTypes.string,
-  className: PropTypes.node
+  className: PropTypes.node.isRequired
 }

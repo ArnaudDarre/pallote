@@ -52,8 +52,8 @@ export const RadioButtons = ({
 
 RadioButtons.propTypes = {
   onChange: PropTypes.func,
-  id: PropTypes.string,
-  label: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   direction: PropTypes.oneOf([
     'portrait',
     'landscape'
@@ -62,6 +62,6 @@ RadioButtons.propTypes = {
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
   hint: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.node
 }

@@ -54,5 +54,5 @@ Link.propTypes = {
   ]),
   href: PropTypes.string,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

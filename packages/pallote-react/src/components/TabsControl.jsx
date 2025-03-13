@@ -12,6 +12,7 @@ export const TabsControl = ({
       role='tablist'
       className={classnames([
         'tabs_controls',
+        className
       ])}
   >
       {children}
@@ -21,5 +22,5 @@ export const TabsControl = ({
 
 TabsControl.propTypes = {
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

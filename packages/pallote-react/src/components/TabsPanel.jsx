@@ -33,5 +33,5 @@ export const TabsPanel = ({
 
 TabsPanel.propTypes = {
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

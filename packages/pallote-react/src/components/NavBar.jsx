@@ -59,5 +59,5 @@ NavBar.propTypes = {
     'right'
   ]),
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

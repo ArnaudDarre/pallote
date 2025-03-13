@@ -27,5 +27,5 @@ ListItem.propTypes = {
   icon: PropTypes.node,
   bold: PropTypes.bool,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }
