@@ -25,7 +25,6 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableFooter,
   TableRow,
   Tabs,
   TabsControl,
@@ -92,7 +91,6 @@ export const Cover = () => {
           </Grid>
         </Grid>
         <Grid gap={6} direction='column'>
-          <TableFooter />
           <Grid gap={6} items='end'>
             <Grid gap={6} direction='column'>
               <Breadcrumbs items={breadcrumbItems} className='mt-0' />

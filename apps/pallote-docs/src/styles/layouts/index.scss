@@ -1,12 +1,38 @@
 @use 'pallote-css/styles/common/variables';
+@use 'pallote-css/styles/common/mixins';
 
 .coverExamples {
+  transform: scale(.85);
+  transform-origin: top right;
   position: absolute;
   top: 2rem;
-  right: 0;
-  min-width: 600px;
-  transform: scale(.8);
-  transform-origin: top right;
+  right: -4rem;
+  
+  @include mixins.responsive(down, 1320px) {
+    transform: scale(.8);
+    right: auto;
+    left: 12.5rem;
+  }
+  
+  @include mixins.responsive(down, 1024px) {
+    transform: scale(.7);
+    top: 3rem;
+    left: 7.5rem;
+  }
+
+  @include mixins.responsive(down, 768px) {
+    @include mixins.clamp(margin-top, 2rem, 8vw, 4rem);
+    transform: scale(.8);
+    position: initial;
+    height: 25rem;
+    margin-right: -3rem;
+  }
+  
+  @include mixins.responsive(down, 568px) {
+    transform: scale(.7);
+    height: 20rem;
+    margin-right: -7rem;
+  }
 
   .flex {
     flex-wrap: nowrap;

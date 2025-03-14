@@ -2,8 +2,8 @@
 @use 'pallote-css/styles/common/mixins';
 
 .navbar {
-  @include mixins.clamp(padding-right, 1.5rem, 4vw, 4rem);
-  @include mixins.clamp(padding-left, 1.5rem, 4vw, 4rem);
+  @include mixins.clamp(padding-right, 1rem, 4vw, 4rem);
+  @include mixins.clamp(padding-left, 1rem, 4vw, 4rem);
   height: variables.$navbar-height;
   position: fixed;
   box-shadow: none;
@@ -36,8 +36,11 @@
   }
 
   &__item {
-    display: flex;
-    align-items: center;
+
+    @include mixins.responsive(up, 997px) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__link {

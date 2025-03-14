@@ -31,7 +31,6 @@ export default function Home() {
     >
       <main>
         <Section landing>
-          <Cover />
           <SectionHeader
             title="Introducing Pallote"
             subtitle={
@@ -53,6 +52,7 @@ export default function Home() {
               </Button>
             }
           />
+          <Cover />
         </Section>
         <Section color='paper' id="section-install">
           <SectionHeader

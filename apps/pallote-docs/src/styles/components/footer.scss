@@ -4,8 +4,8 @@
 @use 'pallote-css/styles/utilities/text';
 
 .footer {
-  @include mixins.clamp(padding-right, 1.5rem, 4vw, 4rem);
-  @include mixins.clamp(padding-left, 1.5rem, 4vw, 4rem);
+  @include mixins.clamp(padding-right, 1rem, 4vw, 4rem);
+  @include mixins.clamp(padding-left, 1rem, 4vw, 4rem);
   @include mixins.clamp(padding-top, 2rem, 8vw, 4rem);
   @include mixins.clamp(padding-bottom, 2rem, 8vw, 4rem);
   background-color: variables.$grey-90;
