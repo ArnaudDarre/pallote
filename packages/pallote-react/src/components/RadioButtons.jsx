@@ -29,11 +29,14 @@ export const RadioButtons = ({
         className
       ])}
       onChange={onChange}
-      aria-describedby={
-        [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
-          .filter(Boolean)
-          .join(' ')
-      }
+      {...(hint || error
+        ? {
+            'aria-describedby': [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
+              .filter(Boolean)
+              .join(' '),
+          }
+        : null
+      )}
     >
       <InputLabel
         isLegend

@@ -56,11 +56,14 @@ export const Select = ({
         id={id}
         disabled={disabled}
         required={!(disabled || optional)}
-        aria-describedby={
-          [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
-            .filter(Boolean)
-            .join(' ')
-        }
+        {...(hint || error
+          ? {
+              'aria-describedby': [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
+                .filter(Boolean)
+                .join(' '),
+            }
+          : null
+        )}
         {...props}
       >
         {children}
