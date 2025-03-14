@@ -1,4 +1,4 @@
-import { Color, Text } from "pallote-react"
+import { Color, Text } from 'pallote-react'
 
 export const GridExample = ({
   fill,

@@ -26,10 +26,10 @@
     transform: translateY(100%);
   }
 
-  &__text {
+  &_text {
     width: 100%;
     display: inline;
-    margin-right: $spacing-xs;
+    margin-right: .25rem;
   }
 
   .link {

@@ -29,13 +29,10 @@ export const Breadcrumbs = ({ items, separator = "slash", className }) => (
 );
 
 Breadcrumbs.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.array.isRequired,
   separator: PropTypes.oneOf([
     'slash',
     'arrow'
   ]),
   className: PropTypes.node
-}
-
-Breadcrumbs.defaultProps = {
 }

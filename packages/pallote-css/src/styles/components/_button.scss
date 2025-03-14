@@ -27,8 +27,8 @@
   border-radius: variables.$border-radius-sm;
   position: relative;
   line-height: 0;
-  text-transform: uppercase;
-  font-weight: variables.$font-bold;
+  text-transform: variables.$button-transform;
+  font-weight: variables.$button-weight;
   white-space: nowrap;
   outline-offset: 2px;
   width: fit-content;
@@ -62,12 +62,10 @@
   padding-right: $size*.33;
   padding-left: $size*.33;
 
-  @if $value == xs or $value == sm {
-    @extend %overline;
-    border-radius: variables.$border-radius-sm;
-  }
-  @if $value == md { @extend %body; }
-  @if $value == lg { @extend %subtitle; }
+  @if $value == xs { font-size: variables.$button-xs-size; }
+  @if $value == sm { font-size: variables.$button-sm-size; }
+  @if $value == md { font-size: variables.$button-size; }
+  @if $value == lg { font-size: variables.$button-lg-size; }
 
   svg {
     width: calc($size/1.75);

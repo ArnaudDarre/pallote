@@ -10,13 +10,13 @@
 // container
 
 .container {
-  @include mixins.clamp(padding-right, 1.5rem, 4vw, 4rem);
+  @include mixins.clamp(padding-right, 1rem, 4vw, 4rem);
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   padding-left: 2rem;
   
   @include mixins.responsive(down, 996.98px) {
-    @include mixins.clamp(padding-left, 1.5rem, 4vw, 4rem);
+    @include mixins.clamp(padding-left, 1rem, 4vw, 4rem);
   }
 
   @include mixins.responsive(up, 997px) {

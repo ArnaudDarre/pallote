@@ -1,10 +1,8 @@
-import React, { createContext } from 'react'
+import React from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 import { Color } from '../utilities/Color'
-
-export const SizeContext = createContext('md')
 
 export const Card = ({
   size = 'md',
@@ -19,26 +17,24 @@ export const Card = ({
 }) => {
 
   return (
-    <SizeContext.Provider value={size}>
-      <Color fill={transparent ? null : fill}>
-        <div
-          className={classnames([
-            'card',
-            {
-              [`card-${size}`]: size,
-              [`card-${direction}`]: direction,
-              [`card-${align}`]: align,
-              'card-hasShadow': hasShadow,
-              'card-transparent': transparent
-            },
-            className
-          ])}
-          {...props}
-        >
-          {children}
-        </div>
-      </Color>
-    </SizeContext.Provider>
+    <Color fill={transparent ? null : fill}>
+      <div
+        className={classnames([
+          'card',
+          {
+            [`card-${size}`]: size,
+            [`card-${direction}`]: direction,
+            [`card-${align}`]: align,
+            'card-hasShadow': hasShadow,
+            'card-transparent': transparent
+          },
+          className
+        ])}
+        {...props}
+      >
+        {children}
+      </div>
+    </Color>
   )
 }
 
@@ -72,5 +68,5 @@ Card.propTypes = {
   hasShadow: PropTypes.bool,
   transparent: PropTypes.bool,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

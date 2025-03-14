@@ -97,12 +97,25 @@ div.css-qhkunw {
 // overrides components
 // —————————————————————————————————————————————————————————————————
 
+body.js-navbar {
+  overflow: initial !important;
+
+  &:after {
+    display: none;
+    overflow: initial;
+  }
+}
+
 .page {
   width: 100%;
 }
 
 .navBar {
   position: initial;
+}
+
+.snippet_wrapper {
+  width: 100%;
 }
 
 // —————————————————————————————————————————————————————————————————

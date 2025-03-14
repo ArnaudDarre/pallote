@@ -12,11 +12,12 @@
 // —————————————————————————————————————————————————————————————————
 
 .breadcrumbs {
-  text-transform: uppercase;
 
   ol {
     display: inline-flex;
     flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
   }
 
   li {
@@ -25,8 +26,9 @@
   }
 
   &_item {
-    @extend %caption;
-    font-weight: variables.$font-bold;
+    text-transform: variables.$button-transform;
+    font-weight: variables.$button-weight;
+    font-size: variables.$button-sm-size;
     
     &:not(:first-child) {
       margin-left: .25rem;

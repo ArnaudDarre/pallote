@@ -23,5 +23,5 @@ export const CardContent = ({ fullWidth, className, children, ...props }) => {
 CardContent.propTypes = {
   fullWidth: PropTypes.bool,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

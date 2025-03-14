@@ -15,13 +15,13 @@
 
 // lines > close
 @include mixins.keyframes(button-menu-open-before) {
-	0% 		{ transform: translateY(variables.$spacing-xs*1.5); }
+	0% 		{ transform: translateY(.325rem); }
 	50% 	{ transform: translateY(0); 
 			  	transform: rotate(0); }
 	100% 	{ transform: rotate(45deg); }
 }
 @include mixins.keyframes(button-menu-open-after) {
-	0% 		{ transform: translateY(-(variables.$spacing-xs)*1.5); }
+	0% 		{ transform: translateY(-.325rem); }
 	50% 	{ transform: translateY(0); 
 			  	transform: rotate(0); }
 	100% 	{ transform: rotate(-45deg); }
@@ -32,18 +32,22 @@
 	0% 		{ transform: rotate(45deg); }
 	50% 	{ transform: rotate(0); 
 			  	transform: translateY(0); }
-	100% 	{ transform: translateY(variables.$spacing-xs*1.5); }
+	100% 	{ transform: translateY(.325rem); }
 }
 @include mixins.keyframes(button-menu-close-after) {
 	0% 		{ transform: rotate(-45deg); }
 	50% 	{ transform: rotate(0); 
 			  	transform: translateY(0); }
-	100% 	{ transform: translateY(-(variables.$spacing-xs)*1.5); }
+	100% 	{ transform: translateY(-.325rem); }
 }
 
 // —————————————————————————————————————————————————————————————————
 // elements
 // —————————————————————————————————————————————————————————————————
+
+header {
+  width: 100%;
+}
 
 .navbar {
   top: 0;
@@ -85,27 +89,29 @@
     }
   }
 
-  &__main {
+  &_main {
     display: flex;
     align-items: center;
 
     @include mixins.responsive(down, tablet) {
       height: variables.$navbar-height-sm;
+      justify-content: space-between;
     }
   }
   
-  &__logo {
+  &_logo {
     display: flex;
     align-items: baseline;
     font-weight: variables.$font-bold;
-    flex-grow: 1;
+    border-radius: variables.$border-radius-sm;
+    color: variables.$primary;
     
-    > * {
-      margin-right: variables.$spacing-xs;
+    img {
+      max-height: 2rem;
     }
   }
   
-  &__button {
+  &_button {
     @include mixins.transition(variables.$transition-md, opacity);
     animation: button-menu-opacity variables.$transition-lg;
     display: flex;
@@ -113,8 +119,10 @@
     justify-content: center;
     cursor: pointer;
     position: relative;
-    width: variables.$spacing-md;
-    height: variables.$spacing-md;
+    width: 1rem;
+    height: 1rem;
+    border-radius: calc(variables.$border-radius-sm/2);
+    outline-offset: .25rem;
     
     @include mixins.responsive(up, tablet) {
       display: none;
@@ -129,24 +137,24 @@
   
     &:before,
     &:after {
-      @include mixins.pseudo-element('', auto, auto, auto, auto, variables.$spacing-md, 2px);
+      @include mixins.pseudo-element('', auto, auto, auto, auto, 1rem, 2px);
       @include mixins.transition(variables.$transition-md, transform);
     }
   
     &:before {
-      transform: translateY(variables.$spacing-xs*1.5);
+      transform: translateY(.325rem);
       animation: button-menu-close-before variables.$transition-lg;
     }
   
     &:after {
-      transform: translateY(-(variables.$spacing-xs)*1.5);
+      transform: translateY(-.325rem);
       animation: button-menu-close-after variables.$transition-lg;
     }
   
     span {
       @include mixins.transition(variables.$transition-md, opacity);
       position: absolute;
-      width: variables.$spacing-md;
+      width: 1rem;
       height: 2px;
     }
   
@@ -158,7 +166,8 @@
     }
   }  
 
-  &__nav {
+  &_nav {
+    display: flex;
 
     @include mixins.responsive(down, tablet) {
       @include mixins.transition(variables.$transition-md, max-height);
@@ -171,13 +180,65 @@
       }
     }
   }
+
+  .nav {
+    display: flex;
+
+    @include mixins.responsive(up, tablet) { height: 100%; align-items: center; }
+    @include mixins.responsive(down, tablet) { width: 100%; }
+
+    &_container {
+
+      @include mixins.responsive(up, tablet) {
+        height: 100%;
+        align-items: center;
+      }
+
+      @include mixins.responsive(down, tablet) {
+        @include mixins.calc(max-height, '100vh - 12rem');
+        align-items: stretch;
+        overflow: scroll;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    &_item:not(:first-child) {
+
+      @include mixins.responsive(down, tablet) {
+        margin-top: .25rem;
+        margin-left: 0;
+      }
+    }
+
+    &_item-dropdown {
+
+      @include mixins.responsive(up, tablet) {
+        
+        .nav_target {
+          @include mixins.calc(top, '100% +' variables.$nav-item*0.5);
+          position: absolute;
+          left: -(variables.$nav-item*.5);
+          width: 10rem;
+          padding: variables.$nav-item*.5;
+          border-radius: variables.$border-radius-md;
+          border: variables.$border;
+          z-index: 1;
+          background-color: variables.$background-paper;
+        }
+      }
+    }
+  }
 }
 
 // —————————————————————————————————————————————————————————————————
 // align
 // —————————————————————————————————————————————————————————————————
 
-.navbar--right {
+.navbar-right {
 
   .section_container {
 
@@ -186,7 +247,7 @@
     }
   }
 
-  .navbar__main {
+  .navbar_main {
     flex-direction: row-reverse;    
   }
 }

@@ -12,7 +12,7 @@ $sidebar-width: 200px;
   border-right: variables.$border;
   width: $sidebar-width;
   top: variables.$navbar-height;
-  padding: variables.$spacing-md;
+  padding: 1rem;
   overflow-y: scroll;
   scrollbar-color: light;  
   z-index: 11;
@@ -31,19 +31,19 @@ $sidebar-width: 200px;
     z-index: 13;
   }
 
-  &__button {
+  &_button {
     content: '';
     border: solid variables.$text;
     border-width: 0 2px 2px 0;
     padding: 4px;
     transform: rotate(-45deg);
-    margin-right: variables.$spacing-md;
+    margin-right: 1rem;
     display: none;
 
-    .page--withSidebar & { display: initial; }
+    .page-withSidebar & { display: initial; }
     @include mixins.responsive(up, tablet) { display: none !important; }
 
-    &--close {
+    &-close {
       position: absolute;
       top: variables.$navbar-height-sm*0.5;
       left: variables.$navbar-height-sm*0.5;
@@ -51,11 +51,11 @@ $sidebar-width: 200px;
     }
   }
 
-  &__title {
+  &_title {
     @extend %overline;
     color: variables.$text-alt;
     font-weight: variables.$font-bold;
-    margin-bottom: variables.$spacing-xs;
+    margin-bottom: .25rem;
     margin-left: 0;
   }
 }

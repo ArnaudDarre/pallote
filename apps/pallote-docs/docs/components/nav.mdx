@@ -1,0 +1,158 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { Nav, NavItem } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# Nav
+
+Wrapper for a group of navigation items.
+
+<DocLinks
+  figma="https://www.figma.com/design/bEeQ97jqZFWepD0x4oU5k7/Pallote?node-id=2845-7556&t=ineOgvCZdpp3gI4R-11"
+/>
+
+<div class="docs_block">
+  <Nav aria-label='nav'>
+    <NavItem label='Nav item' component='a' />
+    <NavItem label='Nav item' component='a' />
+    <NavItem label='Nav item' component='a' />
+  </Nav>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Nav aria-label='nav'>
+  <NavItem label='Nav item' component='a' />
+  <NavItem label='Nav item' component='a' />
+  <NavItem label='Nav item' component='a' />
+</Nav>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<nav class="nav" aria-label="nav">
+  <div class="nav_container">
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+  </div>
+</nav>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### Direction
+
+<div class="docs_block">
+  <Nav aria-label='landscape-nav'>
+    <NavItem label='Landscape' component='a' />
+    <NavItem label='Landscape' component='a' />
+  </Nav>
+  <Nav aria-label='portrait-nav' direction='portrait'>
+    <NavItem label='Portait' component='a' />
+    <NavItem label='Portait' component='a' />
+  </Nav>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Nav aria-label='landscape-nav'>
+  <NavItem label='Nav item' component='a' />
+  <NavItem label='Nav item' component='a' />
+</Nav>
+
+<Nav aria-label='portrait-nav' direction='portrait'>
+  <NavItem label='Nav item' component='a' />
+  <NavItem label='Nav item' component='a' />
+</Nav>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<nav class="nav" aria-label="landscape-nav">
+  <div class="nav_container">
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="nav nav-portrait" aria-label="portrait-nav">
+  <div class="nav_container">
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+  </div>
+</nav>
+```
+  </TabItem>
+</Tabs>
+
+### Dense
+
+<div class="docs_block">
+  <Nav aria-label='dense-nav' dense>
+    <NavItem label='Dense' component='a' />
+    <NavItem label='Dense' component='a' />
+  </Nav>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Nav aria-label='dense-nav' dense>
+  <NavItem label='Nav item' component='a' />
+  <NavItem label='Nav item' component='a' />
+</Nav>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<nav class="nav nav-dense" aria-label="dense-nav">
+  <div class="nav_container">
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+    <div class="nav_item">
+      <a class="nav_trigger">Nav item</a>
+    </div>
+  </div>
+</nav>
+```
+  </TabItem>
+</Tabs>

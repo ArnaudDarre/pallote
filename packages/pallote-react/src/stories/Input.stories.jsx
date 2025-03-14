@@ -29,6 +29,10 @@ const Template = (args) => <Input {...args} />
 
 export const Playground = Template.bind({})
 
+Playground.args = {
+  id: "input",
+}
+
 export const Type = () => (
   <Grid gap={4}>
     <Grid colmd={4}><Input type="date" id="date" label="Date" /></Grid>
@@ -49,7 +53,7 @@ export const IsFocused = () => (
 )
 
 export const Error = () => (
-  <Input id="error" label="Error" error />
+  <Input id="error" label="Error" error="This is the error message" />
 )
 
 export const Disabled = () => (

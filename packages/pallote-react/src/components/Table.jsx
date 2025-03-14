@@ -42,5 +42,5 @@ Table.propTypes = {
   border: PropTypes.bool,
   withFooter: PropTypes.bool,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

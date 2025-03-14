@@ -13,24 +13,14 @@ const config = {
   title: 'Pallote',
   tagline: 'Pallote is a handcrafted, simple and stylish CSS and React component library, built with passion and care',
   favicon: '/favicon.ico',
-
-  // Set the production url of your site here
   url: 'https://pallote.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
     [
       'classic',
@@ -102,7 +92,7 @@ const config = {
             className: 'navbar__item navbar__link nav-item-custom nav-item-custom-storybook',
           },
           {
-            href: 'https://github.com/ArnaudDarre/pallote-docs',
+            href: 'https://github.com/ArnaudDarre/pallote',
             label: 'GitHub',
             position: 'right',
             className: 'navbar__item navbar__link nav-item-custom nav-item-custom-github',
@@ -147,32 +137,17 @@ const config = {
           //   ],
           // },
           {
-            title: 'GitHub',
-            items: [
-              {
-                label: 'Documentation',
-                href: 'https://github.com/ArnaudDarre/pallote-docs',
-                className: 'footer__link-item nav-item-custom nav-item-custom-github',
-              },
-              {
-                label: 'React',
-                href: 'https://github.com/ArnaudDarre/pallote-react',
-                className: 'footer__link-item nav-item-custom nav-item-custom-github',
-              },
-              {
-                label: 'CSS',
-                href: 'https://github.com/ArnaudDarre/pallote-css',
-                className: 'footer__link-item nav-item-custom nav-item-custom-github',
-              },
-            ],
-          },
-          {
-            title: 'Resources',
+            title: 'External resources',
             items: [
               {
                 label: 'Storybook',
                 href: 'https://react.pallote.com/',
                 className: 'footer__link-item nav-item-custom nav-item-custom-storybook',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/ArnaudDarre/pallote',
+                className: 'footer__link-item nav-item-custom nav-item-custom-github',
               },
               {
                 label: 'Figma',

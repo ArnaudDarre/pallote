@@ -27,12 +27,16 @@ const Template = (args) => <Textarea {...args} />
 
 export const Playground = Template.bind({})
 
+Playground.args = {
+  id: "textara",
+}
+
 export const IsFocused = () => (
   <Textarea id="isFocused" label="IsFocused" isFocused />
 )
 
 export const Error = () => (
-  <Textarea id="error" label="Error" error />
+  <Textarea id="error" label="Error" error="This is the error message" />
 )
 
 export const Disabled = () => (

@@ -59,7 +59,7 @@ $spacing-switch: 1rem;
 
   &_toggle {
     position: absolute;
-    left: -(variables.$spacing-xs);
+    left: -.25rem;
     width: $spacing-switch*1.25;
     height: $spacing-switch*1.25;
     border-radius: $spacing-switch*1.25;

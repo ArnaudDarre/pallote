@@ -2,10 +2,12 @@ import React, { useEffect, useRef } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
+import { InputLabel } from './InputLabel'
+
 export const Select = ({
   onChange,
   id,
-  label,
+  label = 'Select',
   isFocused,
   error,
   disabled,
@@ -41,8 +43,12 @@ export const Select = ({
       ])}
       onChange={onChange}
     >
-      {label && <label className={'input_label'} htmlFor={id}>{label}</label>}
-      {hint && <p className={'input_hint'}>{hint}</p>}
+      <InputLabel
+        htmlFor={id}
+        label={label}
+        hint={hint}
+        error={error}
+      />
       <select
         ref={inputRef}
         className={'input_control'}
@@ -50,7 +56,14 @@ export const Select = ({
         id={id}
         disabled={disabled}
         required={!(disabled || optional)}
-        aria-description={hint}
+        {...(hint || error
+          ? {
+              'aria-describedby': [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
+                .filter(Boolean)
+                .join(' '),
+            }
+          : null
+        )}
         {...props}
       >
         {children}
@@ -61,14 +74,14 @@ export const Select = ({
 
 Select.propTypes = {
   onChange: PropTypes.func,
-  id: PropTypes.string,
-  label: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   isFocused: PropTypes.bool,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
   dense: PropTypes.bool,
   hint: PropTypes.string,
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
   className: PropTypes.node
 }

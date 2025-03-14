@@ -27,6 +27,7 @@ const Template = (args) => <Select {...args} />
 export const Playground = Template.bind({})
 
 Playground.args = {
+  id: "select",
   children: (
     <>
       <option value="1">Option 1</option>
@@ -43,7 +44,7 @@ export const IsFocused = () => (
 )
 
 export const Error = () => (
-  <Select id="error" label="Error" error>
+  <Select id="error" label="Error" error="This is the error message">
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
   </Select>

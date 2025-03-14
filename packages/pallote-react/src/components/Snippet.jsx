@@ -13,14 +13,14 @@ export const Snippet = ({
 }) => {
 
   return (
-    <div className={classnames('snippet__wrapper')} >
+    <div className={classnames('snippet_wrapper')} >
       <SyntaxHighlighter
         language="javascript"
         style={nnfxDark}
         className={classnames([
           'snippet',
-          { ' snippet--dense': dense },
-          { ' snippet--default': isDefault },
+          { ' snippet-dense': dense },
+          { ' snippet-default': isDefault },
           className
         ])}
         {...props}
@@ -32,7 +32,7 @@ export const Snippet = ({
 }
 
 Snippet.propTypes = {
-  content: PropTypes.string,
+  content: PropTypes.string.isRequired,
   isDefault: PropTypes.bool,
   dense: PropTypes.bool,
   className: PropTypes.node

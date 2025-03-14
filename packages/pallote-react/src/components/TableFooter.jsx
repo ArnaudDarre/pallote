@@ -3,7 +3,6 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import { CaretLeft, CaretRight, CaretDoubleLeft, CaretDoubleRight } from '@phosphor-icons/react'
 
-import { Text } from '../utilities/Text'
 import { Button } from './Button'
 import { Buttons } from './Buttons'
 import { Select } from './Select'

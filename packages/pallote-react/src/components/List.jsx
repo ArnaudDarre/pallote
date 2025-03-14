@@ -23,5 +23,5 @@ export const List = ({ dense, className, children, ...props }) => {
 List.propTypes = {
   dense: PropTypes.bool,
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }

@@ -2,6 +2,8 @@ import React from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
+import { InputLabel } from './InputLabel'
+
 export const RadioButtons = ({
   onChange,
   id,
@@ -27,10 +29,21 @@ export const RadioButtons = ({
         className
       ])}
       onChange={onChange}
-      aria-description={hint}
+      {...(hint || error
+        ? {
+            'aria-describedby': [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
+              .filter(Boolean)
+              .join(' '),
+          }
+        : null
+      )}
     >
-      {label && <legend className={'input_label'} htmlFor={id}>{label}</legend>}
-      {hint && <p className={'input_hint'}>{hint}</p>}
+      <InputLabel
+        isLegend
+        label={label}
+        hint={hint}
+        error={error}
+      />
       <div
         className={classnames([
           'input_control',
@@ -52,8 +65,8 @@ export const RadioButtons = ({
 
 RadioButtons.propTypes = {
   onChange: PropTypes.func,
-  id: PropTypes.string,
-  label: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   direction: PropTypes.oneOf([
     'portrait',
     'landscape'
@@ -62,6 +75,6 @@ RadioButtons.propTypes = {
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
   hint: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.node
 }

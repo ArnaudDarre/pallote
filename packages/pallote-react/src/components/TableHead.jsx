@@ -22,5 +22,5 @@ export const TableHead = ({ className, children, ...props }) => {
 
 TableHead.propTypes = {
   className: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }
