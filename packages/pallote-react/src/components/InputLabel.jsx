@@ -14,8 +14,8 @@ export const InputLabel = ({
   return (
     <>
       {label && <LabelTag className={'input_label'} {...(!isLegend && { htmlFor })}>{label}</LabelTag>}
-      {hint && <p className={'input_hint'}>{hint}</p>}
-      {error && <p className={'input_error'}>{error}</p>}
+      {hint && <p id={htmlFor + '-hint'} className={'input_hint'}>{hint}</p>}
+      {error && <p id={htmlFor + '-error'} className={'input_error'}>{error}</p>}
     </>
   )
 }

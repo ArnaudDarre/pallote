@@ -29,7 +29,11 @@ export const Checkboxes = ({
         className
       ])}
       onChange={onChange}
-      aria-description={hint}
+      aria-describedby={
+        [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
+          .filter(Boolean)
+          .join(' ')
+      }
     >
       <InputLabel
         isLegend

@@ -54,7 +54,11 @@ export const Textarea = ({
         disabled={disabled}
         required={!(disabled || optional)}
         rows={4}
-        aria-description={hint}
+        aria-describedby={
+          [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
+            .filter(Boolean)
+            .join(' ')
+        }
         {...props}
       ></textarea>
     </div>

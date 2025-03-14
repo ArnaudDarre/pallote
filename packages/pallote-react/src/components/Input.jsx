@@ -69,7 +69,11 @@ export const Input = ({
         placeholder={placeholder}
         disabled={disabled}
         required={!(disabled || optional)}
-        aria-description={hint}
+        aria-describedby={
+          [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
+            .filter(Boolean)
+            .join(' ')
+        }
         {...props}
       />
     </div>
