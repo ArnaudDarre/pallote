@@ -1,7 +1,7 @@
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import { Button, Buttons, Card, CardActions, CardContent, CardHeader, Grid, Section, SectionContent, SectionHeader } from 'pallote-react';
+import { Button, Buttons, Card, CardActions, CardContent, CardHeader, Grid, Link as PalloteLink, Section, SectionContent, SectionHeader } from 'pallote-react';
 
 import InstallReact from '../components/index/InstallReact.mdx'
 import InstallCSS from '../components/index/InstallCSS.mdx'
@@ -35,11 +35,11 @@ export default function Home() {
             title="Introducing Pallote"
             subtitle={
               <>
-                Pallote is a handcrafted, simple and stylish 
-                <Link className="ph-¼" to="/docs/getting-started/installation?package=react">React</Link>
-                and 
-                <Link className="ph-¼" to="/docs/getting-started/installation?package=css">CSS</Link>
-                component library, built with passion and care
+                Pallote is a handcrafted, simple and stylish {' '}
+                <PalloteLink component={Link} className="dis-inlineBlock text-bold" to="/docs/getting-started/installation?package=react">React</PalloteLink>
+                {' '} and {' '}
+                <PalloteLink component={Link} className="dis-inlineBlock text-bold" to="/docs/getting-started/installation?package=css">CSS</PalloteLink>
+                {' '} component library, built with passion and care
               </>
             }
             actions={
