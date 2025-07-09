@@ -1,6 +1,6 @@
 {
   "name": "pallote-react",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "",
   "main": "dist/index.js",
   "styles": "dist/index.css",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "storybook dev -p 6006",
-    "build": "rollup -c",
+    "build": "rollup -c && node scripts/postbuild.mjs",
     "build-storybook": "storybook build"
   },
   "keywords": [],
