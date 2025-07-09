@@ -13,8 +13,7 @@
   "scripts": {
     "start": "storybook dev -p 6006",
     "build": "rollup -c",
-    "build-storybook": "storybook build",
-    "prepublishOnly": "node ../../scripts/fix-workspace-deps.js && pnpm build"
+    "build-storybook": "storybook build"
   },
   "keywords": [],
   "author": "",
