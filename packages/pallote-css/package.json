@@ -5,9 +5,6 @@
   "main": "dist/pallote.min.css",
   "styles": "dist/pallote.scss",
   "files": ["dist"],
-  "publishConfig": {
-    "directory": "dist"
-  },
   "scripts": {
     "watch": "onchange 'src/styles/**/*.scss' 'src/scripts/**/*.js' -- npm run build",
     "build": "mkdir -p dist && pnpm build:js && pnpm build:css",

@@ -7,9 +7,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "directory": "dist"
-  },
   "scripts": {
     "start": "storybook dev -p 6006",
     "build": "rollup -c",
