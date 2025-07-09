@@ -14,7 +14,7 @@
     "start": "storybook dev -p 6006",
     "build": "rollup -c",
     "build-storybook": "storybook build",
-    "prepublishOnly": "node ./scripts/fix-workspace-deps.js && pnpm build"
+    "prepublishOnly": "node scripts/fix-workspace-deps.js && pnpm build"
   },
   "keywords": [],
   "author": "",
