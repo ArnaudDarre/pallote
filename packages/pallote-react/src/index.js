@@ -4,7 +4,7 @@ import { Display } from './utilities/Display'
 import { Grid } from './utilities/Grid'
 import { Text } from './utilities/Text'
 // components
-import { Alert } from './components/Alert'
+// import { Alert } from './components/Alert'
 import { Breadcrumbs } from './components/Breadcrumbs'
 import { Button } from './components/Button'
 import { Buttons } from './components/Buttons'
@@ -53,7 +53,7 @@ export {
   Grid,
   Text,
   // components
-  Alert,
+  // Alert,
   Breadcrumbs,
   Button,
   Buttons,
