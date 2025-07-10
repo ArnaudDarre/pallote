@@ -1,5 +1,6 @@
 import React from 'react'
 import { MemoryRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import { Grid } from '../utilities/Grid'
 import { NavBar } from '../components/NavBar'
@@ -34,6 +35,14 @@ const Template = (args) => <NavBar {...args} />
 export const Playground = Template.bind({})
 
 Playground.args = {
+  logo: (
+    <Link to="/" exact>
+      <img
+        src="https://pallote.com/logos/pallote-logo.svg"
+        alt="Logo for Pallote"
+      />
+    </Link>
+  ),
   children: (
     <>
       <NavItem label='Home' active/>
@@ -53,11 +62,29 @@ Playground.args = {
 
 export const Align = () => (
   <Grid gap={2} direction="column">
-    <NavBar>
+    <NavBar
+      logo={
+        <Link to="/" exact>
+          <img
+            src="https://pallote.com/logos/pallote-logo.svg"
+            alt="Logo for Pallote"
+          />
+        </Link>
+      }
+    >
       <NavItem label='Align' active />
       <NavItem label='Left' />
     </NavBar>
-    <NavBar align="right">
+    <NavBar
+      logo={
+        <Link to="/" exact>
+          <img
+            src="https://pallote.com/logos/pallote-logo.svg"
+            alt="Logo for Pallote"
+          />
+        </Link>
+      }
+      align="right">
       <NavItem label='Align' active />
       <NavItem label='Right' />
     </NavBar>

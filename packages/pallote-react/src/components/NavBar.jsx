@@ -5,15 +5,13 @@ import { Link } from 'react-router-dom';
 
 import { Section } from './Section'
 
-export const NavBar = ({ homeLinkComponent, align, className, children, ...props }) => {
+export const NavBar = ({ logo, align, className, children, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
     document.body.classList.toggle('js-navbar', !isOpen);
   };
-
-  const HomeLinkComponent = homeLinkComponent || Link
 
   return (
     <header>
@@ -29,12 +27,9 @@ export const NavBar = ({ homeLinkComponent, align, className, children, ...props
         {...props}
       >
         <div className="navbar_main">
-          <HomeLinkComponent className="navbar_logo">
-            <img
-              src="https://pallote.com/logos/pallote-logo.svg"
-              alt="Logo for Pallote"
-            />
-          </HomeLinkComponent>
+          <div className="navbar_logo">
+            {logo}
+          </div>
           <button
             aria-label="Open mobile menu"
             className={classnames('navbar_button', { 'js-opened': isOpen })}
@@ -54,6 +49,7 @@ export const NavBar = ({ homeLinkComponent, align, className, children, ...props
 }
 
 NavBar.propTypes = {
+  logo: PropTypes.node,
   align: PropTypes.oneOf([
     'left',
     'right'

@@ -17,7 +17,16 @@ The header of the website, which includes the logo and navigation items.
 />
 
 <div class="docs_block">
-  <NavBar homeLinkComponent='a'>
+  <NavBar
+    logo={
+      <a href="/">
+        <img
+          src="https://pallote.com/logos/pallote-logo.svg"
+          alt="Logo for Pallote"
+        />
+      </a>
+    }
+  >
     <NavItem label='Home' active component='a' href='' />
     <NavItem
       label='About'
@@ -36,7 +45,16 @@ The header of the website, which includes the logo and navigation items.
   <TabItem value="react" label="React">
 
 ```jsx
-<NavBar>
+<NavBar
+  logo={
+    <Link to="/" exact>
+      <img
+        src="https://pallote.com/logos/pallote-logo.svg"
+        alt="Logo for Pallote"
+      />
+    </Link>
+  }
+>
   <NavItem label='Home' active component='a' href='' />
   <NavItem
     label='About'
@@ -98,12 +116,31 @@ The header of the website, which includes the logo and navigation items.
 ### Align
 
 <div class="docs_block">
-  <NavBar homeLinkComponent='a'>
+  <NavBar
+    logo={
+      <a href="/">
+        <img
+          src="https://pallote.com/logos/pallote-logo.svg"
+          alt="Logo for Pallote"
+        />
+      </a>
+    }
+  >
     <NavItem label='Align' active component='a' href='' />
     <NavItem label='Left' component='a' href='' />
   </NavBar>
-  <NavBar align="right" homeLinkComponent='a'>
-    <NavItem label='Align' active  omponent='a' href='' />
+  <NavBar
+    logo={
+      <a href="/">
+        <img
+          src="https://pallote.com/logos/pallote-logo.svg"
+          alt="Logo for Pallote"
+        />
+      </a>
+    }
+    align="right"
+  >
+    <NavItem label='Align' active component='a' href='' />
     <NavItem label='Right' component='a' href='' />
   </NavBar>
 </div>
@@ -112,11 +149,30 @@ The header of the website, which includes the logo and navigation items.
   <TabItem value="react" label="React">
 
 ```jsx
-<NavBar>
+<NavBar
+  logo={
+    <Link to="/" exact>
+      <img
+        src="https://pallote.com/logos/pallote-logo.svg"
+        alt="Logo for Pallote"
+      />
+    </Link>
+  }
+>
   {/* insert nav items */}
 </NavBar>
 
-<NavBar align="right">
+<NavBar
+  logo={
+    <Link to="/" exact>
+      <img
+        src="https://pallote.com/logos/pallote-logo.svg"
+        alt="Logo for Pallote"
+      />
+    </Link>
+  }
+  align="right"
+>
   {/* insert nav items */}
 </NavBar>
 ```
