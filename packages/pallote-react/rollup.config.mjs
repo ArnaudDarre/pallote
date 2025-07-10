@@ -13,6 +13,7 @@ export default {
   external: [
     "react",
     "react-dom",
+    "react-router-dom",
     "classnames",
     "@phosphor-icons/react",
     "react-syntax-highlighter",
