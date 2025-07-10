@@ -29,7 +29,7 @@ export const NavBar = ({ homeLinkComponent, align, className, children, ...props
         {...props}
       >
         <div className="navbar_main">
-          <HomeLinkComponent to="/" exact className="navbar_logo">
+          <HomeLinkComponent className="navbar_logo">
             <img
               src="https://pallote.com/logos/pallote-logo.svg"
               alt="Logo for Pallote"
