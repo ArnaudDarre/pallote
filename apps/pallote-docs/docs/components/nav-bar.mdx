@@ -27,17 +27,17 @@ The header of the website, which includes the logo and navigation items.
       </a>
     }
   >
-    <NavItem label='Home' active component='a' href='' />
+    <NavItem label='Home' active href='' />
     <NavItem
       label='About'
       dropdown={
         <>
-          <NavItem label='Services'  component='a' href='' />
-          <NavItem label='Teams'  component='a' href='' />
+          <NavItem label='Services' href='' />
+          <NavItem label='Teams' href='' />
         </>
       }
     />
-    <NavItem label='Contact'  component='a' href='' />
+    <NavItem label='Contact' href='' />
   </NavBar>
 </div>
 
@@ -55,17 +55,17 @@ The header of the website, which includes the logo and navigation items.
     </Link>
   }
 >
-  <NavItem label='Home' active component='a' href='' />
+  <NavItem label='Home' active component={Link} to='' />
   <NavItem
     label='About'
     dropdown={
       <>
-        <NavItem label='Services'  component='a' href='' />
-        <NavItem label='Teams'  component='a' href='' />
+        <NavItem label='Services' component={Link} to='' />
+        <NavItem label='Teams' component={Link} to='' />
       </>
     }
   />
-  <NavItem label='Contact'  component='a' href='' />
+  <NavItem label='Contact' component={Link} to='' />
 </NavBar>
 ```
   </TabItem>
@@ -126,8 +126,8 @@ The header of the website, which includes the logo and navigation items.
       </a>
     }
   >
-    <NavItem label='Align' active component='a' href='' />
-    <NavItem label='Left' component='a' href='' />
+    <NavItem label='Align' active href='' />
+    <NavItem label='Left' href='' />
   </NavBar>
   <NavBar
     logo={
@@ -140,8 +140,8 @@ The header of the website, which includes the logo and navigation items.
     }
     align="right"
   >
-    <NavItem label='Align' active component='a' href='' />
-    <NavItem label='Right' component='a' href='' />
+    <NavItem label='Align' active href='' />
+    <NavItem label='Right' href='' />
   </NavBar>
 </div>
 

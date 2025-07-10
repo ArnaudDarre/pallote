@@ -18,14 +18,14 @@ A single nav item, which can also include a dropdown list of `NavItem`.
 />
 
 <div class="docs_block">
-  <NavItem className="w-fit" label='Nav item' component='a' />
+  <NavItem className="w-fit" label='Nav item' />
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<NavItem label='Nav item' />
+<NavItem label='Nav item' component={Link} to='' />
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -43,14 +43,14 @@ A single nav item, which can also include a dropdown list of `NavItem`.
 ### Active
 
 <div class="docs_block">
-  <NavItem className="w-fit" label='Active' active component='a' />
+  <NavItem className="w-fit" label='Active' active />
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<NavItem label='Active' active />
+<NavItem label='Active' component={Link} to='' active />
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
@@ -71,9 +71,9 @@ A single nav item, which can also include a dropdown list of `NavItem`.
     label='With dropdown'
     dropdown={
       <>
-        <NavItem label='Nav item' component='a' />
-        <NavItem label='Nav item' component='a' />
-        <NavItem label='Nav item' component='a' />
+        <NavItem label='Nav item' />
+        <NavItem label='Nav item' />
+        <NavItem label='Nav item' />
       </>
     }
   />
@@ -87,9 +87,9 @@ A single nav item, which can also include a dropdown list of `NavItem`.
   label='With dropdown'
   dropdown={
     <>
-      <NavItem label='Nav item' />
-      <NavItem label='Nav item' />
-      <NavItem label='Nav item' />
+      <NavItem label='Nav item' component={Link} to='' />
+      <NavItem label='Nav item' component={Link} to='' />
+      <NavItem label='Nav item' component={Link} to='' />
     </>
   }
 />
@@ -119,14 +119,14 @@ A single nav item, which can also include a dropdown list of `NavItem`.
 ### Icon
 
 <div class="docs_block">
-  <NavItem className="w-fit" label='Icon' icon={<House />} component='a' />
+  <NavItem className="w-fit" label='Icon' icon={<House />} />
 </div>
 
 <Tabs groupId="package" queryString>
   <TabItem value="react" label="React">
 
 ```jsx
-<NavItem label='Icon' icon={{/* icon */}} />
+<NavItem label='Icon' component={Link} to='' icon={{/* icon */}} />
 ```
   </TabItem>
   <TabItem value="css" label="CSS">

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
 export const NavItem = ({
   component,
@@ -24,7 +23,7 @@ export const NavItem = ({
   if (dropdown) {
     Component = 'button'
   } else {
-    Component = component || Link
+    Component = component || "a"
   }
 
   return (
