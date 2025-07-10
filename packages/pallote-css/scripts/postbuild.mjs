@@ -1,5 +1,4 @@
-// scripts/postbuild.mjs
-import { cpSync, readFileSync, writeFileSync, existsSync } from "fs";
+import { cpSync, readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
 import { resolve } from "path";
 
 const root = resolve(".");
@@ -14,11 +13,16 @@ delete pkg.publishConfig;
 delete pkg.packageManager;
 delete pkg.private;
 
+// Explicitly include all dist files
+pkg.files = readdirSync(dist).filter(
+  (file) => !file.startsWith(".") && file !== "node_modules"
+);
+
 pkg.private = false;
 
 writeFileSync(resolve(dist, "package.json"), JSON.stringify(pkg, null, 2));
 
-// Copy README.md and LICENSE if they exist
+// Copy README and LICENSE if they exist
 ["README.md", "LICENSE"].forEach((file) => {
   const from = resolve(root, file);
   const to = resolve(dist, file);
