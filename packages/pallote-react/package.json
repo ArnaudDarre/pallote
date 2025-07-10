@@ -1,6 +1,6 @@
 {
   "name": "pallote-react",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "",
   "main": "dist/index.js",
   "styles": "dist/index.css",
@@ -20,6 +20,8 @@
   "license": "ISC",
   "packageManager": "pnpm@10.4.1",
   "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "pallote-css": "workspace:^"
   },
   "dependencies": {
@@ -28,8 +30,6 @@
     "@rollup/plugin-json": "^6.1.0",
     "classnames": "^2.5.1",
     "pallote-css": "workspace:^",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
     "react-router-dom": "^7.3.0",
     "react-syntax-highlighter": "^15.6.1",
     "sass": "^1.71.1"
