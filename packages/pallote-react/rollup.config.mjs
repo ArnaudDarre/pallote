@@ -1,34 +1,33 @@
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
+import terser from "@rollup/plugin-terser";
 import json from "@rollup/plugin-json";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 export default {
   input: "src/index.js",
-  output: {
-    file: "dist/index.js",
-    format: "esm",
-  },
-  external: [
-    "react",
-    "react-dom",
-    "react-router-dom",
-    "classnames",
-    "@phosphor-icons/react",
-    "react-syntax-highlighter",
-    "prop-types"
+  output: [
+    {
+      file: "dist/index.js",
+      format: "cjs",
+      sourcemap: true,
+    },
+    {
+      file: "dist/index.esm.js",
+      format: "esm",
+      sourcemap: true,
+    },
   ],
   plugins: [
     peerDepsExternal(),
     resolve({ extensions: [".js", ".jsx"] }),
     commonjs(),
-    json(),
     babel({
-      presets: ["@babel/preset-react"],
-      extensions: [".js", ".jsx"],
-      babelHelpers: "bundled",
-      exclude: "node_modules/**"
+      exclude: "node_modules/**",
+      presets: ["@babel/preset-react"]
     }),
+    terser(),
+    json(),
   ],
 };

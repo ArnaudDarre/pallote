@@ -1,6 +1,6 @@
 {
   "name": "pallote-react",
-  "version": "0.14.3",
+  "version": "0.14.4",
   "description": "",
   "main": "dist/index.js",
   "styles": "dist/index.css",
@@ -26,19 +26,21 @@
     "react-router-dom": "^7.3.0"
   },
   "dependencies": {
-    "@babel/preset-react": "^7.26.3",
     "@phosphor-icons/react": "^2.1.7",
-    "@rollup/plugin-json": "^6.1.0",
     "classnames": "^2.5.1",
     "pallote-css": "workspace:^",
     "react-syntax-highlighter": "^15.6.1",
     "sass": "^1.71.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-react": "^7.26.3",
     "@chromatic-com/storybook": "^3.2.4",
     "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^28.0.2",
-    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
     "@storybook/addon-essentials": "^8.5.6",
     "@storybook/addon-interactions": "^8.5.6",
     "@storybook/addon-onboarding": "^8.5.6",
@@ -51,7 +53,7 @@
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "rollup": "^4.34.8",
+    "rollup": "^4.44.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^8.5.6"
   }
