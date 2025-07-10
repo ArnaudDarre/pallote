@@ -33,16 +33,16 @@ import { Select } from './components/Select'
 import { Snippet } from './components/Snippet'
 import { Status } from './components/Status'
 import { Switch } from './components/Switch'
-import { Tab } from './components/Tab'
-import { Table } from './components/Table'
-import { TableBody } from './components/TableBody'
-import { TableCell } from './components/TableCell'
-import { TableFooter } from './components/TableFooter'
-import { TableHead } from './components/TableHead'
-import { TableRow } from './components/TableRow'
-import { Tabs } from './components/Tabs'
-import { TabsControl } from './components/TabsControl'
-import { TabsPanel } from './components/TabsPanel'
+// import { Tab } from './components/Tab'
+// import { Table } from './components/Table'
+// import { TableBody } from './components/TableBody'
+// import { TableCell } from './components/TableCell'
+// import { TableFooter } from './components/TableFooter'
+// import { TableHead } from './components/TableHead'
+// import { TableRow } from './components/TableRow'
+// import { Tabs } from './components/Tabs'
+// import { TabsControl } from './components/TabsControl'
+// import { TabsPanel } from './components/TabsPanel'
 import { Tag } from './components/Tag'
 import { Textarea } from './components/Textarea'
 
@@ -82,16 +82,16 @@ export {
   Snippet,
   Status,
   Switch,
-  Tab,
-  Table,
-  TableBody,
-  TableCell,
-  TableFooter,
-  TableHead,
-  TableRow,
-  Tabs,
-  TabsControl,
-  TabsPanel,
+  // Tab,
+  // Table,
+  // TableBody,
+  // TableCell,
+  // TableFooter,
+  // TableHead,
+  // TableRow,
+  // Tabs,
+  // TabsControl,
+  // TabsPanel,
   Tag,
   Textarea
 }
