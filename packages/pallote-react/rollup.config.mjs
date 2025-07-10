@@ -23,6 +23,11 @@ export default {
     resolve({ extensions: [".js", ".jsx"] }),
     commonjs(),
     json(),
-    babel({ presets: ["@babel/preset-react"], extensions: [".js", ".jsx"] }),
+    babel({
+      presets: ["@babel/preset-react"],
+      extensions: [".js", ".jsx"],
+      babelHelpers: "bundled",
+      exclude: "node_modules/**"
+    }),
   ],
 };
