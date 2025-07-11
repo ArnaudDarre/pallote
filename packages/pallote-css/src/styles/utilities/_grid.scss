@@ -91,14 +91,14 @@ $breakpoints: (
   xl: desktop
 );
 
+[class*="col-"] {
+  width: 100%;
+}
+
 @for $i from 1 through $columns {
   .col-#{$i} {
     width: variables.$col * $i;
   }
-}
-
-[class*="col-"] {
-  width: 100%;
 }
 
 @for $i from 1 through $columns {
