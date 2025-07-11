@@ -1,6 +1,6 @@
 {
   "name": "pallote-css",
-  "version": "0.4.0",
+  "version": "0.9.0",
   "description": "CSS component library",
   "main": "dist/pallote.min.css",
   "styles": "dist/pallote.scss",
