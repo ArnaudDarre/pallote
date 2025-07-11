@@ -20,7 +20,9 @@
   "license": "ISC",
   "packageManager": "pnpm@10.4.1",
   "peerDependencies": {
-    "pallote-css": "workspace:^"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^7.3.0"
   },
   "dependencies": {
     "@babel/preset-react": "^7.26.3",
@@ -28,9 +30,6 @@
     "@rollup/plugin-json": "^6.1.0",
     "classnames": "^2.5.1",
     "pallote-css": "workspace:^",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^7.3.0",
     "react-syntax-highlighter": "^15.6.1",
     "sass": "^1.71.1"
   },
