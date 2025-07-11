@@ -17,18 +17,27 @@ The header of the website, which includes the logo and navigation items.
 />
 
 <div class="docs_block">
-  <NavBar homeLinkComponent='a'>
-    <NavItem label='Home' active component='a' href='' />
+  <NavBar
+    logo={
+      <a href="/">
+        <img
+          src="https://pallote.com/logos/pallote-logo.svg"
+          alt="Logo for Pallote"
+        />
+      </a>
+    }
+  >
+  <NavItem label='Home' active href='' />
     <NavItem
       label='About'
       dropdown={
         <>
-          <NavItem label='Services'  component='a' href='' />
-          <NavItem label='Teams'  component='a' href='' />
+          <NavItem label='Services' href='' />
+          <NavItem label='Teams' href='' />
         </>
       }
     />
-    <NavItem label='Contact'  component='a' href='' />
+    <NavItem label='Contact' href='' />
   </NavBar>
 </div>
 
@@ -36,18 +45,27 @@ The header of the website, which includes the logo and navigation items.
   <TabItem value="react" label="React">
 
 ```jsx
-<NavBar>
-  <NavItem label='Home' active component='a' href='' />
+<NavBar
+  logo={
+    <Link to="/" exact>
+      <img
+        src="/pallote-logo.svg"
+        alt="Logo for Pallote"
+      />
+    </Link>
+  }
+>
+  <NavItem label='Home' active component={Link} to='' />
   <NavItem
     label='About'
     dropdown={
       <>
-        <NavItem label='Services'  component='a' href='' />
-        <NavItem label='Teams'  component='a' href='' />
+        <NavItem label='Services' component={Link} to='' />
+        <NavItem label='Teams' component={Link} to='' />
       </>
     }
   />
-  <NavItem label='Contact'  component='a' href='' />
+  <NavItem label='Contact' component={Link} to='' />
 </NavBar>
 ```
   </TabItem>
@@ -59,7 +77,7 @@ The header of the website, which includes the logo and navigation items.
     <div class="section_container">
       <div class="navbar_main">
         <a href="/" class="navbar_logo">
-          <img alt="Logo for Pallote" src="https://pallote.com/logos/pallote-logo.svg">
+          <img alt="Logo for Pallote" src="/logos-logo.svg">
         </a>
         <button aria-label="Open mobile menu" class="navbar_button">
           <span></span>
@@ -98,13 +116,32 @@ The header of the website, which includes the logo and navigation items.
 ### Align
 
 <div class="docs_block">
-  <NavBar homeLinkComponent='a'>
-    <NavItem label='Align' active  component='a' href='' />
-    <NavItem label='Left'  component='a' href='' />
+  <NavBar
+    logo={
+      <a href="/">
+        <img
+          src="https://pallote.com/logos/pallote-logo.svg"
+          alt="Logo for Pallote"
+        />
+      </a>
+    }
+  >
+    <NavItem label='Align' active href='' />
+    <NavItem label='Left' href='' />
   </NavBar>
-  <NavBar align="right" homeLinkComponent='a'>
-    <NavItem label='Align' active  component='a' href='' />
-    <NavItem label='Right'  component='a' href='' />
+  <NavBar
+    logo={
+      <a href="/">
+        <img
+          src="https://pallote.com/logos/pallote-logo.svg"
+          alt="Logo for Pallote"
+        />
+      </a>
+    }
+    align="right"
+  >
+    <NavItem label='Align' active href='' />
+    <NavItem label='Right' href='' />
   </NavBar>
 </div>
 
@@ -112,11 +149,30 @@ The header of the website, which includes the logo and navigation items.
   <TabItem value="react" label="React">
 
 ```jsx
-<NavBar>
+<NavBar
+  logo={
+    <Link to="/" exact>
+      <img
+        src="/pallote-logo.svg"
+        alt="Logo for Pallote"
+      />
+    </Link>
+  }
+>
   {/* insert nav items */}
 </NavBar>
 
-<NavBar align="right">
+<NavBar
+  logo={
+    <Link to="/" exact>
+      <img
+        src="/pallote-logo.svg"
+        alt="Logo for Pallote"
+      />
+    </Link>
+  }
+  align="right"
+>
   {/* insert nav items */}
 </NavBar>
 ```
@@ -129,7 +185,7 @@ The header of the website, which includes the logo and navigation items.
     <div class="section_container">
       <div class="navbar_main">
         <a href="/" class="navbar_logo">
-          <img alt="Logo for Pallote" src="https://pallote.com/logos/pallote-logo.svg">
+          <img alt="Logo for Pallote" src="/logos-logo.svg">
         </a>
         <button aria-label="Open mobile menu" class="navbar_button">
           <span></span>
@@ -149,7 +205,7 @@ The header of the website, which includes the logo and navigation items.
     <div class="section_container">
       <div class="navbar_main">
         <a href="/" class="navbar_logo">
-          <img alt="Logo for Pallote" src="https://pallote.com/logos/pallote-logo.svg">
+          <img alt="Logo for Pallote" src="/logos-logo.svg">
         </a>
         <button aria-label="Open mobile menu" class="navbar_button">
           <span></span>

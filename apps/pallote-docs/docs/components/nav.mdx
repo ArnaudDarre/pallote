@@ -17,9 +17,9 @@ Wrapper for a group of navigation items.
 
 <div class="docs_block">
   <Nav aria-label='nav'>
-    <NavItem label='Nav item' component='a' />
-    <NavItem label='Nav item' component='a' />
-    <NavItem label='Nav item' component='a' />
+    <NavItem label='Nav item' />
+    <NavItem label='Nav item' />
+    <NavItem label='Nav item' />
   </Nav>
 </div>
 
@@ -28,9 +28,9 @@ Wrapper for a group of navigation items.
 
 ```jsx
 <Nav aria-label='nav'>
-  <NavItem label='Nav item' component='a' />
-  <NavItem label='Nav item' component='a' />
-  <NavItem label='Nav item' component='a' />
+  <NavItem label='Nav item' component={Link} to='' />
+  <NavItem label='Nav item' component={Link} to='' />
+  <NavItem label='Nav item' component={Link} to='' />
 </Nav>
 ```
   </TabItem>
@@ -60,12 +60,12 @@ Wrapper for a group of navigation items.
 
 <div class="docs_block">
   <Nav aria-label='landscape-nav'>
-    <NavItem label='Landscape' component='a' />
-    <NavItem label='Landscape' component='a' />
+    <NavItem label='Landscape' />
+    <NavItem label='Landscape' />
   </Nav>
   <Nav aria-label='portrait-nav' direction='portrait'>
-    <NavItem label='Portait' component='a' />
-    <NavItem label='Portait' component='a' />
+    <NavItem label='Portait' />
+    <NavItem label='Portait' />
   </Nav>
 </div>
 
@@ -74,13 +74,13 @@ Wrapper for a group of navigation items.
 
 ```jsx
 <Nav aria-label='landscape-nav'>
-  <NavItem label='Nav item' component='a' />
-  <NavItem label='Nav item' component='a' />
+  <NavItem label='Nav item' component={Link} to='' />
+  <NavItem label='Nav item' component={Link} to='' />
 </Nav>
 
 <Nav aria-label='portrait-nav' direction='portrait'>
-  <NavItem label='Nav item' component='a' />
-  <NavItem label='Nav item' component='a' />
+  <NavItem label='Nav item' component={Link} to='' />
+  <NavItem label='Nav item' component={Link} to='' />
 </Nav>
 ```
   </TabItem>
@@ -122,8 +122,8 @@ Wrapper for a group of navigation items.
 
 <div class="docs_block">
   <Nav aria-label='dense-nav' dense>
-    <NavItem label='Dense' component='a' />
-    <NavItem label='Dense' component='a' />
+    <NavItem label='Dense' />
+    <NavItem label='Dense' />
   </Nav>
 </div>
 
@@ -132,8 +132,8 @@ Wrapper for a group of navigation items.
 
 ```jsx
 <Nav aria-label='dense-nav' dense>
-  <NavItem label='Nav item' component='a' />
-  <NavItem label='Nav item' component='a' />
+  <NavItem label='Nav item' component={Link} to='' />
+  <NavItem label='Nav item' component={Link} to='' />
 </Nav>
 ```
   </TabItem>

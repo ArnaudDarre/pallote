@@ -33,7 +33,7 @@ export default {
 }
 
 const Template = (args) => (
-  <NavItem {...args}  className="w-fit" />
+  <NavItem {...args} label="Nav item" className="w-fit" />
 )
 
 export const Playground = Template.bind({})

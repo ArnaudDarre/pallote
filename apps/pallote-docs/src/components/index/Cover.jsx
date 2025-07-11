@@ -71,9 +71,9 @@ export const Cover = () => {
             </Grid>
             <Grid gap={6} direction='column'>
               <Nav aria-label='nav'>
-                <NavItem label='Nav item' component='a' active />
-                <NavItem label='Nav item' component='a' />
-                <NavItem label='Nav item' component='a' />
+                <NavItem label='Nav item' active />
+                <NavItem label='Nav item' />
+                <NavItem label='Nav item' />
               </Nav>
               <Grid gap={6}>
                 <div>Inpul label</div>
@@ -115,7 +115,7 @@ export const Cover = () => {
                     <ListItem icon={<Sun />}>List item</ListItem>
                   </List>
                   <Link icon={<ArrowRight />}>Link</Link>
-                  <NavItem label='Nav item' active icon={<House />} component='a' className='w-fit' />
+                  <NavItem label='Nav item' active icon={<House />} className='w-fit' />
                 </Grid>
                 <RadioButtons label='Radio buttons' className='mt-0 w-fit'>
                   <Radio name='radio' id='radio_1' value='1' label='Label' />
@@ -155,9 +155,9 @@ export const Cover = () => {
           label='Nav item'
           dropdown={
             <>
-              <NavItem label='Nav item' component='a' />
-              <NavItem label='Nav item' component='a' />
-              <NavItem label='Nav item' component='a' />
+              <NavItem label='Nav item' />
+              <NavItem label='Nav item' />
+              <NavItem label='Nav item' />
             </>
           }
         />
