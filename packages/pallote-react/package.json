@@ -1,15 +1,10 @@
 {
   "name": "pallote-react",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "description": "",
   "main": "dist/index.js",
   "styles": "dist/index.css",
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "directory": "dist"
-  },
+  "files": ["dist"],
   "scripts": {
     "start": "storybook dev -p 6006",
     "build": "rollup -c && node scripts/postbuild.mjs",

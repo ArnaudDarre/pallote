@@ -1,13 +1,10 @@
 {
   "name": "pallote-css",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "CSS component library",
   "main": "dist/pallote.min.css",
   "styles": "dist/pallote.scss",
   "files": ["dist"],
-  "publishConfig": {
-    "directory": "dist"
-  },
   "scripts": {
     "watch": "onchange 'src/styles/**/*.scss' 'src/scripts/**/*.js' -- npm run build",
     "build": "mkdir -p dist && pnpm build:js && pnpm build:css && node scripts/postbuild.mjs",
