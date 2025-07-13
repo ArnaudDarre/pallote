@@ -18,7 +18,7 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
-@mixin font-size($size, $weight, $leading, $transform: initial, $family: variables.$font) {
+@mixin font-size($size, $weight, $leading, $transform: initial, $family: inherit) {
 	font-size: $size;
 	font-weight: $weight;
 	line-height: $leading;
