@@ -25,7 +25,7 @@ export const PageHeader = ({
     >
       {label ? <Text variant="caption" weight='bold' className={classnames('page_label')}>{label}</Text> : null }
       {title ? <Text variant={isLanding ? 'h1' : 'h2'} color="primary" className={classnames('page_title')}>{title}</Text> : null }
-      {subtitle ? <Text variant={isLanding ? 'h5' : 'h6'} weight="regular" className={classnames('page_subtitle')}>{subtitle}</Text> : null }
+      {subtitle ? <div variant={isLanding ? 'h5' : 'h6'} weight="regular" className={classnames('page_subtitle editor')}>{subtitle}</div> : null }
     </Section>
   )
 }
