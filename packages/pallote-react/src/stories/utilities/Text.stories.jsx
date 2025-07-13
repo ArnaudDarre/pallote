@@ -29,7 +29,7 @@ Playground.args = {
 }
 
 export const Variant = () => (
-  <Grid gap={4}>
+  <Grid gap={4} direction="column">
     <Grid gap={2} items="baseline">
       <Grid><Text variant="h1">h1</Text></Grid>
       <Grid><Text variant="h2">h2</Text></Grid>

@@ -66,9 +66,9 @@ export default function Home() {
                   <Card className="h-full">
                     <CardHeader
                       title={props.title}
-                      subtitle={props.subtitle}
                     />
-                    <CardContent className="mt-auto">
+                    <CardContent className="mt-auto gap-4">
+                      {props.subtitle}
                       {props.markdownComponent}
                     </CardContent>
                     <CardActions className="mt-0">

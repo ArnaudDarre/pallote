@@ -28,7 +28,7 @@ Playground.args = {
 }
 
 export const Color = () => (
-  <Grid gap={4}>
+  <Grid gap={4} direction="column">
     <Grid gap={2}>
       <Grid><Tag>Primary</Tag></Grid>
       <Grid><Tag color="secondary">Secondary</Tag></Grid>

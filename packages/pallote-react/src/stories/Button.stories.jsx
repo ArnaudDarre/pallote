@@ -85,7 +85,7 @@ export const Size = () => (
 )
 
 export const Color = () => (
-  <Grid gap={4}>
+  <Grid gap={4} direction="column">
     <Grid gap={2}>
       <Grid><Button>Primary</Button></Grid>
       <Grid><Button color="secondary">Secondary</Button></Grid>

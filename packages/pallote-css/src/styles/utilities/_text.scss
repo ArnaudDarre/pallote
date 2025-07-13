@@ -18,17 +18,19 @@
 // elements
 // —————————————————————————————————————————————————————————————————
 
-@mixin font-size($font-size, $font-weight, $line-height) {
-	font-size: $font-size;
-	font-weight: $font-weight;
-	line-height: $line-height;
+@mixin font-size($size, $weight, $leading, $transform: initial, $family: variables.$font) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $leading;
+	text-transform: $transform;
+	font-family: $family;
 }
 
 .body, %body {
 	@include font-size(
 		variables.$body-size,
 		variables.$body-weight,
-		variables.$body-line-height
+		variables.$body-leading,
 	);
 }
 
@@ -36,7 +38,7 @@
 	@include font-size(
 		variables.$subtitle-size,
 		variables.$subtitle-weight,
-		variables.$subtitle-line-height
+		variables.$subtitle-leading,
 	);	
 }	
 
@@ -44,7 +46,7 @@
 	@include font-size(
 		variables.$caption-size,
 		variables.$caption-weight,
-		variables.$caption-line-height
+		variables.$caption-leading,
 	);
 }
 
@@ -52,7 +54,7 @@
 	@include font-size(
 		variables.$overline-size,
 		variables.$overline-weight,
-		variables.$overline-line-height
+		variables.$overline-leading,
 	);
 }
 
@@ -60,7 +62,9 @@
 	@include font-size(
 		variables.$h1-size,
 		variables.$h1-weight,
-		variables.$h1-line-height
+		variables.$h1-leading,
+		variables.$h1-transform,
+		variables.$h1-family
 	);
 }
 
@@ -68,7 +72,9 @@
 	@include font-size(
 		variables.$h2-size,
 		variables.$h2-weight,
-		variables.$h2-line-height
+		variables.$h2-leading,
+		variables.$h2-transform,
+		variables.$h2-family
 	);
 }
 
@@ -76,7 +82,9 @@
 	@include font-size(
 		variables.$h3-size,
 		variables.$h3-weight,
-		variables.$h3-line-height
+		variables.$h3-leading,
+		variables.$h3-transform,
+		variables.$h3-family
 	);
 }
 
@@ -84,7 +92,9 @@
 	@include font-size(
 		variables.$h4-size,
 		variables.$h4-weight,
-		variables.$h4-line-height
+		variables.$h4-leading,
+		variables.$h4-transform,
+		variables.$h4-family
 	);
 }
 
@@ -92,7 +102,9 @@
 	@include font-size(
 		variables.$h5-size,
 		variables.$h5-weight,
-		variables.$h5-line-height
+		variables.$h5-leading,
+		variables.$h5-transform,
+		variables.$h5-family
 	);
 }
 
@@ -100,7 +112,9 @@
 	@include font-size(
 		variables.$h6-size,
 		variables.$h6-weight,
-		variables.$h6-line-height
+		variables.$h6-leading,
+		variables.$h6-transform,
+		variables.$h6-family
 	);
 }
 

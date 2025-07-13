@@ -36,7 +36,7 @@ Playground.args = {
 }
 
 export const Fill = () => (
-  <Grid gap={4}>
+  <Grid gap={4} direction="column">
     <Grid gap={2}>
       <Grid><Color fill="main" stroke="border" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">main</Text></Color></Grid>
       <Grid><Color fill="contrast" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">contrast</Text></Color></Grid>
@@ -74,7 +74,7 @@ export const Fill = () => (
 )
 
 export const Stroke = () => (
-  <Grid gap={4}>
+  <Grid gap={4} direction="column">
     <Grid gap={2}>
       <Grid><Color stroke="main" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">main</Text></Color></Grid>
       <Grid><Color stroke="contrast" className={'ph-1 pv-½ br-sm w-10'}><Text variant="caption">contrast</Text></Color></Grid>

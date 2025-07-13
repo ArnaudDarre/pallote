@@ -30,7 +30,7 @@
   &__link-item {
     display: flex;
     align-items: center;
-    line-height: variables.$body-line-height;
+    line-height: variables.$body-leading;
 
     &:hover {
       color: variables.$primary-light;

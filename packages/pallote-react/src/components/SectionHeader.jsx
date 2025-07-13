@@ -29,7 +29,7 @@ export const SectionHeader = ({
       >
         {title}
       </Text>
-      {subtitle ? <Text className={classnames('section_subtitle')}>{subtitle}</Text> : null }
+      {subtitle ? <div className={classnames('section_subtitle')}>{subtitle}</div> : null }
       {actions ? (
         <div className="section_actions">
           {actions}

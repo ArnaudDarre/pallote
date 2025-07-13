@@ -169,7 +169,7 @@
     }
 
     &_subtitle {
-      @extend %h5;
+      @extend %h6;
       margin-top: 2rem;
       
       @include mixins.responsive(down, tablet) {

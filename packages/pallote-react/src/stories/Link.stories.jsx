@@ -35,7 +35,7 @@ export const Icon = () => (
 )
 
 export const Color = () => (
-  <Grid gap={2}>
+  <Grid gap={2} direction="column">
     <Grid gap={2}>
       <Grid><Link href="/" color="default">Default</Link></Grid>
       <Grid><Link href="/" color="alt">Alt</Link></Grid>
