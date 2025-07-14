@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import { X } from '@phosphor-icons/react'
+import { XIcon } from "@phosphor-icons/react/dist/csr/X";
 
 import { Color } from '../utilities/Color'
 
@@ -33,7 +33,7 @@ export const Chip = ({
         <div className={classnames('chip_content')}>
           {children}
         </div>
-        {onClose ? <X className={classnames('chip_close')} size={dense ? 16 : 24} /> : null}
+        {onClose ? <XIcon className={classnames('chip_close')} size={dense ? 16 : 24} /> : null}
       </div>
     </Color>
   )

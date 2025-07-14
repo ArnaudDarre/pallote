@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import { X } from '@phosphor-icons/react'
+import { XIcon } from "@phosphor-icons/react/dist/csr/X";
 
 import { Card } from './Card'
 
@@ -60,7 +60,7 @@ export const Modal = ({
           {...props}
         >
           {children}
-          <X
+          <XIcon
             className={classnames('modal_close')}
             onClick={onClose}
           />

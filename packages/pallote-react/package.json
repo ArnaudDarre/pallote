@@ -1,10 +1,12 @@
 {
   "name": "pallote-react",
-  "version": "0.15.5",
+  "version": "0.15.6",
   "description": "",
   "main": "dist/index.js",
   "styles": "dist/index.css",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "scripts": {
     "start": "storybook dev -p 6006",
@@ -22,7 +24,7 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.26.3",
-    "@phosphor-icons/react": "^2.1.7",
+    "@phosphor-icons/react": "^2.1.10",
     "@rollup/plugin-json": "^6.1.0",
     "classnames": "^2.5.1",
     "pallote-css": "workspace:^",

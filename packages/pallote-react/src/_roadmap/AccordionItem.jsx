@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import { CaretDown } from '@phosphor-icons/react'
+import { CaretDownIcon } from "@phosphor-icons/react/dist/csr/CaretDown";
 
 import { SizeContext } from './Accordion'
 
@@ -70,7 +70,7 @@ export const AccordionItem = ({
       >
         {icon ? <div className={'accordion_icon'}>{icon}</div> : null}
         <Text className={'accordion_header'} variant={labelVariant} weight='bold'>{label}</Text>
-        <div className={classnames('accordion_icon accordion_icon-arrow')}><CaretDown /></div>
+        <div className={classnames('accordion_icon accordion_icon-arrow')}><CaretDownIcon /></div>
       </button>
       <div style={contentStyle} ref={contentRef} className={classnames('accordion_content')}>
         {children}

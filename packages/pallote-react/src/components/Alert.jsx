@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import { X } from '@phosphor-icons/react'
+import { XIcon } from "@phosphor-icons/react/dist/csr/X";
 
 import { Text } from '../utilities/Text'
 
@@ -60,7 +60,7 @@ export const Alert = ({
         {subtitle ? <Text variant={dense ? 'overline' : 'caption'} className={classnames('alert_subtitle')}>{subtitle}</Text> : null}
       </div>
       {onClose ? (
-        <X className={classnames('alert_close')} onClick={onClose} size={dense ? 14 : 16} />
+        <XIcon className={classnames('alert_close')} onClick={onClose} size={dense ? 14 : 16} />
       ) : null}
     </div>
   )

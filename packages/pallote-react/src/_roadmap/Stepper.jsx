@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import { Check } from '@phosphor-icons/react'
+import { CheckIcon } from "@phosphor-icons/react/dist/csr/Check";
 
 import { Text } from '../utilities/Text'
 
@@ -46,7 +46,7 @@ export const Stepper = ({ showLabel, children }) => {
                   }
                 ])}
               >
-                {isCompleted ? <Check size={20} /> : index + 1}
+                {isCompleted ? <CheckIcon size={20} /> : index + 1}
               </span>
               {showLabel ? <Text variant="caption" weight='bold' className={classnames('stepper_label')}>{label}</Text> : null}
             </div>

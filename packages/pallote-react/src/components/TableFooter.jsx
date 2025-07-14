@@ -1,7 +1,10 @@
 import React from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import { CaretLeft, CaretRight, CaretDoubleLeft, CaretDoubleRight } from '@phosphor-icons/react'
+import { CaretLeftIcon } from "@phosphor-icons/react/dist/csr/CaretLeft";
+import { CaretRightIcon } from "@phosphor-icons/react/dist/csr/CaretRight";
+import { CaretDoubleLeftIcon } from "@phosphor-icons/react/dist/csr/CaretDoubleLeft";
+import { CaretDoubleRightIcon } from "@phosphor-icons/react/dist/csr/CaretDoubleRight";
 
 import { Button } from './Button'
 import { Buttons } from './Buttons'
@@ -28,15 +31,15 @@ export const TableFooter = ({
         <option value="2" >All</option>
       </Select>
       <Buttons className="table_pagination">
-        <Button kind="icon" variant="transparent" size="sm"><CaretDoubleLeft /></Button>
-        <Button kind="icon" variant="transparent" size="sm"><CaretLeft /></Button>
+        <Button kind="icon" variant="transparent" size="sm"><CaretDoubleLeftIcon /></Button>
+        <Button kind="icon" variant="transparent" size="sm"><CaretLeftIcon /></Button>
         <Button kind="icon" size="sm">1</Button>
         <Button kind="icon" variant="transparent" size="sm">2</Button>
         <Button kind="icon" variant="transparent" size="sm">3</Button>
         <Button kind="icon" variant="transparent" size="sm">…</Button>
         <Button kind="icon" variant="transparent" size="sm">8</Button>
-        <Button kind="icon" variant="transparent" size="sm"><CaretRight /></Button>
-        <Button kind="icon" variant="transparent" size="sm"><CaretDoubleRight /></Button>
+        <Button kind="icon" variant="transparent" size="sm"><CaretRightIcon /></Button>
+        <Button kind="icon" variant="transparent" size="sm"><CaretDoubleRightIcon /></Button>
       </Buttons>
     </div>
   )

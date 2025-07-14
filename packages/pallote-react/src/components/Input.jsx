@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import {
-  CalendarBlank,
-  CaretUpDown,
-  Clock
-} from '@phosphor-icons/react'
+import { CalendarBlankIcon } from "@phosphor-icons/react/dist/csr/CalendarBlank";
+import { CaretUpDownIcon } from "@phosphor-icons/react/dist/csr/CaretUpDown";
+import { ClockIcon } from "@phosphor-icons/react/dist/csr/Clock";
 
 import { InputLabel } from './InputLabel'
 
@@ -35,9 +33,9 @@ export const Input = ({
 
   const customIcon =
     icon ||
-    (type === 'date' && <CalendarBlank />) ||
-    (type === 'time' && <Clock />) ||
-    (type === 'number' && <CaretUpDown />)
+    (type === 'date' && <CalendarBlankIcon />) ||
+    (type === 'time' && <ClockIcon />) ||
+    (type === 'number' && <CaretUpDownIcon />)
 
   return (
     <div

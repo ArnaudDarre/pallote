@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import { Info } from '@phosphor-icons/react'
+import { InfoIcon } from "@phosphor-icons/react/dist/csr/Info";
 
 export const Tooltip = ({
   infoIcon,
@@ -26,7 +26,7 @@ export const Tooltip = ({
       ])}
       {...props}
     >
-      {infoIcon ? <Info className={classnames('tooltip_icon')} size={infoIconSize ? infoIconSize : 12} /> : children}
+      {infoIcon ? <InfoIcon className={classnames('tooltip_icon')} size={infoIconSize ? infoIconSize : 12} /> : children}
       <span
         className={classnames([
           'tooltip_content',
