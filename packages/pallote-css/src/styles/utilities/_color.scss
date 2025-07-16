@@ -17,7 +17,8 @@
       color: list.nth($i, 3) !important;
       background-color: list.nth($i, 2) !important;
 
-      .card_title {
+      .card_title,
+      .card_icon {
         color: list.nth($i, 3) !important;
       }
     }

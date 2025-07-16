@@ -25,7 +25,7 @@
 
 	&_title {
 		@extend %subtitle;
-		font-weight: variables.$font-bold;
+		font-weight: variables.$weight-bold;
 	}
 }
 

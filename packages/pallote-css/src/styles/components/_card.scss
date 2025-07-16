@@ -71,9 +71,13 @@
     @include mixins.responsive(down, tablet) { order: 4; }
   }
 
+  &_icon {
+    opacity: 0.5;
+  }
+
   &_label,
   &_title {
-    font-weight: variables.$font-bold;
+    font-weight: variables.$weight-bold;
   }
 
   &_title {
@@ -129,6 +133,11 @@
   &:not(.card-transparent) {
     border-radius: calc($size/2);
   } 
+
+  > .card_header > .card_icon {
+    width: $size;
+    height: $size;
+  }
 
   > .card_media,
   > .card_header,

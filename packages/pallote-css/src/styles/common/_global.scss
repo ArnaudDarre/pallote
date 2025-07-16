@@ -9,7 +9,7 @@ body {
 	font-family: variables.$font, variables.$font-fallback;
 	font-size: 16px;
 	line-height: 1.5;
-	font-weight: variables.$font-regular;
+	font-weight: variables.$weight-regular;
 	background-color: variables.$background-default;
 	color: variables.$text;
 	// needed for footer margin-top: auto if content smaller than viewport height
@@ -141,7 +141,7 @@ iframe {
 }
 
 strong {
-	font-weight: variables.$font-bold;
+	font-weight: variables.$weight-bold;
 }
 
 // z-index

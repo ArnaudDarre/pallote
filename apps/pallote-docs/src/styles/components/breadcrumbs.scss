@@ -37,7 +37,7 @@
       margin-right: .25rem;
       color: variables.$text-alt;
       display: inline-block; // required to remove underline on hover for before element
-      font-weight: variables.$font-bold;
+      font-weight: variables.$weight-bold;
       transform: translateY(0px)
     }
   }
@@ -45,7 +45,7 @@
 
 .breadcrumbs__link {
   @extend %caption;
-  font-weight: variables.$font-bold;
+  font-weight: variables.$weight-bold;
   border-radius: variables.$border-radius-sm;
   padding: 0;
 

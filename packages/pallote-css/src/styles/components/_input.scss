@@ -45,7 +45,7 @@
 
   &_label {
 		@include mixins.transition(variables.$transition-md, color);
-		font-weight: variables.$font-bold;
+		font-weight: variables.$weight-bold;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;
@@ -54,7 +54,7 @@
   }
 
   &_error {
-    font-weight: variables.$font-bold;
+    font-weight: variables.$weight-bold;
     color: variables.$error;
     border-left: .25rem solid variables.$error;
     padding-left: .5rem;

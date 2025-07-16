@@ -122,7 +122,7 @@ th.table_cell { background-color: rgba(variables.$contrast, 0.05); }
 
   th.table_cell {
     @extend %overline;
-    font-weight: variables.$font-bold;
+    font-weight: variables.$weight-bold;
   }
 }
 

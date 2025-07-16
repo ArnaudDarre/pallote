@@ -51,7 +51,7 @@
 
     .menu__link {
       @extend %body;
-      font-weight: variables.$font-bold;
+      font-weight: variables.$weight-bold;
     }
   }
 
@@ -60,7 +60,7 @@
   
     .menu__link {
       @extend %caption;
-      font-weight: variables.$font-regular;
+      font-weight: variables.$weight-regular;
       padding-left: 1.5rem !important;
     }
   }

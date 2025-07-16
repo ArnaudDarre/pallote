@@ -24,8 +24,8 @@
 // barlow
 // —————————————————————————————————————————————————————————————————
 
-@include mixins.fontface(variables.$font, variables.$font-clean/regular, variables.$font-regular, normal);
-@include mixins.fontface(variables.$font, variables.$font-clean/regularitalic, variables.$font-regular, italic);
+@include mixins.fontface(variables.$font, variables.$font-clean/regular, variables.$weight-regular, normal);
+@include mixins.fontface(variables.$font, variables.$font-clean/regularitalic, variables.$weight-regular, italic);
 
-@include mixins.fontface(variables.$font, variables.$font-clean/semibold, variables.$font-bold, normal);
-@include mixins.fontface(variables.$font, variables.$font-clean/semibolditalic, variables.$font-bold, italic);
+@include mixins.fontface(variables.$font, variables.$font-clean/semibold, variables.$weight-bold, normal);
+@include mixins.fontface(variables.$font, variables.$font-clean/semibolditalic, variables.$weight-bold, italic);

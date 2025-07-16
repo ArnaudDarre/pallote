@@ -142,8 +142,8 @@
 // weight
 // —————————————————————————————————————————————————————————————————
 
-.text-regular, %text-regular { font-weight: variables.$font-regular !important; }
-.text-bold, %text-bold { font-weight: variables.$font-bold !important; }
+.text-regular, %text-regular { font-weight: variables.$weight-regular !important; }
+.text-bold, %text-bold { font-weight: variables.$weight-bold !important; }
 
 // —————————————————————————————————————————————————————————————————
 // transform

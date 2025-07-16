@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { Text } from '../utilities/Text'
 
-export const CardHeader = ({ label, title, subtitle, actions, className, ...props }) => {
+export const CardHeader = ({ icon, label, title, subtitle, actions, className, ...props }) => {
 
   return (
     <div
@@ -19,6 +19,7 @@ export const CardHeader = ({ label, title, subtitle, actions, className, ...prop
           {actions}
         </div>
       )}
+      {icon ? React.cloneElement(icon, { className: `${icon.props.className ?? ''} card_icon` }) : null}
       {label ? ( <Text className={classnames('card_label')}>{label}</Text> ) : null}
       <Text className={classnames('card_title')}>{title}</Text>
       {subtitle ? ( <Text className={classnames('card_subtitle')}>{subtitle}</Text> ) : null}
@@ -27,6 +28,7 @@ export const CardHeader = ({ label, title, subtitle, actions, className, ...prop
 }
 
 CardHeader.propTypes = {
+  icon: PropTypes.node,
   label: PropTypes.string,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,

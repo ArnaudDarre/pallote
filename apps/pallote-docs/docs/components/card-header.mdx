@@ -2,6 +2,7 @@
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { Coffee } from '@phosphor-icons/react'
 
 import { Button, Card, CardHeader } from 'pallote-react'
 
@@ -17,8 +18,14 @@ Contains the card title. You can add an optional label or subtitle. The font siz
 />
 
 <div class="docs_block">
-  <Card transparent>
+  <Card transparent style={{overflow: "visible"}}>
     <CardHeader
+      actions={
+        <>
+          <Button color="error">Cancel</Button>
+          <Button color="primary">Save</Button>
+        </>
+      }
       label="Card label"
       title="Card title"
       subtitle="This is a card subtitle"
@@ -50,6 +57,38 @@ Contains the card title. You can add an optional label or subtitle. The font siz
 </Tabs>
 
 ## Props
+
+### Icon
+
+<div class="docs_block">
+  <Card>
+    <CardHeader
+      icon={<Coffee />}
+      title="Card header with icon"
+    />
+  </Card>
+</div>
+
+<Tabs groupId="package" queryString>
+   <TabItem value="react" label="React">
+  
+```jsx
+<CardHeader
+  icon={{/* insert icon */}}
+  title="Card header with icon"
+/>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="card_header">
+  <span class="card_icon"><!-- insert icon --></span>
+  <p class="card_title">Card header with actions</p>
+</div>
+```
+  </TabItem>
+</Tabs>
 
 ### Actions
 
