@@ -65,11 +65,6 @@ header {
     z-index: 11;
   }
   
-  &.section {
-    overflow: visible;
-    position: sticky;
-  }
-
   .section_container {
     display: flex;
     flex-direction: row;

@@ -46,6 +46,11 @@ body {
 	}
 }
 
+header {
+	position: sticky;
+	top: 0;
+}
+
 // stick to bottom of page when page height smaller than viewport height
 footer {
 	margin-top: auto;
