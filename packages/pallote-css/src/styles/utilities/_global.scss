@@ -8,6 +8,7 @@
 // display
 // border
 // border-radius
+// aspect-ratio
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
@@ -154,8 +155,8 @@ $fractions: ( "¼": 0.25, "½": 0.5, "¾": 0.75 );
 
   &-absolute { position: absolute !important; }
   &-relative { position: relative !important; }
-  &-fixed { position: relative !important; }
-  &-sticky { position: relative !important; }
+  &-fixed { position: fixed !important; }
+  &-sticky { position: sticky !important; top: 0; }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -211,3 +212,17 @@ $fractions: ( "¼": 0.25, "½": 0.5, "¾": 0.75 );
 .br-sm { border-radius: variables.$border-radius-sm; }
 .br-md { border-radius: variables.$border-radius-md; }
 .br-lg { border-radius: variables.$border-radius-lg; }
+
+// —————————————————————————————————————————————————————————————————
+// aspect-ratio
+// —————————————————————————————————————————————————————————————————
+
+.ar-square { aspect-ratio: 1/1; }
+.ar-½ { aspect-ratio: 1/2; }
+.ar-⅓ { aspect-ratio: 1/3; }
+.ar-⅔ { aspect-ratio: 2/3; }
+.ar-¾ { aspect-ratio: 3/4; }
+.ar-½- { aspect-ratio: 2/1; }
+.ar-⅓- { aspect-ratio: 3/1; }
+.ar-⅔- { aspect-ratio: 3/2; }
+.ar-¾- { aspect-ratio: 4/3; }

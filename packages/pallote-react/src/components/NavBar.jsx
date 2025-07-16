@@ -13,37 +13,36 @@ export const NavBar = ({ logo, align, className, children, ...props }) => {
   };
 
   return (
-    <header>
-      <Section
-        className={classnames([
-          'navbar',
-          {
-            [`navbar-${align}`]: align,
-            'js-opened': isOpen
-          },
-          className
-        ])}
-        {...props}
-      >
-        <div className="navbar_main">
-          <div className="navbar_logo">
-            {logo}
-          </div>
-          <button
-            aria-label="Open mobile menu"
-            className={classnames('navbar_button', { 'js-opened': isOpen })}
-            onClick={toggleNav}
-          >
-            <span></span>
-          </button>
+    <Section
+      component="header"
+      className={classnames([
+        'navbar',
+        {
+          [`navbar-${align}`]: align,
+          'js-opened': isOpen
+        },
+        className
+      ])}
+      {...props}
+    >
+      <div className="navbar_main">
+        <div className="navbar_logo">
+          {logo}
         </div>
-        <nav aria-label="main-nav" className={classnames('navbar_nav nav', { 'js-opened': isOpen })}>
-          <div className='nav_container'>
-            {children}
-          </div>
-        </nav>
-      </Section>
-    </header>
+        <button
+          aria-label="Open mobile menu"
+          className={classnames('navbar_button', { 'js-opened': isOpen })}
+          onClick={toggleNav}
+        >
+          <span></span>
+        </button>
+      </div>
+      <nav aria-label="main-nav" className={classnames('navbar_nav nav', { 'js-opened': isOpen })}>
+        <div className='nav_container'>
+          {children}
+        </div>
+      </nav>
+    </Section>
   )
 }
 

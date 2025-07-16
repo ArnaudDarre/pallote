@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { SectionHeader } from './SectionHeader'
 
 export const Section = ({
+  component = 'div',
   align = 'left',
   color = 'default',
   landing,
@@ -13,8 +14,11 @@ export const Section = ({
   children,
   ...props
 }) => {
+
+  const Component = component || 'div'
+
   return (
-    <div
+    <Component
       className={classnames([
         'section',
         {
@@ -35,11 +39,17 @@ export const Section = ({
           return child
         })}
       </div>
-    </div>
+    </Component>
   )
 }
 
 Section.propTypes = {
+  component: PropTypes.oneOf([
+    'div',
+    'footer',
+    'header',
+    'section'
+  ]),
   align: PropTypes.oneOf([
     'left',
     'center',

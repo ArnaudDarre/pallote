@@ -8,6 +8,10 @@
   position: fixed;
   box-shadow: none;
 
+  &--fixed-top {
+    z-index: 100;
+  }
+
   &__brand {
     display: flex;
     align-items: flex-end;
