@@ -8,12 +8,18 @@ export const Snippet = ({
   content = 'Snippet',
   isDefault = false,
   dense = false,
+  fullWidth,
   className,
   ...props
 }) => {
 
   return (
-    <div className={classnames('snippet_wrapper')} >
+    <div
+      className={classnames([
+        'snippet_wrapper',
+        { ' w-full': fullWidth }
+      ])}
+    >
       <SyntaxHighlighter
         language="javascript"
         style={nnfxDark}

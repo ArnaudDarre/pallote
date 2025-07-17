@@ -11,8 +11,6 @@ import { GridExample } from "./partials/grid"
 
 Container element to arrange items on a page and create a responsive layout.
 
-<!-- By default the chil elements takes up 100% of the height. If you want children to fit their content, add the `items="start` property to the parent `<Grid />` element. -->
-
 <div class="docs_block">
   <Grid gap={2}>
     <Grid><GridExample fill="grey5" content="1" /></Grid>
@@ -51,7 +49,7 @@ Container element to arrange items on a page and create a responsive layout.
 Make all child elements automatically the same width.
 
 <div class="docs_block">
-  <Grid gap={2} wrap className="w-full">
+  <Grid gap={2} wrap>
     <Grid><GridExample fill="grey5" content="1" /></Grid>
     <Grid><GridExample fill="grey10" content="2" /></Grid>
     <Grid><GridExample fill="grey20" content="3" /></Grid>
@@ -78,9 +76,9 @@ Make all child elements automatically the same width.
 This prop overrides the `flex-direction` value of the component.
 
 <div class="docs_block">
-  <Grid gap={4}>
+  <Grid gap={4} className="w-full">
     <Grid colsm={6} gap={2} direction="column">
-      <Grid><Snippet content="direction='column'" dense /></Grid>
+      <Grid><Snippet content="direction='column'" dense fullWidth /></Grid>
       <Grid gap={2} direction="column">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -88,7 +86,7 @@ This prop overrides the `flex-direction` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={6} gap={2} direction="column">
-      <Grid><Snippet content="direction='columnReverse'" dense /></Grid>
+      <Grid><Snippet content="direction='columnReverse'" dense fullWidth /></Grid>
       <Grid gap={2} direction="columnReverse">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -96,7 +94,7 @@ This prop overrides the `flex-direction` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={6} gap={2} direction="column">
-      <Grid><Snippet content="direction='row'" dense /></Grid>
+      <Grid><Snippet content="direction='row'" dense fullWidth /></Grid>
       <Grid gap={2} direction="row">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -104,7 +102,7 @@ This prop overrides the `flex-direction` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={6} gap={2} direction="column">
-      <Grid><Snippet content="direction='rowReverse'" dense /></Grid>
+      <Grid><Snippet content="direction='rowReverse'" dense fullWidth /></Grid>
       <Grid gap={2} direction="rowReverse">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -140,9 +138,9 @@ This prop overrides the `flex-direction` value of the component.
 This prop overrides the `justify-content` value of the component.
 
 <div class="docs_block">
-  <Grid gap={4}>
+  <Grid gap={4} className="w-full">
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="justify='center'" dense /></Grid>
+      <Grid><Snippet content="justify='center'" dense fullWidth /></Grid>
       <Grid gap={2} justify="center">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -150,7 +148,7 @@ This prop overrides the `justify-content` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="justify='end'" dense /></Grid>
+      <Grid><Snippet content="justify='end'" dense fullWidth /></Grid>
       <Grid gap={2} justify="end">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -158,7 +156,7 @@ This prop overrides the `justify-content` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="justify='start'" dense /></Grid>
+      <Grid><Snippet content="justify='start'" dense fullWidth /></Grid>
       <Grid gap={2} justify="start">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -166,7 +164,7 @@ This prop overrides the `justify-content` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="justify='spaceAround'" dense /></Grid>
+      <Grid><Snippet content="justify='spaceAround'" dense fullWidth /></Grid>
       <Grid gap={2} justify="spaceAround">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -174,7 +172,7 @@ This prop overrides the `justify-content` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="justify='spaceBetween'" dense /></Grid>
+      <Grid><Snippet content="justify='spaceBetween'" dense fullWidth /></Grid>
       <Grid gap={2} justify="spaceBetween">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -182,7 +180,7 @@ This prop overrides the `justify-content` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="justify='spaceEvenly'" dense /></Grid>
+      <Grid><Snippet content="justify='spaceEvenly'" dense fullWidth /></Grid>
       <Grid gap={2} justify="spaceEvenly">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -222,9 +220,9 @@ This prop overrides the `justify-content` value of the component.
 This prop overrides the `align-items` value of the component.
 
 <div class="docs_block">
-  <Grid gap={4}>
+  <Grid gap={4} className="w-full">
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="items='stretch'" dense /></Grid>
+      <Grid><Snippet content="items='stretch'" dense fullWidth /></Grid>
       <Grid gap={2} items="stretch">
         <Grid><Text variant="h6" code>1</Text></Grid>
         <Grid><Text variant="h2" code>2</Text></Grid>
@@ -232,7 +230,7 @@ This prop overrides the `align-items` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="items='center'" dense /></Grid>
+      <Grid><Snippet content="items='center'" dense fullWidth /></Grid>
       <Grid gap={2} items="center">
         <Grid><Text variant="h6" code>1</Text></Grid>
         <Grid><Text variant="h2" code>2</Text></Grid>
@@ -240,7 +238,7 @@ This prop overrides the `align-items` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="items='end'" dense /></Grid>
+      <Grid><Snippet content="items='end'" dense fullWidth /></Grid>
       <Grid gap={2} items="end">
         <Grid><Text variant="h6" code>1</Text></Grid>
         <Grid><Text variant="h2" code>2</Text></Grid>
@@ -248,7 +246,7 @@ This prop overrides the `align-items` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="items='start'" dense /></Grid>
+      <Grid><Snippet content="items='start'" dense fullWidth /></Grid>
       <Grid gap={2} items="start">
         <Grid><Text variant="h6" code>1</Text></Grid>
         <Grid><Text variant="h2" code>2</Text></Grid>
@@ -256,7 +254,7 @@ This prop overrides the `align-items` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="items='baseline'" dense /></Grid>
+      <Grid><Snippet content="items='baseline'" dense fullWidth /></Grid>
       <Grid gap={2} items="baseline">
         <Grid><Text variant="h6" code>1</Text></Grid>
         <Grid><Text variant="h2" code>2</Text></Grid>
@@ -294,33 +292,33 @@ This prop overrides the `align-items` value of the component.
 This prop overrides the `align-self` value of the component.
 
 <div class="docs_block">
-  <Grid gap={4}>
+  <Grid gap={4} className="w-full">
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="self='stretch'" dense /></Grid>
+      <Grid><Snippet content="self='stretch'" dense fullWidth /></Grid>
       <Grid self="stretch">
         <GridExample content="Stretch" />
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="self='center'" dense /></Grid>
+      <Grid><Snippet content="self='center'" dense fullWidth /></Grid>
       <Grid self="center">
         <GridExample content="Center" />
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="self='end'" dense /></Grid>
+      <Grid><Snippet content="self='end'" dense fullWidth /></Grid>
       <Grid self="end">
         <GridExample content="End" />
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="self='start'" dense /></Grid>
+      <Grid><Snippet content="self='start'" dense fullWidth /></Grid>
       <Grid self="start">
         <GridExample content="Start" />
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="self='baseline'" dense /></Grid>
+      <Grid><Snippet content="self='baseline'" dense fullWidth /></Grid>
       <Grid self="baseline">
         <GridExample content="Baseline" />
       </Grid>
@@ -354,9 +352,9 @@ This prop overrides the `align-self` value of the component.
 ### Gap
 
 <div class="docs_block">
-  <Grid gap={4}>
+  <Grid gap={4} className="w-full">
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={1}" dense /></Grid>
+      <Grid><Snippet content="gap={1}" dense fullWidth /></Grid>
       <Grid gap={1}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -364,7 +362,7 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={2}" dense /></Grid>
+      <Grid><Snippet content="gap={2}" dense fullWidth /></Grid>
       <Grid gap={2}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -372,7 +370,7 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={3}" dense /></Grid>
+      <Grid><Snippet content="gap={3}" dense fullWidth /></Grid>
       <Grid gap={3}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -380,15 +378,15 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={4}" dense /></Grid>
-      <Grid gap={4}>
+      <Grid><Snippet content="gap={4}" dense fullWidth /></Grid>
+      <Grid gap={4} className="w-full">
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
         <Grid><GridExample fill="grey20" content="3" /></Grid>
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={5}" dense /></Grid>
+      <Grid><Snippet content="gap={5}" dense fullWidth /></Grid>
       <Grid gap={5}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -396,7 +394,7 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={6}" dense /></Grid>
+      <Grid><Snippet content="gap={6}" dense fullWidth /></Grid>
       <Grid gap={6}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -404,7 +402,7 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={7}" dense /></Grid>
+      <Grid><Snippet content="gap={7}" dense fullWidth /></Grid>
       <Grid gap={7}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -412,7 +410,7 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={8}" dense /></Grid>
+      <Grid><Snippet content="gap={8}" dense fullWidth /></Grid>
       <Grid gap={8}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -420,7 +418,7 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={9}" dense /></Grid>
+      <Grid><Snippet content="gap={9}" dense fullWidth /></Grid>
       <Grid gap={9}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -428,7 +426,7 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={10}" dense /></Grid>
+      <Grid><Snippet content="gap={10}" dense fullWidth /></Grid>
       <Grid gap={10}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -436,7 +434,7 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={11}" dense /></Grid>
+      <Grid><Snippet content="gap={11}" dense fullWidth /></Grid>
       <Grid gap={11}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -444,7 +442,7 @@ This prop overrides the `align-self` value of the component.
       </Grid>
     </Grid>
     <Grid colsm={4} gap={2} direction="column">
-      <Grid><Snippet content="gap={12}" dense /></Grid>
+      <Grid><Snippet content="gap={12}" dense fullWidth /></Grid>
       <Grid gap={12}>
         <Grid><GridExample fill="grey5" content="1" /></Grid>
         <Grid><GridExample fill="grey10" content="2" /></Grid>
@@ -461,7 +459,7 @@ This prop overrides the `align-self` value of the component.
 <Grid gap={1}></Grid>
 <Grid gap={2}></Grid>
 <Grid gap={3}></Grid>
-<Grid gap={4}></Grid>
+<Grid gap={4} className="w-full"></Grid>
 <Grid gap={5}></Grid>
 <Grid gap={6}></Grid>
 <Grid gap={7}></Grid>

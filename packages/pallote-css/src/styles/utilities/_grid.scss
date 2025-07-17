@@ -101,6 +101,16 @@ $breakpoints: (
   }
 }
 
+@each $suffix, $breakpoint in $breakpoints {
+  @include mixins.responsive(up, $breakpoint) {
+    @for $i from 1 through $columns {
+      .col-#{$suffix}-#{$i} {
+        width: calc(variables.$col * #{$i});
+      }
+    }
+  }
+}
+
 @for $i from 1 through $columns {
   .gap-#{$i} {
     gap: #{$i * .25}rem;

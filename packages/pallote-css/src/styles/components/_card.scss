@@ -137,6 +137,7 @@
   > .card_header > .card_icon {
     width: $size;
     height: $size;
+    margin-bottom: calc($size/2);
   }
 
   > .card_media,
