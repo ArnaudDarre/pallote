@@ -17,7 +17,6 @@ export default {
     "classnames",
     "@phosphor-icons/react",
     "react-syntax-highlighter",
-    "prop-types"
   ],
   plugins: [
     peerDepsExternal(),
