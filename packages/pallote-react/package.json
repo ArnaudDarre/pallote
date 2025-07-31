@@ -1,6 +1,6 @@
 {
   "name": "pallote-react",
-  "version": "0.15.8",
+  "version": "0.15.9",
   "description": "",
   "main": "dist/index.js",
   "styles": "dist/index.css",
