@@ -52,7 +52,10 @@ SectionHeader.propTypes = {
     'h6',
     'p'
   ]).isRequired,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]),
   actions: PropTypes.node,
   className: PropTypes.node
 }
