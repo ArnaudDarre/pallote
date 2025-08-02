@@ -41,7 +41,6 @@ export const Select = ({
         },
         className
       ])}
-      onChange={onChange}
     >
       <InputLabel
         htmlFor={id}
@@ -56,6 +55,7 @@ export const Select = ({
         id={id}
         disabled={disabled}
         required={!(disabled || optional)}
+        onChange={onChange}
         {...(hint || error
           ? {
               'aria-describedby': [hint ? `${id}-hint` : null, error ? `${id}-error` : null]

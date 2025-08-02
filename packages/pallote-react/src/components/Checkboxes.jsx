@@ -28,7 +28,6 @@ export const Checkboxes = ({
         },
         className
       ])}
-      onChange={onChange}
       {...(hint || error
         ? {
             'aria-describedby': [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
@@ -55,7 +54,7 @@ export const Checkboxes = ({
       >
         {React.Children.map(children, (child) =>
           React.isValidElement(child)
-            ? React.cloneElement(child, { optional, disabled })
+            ? React.cloneElement(child, { onChange, optional, disabled })
             : child
         )}
       </div>

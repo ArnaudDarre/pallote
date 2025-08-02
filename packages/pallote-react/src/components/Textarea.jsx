@@ -37,7 +37,6 @@ export const Textarea = ({
         },
         className
       ])}
-      onChange={onChange}
     >
       <InputLabel
         htmlFor={id}
@@ -54,6 +53,7 @@ export const Textarea = ({
         disabled={disabled}
         required={!(disabled || optional)}
         rows={4}
+        onChange={onChange}
         {...(hint || error
           ? {
               'aria-describedby': [hint ? `${id}-hint` : null, error ? `${id}-error` : null]

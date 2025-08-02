@@ -49,7 +49,6 @@ export const Input = ({
         },
         className
       ])}
-      onChange={onChange}
     >
       <InputLabel
         htmlFor={id}
@@ -67,6 +66,7 @@ export const Input = ({
         placeholder={placeholder}
         disabled={disabled}
         required={!(disabled || optional)}
+        onChange={onChange}
         {...(hint || error
           ? {
               'aria-describedby': [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
