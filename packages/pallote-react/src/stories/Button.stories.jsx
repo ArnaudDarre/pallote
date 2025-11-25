@@ -134,3 +134,19 @@ Icons.parameters = {
     }
   }
 }
+
+export const Type = () => (
+  <Grid gap={4}>
+    <Grid><Button>Button (default)</Button></Grid>
+    <Grid><Button type="submit">Submit</Button></Grid>
+    <Grid><Button type="reset">Reset</Button></Grid>
+  </Grid>
+)
+
+Type.parameters = {
+  docs: {
+    description: {
+      story: 'By default, buttons have `type="button"` to prevent unintended form submissions. Override with `type="submit"` or `type="reset"` when needed.'
+    }
+  }
+}

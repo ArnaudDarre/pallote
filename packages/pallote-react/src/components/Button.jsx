@@ -14,6 +14,7 @@ export const Button = React.forwardRef(({
   iconRight,
   className,
   children = 'button',
+  type = 'button',
   ...props
 }, ref) => {
 
@@ -49,6 +50,7 @@ export const Button = React.forwardRef(({
       ])}
       ref={ref}
       disabled={Component === 'button' ? disabled : undefined}
+      {...(Component === 'button' ? { type } : {})}
       {...props}
     >
       {content}
@@ -94,5 +96,6 @@ Button.propTypes = {
   iconLeft: PropTypes.node,
   iconRight: PropTypes.node,
   className: PropTypes.node,
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
   children: PropTypes.node.isRequired
 }

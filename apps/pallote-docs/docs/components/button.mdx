@@ -278,3 +278,32 @@ Change the button style.
 ```
   </TabItem>
 </Tabs>
+
+### Type
+
+By default, buttons have `type="button"` to prevent unintended form submissions. Override with `type="submit"` or `type="reset"` when needed.
+
+<div class="docs_block">
+  <Button>Button (default)</Button>
+  <Button type="submit">Submit</Button>
+  <Button type="reset">Reset</Button>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Button>Button (default)</Button>
+<Button type="submit">Submit</Button>
+<Button type="reset">Reset</Button>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<button type="button" class="button">Button (default)</button>
+<button type="submit" class="button">Submit</button>
+<button type="reset" class="button">Reset</button>
+```
+  </TabItem>
+</Tabs>
