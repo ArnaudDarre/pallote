@@ -10,6 +10,7 @@ export const Checkbox = ({
   disabled,
   optional,
   dense,
+  onChange,
   className,
   ...props
 }) => {
@@ -34,6 +35,7 @@ export const Checkbox = ({
         aria-checked={checked}
         disabled={disabled}
         required={!(disabled || optional)}
+        onChange={onChange}
         {...props}
       />
       <label
