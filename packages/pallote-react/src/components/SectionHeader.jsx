@@ -8,7 +8,7 @@ export const SectionHeader = ({
   label,
   title,
   promoteTitle = false,
-  titleComponent,
+  titleComponent = 'h2',
   subtitle,
   actions,
   className,
@@ -51,7 +51,7 @@ SectionHeader.propTypes = {
     'h5',
     'h6',
     'p'
-  ]).isRequired,
+  ]),
   subtitle: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object
