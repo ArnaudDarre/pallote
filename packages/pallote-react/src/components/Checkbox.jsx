@@ -35,8 +35,8 @@ export const Checkbox = ({
         aria-checked={checked}
         disabled={disabled}
         required={!(disabled || optional)}
-        {...props}
         onChange={onChange}
+        {...props}
       />
       <label
         className={classnames('checkbox_label')}
@@ -56,6 +56,5 @@ Checkbox.propTypes = {
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
   dense: PropTypes.bool,
-  onChange: PropTypes.func,
   className: PropTypes.node
 }

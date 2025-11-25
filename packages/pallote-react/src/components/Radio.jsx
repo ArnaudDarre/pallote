@@ -36,8 +36,8 @@ export const Radio = ({
         aria-checked={checked}
         disabled={disabled}
         required={!(disabled || optional)}
-        {...props}
         onChange={onChange}
+        {...props}
       />
       <label
         className={classnames('radio_label')}
@@ -58,6 +58,5 @@ Radio.propTypes = {
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
   dense: PropTypes.bool,
-  onChange: PropTypes.func,
   className: PropTypes.node
 }
