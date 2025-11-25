@@ -244,7 +244,7 @@ For the CSS library, you do not need to add the `required` property to the form 
 ### Hint
 
 <div class="docs_block">
-  <RadioButtons label="Hont" hint="This is a hint to give more details">
+  <RadioButtons label="Hint" hint="This is a hint to give more details">
     <Radio name="hint" id="hint_1" value="1" label="Option 1" />
     <Radio name="hint" id="hint_2" value="2" label="Option 2" />
   </RadioButtons>
@@ -254,7 +254,7 @@ For the CSS library, you do not need to add the `required` property to the form 
   <TabItem value="react" label="React">
 
 ```jsx
-<RadioButtons label="Hont" hint="This is a hint to give more details">
+<RadioButtons label="Hint" hint="This is a hint to give more details">
   <Radio name="hint" id="hint_1" value="1" label="Option 1" />
   <Radio name="hint" id="hint_2" value="2" label="Option 2" />
 </RadioButtons>
@@ -274,6 +274,88 @@ For the CSS library, you do not need to add the `required` property to the form 
     <div class="radio">
       <input type="radio" name="hint" id="hint_2" value="hint_2" class="radio_control" />
       <label for="hint_2" class="radio_label">Option 2</label>
+    </div>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Dense
+
+Reduce the font size and radio size for a more compact appearance.
+
+<div class="docs_block">
+  <RadioButtons id="dense" label="Dense" dense>
+    <Radio name="dense" id="dense_1" value="1" label="Option 1" />
+    <Radio name="dense" id="dense_2" value="2" label="Option 2" />
+  </RadioButtons>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<RadioButtons id="dense" label="Dense" dense>
+  <Radio name="dense" id="dense_1" value="1" label="Option 1" />
+  <Radio name="dense" id="dense_2" value="2" label="Option 2" />
+</RadioButtons>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input input-dense">
+  <legend class="input_label">Dense</legend>
+  <div class="input_control radios">
+    <div class="radio">
+      <input type="radio" name="dense" id="dense_1" value="dense_1" class="radio_control" />
+      <label for="dense_1" class="radio_label">Option 1</label>
+    </div>
+    <div class="radio">
+      <input type="radio" name="dense" id="dense_2" value="dense_2" class="radio_control" />
+      <label for="dense_2" class="radio_label">Option 2</label>
+    </div>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### HideLabel
+
+Hide the label visually while keeping it accessible to screen readers.
+
+<div class="docs_block">
+  <RadioButtons id="hideLabel" label="Hidden Label" hideLabel>
+    <Radio name="hideLabel" id="hideLabel_1" value="1" label="Option 1" />
+    <Radio name="hideLabel" id="hideLabel_2" value="2" label="Option 2" />
+  </RadioButtons>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<RadioButtons id="hideLabel" label="Hidden Label" hideLabel>
+  <Radio name="hideLabel" id="hideLabel_1" value="1" label="Option 1" />
+  <Radio name="hideLabel" id="hideLabel_2" value="2" label="Option 2" />
+</RadioButtons>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input">
+  <legend class="input_label sr-only">Hidden Label</legend>
+  <div class="input_control radios">
+    <div class="radio">
+      <input type="radio" name="hideLabel" id="hideLabel_1" value="hideLabel_1" class="radio_control" />
+      <label for="hideLabel_1" class="radio_label">Option 1</label>
+    </div>
+    <div class="radio">
+      <input type="radio" name="hideLabel" id="hideLabel_2" value="hideLabel_2" class="radio_control" />
+      <label for="hideLabel_2" class="radio_label">Option 2</label>
     </div>
   </div>
 </div>

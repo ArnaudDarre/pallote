@@ -245,3 +245,79 @@ Add this class to signal users the field is disabled.
 ```
   </TabItem>
 </Tabs>
+
+### Dense
+
+Reduce the font size and padding for a more compact appearance.
+
+<div class="docs_block">
+  <Select id="dense" label="Dense" dense>
+    <option value=""></option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </Select>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Select id="dense" label="Dense" dense>
+  <option value=""></option>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</Select>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input input-dense select">
+  <label for="dense" class="input_label">Dense</label>
+  <select name="dense" id="dense" class="input_control">
+    <option value=""></option>
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+  </select>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### HideLabel
+
+Hide the label visually while keeping it accessible to screen readers.
+
+<div class="docs_block">
+  <Select id="hideLabel" label="Hidden Label" hideLabel>
+    <option value="">Select an option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </Select>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Select id="hideLabel" label="Hidden Label" hideLabel>
+  <option value="">Select an option</option>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</Select>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input select">
+  <label for="hideLabel" class="input_label sr-only">Hidden Label</label>
+  <select name="hideLabel" id="hideLabel" class="input_control">
+    <option value="">Select an option</option>
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+  </select>
+</div>
+```
+  </TabItem>
+</Tabs>

@@ -281,3 +281,85 @@ For the CSS library, you do not need to add the `required` property to the form 
 ```
   </TabItem>
 </Tabs>
+
+### Dense
+
+Reduce the font size and checkbox size for a more compact appearance.
+
+<div class="docs_block">
+  <Checkboxes id="dense" label="Dense" dense>
+    <Checkbox id="dense_1" value="1" label="Option 1" />
+    <Checkbox id="dense_2" value="2" label="Option 2" />
+  </Checkboxes>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Checkboxes id="dense" label="Dense" dense>
+  <Checkbox id="dense_1" value="1" label="Option 1" />
+  <Checkbox id="dense_2" value="2" label="Option 2" />
+</Checkboxes>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input input-dense">
+  <legend class="input_label">Dense</legend>
+  <div class="input_control checkboxes">
+    <div class="checkbox">
+      <input type="checkbox" id="dense_1" value="dense_1" class="checkbox_control" />
+      <label for="dense_1" class="checkbox_label">Option 1</label>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox" id="dense_2" value="dense_2" class="checkbox_control" />
+      <label for="dense_2" class="checkbox_label">Option 2</label>
+    </div>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### HideLabel
+
+Hide the label visually while keeping it accessible to screen readers.
+
+<div class="docs_block">
+  <Checkboxes id="hideLabel" label="Hidden Label" hideLabel>
+    <Checkbox id="hideLabel_1" value="1" label="Option 1" />
+    <Checkbox id="hideLabel_2" value="2" label="Option 2" />
+  </Checkboxes>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Checkboxes id="hideLabel" label="Hidden Label" hideLabel>
+  <Checkbox id="hideLabel_1" value="1" label="Option 1" />
+  <Checkbox id="hideLabel_2" value="2" label="Option 2" />
+</Checkboxes>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input">
+  <legend class="input_label sr-only">Hidden Label</legend>
+  <div class="input_control checkboxes">
+    <div class="checkbox">
+      <input type="checkbox" id="hideLabel_1" value="hideLabel_1" class="checkbox_control" />
+      <label for="hideLabel_1" class="checkbox_label">Option 1</label>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox" id="hideLabel_2" value="hideLabel_2" class="checkbox_control" />
+      <label for="hideLabel_2" class="checkbox_label">Option 2</label>
+    </div>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>

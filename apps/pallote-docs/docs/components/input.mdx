@@ -236,3 +236,55 @@ Add this class to signal users the field is disabled.
 ```
   </TabItem>
 </Tabs>
+
+### Dense
+
+Reduce the font size and padding for a more compact appearance.
+
+<div class="docs_block">
+  <Input id="dense" label="Dense" dense />
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Input id="dense" label="Dense" dense />
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input input-dense">
+  <label for="dense" class="input_label">Dense</label>
+  <input type="text" id="dense" class="input_control">
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### HideLabel
+
+Hide the label visually while keeping it accessible to screen readers.
+
+<div class="docs_block">
+  <Input id="hideLabel" label="Hidden Label" hideLabel placeholder="Label is hidden but accessible to screen readers" />
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Input id="hideLabel" label="Hidden Label" hideLabel placeholder="Label is hidden but accessible to screen readers" />
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input">
+  <label for="hideLabel" class="input_label sr-only">Hidden Label</label>
+  <input type="text" id="hideLabel" class="input_control" placeholder="Label is hidden but accessible to screen readers">
+</div>
+```
+  </TabItem>
+</Tabs>

@@ -173,3 +173,55 @@ Add this class to signal users the field is disabled.
 ```
   </TabItem>
 </Tabs>
+
+### Dense
+
+Reduce the font size and padding for a more compact appearance.
+
+<div class="docs_block">
+  <Textarea id="dense" label="Dense" dense />
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Textarea id="dense" label="Dense" dense />
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input input-dense textarea">
+  <label for="dense" class="input_label">Dense</label>
+  <textarea id="dense" rows="4" class="input_control"></textarea>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### HideLabel
+
+Hide the label visually while keeping it accessible to screen readers.
+
+<div class="docs_block">
+  <Textarea id="hideLabel" label="Hidden Label" hideLabel placeholder="Label is hidden but accessible to screen readers" />
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Textarea id="hideLabel" label="Hidden Label" hideLabel placeholder="Label is hidden but accessible to screen readers" />
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="input textarea">
+  <label for="hideLabel" class="input_label sr-only">Hidden Label</label>
+  <textarea id="hideLabel" rows="4" class="input_control" placeholder="Label is hidden but accessible to screen readers"></textarea>
+</div>
+```
+  </TabItem>
+</Tabs>
