@@ -9,6 +9,7 @@ export const Checkbox = ({
   checked,
   disabled,
   optional,
+  dense,
   className,
   ...props
 }) => {
@@ -16,7 +17,10 @@ export const Checkbox = ({
     <div
       className={classnames([
         'checkbox',
-        { 'checkbox-disabled': disabled },
+        { 
+          'checkbox-disabled': disabled,
+          'checkbox-dense': dense
+        },
         className
       ])}
     >
@@ -49,5 +53,6 @@ Checkbox.propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
+  dense: PropTypes.bool,
   className: PropTypes.node
 }

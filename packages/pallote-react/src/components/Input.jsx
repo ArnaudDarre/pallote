@@ -18,7 +18,9 @@ export const Input = ({
   error,
   disabled,
   optional,
+  dense,
   hint,
+  hideLabel,
   className,
   ...props
 }) => {
@@ -45,6 +47,7 @@ export const Input = ({
           'js-error': error,
           'input-disabled': disabled,
           'input-optional': optional,
+          'input-dense': dense,
           'input-withIcon': icon
         },
         className
@@ -55,6 +58,7 @@ export const Input = ({
         label={label}
         hint={hint}
         error={error}
+        hideLabel={hideLabel}
       />
       {customIcon && <div className={'input_icon'}>{customIcon}</div>}
       <input
@@ -99,6 +103,8 @@ Input.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
+  dense: PropTypes.bool,
   hint: PropTypes.string,
+  hideLabel: PropTypes.bool,
   className: PropTypes.node
 }

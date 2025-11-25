@@ -285,8 +285,23 @@ input[type='radio']:checked {
 
 .input-dense {
 
-  .input_control:not(textarea) {
-    height: 2rem;
+  .input_label,
+  .input_control,
+  .checkbox,
+  .radio {
+    font-size: variables.$caption-size;
+  }
+
+  .input_label {
+    margin-bottom: .125rem;
+  }
+
+  .input_control {
+    padding: .25rem .375rem;
+    
+    &:not(textarea) {
+      height: 2rem;
+    }
   }
 
   &.select {
@@ -298,6 +313,48 @@ input[type='radio']:checked {
  
     .input_control {
       padding-right: 1.5rem;
+    }
+  }
+
+  .checkboxes,
+  .radios {
+    padding-right: 0;
+    padding-left: 0;
+
+    &:not(&-landscape) {
+
+      .checkbox + .checkbox,
+      .radio + .radio {  
+        margin-top: 0.5rem;
+      }  
+    }
+  }
+
+}
+
+.checkbox-dense,
+.radio-dense,
+.input-dense {
+  
+  input[type="checkbox"],
+  input[type='radio'] {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: .375rem;
+  }
+
+  input[type='checkbox']:checked {
+    
+    &:after {
+      font-size: 0.875rem;
+    }
+  }
+  
+  input[type='radio']:checked {
+    
+    &:after {
+      height: 0.625rem;
+      width: 0.625rem;
     }
   }
 }

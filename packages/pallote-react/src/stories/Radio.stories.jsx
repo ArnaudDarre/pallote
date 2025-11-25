@@ -56,3 +56,10 @@ export const Disabled = () => (
 export const Optional = () => (
   <Radio label="Optional" id="optional" name="optional" value="optional" optional></Radio>
 )
+
+export const Dense = () => (
+  <Grid gap={4} direction="column">
+    <Grid><Radio label="Dense" id="dense" name="dense" value="dense" dense></Radio></Grid>
+    <Grid><Radio label="Dense Checked" id="denseChecked" name="dense" value="denseChecked" checked dense></Radio></Grid>
+  </Grid>
+)

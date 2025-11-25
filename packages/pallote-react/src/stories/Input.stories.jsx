@@ -69,3 +69,11 @@ export const Optional = () => (
 export const Hint = () => (
   <Input id="hint" label="Hint" hint="This is a hint to give more details" />
 )
+
+export const Dense = () => (
+  <Input id="dense" label="Dense" dense />
+)
+
+export const HideLabel = () => (
+  <Input id="hideLabel" label="Hidden Label" hideLabel placeholder="Label is hidden but accessible to screen readers" />
+)

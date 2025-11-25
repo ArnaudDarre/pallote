@@ -12,7 +12,9 @@ export const RadioButtons = ({
   error,
   disabled,
   optional,
+  dense,
   hint,
+  hideLabel,
   children,
   className
 }) => {
@@ -24,7 +26,8 @@ export const RadioButtons = ({
         {
           'js-error': error,
           'input-disabled': disabled,
-          'input-optional': optional
+          'input-optional': optional,
+          'input-dense': dense
         },
         className
       ])}
@@ -42,6 +45,7 @@ export const RadioButtons = ({
         label={label}
         hint={hint}
         error={error}
+        hideLabel={hideLabel}
       />
       <div
         className={classnames([
@@ -73,7 +77,9 @@ RadioButtons.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
+  dense: PropTypes.bool,
   hint: PropTypes.string,
+  hideLabel: PropTypes.bool,
   children: PropTypes.node.isRequired,
   className: PropTypes.node
 }

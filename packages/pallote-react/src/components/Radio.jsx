@@ -10,6 +10,7 @@ export const Radio = ({
   checked,
   disabled,
   optional,
+  dense,
   className,
   ...props
 }) => {
@@ -17,7 +18,10 @@ export const Radio = ({
     <div
       className={classnames([
         'radio',
-        { 'radio-disabled': disabled },
+        { 
+          'radio-disabled': disabled,
+          'radio-dense': dense
+        },
         className
       ])}
     >
@@ -51,5 +55,6 @@ Radio.propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
+  dense: PropTypes.bool,
   className: PropTypes.node
 }

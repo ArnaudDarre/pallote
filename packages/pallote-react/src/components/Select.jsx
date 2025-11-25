@@ -14,6 +14,7 @@ export const Select = ({
   optional,
   dense,
   hint,
+  hideLabel,
   children,
   className,
   ...props
@@ -47,6 +48,7 @@ export const Select = ({
         label={label}
         hint={hint}
         error={error}
+        hideLabel={hideLabel}
       />
       <select
         ref={inputRef}
@@ -82,6 +84,7 @@ Select.propTypes = {
   optional: PropTypes.bool,
   dense: PropTypes.bool,
   hint: PropTypes.string,
+  hideLabel: PropTypes.bool,
   children: PropTypes.any.isRequired,
   className: PropTypes.node
 }

@@ -13,7 +13,9 @@ export const Textarea = ({
   error,
   disabled,
   optional,
+  dense,
   hint,
+  hideLabel,
   className,
   ...props
 }) => {
@@ -33,7 +35,8 @@ export const Textarea = ({
         {
           'js-error': error,
           'input-disabled': disabled,
-          'input-optional': optional
+          'input-optional': optional,
+          'input-dense': dense
         },
         className
       ])}
@@ -43,6 +46,7 @@ export const Textarea = ({
         label={label}
         hint={hint}
         error={error}
+        hideLabel={hideLabel}
       />
       <textarea
         ref={inputRef}
@@ -77,6 +81,8 @@ Textarea.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
+  dense: PropTypes.bool,
   hint: PropTypes.string,
+  hideLabel: PropTypes.bool,
   className: PropTypes.node
 }

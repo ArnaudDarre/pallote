@@ -50,3 +50,11 @@ export const Optional = () => (
 export const Hint = () => (
   <Textarea id="hint" label="Hint" hint="This is a hint to give more details" />
 )
+
+export const Dense = () => (
+  <Textarea id="dense" label="Dense" dense />
+)
+
+export const HideLabel = () => (
+  <Textarea id="hideLabel" label="Hidden Label" hideLabel placeholder="Label is hidden but accessible to screen readers" />
+)

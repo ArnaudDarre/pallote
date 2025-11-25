@@ -171,6 +171,19 @@ $fractions: ( "¼": 0.25, "½": 0.5, "¾": 0.75 );
 .dis-block { display: block !important; }
 .dis-inlineBlock { display: inline-block !important; }
 
+// screen reader only (visually hidden but accessible)
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
+}
+
 // flexbasis
 
 .fb {

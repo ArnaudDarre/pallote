@@ -1,19 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 export const InputLabel = ({
   isLegend = false,
   htmlFor,
   label = 'Input label',
   hint,
-  error
+  error,
+  hideLabel = false
 }) => {
 
   const LabelTag = isLegend ? 'legend' : 'label';
 
   return (
     <>
-      {label && <LabelTag className={'input_label'} {...(!isLegend && { htmlFor })}>{label}</LabelTag>}
+      {label && (
+        <LabelTag 
+          className={classnames('input_label', { 'sr-only': hideLabel })}
+          {...(!isLegend && { htmlFor })}
+        >
+          {label}
+        </LabelTag>
+      )}
       {hint && <p id={htmlFor + '-hint'} className={'input_hint'}>{hint}</p>}
       {error && <p id={htmlFor + '-error'} className={'input_error'}>{error}</p>}
     </>
@@ -29,5 +38,6 @@ InputLabel.propTypes = {
   },
   label: PropTypes.string.isRequired,
   hint: PropTypes.string,
-  error: PropTypes.string
+  error: PropTypes.string,
+  hideLabel: PropTypes.bool
 }

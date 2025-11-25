@@ -82,3 +82,17 @@ export const Hint = () => (
     <Checkbox id="hint_2" value="2" label="Option 2" />
   </Checkboxes>
 )
+
+export const Dense = () => (
+  <Checkboxes id="dense" label="Dense" dense>
+    <Checkbox id="dense_1" value="1" label="Option 1" />
+    <Checkbox id="dense_2" value="2" label="Option 2" />
+  </Checkboxes>
+)
+
+export const HideLabel = () => (
+  <Checkboxes id="hideLabel" label="Hidden Label" hideLabel>
+    <Checkbox id="hideLabel_1" value="1" label="Option 1" />
+    <Checkbox id="hideLabel_2" value="2" label="Option 2" />
+  </Checkboxes>
+)

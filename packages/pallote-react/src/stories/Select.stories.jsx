@@ -70,3 +70,18 @@ export const Hint = () => (
     <option value="2">Option 2</option>
   </Select>
 )
+
+export const Dense = () => (
+  <Select id="dense" label="Dense" dense>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </Select>
+)
+
+export const HideLabel = () => (
+  <Select id="hideLabel" label="Hidden Label" hideLabel>
+    <option value="">Select an option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </Select>
+)

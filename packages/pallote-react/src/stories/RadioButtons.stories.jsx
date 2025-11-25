@@ -82,3 +82,17 @@ export const Hint = () => (
     <Radio name="hint" id="hint_2" value="2" label="Option 2" />
   </RadioButtons>
 )
+
+export const Dense = () => (
+  <RadioButtons id="dense" label="Dense" dense>
+    <Radio name="dense" id="dense_1" value="1" label="Option 1" />
+    <Radio name="dense" id="dense_2" value="2" label="Option 2" />
+  </RadioButtons>
+)
+
+export const HideLabel = () => (
+  <RadioButtons id="hideLabel" label="Hidden Label" hideLabel>
+    <Radio name="hideLabel" id="hideLabel_1" value="1" label="Option 1" />
+    <Radio name="hideLabel" id="hideLabel_2" value="2" label="Option 2" />
+  </RadioButtons>
+)
