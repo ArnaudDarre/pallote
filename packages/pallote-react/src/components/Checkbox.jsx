@@ -56,5 +56,6 @@ Checkbox.propTypes = {
   disabled: PropTypes.bool,
   optional: PropTypes.bool,
   dense: PropTypes.bool,
+  onChange: PropTypes.func,
   className: PropTypes.node
 }
