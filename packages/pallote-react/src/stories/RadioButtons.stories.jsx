@@ -16,7 +16,6 @@ export default {
     }
   },
   argTypes: {
-    onChange: { control: false },
     onFocus:{ control: false },
     onBlur:{ control: false },
     children:{ control: false },

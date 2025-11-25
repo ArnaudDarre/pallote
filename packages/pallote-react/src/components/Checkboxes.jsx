@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { InputLabel } from './InputLabel'
 
 export const Checkboxes = ({
-  onChange,
   id,
   label = 'Label',
   direction = 'portrait',
@@ -56,18 +55,13 @@ export const Checkboxes = ({
           }
         ])}
       >
-        {React.Children.map(children, (child) =>
-          React.isValidElement(child)
-            ? React.cloneElement(child, { onChange, optional, disabled })
-            : child
-        )}
+        {children}
       </div>
     </fieldset>
   )
 }
 
 Checkboxes.propTypes = {
-  onChange: PropTypes.func,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   direction: PropTypes.oneOf([
