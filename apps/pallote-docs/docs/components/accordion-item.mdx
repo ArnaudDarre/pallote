@@ -1,0 +1,173 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { Accordion, AccordionItem, Text } from 'pallote-react'
+import { User, Folder } from '@phosphor-icons/react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# AccordionItem
+
+Individual expandable section within an Accordion. Must be used as a child of `Accordion`.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-accordionitem--docs"
+/>
+
+<div class="docs_block">
+  <Accordion>
+    <AccordionItem label="Click to expand">
+      <Text>Content inside the accordion item</Text>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Accordion>
+  <AccordionItem label="Click to expand">
+    <Text>Content inside the accordion item</Text>
+  </AccordionItem>
+</Accordion>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="accordion">
+  <div class="accordion_item">
+    <button class="accordion_control" aria-expanded="false" aria-controls="panel-1">
+      <span class="accordion_header">Click to expand</span>
+      <span class="accordion_icon accordion_icon-arrow">▼</span>
+    </button>
+    <div id="panel-1" class="accordion_content" role="region">
+      <p>Content inside the accordion item</p>
+    </div>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### Label
+
+The `label` prop sets the header text for the accordion item.
+
+<div class="docs_block">
+  <Accordion>
+    <AccordionItem label="Custom label text">
+      <Text>Content</Text>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<AccordionItem label="Custom label text">
+  <Text>Content</Text>
+</AccordionItem>
+```
+  </TabItem>
+</Tabs>
+
+### Icon
+
+Add a leading icon to the accordion item.
+
+<div class="docs_block">
+  <Accordion>
+    <AccordionItem label="Profile" icon={<User />}>
+      <Text>User profile settings</Text>
+    </AccordionItem>
+    <AccordionItem label="Files" icon={<Folder />}>
+      <Text>File management options</Text>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+import { User, Folder } from '@phosphor-icons/react'
+
+<Accordion>
+  <AccordionItem label="Profile" icon={<User />}>
+    <Text>User profile settings</Text>
+  </AccordionItem>
+  <AccordionItem label="Files" icon={<Folder />}>
+    <Text>File management options</Text>
+  </AccordionItem>
+</Accordion>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="accordion_item">
+  <button class="accordion_control">
+    <span class="accordion_icon"><!-- icon SVG --></span>
+    <span class="accordion_header">Profile</span>
+    <span class="accordion_icon accordion_icon-arrow">▼</span>
+  </button>
+  <div class="accordion_content" role="region">...</div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Disabled
+
+Prevent an accordion item from being expanded.
+
+<div class="docs_block">
+  <Accordion>
+    <AccordionItem label="Enabled">
+      <Text>This section can be expanded</Text>
+    </AccordionItem>
+    <AccordionItem label="Disabled" disabled>
+      <Text>This section cannot be expanded</Text>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Accordion>
+  <AccordionItem label="Enabled">...</AccordionItem>
+  <AccordionItem label="Disabled" disabled>...</AccordionItem>
+</Accordion>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="accordion_item accordion_item-disabled">
+  <button class="accordion_control" disabled aria-disabled="true">
+    <span class="accordion_header">Disabled</span>
+    <span class="accordion_icon accordion_icon-arrow">▼</span>
+  </button>
+  <div class="accordion_content" role="region">...</div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+## Accessibility
+
+- Header is a `button` element with `type="button"`
+- `aria-expanded` reflects current open/closed state
+- `aria-controls` links to the content panel ID
+- `aria-disabled` and `disabled` attribute when disabled
+- Content panel has `role="region"` and `aria-labelledby`
+- Icons are marked with `aria-hidden="true"`

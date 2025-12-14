@@ -1,0 +1,201 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { Accordion, AccordionItem, Text } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# Accordion
+
+Expandable sections for organizing content. Only one section is open at a time by default.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-accordion--docs"
+/>
+
+<div class="docs_block">
+  <Accordion>
+    <AccordionItem label="Section 1">
+      <Text>Content for section 1</Text>
+    </AccordionItem>
+    <AccordionItem label="Section 2">
+      <Text>Content for section 2</Text>
+    </AccordionItem>
+    <AccordionItem label="Section 3">
+      <Text>Content for section 3</Text>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Accordion>
+  <AccordionItem label="Section 1">
+    <Text>Content for section 1</Text>
+  </AccordionItem>
+  <AccordionItem label="Section 2">
+    <Text>Content for section 2</Text>
+  </AccordionItem>
+</Accordion>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="accordion">
+  <div class="accordion_item">
+    <button class="accordion_control" aria-expanded="false">
+      <span class="accordion_header">Section 1</span>
+      <span class="accordion_icon accordion_icon-arrow">▼</span>
+    </button>
+    <div class="accordion_content" role="region">
+      <p>Content for section 1</p>
+    </div>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### Allow Multiple
+
+By default, only one section can be open at a time. Use `allowMultiple` to allow multiple sections to be open simultaneously.
+
+<div class="docs_block">
+  <Accordion allowMultiple>
+    <AccordionItem label="Section 1">
+      <Text>Content for section 1</Text>
+    </AccordionItem>
+    <AccordionItem label="Section 2">
+      <Text>Content for section 2</Text>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Accordion allowMultiple>
+  <AccordionItem label="Section 1">...</AccordionItem>
+  <AccordionItem label="Section 2">...</AccordionItem>
+</Accordion>
+```
+  </TabItem>
+</Tabs>
+
+### Size
+
+<div class="docs_block" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+  <Accordion size="sm">
+    <AccordionItem label="Small">
+      <Text>Small accordion content</Text>
+    </AccordionItem>
+  </Accordion>
+  <Accordion size="md">
+    <AccordionItem label="Medium (default)">
+      <Text>Medium accordion content</Text>
+    </AccordionItem>
+  </Accordion>
+  <Accordion size="lg">
+    <AccordionItem label="Large">
+      <Text>Large accordion content</Text>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Accordion size="sm">...</Accordion>
+<Accordion size="md">...</Accordion>
+<Accordion size="lg">...</Accordion>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="accordion accordion-sm">...</div>
+<div class="accordion">...</div>
+<div class="accordion accordion-lg">...</div>
+```
+  </TabItem>
+</Tabs>
+
+### Transparent
+
+<div class="docs_block">
+  <Accordion transparent>
+    <AccordionItem label="Section 1">
+      <Text>Content for section 1</Text>
+    </AccordionItem>
+    <AccordionItem label="Section 2">
+      <Text>Content for section 2</Text>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Accordion transparent>...</Accordion>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="accordion accordion-transparent">...</div>
+```
+  </TabItem>
+</Tabs>
+
+### Disabled Items
+
+<div class="docs_block">
+  <Accordion>
+    <AccordionItem label="Enabled">
+      <Text>This section works normally</Text>
+    </AccordionItem>
+    <AccordionItem label="Disabled" disabled>
+      <Text>This section is disabled</Text>
+    </AccordionItem>
+  </Accordion>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Accordion>
+  <AccordionItem label="Enabled">...</AccordionItem>
+  <AccordionItem label="Disabled" disabled>...</AccordionItem>
+</Accordion>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="accordion">
+  <div class="accordion_item">...</div>
+  <div class="accordion_item accordion_item-disabled">...</div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+## Accessibility
+
+- Uses `button` element for accordion headers
+- `aria-expanded` indicates open/closed state
+- `aria-controls` links header to content panel
+- Content panel has `role="region"` and `aria-labelledby`
+- Keyboard accessible: Enter/Space to toggle
+- `hidden` attribute on collapsed panels

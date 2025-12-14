@@ -6,6 +6,7 @@
 // size
 // transparent
 // active
+// disabled
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
@@ -28,10 +29,14 @@
   }
 
   &_control {
-    display: flex;
-    align-items: center;
     width: 100%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:focus { outline: none; }
+    &:focus-within { outline: revert; }
 
     &:after {
       transition: transform variables.$transition-md;
@@ -42,6 +47,15 @@
       transform-origin: center 60%;
       pointer-events: none;
     }
+  }
+
+  &_header {
+    flex: 1;
+  }
+
+  &_icon {
+    width: 1em;
+    height: 1em;
   }
 
   &_content {
@@ -128,5 +142,20 @@
 
   .accordion_control:after {
     transform: rotate(180deg);
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// disabled
+// —————————————————————————————————————————————————————————————————
+
+.accordion_item-disabled {
+  opacity: 0.5;
+  
+  .accordion {
+    
+    &_control {
+      cursor: not-allowed;
+    }
   }
 }
