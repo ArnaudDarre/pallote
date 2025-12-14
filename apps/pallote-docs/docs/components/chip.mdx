@@ -1,0 +1,173 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { Chip } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# Chip
+
+Compact element representing an input, attribute, or action. Chips are often used for tags, filters, or selections.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-chip--docs"
+/>
+
+<div class="docs_block">
+  <Chip>Chip</Chip>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Chip>Chip</Chip>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="chip">
+  <span class="chip_content">Chip</span>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### Color
+
+<div class="docs_block">
+  <Chip>Paper</Chip>
+  <Chip color="primary">Primary</Chip>
+  <Chip color="secondary">Secondary</Chip>
+  <Chip color="success">Success</Chip>
+  <Chip color="info">Info</Chip>
+  <Chip color="warning">Warning</Chip>
+  <Chip color="error">Error</Chip>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Chip>Paper</Chip>
+<Chip color="primary">Primary</Chip>
+<Chip color="secondary">Secondary</Chip>
+<Chip color="success">Success</Chip>
+<Chip color="info">Info</Chip>
+<Chip color="warning">Warning</Chip>
+<Chip color="error">Error</Chip>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="chip fill-paper"><span class="chip_content">Paper</span></div>
+<div class="chip fill-primary"><span class="chip_content">Primary</span></div>
+<div class="chip fill-secondary"><span class="chip_content">Secondary</span></div>
+<div class="chip fill-success"><span class="chip_content">Success</span></div>
+<div class="chip fill-info"><span class="chip_content">Info</span></div>
+<div class="chip fill-warning"><span class="chip_content">Warning</span></div>
+<div class="chip fill-error"><span class="chip_content">Error</span></div>
+```
+  </TabItem>
+</Tabs>
+
+### Dense
+
+<div class="docs_block">
+  <Chip>Default</Chip>
+  <Chip dense>Dense</Chip>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Chip>Default</Chip>
+<Chip dense>Dense</Chip>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="chip"><span class="chip_content">Default</span></div>
+<div class="chip chip-dense"><span class="chip_content">Dense</span></div>
+```
+  </TabItem>
+</Tabs>
+
+### Avatar
+
+<div class="docs_block">
+  <Chip avatar="https://i.pravatar.cc/40?img=1">John Doe</Chip>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Chip avatar="https://i.pravatar.cc/40?img=1">John Doe</Chip>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="chip">
+  <img class="chip_avatar" src="https://i.pravatar.cc/40?img=1" alt="" />
+  <span class="chip_content">John Doe</span>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Dismissible
+
+Use the `onClose` prop to add a close button.
+
+<div class="docs_block">
+  <Chip onClose={() => {}}>Dismissible</Chip>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Chip onClose={() => handleClose()}>Dismissible</Chip>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="chip">
+  <span class="chip_content">Dismissible</span>
+  <button class="chip_close" aria-label="Remove">×</button>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Disabled
+
+<div class="docs_block">
+  <Chip disabled>Disabled</Chip>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Chip disabled>Disabled</Chip>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="chip chip-disabled"><span class="chip_content">Disabled</span></div>
+```
+  </TabItem>
+</Tabs>
