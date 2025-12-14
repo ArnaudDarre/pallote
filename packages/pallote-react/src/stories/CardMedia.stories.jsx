@@ -32,13 +32,11 @@ Playground.args = {
 }
 
 export const Width = () => (
-  <Grid gap={4}>
-    <Grid colsm={12}>
-      <Card direction="landscape">
-        <CardMedia width={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
-        <CardHeader title="Override width" />
-      </Card>
-    </Grid>
+  <Grid colsm={12}>
+    <Card direction="landscape">
+      <CardMedia width={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
+      <CardHeader title="Override width" />
+    </Card>
   </Grid>
 )
 
@@ -51,13 +49,11 @@ Width.parameters = {
 }
 
 export const Height = () => (
-  <Grid gap={4}>
-    <Grid colmd={4} colsm={12}>
-      <Card>
-        <CardMedia height={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
-        <CardHeader title="Override height" />
-      </Card>
-    </Grid>
+  <Grid colmd={4} colsm={12}>
+    <Card>
+      <CardMedia height={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
+      <CardHeader title="Override height" />
+    </Card>
   </Grid>
 )
 
@@ -70,13 +66,11 @@ Height.parameters = {
 }
 
 export const FullWidth = () => (
-  <Grid gap={4}>
-    <Grid colmd={4} colsm={12}>
-      <Card>
-        <CardMedia fullWidth height={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
-        <CardHeader title="Full width" />
-      </Card>
-    </Grid>
+  <Grid colmd={4} colsm={12}>
+    <Card>
+      <CardMedia fullWidth height={200} image="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chanterelle_Cantharellus_cibarius.jpg" />
+      <CardHeader title="Full width" />
+    </Card>
   </Grid>
 )
 

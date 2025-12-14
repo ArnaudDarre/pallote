@@ -31,11 +31,9 @@ Playground.args = {
 }
 
 export const Default = () => (
-  <Grid gap={8}>
-    <Text>
-      Hover over this <Tooltip content="Additional information here">underlined text</Tooltip> to see the tooltip.
-    </Text>
-  </Grid>
+  <Text>
+    Hover over this <Tooltip content="Additional information here">underlined text</Tooltip> to see the tooltip.
+  </Text>
 )
 
 Default.parameters = {
@@ -47,12 +45,10 @@ Default.parameters = {
 }
 
 export const InfoIcon = () => (
-  <Grid gap={8}>
-    <Grid direction="row" gap={2} align="center">
-      <Text>Label with info</Text>
-      <Tooltip infoIcon content="This explains what the label means" />
-    </Grid>
-  </Grid>
+  <>
+    <Text>Label with info</Text>
+    <Tooltip infoIcon content="This explains what the label means" />
+  </>
 )
 
 InfoIcon.parameters = {
@@ -83,11 +79,9 @@ Dense.parameters = {
 }
 
 export const OnButton = () => (
-  <Grid gap={4}>
-    <Tooltip content="Click to submit the form">
-      <Button>Submit</Button>
-    </Tooltip>
-  </Grid>
+  <Tooltip content="Click to submit the form">
+    <Button>Submit</Button>
+  </Tooltip>
 )
 
 OnButton.parameters = {

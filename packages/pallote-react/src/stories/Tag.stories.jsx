@@ -30,15 +30,15 @@ Playground.args = {
 export const Color = () => (
   <Grid gap={4} direction="column">
     <Grid gap={2}>
-      <Grid><Tag>Primary</Tag></Grid>
-      <Grid><Tag color="secondary">Secondary</Tag></Grid>
-      <Grid><Tag color="grey">Grey</Tag></Grid>
+      <Tag>Primary</Tag>
+      <Tag color="secondary">Secondary</Tag>
+      <Tag color="grey">Grey</Tag>
     </Grid>
     <Grid gap={2}>
-      <Grid><Tag color="success">Success</Tag></Grid>
-      <Grid><Tag color="info">Info</Tag></Grid>
-      <Grid><Tag color="warning">Warning</Tag></Grid>
-      <Grid><Tag color="error">Error</Tag></Grid>
+      <Tag color="success">Success</Tag>
+      <Tag color="info">Info</Tag>
+      <Tag color="warning">Warning</Tag>
+      <Tag color="error">Error</Tag>
     </Grid>
   </Grid>
 )

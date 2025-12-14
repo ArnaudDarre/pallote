@@ -48,8 +48,8 @@ Checked.parameters = {
 
 export const Disabled = () => (
   <Grid gap={4} direction="column">
-    <Grid><Radio label="Disabled" id="disabled" name="disabled" value="disabled" disabled></Radio></Grid>
-    <Grid><Radio label="Disabled" id="disabled" name="disabled" value="disabled" checked disabled></Radio></Grid>
+    <Radio label="Disabled" id="disabled" name="disabled" value="disabled" disabled></Radio>
+    <Radio label="Disabled" id="disabled" name="disabled" value="disabled" checked disabled></Radio>
   </Grid>
 )
 
@@ -59,7 +59,7 @@ export const Optional = () => (
 
 export const Dense = () => (
   <Grid gap={4} direction="column">
-    <Grid><Radio label="Dense" id="dense" name="dense" value="dense" dense></Radio></Grid>
-    <Grid><Radio label="Dense Checked" id="denseChecked" name="dense" value="denseChecked" checked dense></Radio></Grid>
+    <Radio label="Dense" id="dense" name="dense" value="dense" dense></Radio>
+    <Radio label="Dense Checked" id="denseChecked" name="dense" value="denseChecked" checked dense></Radio>
   </Grid>
 )

@@ -3,6 +3,7 @@ import { Folder, Gear, User } from '@phosphor-icons/react'
 
 import { Accordion } from '../components/Accordion'
 import { AccordionItem } from '../components/AccordionItem'
+import { Grid } from '../utilities/Grid'
 import { Text } from '../utilities/Text'
 
 export default {
@@ -73,8 +74,11 @@ AllowMultiple.parameters = {
 }
 
 export const Size = () => (
-  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+  <Grid gap={4}>
     <Accordion size="sm">
+      <AccordionItem label="Small accordion">
+        {content}
+      </AccordionItem>
       <AccordionItem label="Small accordion">
         {content}
       </AccordionItem>
@@ -83,13 +87,19 @@ export const Size = () => (
       <AccordionItem label="Medium accordion">
         {content}
       </AccordionItem>
+      <AccordionItem label="Medium accordion">
+        {content}
+      </AccordionItem>
     </Accordion>
     <Accordion size="lg">
       <AccordionItem label="Large accordion">
         {content}
       </AccordionItem>
+      <AccordionItem label="Large accordion">
+        {content}
+      </AccordionItem>
     </Accordion>
-  </div>
+  </Grid>
 )
 
 Size.parameters = {

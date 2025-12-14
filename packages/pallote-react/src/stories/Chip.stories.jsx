@@ -31,13 +31,13 @@ Playground.args = {
 
 export const Color = () => (
   <Grid gap={4}>
-    <Grid><Chip>Paper</Chip></Grid>
-    <Grid><Chip color="primary">Primary</Chip></Grid>
-    <Grid><Chip color="secondary">Secondary</Chip></Grid>
-    <Grid><Chip color="success">Success</Chip></Grid>
-    <Grid><Chip color="info">Info</Chip></Grid>
-    <Grid><Chip color="warning">Warning</Chip></Grid>
-    <Grid><Chip color="error">Error</Chip></Grid>
+    <Chip>Paper</Chip>
+    <Chip color="primary">Primary</Chip>
+    <Chip color="secondary">Secondary</Chip>
+    <Chip color="success">Success</Chip>
+    <Chip color="info">Info</Chip>
+    <Chip color="warning">Warning</Chip>
+    <Chip color="error">Error</Chip>
   </Grid>
 )
 
@@ -51,8 +51,8 @@ Color.parameters = {
 
 export const Dense = () => (
   <Grid gap={4}>
-    <Grid><Chip>Default</Chip></Grid>
-    <Grid><Chip dense>Dense</Chip></Grid>
+    <Chip>Default</Chip>
+    <Chip dense>Dense</Chip>
   </Grid>
 )
 
@@ -66,8 +66,8 @@ Dense.parameters = {
 
 export const WithAvatar = () => (
   <Grid gap={4}>
-    <Grid><Chip avatar="https://i.pravatar.cc/40?img=1">John Doe</Chip></Grid>
-    <Grid><Chip avatar="https://i.pravatar.cc/40?img=2" dense>Jane Doe</Chip></Grid>
+    <Chip avatar="https://i.pravatar.cc/40?img=1">John Doe</Chip>
+    <Chip avatar="https://i.pravatar.cc/40?img=2" dense>Jane Doe</Chip>
   </Grid>
 )
 
@@ -81,8 +81,8 @@ WithAvatar.parameters = {
 
 export const Dismissible = () => (
   <Grid gap={4}>
-    <Grid><Chip onClose={() => alert('Dismissed!')}>Dismissible</Chip></Grid>
-    <Grid><Chip onClose={() => alert('Dismissed!')} dense>Dismissible dense</Chip></Grid>
+    <Chip onClose={() => alert('Dismissed!')}>Dismissible</Chip>
+    <Chip onClose={() => alert('Dismissed!')} dense>Dismissible dense</Chip>
   </Grid>
 )
 
@@ -96,8 +96,8 @@ Dismissible.parameters = {
 
 export const Disabled = () => (
   <Grid gap={4}>
-    <Grid><Chip disabled>Disabled</Chip></Grid>
-    <Grid><Chip disabled onClose={() => {}}>Disabled dismissible</Chip></Grid>
+    <Chip disabled>Disabled</Chip>
+    <Chip disabled onClose={() => {}}>Disabled dismissible</Chip>
   </Grid>
 )
 

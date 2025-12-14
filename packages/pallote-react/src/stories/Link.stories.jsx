@@ -37,9 +37,9 @@ export const Icon = () => (
 export const Color = () => (
   <Grid gap={2} direction="column">
     <Grid gap={2}>
-      <Grid><Link href="/" color="default">Default</Link></Grid>
-      <Grid><Link href="/" color="alt">Alt</Link></Grid>
-      <Grid><Link href="/" color="disabled">Disabled</Link></Grid>
+      <Link href="/" color="default">Default</Link>
+      <Link href="/" color="alt">Alt</Link>
+      <Link href="/" color="disabled">Disabled</Link>
     </Grid>
     <Grid gap={2}>
       <Grid className="fill-contrast"><Link href="/" color="contrast">Contrast</Link></Grid>
@@ -47,11 +47,11 @@ export const Color = () => (
       <Grid className="fill-contrast"><Link href="/" color="contrastDisabled">Contrast disabled</Link></Grid>
     </Grid>
     <Grid gap={2}>
-      <Grid><Link href="/" color="primary">Primary</Link></Grid>
-      <Grid><Link href="/" color="secondary">Secondary</Link></Grid>
+      <Link href="/" color="primary">Primary</Link>
+      <Link href="/" color="secondary">Secondary</Link>
     </Grid>
     <Grid gap={2}>
-      <Grid><Link href="/" color="inherit">Inherit</Link></Grid>
+      <Link href="/" color="inherit">Inherit</Link>
     </Grid>
   </Grid>
 )
