@@ -49,9 +49,7 @@ export const Chip = ({
             aria-hidden="true"
           />
         ) : null}
-        <span className={classnames('chip_content')}>
-          {children}
-        </span>
+        {children}
         {onClose ? (
           <button
             type="button"

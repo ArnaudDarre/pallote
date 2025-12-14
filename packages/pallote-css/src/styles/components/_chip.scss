@@ -26,10 +26,6 @@
   transition: variables.$transition-md;
 }
 
-.chip_content {
-  flex: 1;
-}
-
 // —————————————————————————————————————————————————————————————————
 // dense
 // —————————————————————————————————————————————————————————————————
@@ -75,11 +71,13 @@
   color: inherit;
   opacity: 0.6;
   border-radius: 50%;
-  transition: variables.$transition-md;
 
   &:hover {
     opacity: 1;
   }
+
+  &:focus { outline: none; }
+  &:focus-within { outline: revert; }
 
   .chip-dense & {
     margin-right: -0.25rem;
