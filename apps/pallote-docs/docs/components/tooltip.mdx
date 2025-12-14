@@ -1,0 +1,107 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { Tooltip, Text } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# Tooltip
+
+Displays additional information when hovering or focusing on an element.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-tooltip--docs"
+/>
+
+<div class="docs_block">
+  <Text>Hover over <Tooltip content="Additional information">this text</Tooltip> to see the tooltip.</Text>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Tooltip content="Additional information">this text</Tooltip>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<span class="tooltip">
+  this text
+  <span class="tooltip_content" role="tooltip">Additional information</span>
+</span>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### Info Icon
+
+Use the `infoIcon` prop to display an info icon instead of wrapping text. Useful for contextual help.
+
+<div class="docs_block">
+  <Text style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+    Label <Tooltip infoIcon content="This explains what the label means" />
+  </Text>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Text>Label <Tooltip infoIcon content="This explains what the label means" /></Text>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<span class="tooltip tooltip-info" tabindex="0">
+  <svg class="tooltip_icon"><!-- info icon --></svg>
+  <span class="tooltip_content" role="tooltip">This explains what the label means</span>
+</span>
+```
+  </TabItem>
+</Tabs>
+
+### Dense
+
+Compact tooltip for tighter layouts.
+
+<div class="docs_block">
+  <Tooltip content="Standard tooltip">Default</Tooltip>
+  <Tooltip content="Compact tooltip" dense>Dense</Tooltip>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Tooltip content="Standard tooltip">Default</Tooltip>
+<Tooltip content="Compact tooltip" dense>Dense</Tooltip>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<span class="tooltip">
+  Default
+  <span class="tooltip_content">Standard tooltip</span>
+</span>
+<span class="tooltip">
+  Dense
+  <span class="tooltip_content tooltip_content-dense">Compact tooltip</span>
+</span>
+```
+  </TabItem>
+</Tabs>
+
+## Accessibility
+
+- Tooltip content has `role="tooltip"` 
+- Trigger element has `aria-describedby` linking to the tooltip
+- Info icon variant is keyboard focusable (`tabindex="0"`)
+- Tooltip appears on both hover and focus

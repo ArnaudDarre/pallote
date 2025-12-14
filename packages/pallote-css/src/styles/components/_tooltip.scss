@@ -1,0 +1,106 @@
+@use '../common/variables';
+@use '../utilities/text';
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// info icon
+// bold
+// dense
+// positioning
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: help;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.15em;
+
+  &:has(.button) {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    .tooltip_content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}
+
+.tooltip_content {
+  @extend %caption;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.5rem);
+  transform: translateX(-50%) translateY(0.25rem);
+  background-color: variables.$text;
+  color: variables.$text-contrast;
+  padding: 0.5rem 0.75rem;
+  border-radius: variables.$border-radius-sm;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity variables.$transition-md, transform variables.$transition-md, visibility variables.$transition-md;
+  z-index: 1000;
+  pointer-events: none;
+
+  // Arrow
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0.375rem solid transparent;
+    border-top-color: variables.$text;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// info icon
+// —————————————————————————————————————————————————————————————————
+
+.tooltip-info {
+  border-bottom: none;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: revert;
+    outline-offset: 2px;
+  }
+}
+
+.tooltip_icon {
+  opacity: 0.6;
+  transition: opacity variables.$transition-md;
+  width: 1em;
+  height: 1em;
+
+  .tooltip:hover &,
+  .tooltip:focus & {
+    opacity: 1;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// dense
+// —————————————————————————————————————————————————————————————————
+
+.tooltip_content-dense {
+  @extend %overline;
+  padding: 0.25rem 0.5rem;
+}

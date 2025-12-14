@@ -47,6 +47,7 @@ export { TabsControl } from './components/TabsControl'
 export { TabsPanel } from './components/TabsPanel'
 export { Tag } from './components/Tag'
 export { Textarea } from './components/Textarea'
+export { Tooltip } from './components/Tooltip'
 
 // types
 export type { ColorProps } from './utilities/Color'
@@ -95,3 +96,4 @@ export type { TabsControlProps } from './components/TabsControl'
 export type { TabsPanelProps } from './components/TabsPanel'
 export type { TagProps } from './components/Tag'
 export type { TextareaProps } from './components/Textarea'
+export type { TooltipProps } from './components/Tooltip'
