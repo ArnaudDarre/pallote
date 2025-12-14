@@ -39,8 +39,13 @@ export const Link = ({
       {...props}
     >
       {children}
-      {icon && !isExternal && <span className={'link_icon'}>{icon}</span>}
-      {isExternal && <span className={'link_icon'}><ArrowSquareOutIcon /></span>}
+      {icon && !isExternal && <span className={'link_icon'} aria-hidden="true">{icon}</span>}
+      {isExternal && (
+        <>
+          <span className="sr-only"> (opens in new tab)</span>
+          <span className={'link_icon'} aria-hidden="true"><ArrowSquareOutIcon /></span>
+        </>
+      )}
     </Component>
   )
 }

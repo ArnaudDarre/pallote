@@ -76,7 +76,7 @@ export const Input = ({
         hint={hint}
         hideLabel={hideLabel}
       />
-      {customIcon && <div className={'input_icon'}>{customIcon}</div>}
+      {customIcon && <div className={'input_icon'} aria-hidden="true">{customIcon}</div>}
       <input
         ref={inputRef}
         type={type}
@@ -86,6 +86,7 @@ export const Input = ({
         placeholder={placeholder}
         disabled={disabled}
         required={!(disabled || optional)}
+        aria-invalid={error ? true : undefined}
         onChange={onChange}
         {...(hint || error
           ? {

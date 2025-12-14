@@ -53,6 +53,8 @@ export const Alert = ({
 
   const alert = (
     <div
+      role="alert"
+      aria-live={variant === 'notice' ? undefined : 'polite'}
       className={classnames([
         'alert',
         {
@@ -73,7 +75,14 @@ export const Alert = ({
         {subtitle ? <Text variant={dense ? 'overline' : 'caption'} className={classnames('alert_subtitle')}>{subtitle}</Text> : null}
       </div>
       {onClose ? (
-        <XIcon className={classnames('alert_close')} onClick={onClose} size={dense ? 14 : 16} />
+        <button
+          type="button"
+          className={classnames('alert_close')}
+          onClick={onClose}
+          aria-label="Dismiss alert"
+        >
+          <XIcon size={dense ? 14 : 16} aria-hidden="true" />
+        </button>
       ) : null}
     </div>
   )

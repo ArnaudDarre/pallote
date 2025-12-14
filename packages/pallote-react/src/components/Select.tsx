@@ -69,6 +69,7 @@ export const Select = ({
         id={id}
         disabled={disabled}
         required={!(disabled || optional)}
+        aria-invalid={error ? true : undefined}
         onChange={onChange}
         {...(hint || error
           ? {

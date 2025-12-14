@@ -66,6 +66,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
       ])}
       ref={ref}
       disabled={Component === 'button' ? disabled : undefined}
+      aria-disabled={Component !== 'button' && disabled ? true : undefined}
       {...(Component === 'button' ? { type } : {})}
       {...props}
     >

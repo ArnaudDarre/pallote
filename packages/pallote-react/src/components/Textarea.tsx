@@ -68,6 +68,7 @@ export const Textarea = ({
         placeholder={placeholder}
         disabled={disabled}
         required={!(disabled || optional)}
+        aria-invalid={error ? true : undefined}
         rows={4}
         onChange={onChange}
         {...(hint || error

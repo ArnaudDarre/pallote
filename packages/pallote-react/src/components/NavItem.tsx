@@ -36,6 +36,8 @@ export const NavItem = ({
     Component = component || 'a'
   }
 
+  const dropdownId = dropdown ? `nav-dropdown-${label.replace(/\s+/g, '-').toLowerCase()}` : undefined
+
   return (
     <div
       className={classnames([
@@ -57,15 +59,20 @@ export const NavItem = ({
           }
         ])}
         onClick={onClick}
+        aria-expanded={dropdown ? isExpanded : undefined}
+        aria-haspopup={dropdown ? 'menu' : undefined}
+        aria-controls={dropdownId}
         {...props}
       >
-        {icon ? (<span className={classnames('nav_icon')}>{icon}</span>) : null}
+        {icon ? (<span className={classnames('nav_icon')} aria-hidden="true">{icon}</span>) : null}
         {label}
       </Component>
       {dropdown ? (
         <div
           ref={dropdownRef}
+          id={dropdownId}
           className='nav_target'
+          role="menu"
         >
           {dropdown}
         </div>
