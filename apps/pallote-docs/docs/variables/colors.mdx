@@ -44,21 +44,62 @@ These are the default color style, which you can override them to match your own
 
 | Name | Value | |
 | - | - | - |
-| `$text` | `$contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
-| `$text-contrast` | `$main` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/000A1E?style=round'/> |
+| `$text` | `$contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/000A1E?style=round'/> |
+| `$text-alt` | `rgba($text, 0.5)` | |
+| `$text-disabled` | `rgba($text, 0.25)` | |
+| `$text-contrast` | `$main` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
+| `$text-contrast-alt` | `rgba($text-contrast, 0.6)` | |
+| `$text-contrast-disabled` | `rgba($text-contrast, 0.3)` | |
 
 ### Brand
 
 | Name | Value | |
 | - | - | - |
-| `$primary`<br></br>`$primary-contrast` | `#3C6BF4`<br></br>`$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/3C6BF4?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
-| `$secondary`<br></br>`$secondary-contrast` | `#9E6D04`<br></br>`$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/9E6D04?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
+| `$primary` | `#3C6BF4` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/3C6BF4?style=round'/> |
+| `$primary-light` | `mix($main, $primary, 70%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/C4D3FB?style=round'/> |
+| `$primary-dark` | `mix($contrast, $primary, 50%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/1E3B89?style=round'/> |
+| `$primary-contrast` | `$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
+| `$secondary` | `#9E6D04` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/9E6D04?style=round'/> |
+| `$secondary-light` | `mix($main, $secondary, 70%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/E5D9B9?style=round'/> |
+| `$secondary-dark` | `mix($contrast, $secondary, 50%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/4F3B11?style=round'/> |
+| `$secondary-contrast` | `$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
 
 ### Status
 
 | Name | Value | |
 | - | - | - |
-| `$success`<br></br>`$success-contrast` | `#27AE60`<br></br>`$text` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/27AE60?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
-| `$info`<br></br>`$info-contrast` | `#17A0CC`<br></br>`$text` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/17A0CC?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
-| `$warning`<br></br>`$warning-contrast` | `#FFDC46`<br></br>`$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFDC46?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/000A1E?style=round'/> |
-| `$error`<br></br>`$error-contrast` | `#EB5757`<br></br>`$text` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/EB5757?style=round'/><br></br><img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
+| `$success` | `#27AE60` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/27AE60?style=round'/> |
+| `$success-light` | `mix($main, $success, 80%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/D4EFDF?style=round'/> |
+| `$success-dark` | `mix($contrast, $success, 60%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/104832?style=round'/> |
+| `$success-contrast` | `$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
+| `$info` | `#17A0CC` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/17A0CC?style=round'/> |
+| `$info-light` | `mix($main, $info, 80%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/D0ECF4?style=round'/> |
+| `$info-dark` | `mix($contrast, $info, 60%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/094660?style=round'/> |
+| `$info-contrast` | `$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
+| `$warning` | `#FFDC46` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFDC46?style=round'/> |
+| `$warning-light` | `mix($main, $warning, 80%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFF8DA?style=round'/> |
+| `$warning-dark` | `mix($contrast, $warning, 60%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/665B25?style=round'/> |
+| `$warning-contrast` | `$text` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/000A1E?style=round'/> |
+| `$error` | `#EB5757` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/EB5757?style=round'/> |
+| `$error-light` | `mix($main, $error, 80%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FBDDDD?style=round'/> |
+| `$error-dark` | `mix($contrast, $error, 60%)` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/5E2830?style=round'/> |
+| `$error-contrast` | `$text-contrast` | <img valign='middle' height="20" alt='blue' src='https://readme-swatches.vercel.app/FFFFFF?style=round'/> |
+
+### Border
+
+| Name | Value | |
+| - | - | - |
+| `$border-color` | `rgba($text, 0.2)` | |
+| `$border` | `1px solid $border-color` | |
+| `$border-color-contrast` | `rgba($text-contrast, 0.3)` | |
+| `$border-contrast` | `1px solid $border-color-contrast` | |
+
+### Interaction
+
+| Name | Value | |
+| - | - | - |
+| `$hover` | `rgba($text, 0.08)` | |
+| `$hover-contrast` | `rgba($text-contrast, 0.08)` | |
+| `$overlay` | `rgba($text-contrast, 0.8)` | |
+| `$overlay-contrast` | `rgba($text, 0.2)` | |
+| `$input-background` | `rgba($text, 0.05)` | |

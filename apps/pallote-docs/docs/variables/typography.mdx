@@ -15,16 +15,19 @@ These are the default typographic style, which you can override them to match yo
 
 | Name | Value | |
 | - | - | - |
-| `$font` | `"Source Sans 3"` | This is the default font |
-| `$font-headings` | `"Source Sans 3"` | This is the default font for headings |
-| `$font-fallback` | `"Arial, sans-serif"` | |
+| `$font` | `"Source Sans 3"` | Default body font |
+| `$font-headings` | `"Source Sans 3"` | Default headings font |
+| `$font-fallback` | `"Arial, sans-serif"` | Fallback font stack |
+| `$font-code` | `monospace` | Font for code blocks |
 
 ### Weight
 
 | Name | Value | |
 | - | - | - |
-| `$weight-regular` | `400` | <span class="text-regular">Regular</span> |
-| `$weight-bold` | `700` | <span class="text-bold">Bold</span> |
+| `$weight-regular` | `400` | Regular |
+| `$weight-bold` | `700` | Bold |
+| `$weight-headings-regular` | `400` | Regular weight for headings |
+| `$weight-headings-bold` | `700` | Bold weight for headings |
 
 ### Styles
 
@@ -32,12 +35,12 @@ These are the default typographic style, which you can override them to match yo
 
 | Name | Value | |
 | - | - | - |
-| `$h1-size`<br></br>`$h1-weight`<br></br>`$h1-leading`<br></br>`$h1-family` | `3rem`<br></br>`$weight-bold`<br></br>`1.25` <br></br>`$font-headings`| <span class="h1">h1</span> |
-| `$h2-size`<br></br>`$h2-weight`<br></br>`$h2-leading`<br></br>`$h2-family` | `2.5rem`<br></br>`$weight-bold`<br></br>`1.25`<br></br>`$font-headings` | <span class="h2">h2</span> |
-| `$h3-size`<br></br>`$h3-weight`<br></br>`$h3-leading`<br></br>`$h3-family` | `2rem`<br></br>`$weight-bold`<br></br>`1.25` <br></br>`$font-headings`| <span class="h3">h3</span> |
-| `$h4-size`<br></br>`$h4-weight`<br></br>`$h4-leading`<br></br>`$h4-family` | `1.75rem`<br></br>`$weight-bold`<br></br>`1.25`<br></br>`$font-headings` | <span class="h4">h4</span> |
-| `$h5-size`<br></br>`$h5-weight`<br></br>`$h5-leading`<br></br>`$h5-family` | `1.5rem`<br></br>`$weight-bold`<br></br>`1.25`<br></br>`$font-headings` | <span class="h5">h5</span> |
-| `$h6-size`<br></br>`$h6-weight`<br></br>`$h6-leading`<br></br>`$h6-family` | `1.25rem`<br></br>`$weight-bold`<br></br>`1.5`<br></br>`$font` | <span class="h6">h6</span> |
+| `$h1-size`<br></br>`$h1-weight`<br></br>`$h1-leading`<br></br>`$h1-family`<br></br>`$h1-transform` | `3rem`<br></br>`$weight-bold`<br></br>`1.25`<br></br>`$font-headings`<br></br>`initial` | <span class="h1">h1</span> |
+| `$h2-size`<br></br>`$h2-weight`<br></br>`$h2-leading`<br></br>`$h2-family`<br></br>`$h2-transform` | `2.5rem`<br></br>`$weight-bold`<br></br>`1.25`<br></br>`$font-headings`<br></br>`initial` | <span class="h2">h2</span> |
+| `$h3-size`<br></br>`$h3-weight`<br></br>`$h3-leading`<br></br>`$h3-family`<br></br>`$h3-transform` | `2rem`<br></br>`$weight-bold`<br></br>`1.25`<br></br>`$font-headings`<br></br>`initial` | <span class="h3">h3</span> |
+| `$h4-size`<br></br>`$h4-weight`<br></br>`$h4-leading`<br></br>`$h4-family`<br></br>`$h4-transform` | `1.75rem`<br></br>`$weight-bold`<br></br>`1.25`<br></br>`$font-headings`<br></br>`initial` | <span class="h4">h4</span> |
+| `$h5-size`<br></br>`$h5-weight`<br></br>`$h5-leading`<br></br>`$h5-family`<br></br>`$h5-transform` | `1.5rem`<br></br>`$weight-bold`<br></br>`1.25`<br></br>`$font-headings`<br></br>`initial` | <span class="h5">h5</span> |
+| `$h6-size`<br></br>`$h6-weight`<br></br>`$h6-leading`<br></br>`$h6-family`<br></br>`$h6-transform` | `1.25rem`<br></br>`$weight-bold`<br></br>`1.5`<br></br>`$font`<br></br>`initial` | <span class="h6">h6</span> |
 
 #### Body
 
@@ -47,3 +50,15 @@ These are the default typographic style, which you can override them to match yo
 | `$body-size`<br></br>`$body-weight`<br></br>`$body-leading` | `1rem`<br></br>`$weight-regular`<br></br>`1.5` | <span class="body">Body</span> |
 | `$caption-size`<br></br>`$caption-weight`<br></br>`$caption-leading` | `0.875rem`<br></br>`$weight-regular`<br></br>`1.5` | <span class="caption">Caption</span> |
 | `$overline-size`<br></br>`$overline-weight`<br></br>`$overline-leading` | `0.75rem`<br></br>`$weight-regular`<br></br>`1.5` | <span class="overline">Overline</span> |
+
+#### Button
+
+| Name | Value | |
+| - | - | - |
+| `$button-family` | `$font` | Button font family |
+| `$button-size` | `1rem` | Default button font size |
+| `$button-xs-size` | `0.75rem` | Extra small button font size |
+| `$button-sm-size` | `0.875rem` | Small button font size |
+| `$button-lg-size` | `1.25rem` | Large button font size |
+| `$button-weight` | `$weight-bold` | Button font weight |
+| `$button-transform` | `uppercase` | Button text transform |
