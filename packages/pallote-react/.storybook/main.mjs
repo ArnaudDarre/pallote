@@ -1,4 +1,7 @@
-import { join, dirname } from "path";
+import { dirname, join, resolve } from "path";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -29,7 +32,7 @@ const config = {
         ...config.resolve,
         alias: {
           ...config.resolve?.alias,
-          "pallote-css": require("path").resolve("node_modules/pallote-css"),
+          "pallote-css": resolve("node_modules/pallote-css"),
         },
       },
       optimizeDeps: {
