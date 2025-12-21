@@ -1,0 +1,106 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { Stepper, Step, Text, Input } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# Step
+
+Individual step within a Stepper. Must be used as a child of `Stepper`.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-step--docs"
+/>
+
+<div class="docs_block">
+  <Stepper>
+    <Step label="Step Label">
+      <Text>This is the step content</Text>
+    </Step>
+  </Stepper>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Stepper showLabels>
+  <Step label="Current Step">
+    <Text>This is the step content</Text>
+  </Step>
+  <Step label="Next Step">
+    <Text>Next step content</Text>
+  </Step>
+</Stepper>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### Label
+
+The `label` prop sets the step title shown in the indicator and card header. You can show the labels under the step icon by adding the `showLabels` prop to the `Stepper` component.
+
+<div class="docs_block">
+  <Stepper showLabels>
+    <Step label="Custom Step Label">
+      <Text>The label appears in both the step indicator and the card header.</Text>
+    </Step>
+    <Step label="Another Step">
+      <Text>Next step content</Text>
+    </Step>
+  </Stepper>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Step label="Account Setup">
+  <Text>Step content</Text>
+</Step>
+```
+  </TabItem>
+</Tabs>
+
+### Skippable
+
+Use the `skippable` prop to add a Skip button.
+
+<div class="docs_block">
+  <Stepper showLabels>
+    <Step label="Required Step">
+      <Text>This step cannot be skipped.</Text>
+    </Step>
+    <Step label="Optional Step" skippable>
+      <Text>This step has a Skip button.</Text>
+    </Step>
+    <Step label="Final Step">
+      <Text>Final step content</Text>
+    </Step>
+  </Stepper>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Stepper>
+  <Step label="Required">...</Step>
+  <Step label="Optional" skippable>...</Step>
+  <Step label="Final">...</Step>
+</Stepper>
+```
+  </TabItem>
+</Tabs>
+
+## Accessibility
+
+- Step panel has `role="tabpanel"` with `aria-label`
+- Back button disabled on first step with proper `disabled` attribute
+- Next button changes to "Finish" on last step
+- All buttons have descriptive `aria-label` attributes

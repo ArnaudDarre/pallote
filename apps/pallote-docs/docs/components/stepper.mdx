@@ -1,0 +1,97 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { Stepper, Step, Text, Input } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# Stepper
+
+Multi-step wizard for guiding users through a process. Displays progress and allows navigation between steps.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-stepper--docs"
+/>
+
+<div class="docs_block">
+  <Stepper>
+    <Step label="Account">
+      <Text>Enter your account details</Text>
+      <Input label="Email" type="email" style={{ marginTop: '1rem' }} />
+    </Step>
+    <Step label="Profile">
+      <Text>Set up your profile</Text>
+      <Input label="Full name" style={{ marginTop: '1rem' }} />
+    </Step>
+    <Step label="Confirmation">
+      <Text>Review and confirm your information</Text>
+    </Step>
+  </Stepper>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+  <Stepper>
+    <Step label="Account">
+      {/* add step content */}
+    </Step>
+    <Step label="Profile">
+      {/* add step content */}
+    </Step>
+    <Step label="Confirmation">
+      {/* add step content */}
+    </Step>
+  </Stepper>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### Show Labels
+
+By default, only step numbers are shown. Use `showLabels` to display step names.
+
+<div class="docs_block">
+  <Stepper showLabels>
+    <Step label="Account">
+      <Text>Enter your account details</Text>
+    </Step>
+    <Step label="Profile">
+      <Text>Set up your profile</Text>
+    </Step>
+    <Step label="Confirmation">
+      <Text>Review and confirm</Text>
+    </Step>
+  </Stepper>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Stepper showLabels>
+  <Step label="Step 1">
+    {/* add step content */}
+  </Step>
+  <Step label="Step 2">
+    {/* add step content */}
+  </Step>
+</Stepper>
+```
+  </TabItem>
+</Tabs>
+
+## Accessibility
+
+- Step list uses semantic `<nav>` with `aria-label="Progress"`
+- Steps are in an ordered list (`<ol>`) with `role="list"`
+- Active step has `aria-current="step"`
+- Icons are decorative (`aria-hidden="true"`)
+- When labels are hidden, screen reader text is provided
+- Step content has `role="tabpanel"` with `aria-label`
+- Navigation buttons have descriptive `aria-label` attributes

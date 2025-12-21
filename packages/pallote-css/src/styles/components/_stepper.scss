@@ -1,0 +1,115 @@
+@use '../common/variables';
+@use '../utilities/text';
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// steps
+// active
+// completed
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.stepper_nav {
+  width: 100%;
+}
+
+.stepper_list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step;
+}
+
+.stepper_step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  position: relative;
+
+  // Connector line
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: calc(50% + 1.25rem);
+    right: calc(-50% + 1.25rem);
+    height: 2px;
+    background-color: variables.$border-color;
+    z-index: 0;
+  }
+
+  &-completed:not(:last-child)::after {
+    background-color: variables.$primary;
+  }
+}
+
+.stepper_icon {
+  @extend %caption;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: variables.$hover;
+  color: variables.$text-alt;
+  font-weight: variables.$weight-bold;
+  position: relative;
+  z-index: 1;
+  transition: background-color variables.$transition-md, color variables.$transition-md;
+}
+
+.stepper_label {
+  text-align: center;
+  color: variables.$text-alt;
+  transition: color variables.$transition-md;
+}
+
+.stepper_content {
+  width: 100%;
+}
+
+.stepper_panel {
+  width: 100%;
+}
+
+// —————————————————————————————————————————————————————————————————
+// active
+// —————————————————————————————————————————————————————————————————
+
+.stepper_icon-active {
+  background-color: variables.$primary;
+  color: variables.$primary-contrast;
+}
+
+.stepper_step-active .stepper_label {
+  color: variables.$text;
+}
+
+// —————————————————————————————————————————————————————————————————
+// completed
+// —————————————————————————————————————————————————————————————————
+
+.stepper_icon-completed {
+  background-color: variables.$primary;
+  color: variables.$primary-contrast;
+}
+
+.stepper_step-completed .stepper_label {
+  color: variables.$text;
+}
