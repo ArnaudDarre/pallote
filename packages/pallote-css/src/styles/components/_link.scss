@@ -45,7 +45,13 @@
     text-decoration: underline 3px;
   }
 
-  &.text-inherit {
-    color: inherit;
-  }
+  &.text-default { color: variables.$text; }
+  &.text-alt { color: variables.$text-alt; }
+  &.text-disabled { color: variables.$text-disabled; }
+  &.text-contrast { color: variables.$text-contrast; }
+  &.text-contrastAlt { color: variables.$text-contrast-alt; }
+  &.text-contrastDisabled { color: variables.$text-contrast-disabled; }
+  &.text-primary { color: variables.$primary; }
+  &.text-secondary { color: variables.$secondary; }
+  &.text-inherit { color: inherit; }
 }

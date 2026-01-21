@@ -10,8 +10,10 @@ export interface LinkProps extends ComponentPropsWithoutRef<'a'> {
   color?: LinkColor
   isExternal?: boolean
   href?: string
+  to?: string
   className?: string
   children: ReactNode
+  [key: string]: unknown
 }
 
 export const Link = ({

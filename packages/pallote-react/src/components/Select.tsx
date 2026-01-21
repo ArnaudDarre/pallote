@@ -12,7 +12,7 @@ export interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement
   disabled?: boolean
   optional?: boolean
   dense?: boolean
-  hint?: string
+  hint?: ReactNode
   hideLabel?: boolean
   children: ReactNode
   className?: string

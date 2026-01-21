@@ -6,7 +6,7 @@ import { ClockIcon } from "@phosphor-icons/react/dist/csr/Clock"
 
 import { InputLabel } from './InputLabel'
 
-type InputType = 'date' | 'email' | 'number' | 'tel' | 'text' | 'time'
+type InputType = 'date' | 'email' | 'number' | 'tel' | 'text' | 'time' | 'password'
 
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'type'> {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
@@ -20,7 +20,7 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 
   disabled?: boolean
   optional?: boolean
   dense?: boolean
-  hint?: string
+  hint?: ReactNode
   hideLabel?: boolean
   className?: string
 }

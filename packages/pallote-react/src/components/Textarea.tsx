@@ -1,4 +1,4 @@
-import { useEffect, useRef, TextareaHTMLAttributes, ChangeEvent } from 'react'
+import { useEffect, useRef, TextareaHTMLAttributes, ChangeEvent, ReactNode } from 'react'
 import classnames from 'classnames'
 
 import { InputLabel } from './InputLabel'
@@ -13,7 +13,7 @@ export interface TextareaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaE
   disabled?: boolean
   optional?: boolean
   dense?: boolean
-  hint?: string
+  hint?: ReactNode
   hideLabel?: boolean
   className?: string
 }

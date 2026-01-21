@@ -17,6 +17,8 @@ export interface ButtonProps extends Omit<ComponentPropsWithoutRef<'button'>, 't
   iconLeft?: ReactNode
   iconRight?: ReactNode
   type?: ButtonType
+  to?: string
+  [key: string]: unknown
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({

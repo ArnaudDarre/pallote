@@ -1,11 +1,12 @@
+import { ReactNode } from 'react'
 import classnames from 'classnames'
 
 export interface InputLabelProps {
   isLegend?: boolean
   htmlFor?: string
   label?: string
-  hint?: string
-  error?: string
+  hint?: ReactNode
+  error?: ReactNode
   hideLabel?: boolean
 }
 

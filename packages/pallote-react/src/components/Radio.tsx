@@ -4,7 +4,7 @@ import classnames from 'classnames'
 export interface RadioProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   id: string
   name: string
-  value: string
+  value?: string
   label: string
   checked?: boolean
   disabled?: boolean

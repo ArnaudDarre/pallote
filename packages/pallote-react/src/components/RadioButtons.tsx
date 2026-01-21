@@ -13,7 +13,7 @@ export interface RadioButtonsProps {
   disabled?: boolean
   optional?: boolean
   dense?: boolean
-  hint?: string
+  hint?: ReactNode
   hideLabel?: boolean
   children: ReactNode
   className?: string

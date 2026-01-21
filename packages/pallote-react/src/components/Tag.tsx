@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import { Text } from '../utilities/Text'
 
-type TagColor = 'primary' | 'secondary' | 'grey' | 'success' | 'info' | 'warning' | 'error'
+export type TagColor = 'primary' | 'secondary' | 'grey' | 'success' | 'info' | 'warning' | 'error'
 
 export interface TagProps extends HTMLAttributes<HTMLElement> {
   color?: TagColor

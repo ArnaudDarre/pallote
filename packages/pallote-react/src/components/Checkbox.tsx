@@ -1,10 +1,10 @@
-import { InputHTMLAttributes, ChangeEvent } from 'react'
+import { InputHTMLAttributes, ChangeEvent, useId } from 'react'
 import classnames from 'classnames'
 
 export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
-  id: string
-  value: string
-  label: string
+  id?: string
+  value?: string
+  label?: string
   checked?: boolean
   disabled?: boolean
   optional?: boolean
@@ -14,7 +14,7 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
 }
 
 export const Checkbox = ({
-  id,
+  id: providedId,
   value,
   label,
   checked,
@@ -25,6 +25,9 @@ export const Checkbox = ({
   className,
   ...props
 }: CheckboxProps) => {
+  const generatedId = useId()
+  const id = providedId || generatedId
+
   return (
     <div
       className={classnames([
@@ -44,17 +47,20 @@ export const Checkbox = ({
         value={value}
         checked={checked}
         aria-checked={checked}
+        aria-label={!label ? 'Checkbox' : undefined}
         disabled={disabled}
         required={!(disabled || optional)}
         onChange={onChange}
         {...props}
       />
-      <label
-        className={classnames('checkbox_label')}
-        htmlFor={id}
-      >
-        {label}
-      </label>
+      {label && (
+        <label
+          className={classnames('checkbox_label')}
+          htmlFor={id}
+        >
+          {label}
+        </label>
+      )}
     </div>
   )
 }

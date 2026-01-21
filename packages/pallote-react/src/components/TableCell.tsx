@@ -8,7 +8,7 @@ type TableCellKind = 'default' | 'number' | 'action'
 export interface TableCellProps extends TdHTMLAttributes<HTMLTableCellElement> {
   kind?: TableCellKind
   className?: string
-  children: ReactNode
+  children?: ReactNode
 }
 
 export const TableCell = ({ kind = 'default', className, children, ...props }: TableCellProps) => {
