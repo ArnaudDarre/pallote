@@ -167,7 +167,7 @@ textarea {
 .checkbox,
 .radio {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
 }
 
 input[type="checkbox"],

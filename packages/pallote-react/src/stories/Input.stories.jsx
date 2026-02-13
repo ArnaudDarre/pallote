@@ -40,6 +40,7 @@ export const Type = () => (
     <Grid colmd={4}><Input type="tel" id="tel" label="Telephone" /></Grid>
     <Grid colmd={4}><Input type="text" id="text" label="Text" /></Grid>
     <Grid colmd={4}><Input type="time" id="time" label="Time" /></Grid>
+    <Grid colmd={4}><Input type="color" id="color" label="Color" /></Grid>
   </Grid>
 )
 
