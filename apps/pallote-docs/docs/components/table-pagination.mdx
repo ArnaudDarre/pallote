@@ -1,0 +1,41 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { DocLinks } from './partials/DocLinks'
+
+# TablePagination
+
+Pagination component for `DataTable`. Displays page navigation and a rows-per-page selector.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-tablepagination--docs"
+/>
+
+:::info
+This component is used internally by `DataTable` and does not need to be used directly.
+:::
+
+## Props
+
+| Prop | Type | Default | Description |
+| - | - | - | - |
+| `pageIndex` | `number` | required | Current page (zero-based) |
+| `pageCount` | `number` | required | Total number of pages |
+| `pageSize` | `number` | required | Current rows per page |
+| `pageSizeOptions` | `number[]` | `[10, 25, 50, 100]` | Available page size options |
+| `totalRows` | `number` | required | Total number of rows |
+| `onPageChange` | `(page: number) => void` | required | Page change callback |
+| `onPageSizeChange` | `(size: number) => void` | required | Page size change callback |
+
+```jsx
+<TablePagination
+  pageIndex={0}
+  pageCount={5}
+  pageSize={10}
+  totalRows={50}
+  onPageChange={(page) => setPage(page)}
+  onPageSizeChange={(size) => setPageSize(size)}
+/>
+```

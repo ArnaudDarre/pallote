@@ -1,0 +1,81 @@
+@use '../common/variables';
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// search
+// sort
+// filter
+// empty
+// —————————————————————————————————————————————————————————————————
+
+// —————————————————————————————————————————————————————————————————
+// elements
+// —————————————————————————————————————————————————————————————————
+
+.datatable {
+  width: 100%;
+
+  .table {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// search
+// —————————————————————————————————————————————————————————————————
+
+.datatable_search {
+  margin-bottom: 0.75rem;
+  max-width: 20rem;
+}
+
+// —————————————————————————————————————————————————————————————————
+// sort
+// —————————————————————————————————————————————————————————————————
+
+.datatable_sortable {
+  cursor: pointer;
+}
+
+.datatable_headerContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.datatable_sortIcon {
+  display: flex;
+  align-items: center;
+
+  &-inactive {
+    opacity: 0.3;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// filter
+// —————————————————————————————————————————————————————————————————
+
+.datatable_filterRow {
+
+  .table_cell {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.datatable_filter {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+// —————————————————————————————————————————————————————————————————
+// empty
+// —————————————————————————————————————————————————————————————————
+
+.datatable_empty {
+  text-align: center;
+  color: variables.$text-alt;
+  padding: 2rem !important;
+}

@@ -17,6 +17,7 @@ export default {
     "classnames",
     "@phosphor-icons/react",
     "react-syntax-highlighter",
+    "@tanstack/react-table",
   ],
   plugins: [
     peerDepsExternal(),

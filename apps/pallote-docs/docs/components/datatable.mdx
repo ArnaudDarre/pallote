@@ -1,0 +1,193 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { DataTable, Tag } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+export const employees = [
+  { name: 'Alice Johnson', department: 'Engineering', role: 'Senior Developer', salary: 120000, status: 'Active' },
+  { name: 'Bob Smith', department: 'Design', role: 'Lead Designer', salary: 105000, status: 'Active' },
+  { name: 'Carol White', department: 'Engineering', role: 'Junior Developer', salary: 75000, status: 'On Leave' },
+  { name: 'Dave Brown', department: 'Marketing', role: 'Marketing Manager', salary: 95000, status: 'Active' },
+  { name: 'Eve Davis', department: 'Engineering', role: 'DevOps Engineer', salary: 110000, status: 'Active' },
+  { name: 'Frank Miller', department: 'Sales', role: 'Sales Representative', salary: 70000, status: 'Inactive' },
+  { name: 'Grace Lee', department: 'Design', role: 'UX Researcher', salary: 90000, status: 'Active' },
+  { name: 'Henry Wilson', department: 'Engineering', role: 'Senior Developer', salary: 125000, status: 'Active' },
+  { name: 'Ivy Chen', department: 'Marketing', role: 'Content Writer', salary: 65000, status: 'Active' },
+  { name: 'Jack Taylor', department: 'Sales', role: 'Account Manager', salary: 85000, status: 'On Leave' },
+  { name: 'Karen Moore', department: 'Engineering', role: 'QA Engineer', salary: 88000, status: 'Active' },
+  { name: 'Leo Harris', department: 'Design', role: 'Visual Designer', salary: 92000, status: 'Inactive' },
+]
+
+export const statusColor = (status) => {
+  switch (status) {
+    case 'Active': return 'success'
+    case 'On Leave': return 'warning'
+    case 'Inactive': return 'grey'
+    default: return 'primary'
+  }
+}
+
+# DataTable
+
+Feature-rich data table with sorting, per-column filtering, global search, and pagination. Built on [TanStack Table](https://tanstack.com/table).
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-datatable--docs"
+/>
+
+<div class="docs_block">
+  <DataTable
+    data={employees}
+    columns={[
+      { accessorKey: 'name', header: 'Name', enableSorting: true },
+      { accessorKey: 'department', header: 'Department', enableSorting: true },
+      { accessorKey: 'role', header: 'Role', enableSorting: true },
+      { accessorKey: 'salary', header: 'Salary', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
+      { accessorKey: 'status', header: 'Status', enableSorting: true, cell: (value) => <Tag dense color={statusColor(value)}>{String(value)}</Tag> },
+    ]}
+    enableSearch
+    border
+    pageSize={5}
+  />
+</div>
+
+```jsx
+<DataTable
+  data={employees}
+  columns={[
+    { accessorKey: 'name', header: 'Name', enableSorting: true },
+    { accessorKey: 'department', header: 'Department', enableSorting: true },
+    { accessorKey: 'role', header: 'Role', enableSorting: true },
+    { accessorKey: 'salary', header: 'Salary', enableSorting: true,
+      cell: (value) => `$${Number(value).toLocaleString()}` },
+    { accessorKey: 'status', header: 'Status', enableSorting: true,
+      cell: (value) => <Tag dense color={statusColor(value)}>{value}</Tag> },
+  ]}
+  enableSearch
+  border
+  pageSize={5}
+/>
+```
+
+## Column Configuration
+
+Each column accepts:
+
+| Prop | Type | Default | Description |
+| - | - | - | - |
+| `accessorKey` | `string` | required | Key from the data object |
+| `header` | `string` | required | Column header label |
+| `enableSorting` | `boolean` | `false` | Allow sorting on this column |
+| `enableFiltering` | `boolean` | `false` | Show column filter |
+| `filterType` | `'text' \| 'select'` | `'text'` | Filter input type |
+| `filterOptions` | `string[]` | - | Options for select filter |
+| `cell` | `(value, row) => ReactNode` | - | Custom cell renderer |
+
+## Props
+
+### Search
+
+Use `enableSearch` to add a global search input above the table.
+
+<div class="docs_block">
+  <DataTable
+    data={employees.slice(0, 5)}
+    columns={[
+      { accessorKey: 'name', header: 'Name', enableSorting: true },
+      { accessorKey: 'department', header: 'Department' },
+      { accessorKey: 'role', header: 'Role' },
+    ]}
+    enableSearch
+    searchPlaceholder="Search employees..."
+    border
+  />
+</div>
+
+```jsx
+<DataTable
+  data={data}
+  columns={columns}
+  enableSearch
+  searchPlaceholder="Search employees..."
+/>
+```
+
+### Column Filters
+
+Enable per-column filters with `enableFiltering`. Use `filterType: 'select'` with `filterOptions` for dropdown filters.
+
+<div class="docs_block">
+  <DataTable
+    data={employees}
+    columns={[
+      { accessorKey: 'name', header: 'Name', enableSorting: true, enableFiltering: true },
+      { accessorKey: 'department', header: 'Department', enableSorting: true, enableFiltering: true, filterType: 'select', filterOptions: ['Engineering', 'Design', 'Marketing', 'Sales'] },
+      { accessorKey: 'status', header: 'Status', enableFiltering: true, filterType: 'select', filterOptions: ['Active', 'On Leave', 'Inactive'], cell: (value) => <Tag dense color={statusColor(value)}>{String(value)}</Tag> },
+    ]}
+    border
+    pageSize={5}
+  />
+</div>
+
+```jsx
+<DataTable
+  data={data}
+  columns={[
+    { accessorKey: 'name', header: 'Name', enableFiltering: true },
+    { accessorKey: 'department', header: 'Department',
+      enableFiltering: true, filterType: 'select',
+      filterOptions: ['Engineering', 'Design', 'Marketing', 'Sales'] },
+    { accessorKey: 'status', header: 'Status',
+      enableFiltering: true, filterType: 'select',
+      filterOptions: ['Active', 'On Leave', 'Inactive'] },
+  ]}
+/>
+```
+
+### Pagination
+
+Pagination is built-in. Customize initial page size and available options.
+
+```jsx
+<DataTable
+  data={data}
+  columns={columns}
+  pageSize={5}
+  pageSizeOptions={[5, 10, 25]}
+/>
+```
+
+### Table Variants
+
+Supports the same style variants as `Table`: `striped`, `dense`, `border`, `hasHover`.
+
+<div class="docs_block">
+  <DataTable
+    data={employees.slice(0, 5)}
+    columns={[
+      { accessorKey: 'name', header: 'Name' },
+      { accessorKey: 'department', header: 'Department' },
+      { accessorKey: 'role', header: 'Role' },
+    ]}
+    dense
+    striped
+    border
+  />
+</div>
+
+```jsx
+<DataTable data={data} columns={columns} dense striped border />
+```
+
+## Accessibility
+
+- Sortable headers have `aria-sort` attribute
+- Sort icons are decorative (`aria-hidden`)
+- Filter inputs have hidden labels for screen readers
+- Pagination uses `role="navigation"` with `aria-label`
+- Page buttons have descriptive `aria-label` attributes
+- Empty state is announced within the table
