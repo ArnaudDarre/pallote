@@ -12,7 +12,9 @@ import {
   ColumnFiltersState,
   Header,
 } from '@tanstack/react-table'
-import { CaretUpIcon, CaretDownIcon, MagnifyingGlassIcon } from "@phosphor-icons/react"
+import { CaretUpIcon } from "@phosphor-icons/react/dist/csr/CaretUp"
+import { CaretDownIcon } from "@phosphor-icons/react/dist/csr/CaretDown"
+import { MagnifyingGlassIcon } from "@phosphor-icons/react/dist/csr/MagnifyingGlass"
 
 import { Table } from './Table'
 import { TableHead } from './TableHead'
@@ -28,7 +30,6 @@ export type DataTableFilterType = 'text' | 'select'
 export interface DataTableColumnDef<TData> {
   accessorKey: keyof TData & string
   header: string
-  className?: string
   enableSorting?: boolean
   enableFiltering?: boolean
   filterType?: DataTableFilterType
@@ -51,7 +52,7 @@ export interface DataTableProps<TData> extends Omit<HTMLAttributes<HTMLDivElemen
 }
 
 function ColumnFilter<TData>({ header }: { header: Header<TData, unknown> }) {
-  const columnDef = header.column.columnDef.meta as { className?: string; filterType?: DataTableFilterType; filterOptions?: string[] } | undefined
+  const columnDef = header.column.columnDef.meta as { filterType?: DataTableFilterType; filterOptions?: string[] } | undefined
   const filterType = columnDef?.filterType ?? 'text'
   const filterOptions = columnDef?.filterOptions ?? []
   const filterValue = (header.column.getFilterValue() as string) ?? ''
@@ -117,7 +118,6 @@ export function DataTable<TData extends Record<string, unknown>>({
         ? (info) => col.cell!(info.getValue() as TData[keyof TData & string], info.row.original)
         : (info) => String(info.getValue() ?? ''),
       meta: {
-        className: col.className,
         filterType: col.filterType ?? 'text',
         filterOptions: col.filterOptions,
       },
@@ -167,15 +167,12 @@ export function DataTable<TData extends Record<string, unknown>>({
         <TableHead>
           {table.getHeaderGroups().map(headerGroup => (
             <TableRow key={headerGroup.id}>
-              {headerGroup.headers.map(header => {
-                const colMeta = header.column.columnDef.meta as { className?: string } | undefined
-                return (
+              {headerGroup.headers.map(header => (
                 <TableCell
                   key={header.id}
-                  className={classnames(
-                    colMeta?.className,
-                    { 'datatable_sortable': header.column.getCanSort() }
-                  )}
+                  className={classnames({
+                    'datatable_sortable': header.column.getCanSort()
+                  })}
                   onClick={header.column.getToggleSortingHandler()}
                   aria-sort={
                     header.column.getIsSorted() === 'asc' ? 'ascending'
@@ -198,8 +195,7 @@ export function DataTable<TData extends Record<string, unknown>>({
                     )}
                   </span>
                 </TableCell>
-                )
-              })}
+              ))}
             </TableRow>
           ))}
           {hasFilters && (
@@ -224,14 +220,11 @@ export function DataTable<TData extends Record<string, unknown>>({
           ) : (
             table.getRowModel().rows.map(row => (
               <TableRow key={row.id}>
-                {row.getVisibleCells().map(cell => {
-                  const colMeta = cell.column.columnDef.meta as { className?: string } | undefined
-                  return (
-                    <TableCell key={cell.id} className={colMeta?.className}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </TableCell>
-                  )
-                })}
+                {row.getVisibleCells().map(cell => (
+                  <TableCell key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </TableCell>
+                ))}
               </TableRow>
             ))
           )}
