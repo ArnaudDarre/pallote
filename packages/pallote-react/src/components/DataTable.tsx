@@ -12,9 +12,7 @@ import {
   ColumnFiltersState,
   Header,
 } from '@tanstack/react-table'
-import { CaretUpIcon } from "@phosphor-icons/react/dist/csr/CaretUp"
-import { CaretDownIcon } from "@phosphor-icons/react/dist/csr/CaretDown"
-import { MagnifyingGlassIcon } from "@phosphor-icons/react/dist/csr/MagnifyingGlass"
+import { CaretUpIcon, CaretDownIcon, MagnifyingGlassIcon } from "@phosphor-icons/react"
 
 import { Table } from './Table'
 import { TableHead } from './TableHead'
