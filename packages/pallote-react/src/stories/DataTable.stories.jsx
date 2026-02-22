@@ -10,7 +10,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Feature-rich data table with sorting, filtering, search, and pagination. Built on TanStack Table.'
+        component: 'Feature-rich data table with sorting, filtering, search, and pagination. Built on TanStack Table. Supports the same style variants as Table: `striped`, `dense`, `border`, `hasHover`.'
       }
     }
   },
@@ -125,6 +125,7 @@ export const PageSizeOptions = () => (
     ]}
     pageSize={5}
     pageSizeOptions={[5, 10, 15]}
+    border
   />
 )
 

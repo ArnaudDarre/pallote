@@ -49,9 +49,7 @@ Feature-rich data table with sorting, per-column filtering, global search, and p
       { accessorKey: 'salary', header: 'Salary', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
       { accessorKey: 'status', header: 'Status', enableSorting: true, cell: (value) => <Tag dense color={statusColor(value)}>{String(value)}</Tag> },
     ]}
-    enableSearch
     border
-    pageSize={5}
   />
 </div>
 
@@ -62,14 +60,10 @@ Feature-rich data table with sorting, per-column filtering, global search, and p
     { accessorKey: 'name', header: 'Name', enableSorting: true },
     { accessorKey: 'department', header: 'Department', enableSorting: true },
     { accessorKey: 'role', header: 'Role', enableSorting: true },
-    { accessorKey: 'salary', header: 'Salary', enableSorting: true,
-      cell: (value) => `$${Number(value).toLocaleString()}` },
-    { accessorKey: 'status', header: 'Status', enableSorting: true,
-      cell: (value) => <Tag dense color={statusColor(value)}>{value}</Tag> },
+    { accessorKey: 'salary', header: 'Salary', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
+    { accessorKey: 'status', header: 'Status', enableSorting: true, cell: (value) => <Tag dense color={statusColor(value)}>{String(value)}</Tag> },
   ]}
-  enableSearch
   border
-  pageSize={5}
 />
 ```
 
@@ -89,7 +83,7 @@ Each column accepts:
 
 ## Props
 
-### Search
+### EnableSearch
 
 Use `enableSearch` to add a global search input above the table.
 
@@ -102,7 +96,6 @@ Use `enableSearch` to add a global search input above the table.
       { accessorKey: 'role', header: 'Role' },
     ]}
     enableSearch
-    searchPlaceholder="Search employees..."
     border
   />
 </div>
@@ -112,11 +105,10 @@ Use `enableSearch` to add a global search input above the table.
   data={data}
   columns={columns}
   enableSearch
-  searchPlaceholder="Search employees..."
 />
 ```
 
-### Column Filters
+### EnableFiltering
 
 Enable per-column filters with `enableFiltering`. Use `filterType: 'select'` with `filterOptions` for dropdown filters.
 
@@ -148,9 +140,23 @@ Enable per-column filters with `enableFiltering`. Use `filterType: 'select'` wit
 />
 ```
 
-### Pagination
+### PageSizeOptions
 
 Pagination is built-in. Customize initial page size and available options.
+
+<div class="docs_block">
+  <DataTable
+    data={employees}
+    columns={[
+      { accessorKey: 'name', header: 'Name', enableSorting: true },
+      { accessorKey: 'department', header: 'Department', enableSorting: true },
+      { accessorKey: 'role', header: 'Role' },
+    ]}
+    pageSize={5}
+    pageSizeOptions={[5, 10, 15]}
+    border
+  />
+</div>
 
 ```jsx
 <DataTable

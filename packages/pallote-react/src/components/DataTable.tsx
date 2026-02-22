@@ -113,7 +113,7 @@ export function DataTable<TData extends Record<string, unknown>>({
       accessorKey: col.accessorKey,
       header: col.header,
       enableSorting: col.enableSorting ?? false,
-      enableColumnFilter: col.enableFiltering ?? false,
+      enableColumnFilter: col.enableFiltering === true,
       cell: col.cell
         ? (info) => col.cell!(info.getValue() as TData[keyof TData & string], info.row.original)
         : (info) => String(info.getValue() ?? ''),
@@ -141,7 +141,7 @@ export function DataTable<TData extends Record<string, unknown>>({
     },
   })
 
-  const hasFilters = columnDefs.some(col => col.enableFiltering !== false)
+  const hasFilters = columnDefs.some(col => col.enableFiltering === true)
 
   return (
     <div className={classnames('datatable', className)} {...props}>
