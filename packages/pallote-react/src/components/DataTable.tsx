@@ -25,13 +25,16 @@ import { Select } from './Select'
 
 export type DataTableFilterType = 'text' | 'select'
 
+/** Option value for filtering; label is shown in the dropdown. Use when row values are raw (e.g. in_progress) but you want formatted labels (e.g. In progress). */
+export type DataTableFilterOption = string | { value: string; label: string }
+
 export interface DataTableColumnDef<TData> {
   accessorKey: keyof TData & string
   header: string
   enableSorting?: boolean
   enableFiltering?: boolean
   filterType?: DataTableFilterType
-  filterOptions?: string[]
+  filterOptions?: DataTableFilterOption[]
   cell?: (value: TData[keyof TData & string], row: TData) => ReactNode
   className?: string
   kind?: TableCellKind
@@ -52,13 +55,18 @@ export interface DataTableProps<TData> extends Omit<HTMLAttributes<HTMLDivElemen
   kind?: TableCellKind
 }
 
+function normalizeFilterOption(opt: DataTableFilterOption): { value: string; label: string } {
+  return typeof opt === 'string' ? { value: opt, label: opt } : opt
+}
+
 function ColumnFilter<TData>({ header }: { header: Header<TData, unknown> }) {
-  const columnDef = header.column.columnDef.meta as { filterType?: DataTableFilterType; filterOptions?: string[] } | undefined
+  const columnDef = header.column.columnDef.meta as { filterType?: DataTableFilterType; filterOptions?: DataTableFilterOption[] } | undefined
   const filterType = columnDef?.filterType ?? 'text'
   const filterOptions = columnDef?.filterOptions ?? []
   const filterValue = (header.column.getFilterValue() as string) ?? ''
 
   if (filterType === 'select') {
+    const options = filterOptions.map(normalizeFilterOption)
     return (
       <Select
         dense
@@ -70,8 +78,8 @@ function ColumnFilter<TData>({ header }: { header: Header<TData, unknown> }) {
         onChange={(e: ChangeEvent<HTMLSelectElement>) => header.column.setFilterValue(e.target.value || undefined)}
       >
         <option value="">All</option>
-        {filterOptions.map(opt => (
-          <option key={opt} value={opt}>{opt}</option>
+        {options.map(({ value, label }) => (
+          <option key={value} value={value}>{label}</option>
         ))}
       </Select>
     )
