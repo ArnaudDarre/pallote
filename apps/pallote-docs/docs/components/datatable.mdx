@@ -46,7 +46,7 @@ Feature-rich data table with sorting, per-column filtering, global search, and p
       { accessorKey: 'name', header: 'Name', enableSorting: true },
       { accessorKey: 'department', header: 'Department', enableSorting: true },
       { accessorKey: 'role', header: 'Role', enableSorting: true },
-      { accessorKey: 'salary', header: 'Salary', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
+      { accessorKey: 'salary', header: 'Salary', kind: 'number', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
       { accessorKey: 'status', header: 'Status', enableSorting: true, cell: (value) => <Tag dense color={statusColor(value)}>{String(value)}</Tag> },
     ]}
     border
@@ -60,7 +60,7 @@ Feature-rich data table with sorting, per-column filtering, global search, and p
     { accessorKey: 'name', header: 'Name', enableSorting: true },
     { accessorKey: 'department', header: 'Department', enableSorting: true },
     { accessorKey: 'role', header: 'Role', enableSorting: true },
-    { accessorKey: 'salary', header: 'Salary', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
+    { accessorKey: 'salary', header: 'Salary', kind: 'number', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
     { accessorKey: 'status', header: 'Status', enableSorting: true, cell: (value) => <Tag dense color={statusColor(value)}>{String(value)}</Tag> },
   ]}
   border

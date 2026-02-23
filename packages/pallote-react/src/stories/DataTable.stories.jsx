@@ -55,7 +55,7 @@ export const Default = () => (
       { accessorKey: 'name', header: 'Name', enableSorting: true },
       { accessorKey: 'department', header: 'Department', enableSorting: true },
       { accessorKey: 'role', header: 'Role', enableSorting: true },
-      { accessorKey: 'salary', header: 'Salary', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
+      { accessorKey: 'salary', header: 'Salary', kind: 'number', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
       { accessorKey: 'status', header: 'Status', enableSorting: true, cell: (value) => <Tag dense color={statusColor(value)}>{String(value)}</Tag> },
     ]}
     border
@@ -77,7 +77,7 @@ export const EnableSearch = () => (
       { accessorKey: 'name', header: 'Name', enableSorting: true },
       { accessorKey: 'department', header: 'Department', enableSorting: true, filterType: 'select', filterOptions: ['Engineering', 'Design', 'Marketing', 'Sales'] },
       { accessorKey: 'role', header: 'Role', enableSorting: true },
-      { accessorKey: 'salary', header: 'Salary', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
+      { accessorKey: 'salary', header: 'Salary', kind: 'number', enableSorting: true, cell: (value) => `$${Number(value).toLocaleString()}` },
       { accessorKey: 'status', header: 'Status', enableSorting: true, filterType: 'select', filterOptions: ['Active', 'On Leave', 'Inactive'], cell: (value) => <Tag dense color={statusColor(value)}>{String(value)}</Tag> },
     ]}
     enableSearch
@@ -100,7 +100,7 @@ export const EnableFiltering = () => (
       { accessorKey: 'name', header: 'Name', enableSorting: true, enableFiltering: true },
       { accessorKey: 'department', header: 'Department', enableSorting: true, enableFiltering: true, filterType: 'select', filterOptions: ['Engineering', 'Design', 'Marketing', 'Sales'] },
       { accessorKey: 'role', header: 'Role', enableSorting: true, enableFiltering: true },
-      { accessorKey: 'salary', header: 'Salary', enableSorting: true, enableFiltering: false, cell: (value) => `$${Number(value).toLocaleString()}` },
+      { accessorKey: 'salary', header: 'Salary', kind: 'number', enableSorting: true, enableFiltering: false, cell: (value) => `$${Number(value).toLocaleString()}` },
       { accessorKey: 'status', header: 'Status', enableSorting: true, enableFiltering: true, filterType: 'select', filterOptions: ['Active', 'On Leave', 'Inactive'], cell: (value) => <Tag dense color={statusColor(value)}>{String(value)}</Tag> },
     ]}
     border
