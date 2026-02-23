@@ -18,7 +18,7 @@ import { Table } from './Table'
 import { TableHead } from './TableHead'
 import { TableBody } from './TableBody'
 import { TableRow } from './TableRow'
-import { TableCell } from './TableCell'
+import { TableCell, type TableCellKind } from './TableCell'
 import { TablePagination } from './TablePagination'
 import { Input } from './Input'
 import { Select } from './Select'
@@ -34,6 +34,7 @@ export interface DataTableColumnDef<TData> {
   filterOptions?: string[]
   cell?: (value: TData[keyof TData & string], row: TData) => ReactNode
   className?: string
+  kind?: TableCellKind
 }
 
 export interface DataTableProps<TData> extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> {
@@ -48,6 +49,7 @@ export interface DataTableProps<TData> extends Omit<HTMLAttributes<HTMLDivElemen
   dense?: boolean
   border?: boolean
   className?: string
+  kind?: TableCellKind
 }
 
 function ColumnFilter<TData>({ header }: { header: Header<TData, unknown> }) {
@@ -100,6 +102,7 @@ export function DataTable<TData extends Record<string, unknown>>({
   hasHover = true,
   dense,
   border,
+  kind: defaultKind,
   className,
   ...props
 }: DataTableProps<TData>) {
@@ -120,6 +123,7 @@ export function DataTable<TData extends Record<string, unknown>>({
         filterType: col.filterType ?? 'text',
         filterOptions: col.filterOptions,
         className: col.className,
+        kind: col.kind,
       },
     })),
     [columnDefs]
@@ -168,10 +172,12 @@ export function DataTable<TData extends Record<string, unknown>>({
           {table.getHeaderGroups().map(headerGroup => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map(header => {
-                const meta = header.column.columnDef.meta as { className?: string } | undefined
+                const meta = header.column.columnDef.meta as { className?: string; kind?: TableCellKind } | undefined
+                const cellKind = meta?.kind ?? defaultKind ?? 'default'
                 return (
                 <TableCell
                   key={header.id}
+                  kind={cellKind}
                   className={classnames(meta?.className, {
                     'datatable_sortable': header.column.getCanSort()
                   })}
@@ -203,9 +209,10 @@ export function DataTable<TData extends Record<string, unknown>>({
           {hasFilters && (
             <TableRow className="datatable_filterRow">
               {table.getHeaderGroups()[0].headers.map(header => {
-                const meta = header.column.columnDef.meta as { className?: string } | undefined
+                const meta = header.column.columnDef.meta as { className?: string; kind?: TableCellKind } | undefined
+                const cellKind = meta?.kind ?? defaultKind ?? 'default'
                 return (
-                  <TableCell key={`filter-${header.id}`} className={meta?.className}>
+                  <TableCell key={`filter-${header.id}`} kind={cellKind} className={meta?.className}>
                     {header.column.getCanFilter() ? (
                       <ColumnFilter header={header} />
                     ) : null}
@@ -226,9 +233,10 @@ export function DataTable<TData extends Record<string, unknown>>({
             table.getRowModel().rows.map(row => (
               <TableRow key={row.id}>
                 {row.getVisibleCells().map(cell => {
-                  const meta = cell.column.columnDef.meta as { className?: string } | undefined
+                  const meta = cell.column.columnDef.meta as { className?: string; kind?: TableCellKind } | undefined
+                  const cellKind = meta?.kind ?? defaultKind ?? 'default'
                   return (
-                    <TableCell key={cell.id} className={meta?.className}>
+                    <TableCell key={cell.id} kind={cellKind} className={meta?.className}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
                   )

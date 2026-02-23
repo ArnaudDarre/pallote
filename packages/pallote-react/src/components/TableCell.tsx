@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import { TableCellComponentContext } from './TableHead'
 
-type TableCellKind = 'default' | 'number' | 'action'
+export type TableCellKind = 'default' | 'number' | 'action'
 
 export interface TableCellProps extends TdHTMLAttributes<HTMLTableCellElement> {
   kind?: TableCellKind
