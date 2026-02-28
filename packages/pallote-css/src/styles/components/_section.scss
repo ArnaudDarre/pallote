@@ -6,8 +6,8 @@
 // elements
 // align
 // color
+// level
 // landing (website title on homepage)
-// header (page title)
 // —————————————————————————————————————————————————————————————————
 
 // —————————————————————————————————————————————————————————————————
@@ -32,8 +32,11 @@
   }
 
   &_header {
-    display: flex;
-    flex-direction: column;
+
+    @include mixins.responsive(down, tablet) {
+      display: flex;
+      flex-direction: column;
+    }
 
     & + .section_content { @include mixins.clamp(padding-top, 2rem, 8vw, 4rem); }
     &-dense + .section_content { padding-top: 2rem; }
@@ -42,7 +45,8 @@
   &_content {
     width: 100%;
 
-    & + & {
+    & + &
+    & + .section_header {
       @include mixins.clamp(padding-top, 2rem, 8vw, 4rem);
     }
   }
@@ -53,8 +57,17 @@
     margin-bottom: .5rem;
   }
 
+  &_titleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div.section_actions {
+      margin-top: 0;
+    }
+  }
+
   &_title {
-    @extend %h3;
     color: variables.$primary;
     max-width: variables.$desktop*0.75;
   }
@@ -67,7 +80,10 @@
   }
 
   &_actions {
-    margin-top: 2rem;
+
+    @include mixins.responsive(down, tablet) {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -142,6 +158,20 @@
 }
 
 // —————————————————————————————————————————————————————————————————
+// level
+// —————————————————————————————————————————————————————————————————
+
+@mixin section-header-level($label-mb, $subtitle-mt, $actions-mt) {
+  .section_label { margin-bottom: $label-mb; }
+  .section_subtitle { margin-top: $subtitle-mt; }
+  .section_actions { margin-top: $actions-mt; }
+}
+
+.section_header-1 { @include section-header-level(.75rem, 1.5rem, 2.5rem); }
+.section_header-2 { @include section-header-level(.5rem, 1rem, 2rem); }
+.section_header-3 { @include section-header-level(.25rem, .75rem, 1.5rem); }
+
+// —————————————————————————————————————————————————————————————————
 // landing (website title on homepage)
 // —————————————————————————————————————————————————————————————————
 
@@ -177,26 +207,10 @@
     }
 
     &_actions {
-      margin-top: 4rem;
 
       @include mixins.responsive(down, tablet) {
         margin-top: 3rem;
       }
     }
-  }
-}
-
-// —————————————————————————————————————————————————————————————————
-// header (page title)
-// —————————————————————————————————————————————————————————————————
-
-.section-header {
-
-  .section {
-
-    &_label { margin-bottom: .75rem; }
-    &_title { @extend %h2; }
-    &_subtitle { margin-top: 1.5rem; }
-    &_actions { margin-top: 2.5rem; }
   }
 }

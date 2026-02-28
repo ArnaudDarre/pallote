@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Button } from '../components/Button'
+import { Section } from '../components/Section'
 import { SectionHeader } from '../components/SectionHeader'
 
 export default {
@@ -34,17 +35,63 @@ Playground.args = {
   )
 }
 
-export const TitleComponent = () => (
-  <SectionHeader
-    title="You can use h1 to h6 and p"
-    titleComponent="p"
-  />
+export const TitleLevel = () => (
+  <>
+    <Section>
+      <SectionHeader
+        title="Title level 1"
+        titleLevel={1}
+      />
+    </Section>
+    <Section>
+      <SectionHeader
+        title="Title level 2"
+        titleLevel={2}
+      />
+    </Section>
+    <Section>
+      <SectionHeader
+        title="Title level 3"
+        titleLevel={3}
+      />
+    </Section>
+  </>
 )
 
-TitleComponent.parameters = {
+
+TitleLevel.parameters = {
   docs: {
     description: {
-      story: 'Override the default HTML tag of the section title.'
+      story: 'Controls semantic heading level and visual variant (1 => h1/h2 style, 2 => h2/h3 style, 3 => h3/h4 style).'
+    }
+  }
+}
+
+export const ActionsPosition = () => (
+  <>
+    <Section>
+      <SectionHeader
+        title="Actions on the right"
+        subtitle="Actions appear at the right of the title on desktop, below the title on mobile"
+        actions={<Button>Action</Button>}
+        actionsPosition="right"
+      />
+    </Section>
+    <Section>
+      <SectionHeader
+        title="Actions on the bottom"
+        subtitle="Actions appear below the subtitle"
+        actions={<Button>Action</Button>}
+        actionsPosition="bottom"
+      />
+    </Section>
+  </>
+)
+
+ActionsPosition.parameters = {
+  docs: {
+    description: {
+      story: 'Controls where actions are placed. `right` places them inline with the title (stacks on mobile), `bottom` places them below the subtitle.'
     }
   }
 }

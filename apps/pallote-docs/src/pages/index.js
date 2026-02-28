@@ -33,6 +33,7 @@ export default function Home() {
         <Section landing>
           <SectionHeader
             title="Introducing Pallote"
+            actionsPosition="bottom"
             subtitle={
               <>
                 Pallote is a handcrafted, simple and stylish {' '}

@@ -284,6 +284,11 @@ input[type='radio']:checked {
 // dense
 // —————————————————————————————————————————————————————————————————
 
+.checkbox-dense .checkbox_label,
+.radio-dense .radio_label {
+  font-size: variables.$caption-size;
+}
+
 .input-dense {
 
   .input_label,
@@ -342,7 +347,7 @@ input[type='radio']:checked {
 .checkbox-dense,
 .radio-dense,
 .input-dense {
-  
+
   input[type="checkbox"],
   input[type='radio'] {
     height: 1.25rem;

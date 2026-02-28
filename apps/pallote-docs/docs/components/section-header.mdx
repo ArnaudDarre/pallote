@@ -58,20 +58,57 @@ Child of the [Section](/docs/components/section.mdx) component. Each Section sho
 
 ## Props
 
-### TitleComponent
+### TitleLevel
 
-Override the HTML tag of the section title.
+Controls the heading level and visual hierarchy of the title.
+
+- `1` => variant `h2`, component `h1`
+- `2` => variant `h3`, component `h2` (default)
+- `3` => variant `h4`, component `h3`
+
+<div class="docs_block">
+  <SectionHeader title="Level 1" titleLevel={1} />
+  <SectionHeader title="Level 2" titleLevel={2} />
+  <SectionHeader title="Level 3" titleLevel={3} />
+</div>
+
+```jsx
+<SectionHeader title="Level 1" titleLevel={1} />
+<SectionHeader title="Level 2" titleLevel={2} />
+<SectionHeader title="Level 3" titleLevel={3} />
+```
+
+### ActionsPosition
+
+Controls where actions are placed relative to the title.
+
+- `right` — inline with the title on desktop, stacks below on mobile
+- `bottom` (default) — below the subtitle
 
 <div class="docs_block">
   <SectionHeader
-    title="You can use h1 to h6 and p"
-    titleComponent="p"
+    title="Actions on the right"
+    subtitle="Actions appear at the right of the title on desktop, below the title on mobile"
+    actions={<Button>Action</Button>}
+    actionsPosition="right"
+  />
+  <SectionHeader
+    title="Actions on the bottom"
+    subtitle="Actions appear below the subtitle"
+    actions={<Button>Action</Button>}
+    actionsPosition="bottom"
   />
 </div>
 
 ```jsx
 <SectionHeader
-  title="You can use h1 to h6 and p"
-  titleComponent="p"
+  title="Actions on the right"
+  actions={<Button>Action</Button>}
+  actionsPosition="right"
+/>
+<SectionHeader
+  title="Actions on the bottom"
+  actions={<Button>Action</Button>}
+  actionsPosition="bottom"
 />
 ```

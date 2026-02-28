@@ -105,12 +105,3 @@ export const Landing = () => (
     />
   </Section>
 )
-
-export const Header = () => (
-  <Section header>
-    <SectionHeader
-      title="Header"
-      subtitle="Prop for the first section of a page."
-    />
-  </Section>
-)

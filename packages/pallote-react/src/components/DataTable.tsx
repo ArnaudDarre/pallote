@@ -91,7 +91,7 @@ function ColumnFilter<TData>({ header }: { header: Header<TData, unknown> }) {
       id={`filter-${header.id}`}
       label={`Filter ${header.column.columnDef.header as string}`}
       hideLabel
-      placeholder="Filter..."
+      placeholder="Search column"
       className="datatable_filter"
       value={filterValue}
       onChange={(e: ChangeEvent<HTMLInputElement>) => header.column.setFilterValue(e.target.value || undefined)}
