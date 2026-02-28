@@ -45,7 +45,7 @@
   &_content {
     width: 100%;
 
-    & + &
+    & + &,
     & + .section_header {
       @include mixins.clamp(padding-top, 2rem, 8vw, 4rem);
     }
