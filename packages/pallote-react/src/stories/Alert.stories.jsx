@@ -127,6 +127,29 @@ Dense.parameters = {
 //   controls: { disable: true }
 // }
 
+export const Actions = () => (
+  <Alert
+    variant="notice"
+    title="Update available"
+    subtitle="A new version is available."
+    actions={
+      <>
+        <Button size="sm" color="success" variant="stroke">Dismiss</Button>
+        <Button size="sm" color="success">Update</Button>
+      </>
+    }
+  />
+)
+
+Actions.parameters = {
+  controls: { disable: true },
+  docs: {
+    description: {
+      story: 'Add action buttons to the alert using the `actions` prop.'
+    }
+  }
+}
+
 export const NoIcons = () => (
   <Alert variant="notice" noIcon title="Remove alert icon"></Alert>
 )

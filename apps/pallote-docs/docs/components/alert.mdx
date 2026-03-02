@@ -1,0 +1,156 @@
+---
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import { Alert, Button, Grid } from 'pallote-react'
+
+import { DocLinks } from './partials/DocLinks'
+
+# Alert
+
+Display a short message to notify users about an action they performed or should perform.
+
+<DocLinks
+  storybook="https://react.pallote.com/?path=/docs/components-alert--docs"
+/>
+
+<div class="docs_block">
+  <Alert variant="notice" title="This is an alert" subtitle="With optional subtitle" />
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Alert variant="notice" title="This is an alert" subtitle="With optional subtitle" />
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="alert alert-success alert-notice">
+  <div class="alert_content">
+    <p class="alert_title">This is an alert</p>
+    <p class="alert_subtitle">With optional subtitle</p>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+## Props
+
+### Color
+
+<div class="docs_block">
+  <Grid gap={2} direction="row">
+    <Alert title="Success" variant="notice" />
+    <Alert color="info" title="Info" variant="notice" />
+    <Alert color="warning" title="Warning" variant="notice" />
+    <Alert color="error" title="Error" variant="notice" />
+  </Grid>
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Alert title="Success" variant="notice" />
+<Alert color="info" title="Info" variant="notice" />
+<Alert color="warning" title="Warning" variant="notice" />
+<Alert color="error" title="Error" variant="notice" />
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="alert alert-success alert-notice">...</div>
+<div class="alert alert-info alert-notice">...</div>
+<div class="alert alert-warning alert-notice">...</div>
+<div class="alert alert-error alert-notice">...</div>
+```
+  </TabItem>
+</Tabs>
+
+### Subtitle
+
+<div class="docs_block">
+  <Alert variant="notice" title="Alert with subtitle" subtitle="This is the subtitle" />
+</div>
+
+```jsx
+<Alert variant="notice" title="Alert with subtitle" subtitle="This is the subtitle" />
+```
+
+### Actions
+
+Add action buttons using the `actions` prop.
+
+<div class="docs_block">
+  <Alert
+    variant="notice"
+    title="Update available"
+    subtitle="A new version is available."
+    actions={
+      <>
+        <Button size="sm" color="success" variant="stroke">Dismiss</Button>
+        <Button size="sm" color="success">Update</Button>
+      </>
+    }
+  />
+</div>
+
+<Tabs groupId="package" queryString>
+  <TabItem value="react" label="React">
+
+```jsx
+<Alert
+  variant="notice"
+  title="Update available"
+  subtitle="A new version is available."
+  actions={
+    <>
+      <Button size="sm" color="success" variant="stroke">Dismiss</Button>
+      <Button size="sm" color="success">Update</Button>
+    </>
+  }
+/>
+```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+
+```html
+<div class="alert alert-success alert-notice">
+  <div class="alert_content">
+    <p class="alert_title">Update available</p>
+    <p class="alert_subtitle">A new version is available.</p>
+    <div class="alert_actions">
+      <button class="button button-sm button-success button-stroke">Dismiss</button>
+      <button class="button button-sm button-success">Update</button>
+    </div>
+  </div>
+</div>
+```
+  </TabItem>
+</Tabs>
+
+### Dense
+
+<div class="docs_block">
+  <Alert variant="notice" dense title="This is a dense alert" />
+</div>
+
+```jsx
+<Alert variant="notice" dense title="This is a dense alert" />
+```
+
+### No Icon
+
+<div class="docs_block">
+  <Alert variant="notice" noIcon title="Remove alert icon" />
+</div>
+
+```jsx
+<Alert variant="notice" noIcon title="Remove alert icon" />
+```

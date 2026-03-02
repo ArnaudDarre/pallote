@@ -1,4 +1,4 @@
-import { useEffect, useState, HTMLAttributes } from 'react'
+import { useEffect, useState, HTMLAttributes, ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import classnames from 'classnames'
 import { XIcon } from "@phosphor-icons/react/dist/csr/X"
@@ -13,6 +13,7 @@ export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   variant?: AlertVariant
   title: string
   subtitle?: string
+  actions?: ReactNode
   dense?: boolean
   noIcon?: boolean
   show?: boolean
@@ -25,6 +26,7 @@ export const Alert = ({
   variant = 'toast',
   title,
   subtitle,
+  actions,
   dense,
   noIcon,
   show,
@@ -74,6 +76,7 @@ export const Alert = ({
         {title ? <Text className={classnames('alert_title')} variant={dense ? 'caption' : 'body'} weight='bold'>{title}</Text> : null}
         {subtitle ? <Text variant={dense ? 'overline' : 'caption'} className={classnames('alert_subtitle')}>{subtitle}</Text> : null}
       </div>
+      {actions ? <div className={classnames('alert_actions')}>{actions}</div> : null}
       {onClose ? (
         <button
           type="button"

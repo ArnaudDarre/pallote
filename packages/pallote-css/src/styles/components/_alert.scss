@@ -19,13 +19,14 @@ $spacing-alert: .5rem;
 
 .alert {
   border-radius: $spacing-alert;
-  padding: $spacing-alert $spacing-alert*2;
+  padding: $spacing-alert;
   position: fixed;
   top: 1rem;
   right: 1rem;
   width: 100%;
   max-width: 20rem;
   z-index: 20;
+  display: flex;
 
   &:not(.alert-bar) {
     padding-left: 2.5rem;
@@ -52,6 +53,10 @@ $spacing-alert: .5rem;
     background-repeat: no-repeat;
   }
 
+  &_content {
+    flex: 1;
+  }
+
   &_title {
     font-weight: variables.$weight-bold !important;
   }
@@ -59,6 +64,11 @@ $spacing-alert: .5rem;
   &_subtitle {
     @extend .caption;
     margin-top: 0.125rem !important;
+  }
+
+  &_actions {
+    display: flex;
+    gap: 0.5rem;
   }
 
   &_close {
@@ -151,7 +161,7 @@ $spacing-alert: .5rem;
 // —————————————————————————————————————————————————————————————————
 
 .alert-dense {
-  padding: $spacing-alert*0.5 $spacing-alert;
+  padding: $spacing-alert*0.5;
 
   &:before {
     top: $spacing-alert*0.5;
