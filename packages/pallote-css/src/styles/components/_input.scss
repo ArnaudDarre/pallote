@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../common/mixins';
 @use '../common/variables';
 @use '../utilities/text';
@@ -218,26 +219,25 @@ input[type='radio']:checked {
   &_control {
 
     &[type="file"] {
-      background-color: transparent;
-      border: 0;
-      padding-inline: 0;
+      padding-block-start: 0.4rem;
     }
 
     &::file-selector-button {
       font-family: variables.$font, variables.$font-fallback;
-      background-color: variables.$input-background;
+      text-transform: variables.$button-transform;
+      font-weight: variables.$button-weight;
+      font-size: variables.$button-sm-size;
+      background-color: variables.$text-disabled;
+      color: inherit;
       border: 0;
-      padding: .325rem .5rem;
+      padding: .125rem .5rem;
       border-radius: variables.$border-radius-sm;
       margin-right: .5rem;
       cursor: pointer;
 
-      &:hover {
-        background-color: variables.$hover;
-      }
-
+      &:hover,
       &:active {
-        background-color: variables.$hover;
+        background-color: color.mix(black, variables.$text-disabled, 20%);
       }
     }
   }
