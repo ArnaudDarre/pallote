@@ -7,6 +7,7 @@
 // elements / select
 // elements / textarea
 // elements / checkbox & radio
+// type / file
 // error
 // disabled
 // optional
@@ -205,6 +206,40 @@ input[type='radio']:checked {
     width: variables.$checkbox-width*.5;
     background-color: variables.$primary;
     border-radius: 50%;
+  }
+}
+
+// —————————————————————————————————————————————————————————————————
+// type / file
+// —————————————————————————————————————————————————————————————————
+
+.input {
+
+  &_control {
+
+    &[type="file"] {
+      background-color: transparent;
+      border: 0;
+      padding-inline: 0;
+    }
+
+    &::file-selector-button {
+      font-family: variables.$font, variables.$font-fallback;
+      background-color: variables.$input-background;
+      border: 0;
+      padding: .325rem .5rem;
+      border-radius: variables.$border-radius-sm;
+      margin-right: .5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: variables.$hover;
+      }
+
+      &:active {
+        background-color: variables.$hover;
+      }
+    }
   }
 }
 
