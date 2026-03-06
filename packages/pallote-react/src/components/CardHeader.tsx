@@ -7,7 +7,7 @@ export interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {
   icon?: ReactElement<{ className?: string }>
   label?: string
   title: string
-  subtitle?: string
+  subtitle?: React.ReactNode
   actions?: React.ReactNode
   className?: string
 }
