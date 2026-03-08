@@ -1,4 +1,4 @@
-import { useState, ReactNode } from 'react'
+import { useState, useCallback, MouseEvent, ReactNode } from 'react'
 import classnames from 'classnames'
 
 import { Section, SectionProps } from './Section'
@@ -19,6 +19,16 @@ export const NavBar = ({ logo, align, className, children, ...props }: NavBarPro
     setIsOpen(!isOpen)
     document.body.classList.toggle('js-navbar', !isOpen)
   }
+
+  const closeNav = useCallback(() => {
+    setIsOpen(false)
+    document.body.classList.remove('js-navbar')
+  }, [])
+
+  const handleNavClick = useCallback((e: MouseEvent<HTMLElement>) => {
+    const target = (e.target as HTMLElement).closest('a, [role="link"]')
+    if (target) closeNav()
+  }, [closeNav])
 
   return (
     <header>
@@ -48,7 +58,7 @@ export const NavBar = ({ logo, align, className, children, ...props }: NavBarPro
             <span aria-hidden="true"></span>
           </button>
         </div>
-        <nav id="navbar-nav" aria-label="Main navigation" className={classnames('navbar_nav nav', { 'js-opened': isOpen })}>
+        <nav id="navbar-nav" aria-label="Main navigation" className={classnames('navbar_nav nav', { 'js-opened': isOpen })} onClick={handleNavClick}>
           <div className='nav_container'>
             {children}
           </div>
