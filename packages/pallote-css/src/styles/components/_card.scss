@@ -197,11 +197,11 @@
     }
 
     &_title {
-      @if $value == xs { font-size: variables.$body-size; font-weight: variables.$body-weight }
-      @else if $value == sm { font-size: variables.$subtitle-size; font-weight: variables.$subtitle-weight }
-      @else if $value == md { font-size: variables.$h6-size; font-weight: variables.$h6-weight }
-      @else if $value == lg { font-size: variables.$h5-size; font-weight: variables.$h5-weight }
-      @else if $value == xl { font-size: variables.$h4-size; font-weight: variables.$h4-weight }
+      @if $value == xs { font-size: variables.$body-size; font-weight: variables.$h6-weight; }
+      @else if $value == sm { font-size: variables.$subtitle-size; font-weight: variables.$h6-weight; }
+      @else if $value == md { font-size: variables.$h6-size; font-weight: variables.$h6-weight; }
+      @else if $value == lg { font-size: variables.$h5-size; font-weight: variables.$h5-weight; }
+      @else if $value == xl { font-size: variables.$h4-size; font-weight: variables.$h4-weight; }
     }
 
     &_subtitle {
