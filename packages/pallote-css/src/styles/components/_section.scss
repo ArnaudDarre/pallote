@@ -32,11 +32,8 @@
   }
 
   &_header {
-
-    @include mixins.responsive(down, tablet) {
-      display: flex;
-      flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
 
     & + .section_content { @include mixins.clamp(padding-top, 2rem, 8vw, 4rem); }
     &-dense + .section_content { padding-top: 2rem; }
@@ -61,6 +58,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
 
     div.section_actions {
       margin-top: 0;
@@ -103,11 +102,25 @@
   text-align: center;
 }
 
+.section-center {
+
+  .section_titleWrapper {
+    justify-content: center;
+  }
+}
+
 .section-right .section_container,
 .section-right .section_header,
 .section_content-right {
   align-items: flex-end;
   text-align: right;
+}
+
+.section-right {
+
+  .section_titleWrapper {
+    flex-direction: row-reverse;
+  }
 }
 
 // —————————————————————————————————————————————————————————————————
