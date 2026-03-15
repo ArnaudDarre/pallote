@@ -56,9 +56,9 @@ a {
 }
 
 .hash-link {
-  padding-right: .25rem !important;
-  padding-left: .25rem !important;
-  margin-left: .25rem;
+  padding-inline-end: .25rem !important;
+  padding-inline-start: .25rem !important;
+  margin-inline-start: .25rem;
   border-radius: variables.$border-radius-sm;
   color: variables.$text-alt;
   font-weight: 100;

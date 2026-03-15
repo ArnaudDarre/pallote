@@ -27,7 +27,7 @@ $sidebar-width: 200px;
     height: 100vh;
     top: 0;
     left: -$sidebar-width;
-    padding-top: variables.$navbar-height-sm;
+    padding-block-start: variables.$navbar-height-sm;
     z-index: 13;
   }
 
@@ -37,7 +37,7 @@ $sidebar-width: 200px;
     border-width: 0 2px 2px 0;
     padding: 4px;
     transform: rotate(-45deg);
-    margin-right: 1rem;
+    margin-inline-end: 1rem;
     display: none;
 
     .page-withSidebar & { display: initial; }
@@ -55,7 +55,7 @@ $sidebar-width: 200px;
     @extend %overline;
     color: variables.$text-alt;
     font-weight: variables.$weight-bold;
-    margin-bottom: .25rem;
-    margin-left: 0;
+    margin-block-end: .25rem;
+    margin-inline-start: 0;
   }
 }

@@ -24,19 +24,19 @@
   border: variables.$border;
   
   & + & {
-    margin-top: .5rem;
+    margin-block-start: .5rem;
   }
 
   p > & {
-    margin-right: .25rem;
-    margin-left: .25rem;
+    margin-inline-end: .25rem;
+    margin-inline-start: .25rem;
   }
 
   .tag {
     font-family: variables.$font, variables.$font-fallback;
     float: right;
-    margin-top: 1px;
-    margin-right: -.25rem;
+    margin-block-start: 1px;
+    margin-inline-end: -.25rem;
   }
 }
 
@@ -51,8 +51,8 @@
     content: "Default";
     font-family: variables.$font, variables.$font-fallback;
     float: right;
-    margin-top: 1px;
-    margin-right: -.25rem;
+    margin-block-start: 1px;
+    margin-inline-end: -.25rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -63,9 +63,9 @@
     top: .5rem;
     right: .75rem;
     height: 1rem;
-    padding-right: .25rem;
-    padding-left: .25rem;
-    padding-bottom: 0.1em;
+    padding-inline-end: .25rem;
+    padding-inline-start: .25rem;
+    padding-block-end: 0.1em;
     background-color: variables.$text-disabled;
   }
 }

@@ -15,8 +15,8 @@
 // —————————————————————————————————————————————————————————————————
 
 .section {
-  @include mixins.clamp(padding-right, 1rem, 4vw, 4rem);
-  @include mixins.clamp(padding-left, 1rem, 4vw, 4rem);
+  @include mixins.clamp(padding-inline-end, 1rem, 4vw, 4rem);
+  @include mixins.clamp(padding-inline-start, 1rem, 4vw, 4rem);
   width: 100%;
   position: relative;
   display: flex;
@@ -24,8 +24,8 @@
   align-items: center;
 
   &_container {
-    @include mixins.clamp(padding-top, 2rem, 8vw, 4rem);
-    @include mixins.clamp(padding-bottom, 2rem, 8vw, 4rem);
+    @include mixins.clamp(padding-block-start, 2rem, 8vw, 4rem);
+    @include mixins.clamp(padding-block-end, 2rem, 8vw, 4rem);
     width: 100%;
     max-width: variables.$desktop;
     position: relative; // needed to have the content over section-landing:before
@@ -35,8 +35,8 @@
     display: flex;
     flex-direction: column;
 
-    & + .section_content { @include mixins.clamp(padding-top, 2rem, 8vw, 4rem); }
-    &-dense + .section_content { padding-top: 2rem; }
+    & + .section_content { @include mixins.clamp(padding-block-start, 2rem, 8vw, 4rem); }
+    &-dense + .section_content { padding-block-start: 2rem; }
   }
 
   &_content {
@@ -44,14 +44,14 @@
 
     & + &,
     & + .section_header {
-      @include mixins.clamp(padding-top, 2rem, 8vw, 4rem);
+      @include mixins.clamp(padding-block-start, 2rem, 8vw, 4rem);
     }
   }
 
   &_label {
     color: variables.$text-alt;
     font-weight: variables.$weight-bold;
-    margin-bottom: .5rem;
+    margin-block-end: .5rem;
   }
 
   &_titleWrapper {
@@ -62,7 +62,7 @@
     width: 100%;
 
     div.section_actions {
-      margin-top: 0;
+      margin-block-start: 0;
     }
   }
 
@@ -74,14 +74,14 @@
   &_subtitle {
     @extend %subtitle;
     max-width: variables.$max-width-subtitle;
-    margin-top: 1rem;
+    margin-block-start: 1rem;
     word-wrap: normal;
   }
 
   &_actions {
 
     @include mixins.responsive(down, tablet) {
-      margin-top: 2rem;
+      margin-block-start: 2rem;
     }
   }
 }
@@ -140,7 +140,7 @@
   & + & {
 
     .section_container {
-      padding-top: 0;
+      padding-block-start: 0;
     }
   }
 
@@ -175,9 +175,9 @@
 // —————————————————————————————————————————————————————————————————
 
 @mixin section-header-level($label-mb, $subtitle-mt, $actions-mt) {
-  .section_label { margin-bottom: $label-mb; }
-  .section_subtitle { margin-top: $subtitle-mt; }
-  .section_actions { margin-top: $actions-mt; }
+  .section_label { margin-block-end: $label-mb; }
+  .section_subtitle { margin-block-start: $subtitle-mt; }
+  .section_actions { margin-block-start: $actions-mt; }
 }
 
 .section_header-1 { @include section-header-level(.75rem, 1.5rem, 2.5rem); }
@@ -193,15 +193,15 @@
   .section {
 
     &_container {
-      @include mixins.clamp(padding-top, 2rem, 10vw, 7rem);
-      @include mixins.clamp(padding-bottom, 2rem, 10vw, 7rem);
+      @include mixins.clamp(padding-block-start, 2rem, 10vw, 7rem);
+      @include mixins.clamp(padding-block-end, 2rem, 10vw, 7rem);
     }
 
     &_label {
-      margin-bottom: 1rem;
+      margin-block-end: 1rem;
 
       @include mixins.responsive(down, tablet) {
-        margin-bottom: 0.75rem;
+        margin-block-end: 0.75rem;
       }
     }
 
@@ -212,17 +212,17 @@
 
     &_subtitle {
       @extend %h6;
-      margin-top: 2rem;
+      margin-block-start: 2rem;
       
       @include mixins.responsive(down, tablet) {
-        margin-top: 1.5rem;
+        margin-block-start: 1.5rem;
       }
     }
 
     &_actions {
 
       @include mixins.responsive(down, tablet) {
-        margin-top: 3rem;
+        margin-block-start: 3rem;
       }
     }
   }

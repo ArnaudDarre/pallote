@@ -2,8 +2,8 @@
 @use 'pallote-css/styles/common/mixins';
 
 .navbar {
-  @include mixins.clamp(padding-right, 1rem, 4vw, 4rem);
-  @include mixins.clamp(padding-left, 1rem, 4vw, 4rem);
+  @include mixins.clamp(padding-inline-end, 1rem, 4vw, 4rem);
+  @include mixins.clamp(padding-inline-start, 1rem, 4vw, 4rem);
   height: variables.$navbar-height;
   position: fixed;
   box-shadow: none;
@@ -22,7 +22,7 @@
     height: 1.6rem;
 
     * {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
   }
 
@@ -71,7 +71,7 @@
     height: 1em;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: .25em;
+    margin-inline-end: .25em;
   }
   
   &-github:before {

@@ -5,34 +5,34 @@
 .theme-doc-markdown {
 
   header {
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
     
     h1 {
-      margin-bottom: 0 !important;
+      margin-block-end: 0 !important;
     }
     
     + p {
       @extend %subtitle;
-      margin-bottom: 2.5rem;
+      margin-block-end: 2.5rem;
 
       + .docs_links {
-        margin-top: -1.5rem;
+        margin-block-start: -1.5rem;
       }
     }
   }
   
   > h2 {
-    margin-bottom: 2rem;
-    padding-top: 2rem;
+    margin-block-end: 2rem;
+    padding-block-start: 2rem;
     border-top: variables.$border;
   }
 
   > h2 + p {
-    margin-top: -1rem;
+    margin-block-start: -1rem;
   }
   
   > h3 + p {
-    margin-top: -.5rem;
+    margin-block-start: -.5rem;
   }
 
   > p, > ul {
@@ -40,7 +40,7 @@
   }
 
   h1.section_title {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   > p > a {
@@ -52,19 +52,19 @@
   }
 
   table + .alert {
-    margin-top: 1rem;
+    margin-block-start: 1rem;
   }
 }
 
 .docs {
 
   &_links {
-    margin-bottom: 2.5rem;
+    margin-block-end: 2.5rem;
   }
 
   &_block {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin-block-start: 1.5rem;
+    margin-block-end: 1rem;
     padding: 1rem;
     border: variables.$border;
     border-radius: variables.$border-radius-md;
@@ -90,7 +90,7 @@
     width: 100%;
 
     & + & {
-      margin-top: .5rem;
+      margin-block-start: .5rem;
     }
   }
 }

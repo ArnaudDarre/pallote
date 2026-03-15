@@ -40,13 +40,13 @@
   p:not(.text) { @extend %body; }
 
   h2 {
-    padding-bottom: 1rem;
-    margin-top: 2rem !important;
+    padding-block-end: 1rem;
+    margin-block-start: 2rem !important;
     border-color: variables.$border-color !important;
   }
 
   h3 {
-    margin-bottom: 1.5rem !important;
+    margin-block-end: 1.5rem !important;
   }
 
   a {
@@ -70,8 +70,8 @@
 // —————————————————————————————————————————————————————————————————
 
 .sb-unstyled {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-block-start: 1.5rem;
+  margin-block-end: 1.5rem;
 }
 
 // stories on components Docs page

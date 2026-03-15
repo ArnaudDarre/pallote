@@ -21,17 +21,17 @@
   }
 
   @include mixins.responsive(down, 768px) {
-    @include mixins.clamp(margin-top, 2rem, 8vw, 4rem);
+    @include mixins.clamp(margin-block-start, 2rem, 8vw, 4rem);
     transform: scale(.8);
     position: initial;
     height: 25rem;
-    margin-right: -3rem;
+    margin-inline-end: -3rem;
   }
   
   @include mixins.responsive(down, 568px) {
     transform: scale(.7);
     height: 20rem;
-    margin-right: -7rem;
+    margin-inline-end: -7rem;
   }
 
   .flex {

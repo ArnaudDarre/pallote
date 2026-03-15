@@ -18,10 +18,10 @@
   }
 
   ul {
-    padding-left: 0;
+    padding-inline-start: 0;
 
     .table-of-contents__link {
-      padding-left: 1.25rem;
+      padding-inline-start: 1.25rem;
     }
   }
 
@@ -67,7 +67,7 @@ button[class*="tocCollapsibleButton_"] {
       border-top: variables.$border;
       border-radius: 0;
       font-size: variables.$caption-size;
-      padding-top: 0;
+      padding-block-start: 0;
 
       &__link {
         padding: 0;

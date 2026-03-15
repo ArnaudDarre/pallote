@@ -6,7 +6,7 @@
 [class*="sidebar_"] {
 
   @include mixins.responsive(up, 997px) {
-    padding-top: variables.$navbar-height !important;
+    padding-block-start: variables.$navbar-height !important;
   }
 }
 
@@ -27,14 +27,14 @@
       padding: 1rem 1rem 2.5rem 1rem;
       
       .menu__list-item {
-        margin-left: 0;
+        margin-inline-start: 0;
       }
       
       .navbar-sidebar__back {
         top: -1rem;
         width: calc(100% + 2rem);
-        margin-left: -1rem;
-        margin-right: -1rem;
+        margin-inline-start: -1rem;
+        margin-inline-end: -1rem;
       }
     }
   }
@@ -56,32 +56,32 @@
   }
 
   &-item-link-level-2 {
-    margin-top: 0 !important;
+    margin-block-start: 0 !important;
   
     .menu__link {
       @extend %caption;
       font-weight: variables.$weight-regular;
-      padding-left: 1.5rem !important;
+      padding-inline-start: 1.5rem !important;
     }
   }
 }
 
 nav.menu {
-  padding-top: 2rem;
-  padding-right: 2rem;
-  @include mixins.clamp(padding-bottom, 2rem, 8vw, 4rem);
-  @include mixins.clamp(padding-left, 1rem, 4vw, 4rem);
+  padding-block-start: 2rem;
+  padding-inline-end: 2rem;
+  @include mixins.clamp(padding-block-end, 2rem, 8vw, 4rem);
+  @include mixins.clamp(padding-inline-start, 1rem, 4vw, 4rem);
 }
 
 .menu {
   
   &__list {
-    padding-left: 0 !important;
-    margin-top: 0;
+    padding-inline-start: 0 !important;
+    margin-block-start: 0;
     
     &-item {
-      margin-left: 0;
-      padding-top: 0 !important;
+      margin-inline-start: 0;
+      padding-block-start: 0 !important;
 
       &, &-collapsible {
         border-radius: variables.$border-radius-sm;

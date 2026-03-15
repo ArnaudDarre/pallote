@@ -29,7 +29,7 @@
   max-width: variables.$max-width-form;
 
   & + & {
-    margin-top: 1rem;
+    margin-block-start: 1rem;
   }
 
   &_label,
@@ -41,8 +41,8 @@
   &_hint,
   &_error {
     font-size: variables.$caption-size;
-    margin-top: -.125rem;
-    margin-bottom: .5rem;
+    margin-block-start: -.125rem;
+    margin-block-end: .5rem;
   }
 
   &_label {
@@ -52,14 +52,14 @@
 		overflow: hidden;
 		white-space: nowrap;
 		position: relative;
-		margin-bottom: .25rem;
+		margin-block-end: .25rem;
   }
 
   &_error {
     font-weight: variables.$weight-bold;
     color: variables.$error;
     border-left: .25rem solid variables.$error;
-    padding-left: .5rem;
+    padding-inline-start: .5rem;
   }
 
   &_control {
@@ -121,7 +121,7 @@
   .input_control {
     display: flex;
     align-items: center;
-    padding-right: 2rem;
+    padding-inline-end: 2rem;
   }
 }
 
@@ -142,8 +142,8 @@ textarea {
   display: flex;
   background-color: transparent;
   border: 0;
-  padding-right: 0;
-  padding-left: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
   
   &:not(&-landscape) {
     flex-direction: column;
@@ -152,8 +152,8 @@ textarea {
     
     .checkbox + .checkbox,
     .radio + .radio {  
-      margin-top: 0.75rem;
-      margin-left: 0;
+      margin-block-start: 0.75rem;
+      margin-inline-start: 0;
     }  
   }
   
@@ -161,7 +161,7 @@ textarea {
     
     .checkbox + .checkbox,
     .radio + .radio {
-      margin-left: 1rem;
+      margin-inline-start: 1rem;
     }
   }
 }
@@ -182,7 +182,7 @@ input[type='radio'] {
   width: variables.$checkbox-width;
   background-color: variables.$input-background;
   border: variables.$border;
-  margin-right: .5rem;
+  margin-inline-end: .5rem;
   color: variables.$primary;
 }
 
@@ -232,7 +232,7 @@ input[type='radio']:checked {
       border: 0;
       padding: .125rem .5rem;
       border-radius: variables.$border-radius-sm;
-      margin-right: .5rem;
+      margin-inline-end: .5rem;
       cursor: pointer;
 
       &:hover,
@@ -334,7 +334,7 @@ input[type='radio']:checked {
   }
 
   .input_label {
-    margin-bottom: .125rem;
+    margin-block-end: .125rem;
   }
 
   .input_control {
@@ -359,20 +359,20 @@ input[type='radio']:checked {
     }
  
     .input_control {
-      padding-right: 1.5rem;
+      padding-inline-end: 1.5rem;
     }
   }
 
   .checkboxes,
   .radios {
-    padding-right: 0;
-    padding-left: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
 
     &:not(&-landscape) {
 
       .checkbox + .checkbox,
       .radio + .radio {  
-        margin-top: 0.5rem;
+        margin-block-start: 0.5rem;
       }  
     }
   }
@@ -387,7 +387,7 @@ input[type='radio']:checked {
   input[type='radio'] {
     height: 1.25rem;
     width: 1.25rem;
-    margin-right: .375rem;
+    margin-inline-end: .375rem;
   }
 
   input[type='checkbox']:checked {
@@ -413,7 +413,7 @@ input[type='radio']:checked {
 .input-withIcon {
 
   .input_control {
-    padding-right: variables.$input-height*1.25;
+    padding-inline-end: variables.$input-height*1.25;
   } 
 }
 
@@ -422,7 +422,7 @@ input[type="date"],
 input[type="time"],
 input[type="number"] {
   appearance: initial;
-  padding-right: 0;
+  padding-inline-end: 0;
 }
 
 .input_icon {

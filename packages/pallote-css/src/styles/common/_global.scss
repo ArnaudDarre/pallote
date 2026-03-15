@@ -12,7 +12,7 @@ body {
 	font-weight: variables.$weight-regular;
 	background-color: variables.$background-default;
 	color: variables.$text;
-	// needed for footer margin-top: auto if content smaller than viewport height
+	// needed for footer margin-block-start: auto if content smaller than viewport height
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -54,14 +54,14 @@ header {
 
 // stick to bottom of page when page height smaller than viewport height
 footer {
-	margin-top: auto;
+	margin-block-start: auto;
 }
 
 // embed responsively
 
 .embed-container { 
 	position: relative; 
-	padding-bottom: 56.25%; 
+	padding-block-end: 56.25%; 
 	height: 0; 
 	overflow: hidden; 
 	max-width: 100%;
@@ -122,10 +122,10 @@ ul {
 }
 
 li {
-	margin-left: 1rem;
+	margin-inline-start: 1rem;
 
 	& + & {
-		padding-top: .25rem;
+		padding-block-start: .25rem;
 	}
 }
 

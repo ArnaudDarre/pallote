@@ -19,7 +19,7 @@
 	&_actions {
 
 		&:not(:last-child) {
-			margin-bottom: 1.5rem;
+			margin-block-end: 1.5rem;
 		}
 	}
 
@@ -42,13 +42,13 @@
 		&_actions {
 			
 			&:not(:last-child) {
-				margin-bottom: 1rem;
+				margin-block-end: 1rem;
 			}
 		}
 	}
 
   .input:not(:last-child) {
-    margin-bottom: .5rem;
+    margin-block-end: .5rem;
   }
 
 	&.form-card {

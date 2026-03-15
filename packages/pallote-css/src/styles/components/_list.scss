@@ -20,14 +20,14 @@
     align-items: center;
 
     & + & {
-      margin-top: .5rem;
+      margin-block-start: .5rem;
     }
 
     &Icon {
       display: flex;
       height: 1em;
       width: 1em;
-      margin-right: .5em;
+      margin-inline-end: .5em;
     }
   }
 }
@@ -41,7 +41,7 @@
   @extend %caption;
 
   + .list_item {
-    margin-top: .25rem;
+    margin-block-start: .25rem;
   }
 }
 

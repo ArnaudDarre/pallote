@@ -4,19 +4,19 @@
 
 .main-wrapper {
   min-height: 100vh;
-  padding-top: variables.$navbar-height !important;
+  padding-block-start: variables.$navbar-height !important;
 }
 
 // container
 
 .container {
-  @include mixins.clamp(padding-right, 1rem, 4vw, 4rem);
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  padding-left: 2rem;
+  @include mixins.clamp(padding-inline-end, 1rem, 4vw, 4rem);
+  padding-block-start: 0 !important;
+  padding-block-end: 0 !important;
+  padding-inline-start: 2rem;
   
   @include mixins.responsive(down, 996.98px) {
-    @include mixins.clamp(padding-left, 1rem, 4vw, 4rem);
+    @include mixins.clamp(padding-inline-start, 1rem, 4vw, 4rem);
   }
 
   @include mixins.responsive(up, 997px) {
@@ -29,8 +29,8 @@
       }
       
       > .col--3 {
-        padding-top: 2rem;
-        padding-right: 2rem;
+        padding-block-start: 2rem;
+        padding-inline-end: 2rem;
       }
     }
   }

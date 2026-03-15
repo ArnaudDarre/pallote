@@ -38,8 +38,8 @@ $spacing-switch: 1rem;
 
   &_label {
     
-    &:first-child { margin-right: .75em; }
-    &:last-child { margin-left: .75em; }
+    &:first-child { margin-inline-end: .75em; }
+    &:last-child { margin-inline-start: .75em; }
   }
 
   &_switch {
@@ -54,7 +54,7 @@ $spacing-switch: 1rem;
     border-radius: $spacing-switch;
     position: relative;
 
-    &:nth-child(2) { margin-left: .25rem; }
+    &:nth-child(2) { margin-inline-start: .25rem; }
   }
 
   &_toggle {

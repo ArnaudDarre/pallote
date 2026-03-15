@@ -26,7 +26,7 @@ $spacing-dense: .5rem;
   }
 
   &_panel {
-    margin-top: $spacing;
+    margin-block-start: $spacing;
   }
 }
 
@@ -84,8 +84,8 @@ $spacing-dense: .5rem;
     }
 
     &_panel {
-      margin-top: 0;
-      margin-left: $spacing;
+      margin-block-start: 0;
+      margin-inline-start: $spacing;
     }
   }
 
@@ -112,7 +112,7 @@ $spacing-dense: .5rem;
 .tabs-dense {
   
   .tabs_panel {
-    margin-top: $spacing-dense;
+    margin-block-start: $spacing-dense;
   }  
 
   .tab {
@@ -132,8 +132,8 @@ $spacing-dense: .5rem;
   border-radius: variables.$border-radius-md;
   
   .tabs_panel {
-    margin-top: 0;
-    margin-left: 0;
+    margin-block-start: 0;
+    margin-inline-start: 0;
     padding: $spacing;
   }
   

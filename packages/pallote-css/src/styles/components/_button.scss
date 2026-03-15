@@ -59,8 +59,8 @@
 @mixin button-size($value, $size) {
   height: $size;
   gap: $size*.25;
-  padding-right: $size*.33;
-  padding-left: $size*.33;
+  padding-inline-end: $size*.33;
+  padding-inline-start: $size*.33;
 
   @if $value == xs { font-size: variables.$button-xs-size; }
   @if $value == sm { font-size: variables.$button-sm-size; }
@@ -70,14 +70,14 @@
   svg {
     width: calc($size/1.75);
     height: calc($size/1.75);
-    margin-right: -$size*.05;
-    margin-left: -$size*.05;
+    margin-inline-end: -$size*.05;
+    margin-inline-start: -$size*.05;
   }
 
   &:not(.button-icon) {
 
     svg {
-      margin-top: 0.15em;
+      margin-block-start: 0.15em;
     }
   }
 

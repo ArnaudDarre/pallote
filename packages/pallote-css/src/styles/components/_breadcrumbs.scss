@@ -16,13 +16,13 @@
   ol {
     display: inline-flex;
     flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
+    padding-inline-start: 0;
+    margin-block-end: 0;
   }
 
   li {
-    margin-left: 0;
-    padding-top: 0;
+    margin-inline-start: 0;
+    padding-block-start: 0;
   }
 
   &_item {
@@ -31,11 +31,11 @@
     font-size: variables.$button-sm-size;
     
     &:not(:first-child) {
-      margin-left: .25rem;
+      margin-inline-start: .25rem;
       
       &:before {
         content: "/";
-        margin-right: .25rem;
+        margin-inline-end: .25rem;
         color: variables.$text-alt;
         display: inline-block; // required to remove underline on hover for before element
       }
@@ -67,6 +67,6 @@
   border-width: 0 1px 1px 0;
   padding: .2em;
   transform: rotate(-45deg);
-  margin-right: .5rem;
-  margin-bottom: .1em;
+  margin-inline-end: .5rem;
+  margin-block-end: .1em;
 }

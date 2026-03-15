@@ -16,7 +16,7 @@
   display: flex;
   
   .tag:not(:last-child) {
-    margin-right: .25rem;
+    margin-inline-end: .25rem;
   }
 
   &-portrait {
@@ -24,8 +24,8 @@
     align-items: flex-start;
   
     .tag:not(:last-child) {
-      margin-bottom: .25rem;
-      margin-right: 0;
+      margin-block-end: .25rem;
+      margin-inline-end: 0;
     }
   }
 }
@@ -41,8 +41,8 @@
   height: 1.5rem;
   width: fit-content;
   min-width: fit-content;
-  padding-right: 0.4em;
-  padding-left: 0.4em;
+  padding-inline-end: 0.4em;
+  padding-inline-start: 0.4em;
 }
 
 // —————————————————————————————————————————————————————————————————

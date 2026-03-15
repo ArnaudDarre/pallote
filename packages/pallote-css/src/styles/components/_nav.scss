@@ -41,7 +41,7 @@ a.nav_trigger {
     position: relative;
 
     &:not(:first-child) {
-      padding-top: 0;
+      padding-block-start: 0;
     }
 
     &-dropdown {
@@ -57,8 +57,8 @@ a.nav_trigger {
     white-space: nowrap;
     cursor: pointer;
     height: variables.$nav-item*2;
-    padding-right: variables.$nav-item*.75;
-    padding-left: variables.$nav-item*.75;
+    padding-inline-end: variables.$nav-item*.75;
+    padding-inline-start: variables.$nav-item*.75;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,7 +76,7 @@ a.nav_trigger {
         border-width: 0 .125rem .125rem 0;
         padding: .125rem;
         transform: rotate(45deg);
-        margin-left: variables.$nav-item*0.5;
+        margin-inline-start: variables.$nav-item*0.5;
       }
     }
   }
@@ -87,8 +87,8 @@ a.nav_trigger {
     height: 1rem;
     align-items: center;
     justify-content: center;
-    margin-right: 0.25rem;
-    margin-left: -0.25rem;
+    margin-inline-end: 0.25rem;
+    margin-inline-start: -0.25rem;
   }
 
   &_target {
@@ -98,8 +98,8 @@ a.nav_trigger {
     gap: .25rem;
 
     .nav_trigger {
-      padding-right: variables.$nav-item*0.5;
-      padding-left: variables.$nav-item*0.5;        
+      padding-inline-end: variables.$nav-item*0.5;
+      padding-inline-start: variables.$nav-item*0.5;        
       border-radius: variables.$border-radius-sm;
     }
   }
@@ -165,8 +165,8 @@ a.nav_trigger {
     }
   
     &_trigger {
-      padding-right: variables.$nav-item*0.5;
-      padding-left: variables.$nav-item*0.5;
+      padding-inline-end: variables.$nav-item*0.5;
+      padding-inline-start: variables.$nav-item*0.5;
       height: variables.$nav-item*1.5;
     }
 
@@ -176,8 +176,8 @@ a.nav_trigger {
         padding: 0 variables.$nav-item*0.25 variables.$nav-item*0.25 variables.$nav-item*0.25;
 
         .nav_trigger {
-          padding-right: variables.$nav-item*0.25;
-          padding-left: variables.$nav-item*0.25;
+          padding-inline-end: variables.$nav-item*0.25;
+          padding-inline-start: variables.$nav-item*0.25;
         }
       }
     }

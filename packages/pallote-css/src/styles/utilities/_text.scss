@@ -121,7 +121,7 @@
 @mixin gutter {
 
 	& + & {
-		margin-top: .75em;
+		margin-block-start: .75em;
 	}
 }
 

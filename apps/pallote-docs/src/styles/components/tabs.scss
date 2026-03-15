@@ -26,13 +26,13 @@
   }
 
   .margin-top--md {
-    margin-top: 0 !important;
+    margin-block-start: 0 !important;
     padding: 1rem;
   }
 }
 
 .tabs__item {
-  margin-left: 0;
+  margin-inline-start: 0;
   padding: .5rem 1rem;
 
   &:hover,
@@ -57,7 +57,7 @@
 [role="tabpanel"] {
 
   p + [class*="codeBlockContainer"] {
-    margin-top: 1rem;
+    margin-block-start: 1rem;
   }
 
   [class*="codeBlockContainer"] {

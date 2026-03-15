@@ -29,7 +29,7 @@ $spacing-alert: .5rem;
   display: flex;
 
   &:not(.alert-bar) {
-    padding-left: 2.5rem;
+    padding-inline-start: 2.5rem;
   }
 
   @include mixins.responsive(down, mobile) {
@@ -63,7 +63,7 @@ $spacing-alert: .5rem;
 
   &_subtitle {
     @extend .caption;
-    margin-top: 0.125rem !important;
+    margin-block-start: 0.125rem !important;
   }
 
   &_actions {
@@ -171,11 +171,11 @@ $spacing-alert: .5rem;
   }
 
   &:not(.alert-bar) {
-    padding-left: 1rem*1.75;
+    padding-inline-start: 1rem*1.75;
   }
 
   .alert_title { @extend .caption; }
-  .alert_subtitle { @extend .overline; margin-top: 0 !important; }
+  .alert_subtitle { @extend .overline; margin-block-start: 0 !important; }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -185,10 +185,10 @@ $spacing-alert: .5rem;
 .alert.alert {
 
   &-noIcon {    
-    padding-left: 1rem;
+    padding-inline-start: 1rem;
     
     &.alert-dense {
-      padding-left: .5rem;
+      padding-inline-start: .5rem;
     }
     
     &:before {

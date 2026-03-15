@@ -34,14 +34,14 @@
 // —————————————————————————————————————————————————————————————————
 
 @mixin divider-padding($padding) {
-  margin-top: $padding;
-  margin-bottom: $padding;
+  margin-block-start: $padding;
+  margin-block-end: $padding;
 
   &.divider-portrait {
-    margin-top: 0;
-    margin-right: $padding;
-    margin-bottom: 0;
-    margin-left: $padding;
+    margin-block-start: 0;
+    margin-inline-end: $padding;
+    margin-block-end: 0;
+    margin-inline-start: $padding;
   }
 }
 

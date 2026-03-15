@@ -28,21 +28,21 @@
 
   h2, h3, h4, h5, h6 {
     
-    &:not(:first-child) { margin-top: 1.5em; }
-    &:not(:last-child) { margin-bottom: .75em; }
+    &:not(:first-child) { margin-block-start: 1.5em; }
+    &:not(:last-child) { margin-block-end: .75em; }
   }
 
   p,
   ol, ul,
   p + a, a + p {
 
-    &:not(:first-child) { margin-top: 0.75em; }
+    &:not(:first-child) { margin-block-start: 0.75em; }
   }
 
   .highlighter-rouge,
   .alert {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-block-start: 1.5rem;
+    margin-block-end: 1.5rem;
     width: fit-content;
     white-space: nowrap;
   }
@@ -74,8 +74,8 @@
     }
 
     &:not(:first-child) {
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-block-start: 1.5rem;
+      margin-block-end: 1.5rem;
     }
   }
 
@@ -85,27 +85,27 @@
 
   ol,
   ul {
-    margin-left: 1rem;
+    margin-inline-start: 1rem;
   }
 
   ol { list-style: decimal; }
   ul { list-style: disc; }
 
-  li + li { margin-top: .25rem; }
+  li + li { margin-block-start: .25rem; }
 
   li {
 
     > ul {
-      margin-top: 0.25rem !important;
-      margin-left: 0;
+      margin-block-start: 0.25rem !important;
+      margin-inline-start: 0;
 
-      li + li { margin-top: 0; }
+      li + li { margin-block-start: 0; }
     }
 
     &:not(:last-child) {
 
       > ul {
-        margin-bottom: 0.25rem;
+        margin-block-end: 0.25rem;
       }
     }
   }
