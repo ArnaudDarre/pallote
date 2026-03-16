@@ -24,8 +24,8 @@ body {
 		background-color: variables.$overlay;
 		height: 100vh;
 		width: 100vw;
-		top: 0;
-		left: 0;
+		inset-block-start: 0;
+		inset-inline-start: 0;
 		opacity: 0;
 		z-index: 12;
 		pointer-events: none;
@@ -48,7 +48,7 @@ body {
 
 header {
 	position: sticky;
-	top: 0;
+	inset-block-start: 0;
 	z-index: 10;
 }
 
@@ -69,8 +69,8 @@ footer {
 	
 	iframe, object, embed { 
 		position: absolute; 
-		top: 0; 
-		left: 0; 
+		inset-block-start: 0; 
+		inset-inline-start: 0; 
 		width: 100%; 
 		height: 100%; 
 	}

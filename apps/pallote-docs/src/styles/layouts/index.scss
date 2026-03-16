@@ -5,19 +5,19 @@
   transform: scale(.85);
   transform-origin: top right;
   position: absolute;
-  top: 2rem;
-  right: -4rem;
+  inset-block-start: 2rem;
+  inset-inline-end: -4rem;
   
   @include mixins.responsive(down, 1320px) {
     transform: scale(.8);
-    right: auto;
-    left: 12.5rem;
+    inset-inline-end: auto;
+    inset-inline-start: 12.5rem;
   }
   
   @include mixins.responsive(down, 1024px) {
     transform: scale(.7);
-    top: 3rem;
-    left: 7.5rem;
+    inset-block-start: 3rem;
+    inset-inline-start: 7.5rem;
   }
 
   @include mixins.responsive(down, 768px) {

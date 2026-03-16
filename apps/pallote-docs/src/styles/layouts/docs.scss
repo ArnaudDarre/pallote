@@ -24,7 +24,7 @@
   > h2 {
     margin-block-end: 2rem;
     padding-block-start: 2rem;
-    border-top: variables.$border;
+    border-block-start: variables.$border;
   }
 
   > h2 + p {

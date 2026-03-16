@@ -32,9 +32,9 @@ td > code {
   
   .docs_block & {
     margin: 1rem -1rem 0 -1rem;
-    border-top: variables.$border;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-block-start: variables.$border;
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
     background: none;
   }
   
@@ -42,8 +42,8 @@ td > code {
     border-radius: variables.$border-radius-md;
     
     .tabs-container & {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      border-start-start-radius: 0;
+      border-start-end-radius: 0;
     }
   }
   
@@ -68,8 +68,8 @@ td > code {
   [class*="buttonGroup_"] {
     height: 2rem;
     width: fit-content;
-    top: 0.625rem;
-    right: 0.625rem;
+    inset-block-start: 0.625rem;
+    inset-inline-end: 0.625rem;
 
     button {
       background-color: variables.$grey-90;

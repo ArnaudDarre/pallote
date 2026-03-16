@@ -85,8 +85,8 @@
       padding: $size $size*1.5;
 
       &:after {
-        top: $size;
-        right: $size*1.25;
+        inset-block-start: $size;
+        inset-inline-end: $size*1.25;
       }
     }
 

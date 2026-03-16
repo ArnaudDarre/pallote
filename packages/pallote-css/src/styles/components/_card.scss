@@ -67,7 +67,7 @@
     width: fit-content;
     justify-content: flex-end;
     
-    @include mixins.responsive(up, tablet) { float: right; }
+    @include mixins.responsive(up, tablet) { float: inline-end; }
     @include mixins.responsive(down, tablet) { order: 4; }
   }
 
@@ -306,7 +306,7 @@
 .card {
 
   &-center { text-align: center; }
-  &-right { text-align: right; }
+  &-end { text-align: right; }
 }
 // —————————————————————————————————————————————————————————————————
 // transparent

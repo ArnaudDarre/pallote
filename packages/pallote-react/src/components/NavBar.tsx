@@ -3,16 +3,16 @@ import classnames from 'classnames'
 
 import { Section, SectionProps } from './Section'
 
-type NavBarAlign = 'left' | 'right'
+type NavBarAlign = 'start' | 'end'
 
 export interface NavBarProps extends Omit<SectionProps, 'children'> {
   logo?: ReactNode
-  align?: NavBarAlign
+  logoPosition?: NavBarAlign
   className?: string
   children: ReactNode
 }
 
-export const NavBar = ({ logo, align, className, children, ...props }: NavBarProps) => {
+export const NavBar = ({ logo, logoPosition, className, children, ...props }: NavBarProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleNav = () => {
@@ -36,7 +36,7 @@ export const NavBar = ({ logo, align, className, children, ...props }: NavBarPro
         className={classnames([
           'navbar',
           {
-            [`navbar-${align}`]: align,
+            [`navbar-${logoPosition}`]: logoPosition,
             'js-opened': isOpen
           },
           className

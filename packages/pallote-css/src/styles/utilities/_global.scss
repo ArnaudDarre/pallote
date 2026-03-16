@@ -157,7 +157,7 @@ $fractions: ( "1-4": 0.25, "1-2": 0.5, "3-4": 0.75 );
   &-absolute { position: absolute !important; }
   &-relative { position: relative !important; }
   &-fixed { position: fixed !important; }
-  &-sticky { position: sticky !important; top: 0; }
+  &-sticky { position: sticky !important; inset-block-start: 0; }
 }
 
 // —————————————————————————————————————————————————————————————————
@@ -214,10 +214,10 @@ $fractions: ( "1-4": 0.25, "1-2": 0.5, "3-4": 0.75 );
 // —————————————————————————————————————————————————————————————————
 
 .b-1 { border: variables.$border; }
-.bt-1 { border-top: variables.$border; }
-.br-1 { border-right: variables.$border; }
-.bb-1 { border-bottom: variables.$border; }
-.bl-1 { border-left: variables.$border; }
+.bt-1 { border-block-start: variables.$border; }
+.bb-1 { border-block-end: variables.$border; }
+.br-1 { border-inline-end: variables.$border; }
+.bl-1 { border-inline-start: variables.$border; }
 
 // —————————————————————————————————————————————————————————————————
 // border-radius

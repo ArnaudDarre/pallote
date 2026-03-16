@@ -127,7 +127,7 @@ The header of the website, which includes the logo and navigation items.
     }
   >
     <NavItem label='Align' active href='' />
-    <NavItem label='Left' href='' />
+    <NavItem label='Start' href='' />
   </NavBar>
   <NavBar
     logo={
@@ -138,10 +138,10 @@ The header of the website, which includes the logo and navigation items.
         />
       </a>
     }
-    align="right"
+    logoPosition="end"
   >
     <NavItem label='Align' active href='' />
-    <NavItem label='Right' href='' />
+    <NavItem label='End' href='' />
   </NavBar>
 </div>
 
@@ -171,7 +171,7 @@ The header of the website, which includes the logo and navigation items.
       />
     </Link>
   }
-  align="right"
+  logoPosition="end"
 >
   {/* insert nav items */}
 </NavBar>
@@ -201,7 +201,7 @@ The header of the website, which includes the logo and navigation items.
 </header>
 
 <header>
-  <div class="section navbar navbar-right">
+  <div class="section navbar navbar-end">
     <div class="section_container">
       <div class="navbar_main">
         <a href="/" class="navbar_logo">

@@ -13,7 +13,7 @@ export interface SectionHeaderProps extends HTMLAttributes<HTMLDivElement> {
   titleLevel?: TitleLevel
   subtitle?: ReactNode
   actions?: ReactNode
-  actionsPosition?: 'right' | 'bottom'
+  actionsPosition?: 'inline' | 'end'
   className?: string
 }
 
@@ -48,7 +48,7 @@ export const SectionHeader = ({
         >
           {title}
         </Text>
-        {actions && actionsPosition === 'right' ? (
+        {actions && actionsPosition === 'inline' ? (
           <Display hide="tablet">
             <div className="section_actions">
               {actions}
@@ -58,7 +58,7 @@ export const SectionHeader = ({
       </div>
       {subtitle ? <div className={classnames('section_subtitle')}>{subtitle}</div> : null}
       {actions ? (
-        actionsPosition === 'right' ? (
+        actionsPosition === 'inline' ? (
           <Display show="tablet">
             <div className="section_actions">
               {actions}

@@ -49,9 +49,9 @@ export const Variant = () => (
 
 export const Align = () => (
   <Grid gap={4} direction="column">
-    <Grid><Text align="left" className="w-full">Left</Text></Grid>
+    <Grid><Text align="start" className="w-full">Start</Text></Grid>
     <Grid><Text align="center" className="w-full">Center</Text></Grid>
-    <Grid><Text align="right" className="w-full">Right</Text></Grid>
+    <Grid><Text align="end" className="w-full">End</Text></Grid>
     <Grid><Text align="justify" className="w-full">Justify</Text></Grid>
   </Grid>
 )

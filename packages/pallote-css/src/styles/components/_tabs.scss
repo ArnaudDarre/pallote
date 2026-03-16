@@ -22,7 +22,7 @@ $spacing-dense: .5rem;
   &_controls {
     display: flex;
     width: 100%;
-    border-bottom: variables.$border;
+    border-block-end: variables.$border;
   }
 
   &_panel {
@@ -34,8 +34,8 @@ $spacing-dense: .5rem;
   position: relative;
   cursor: pointer;
   padding: $spacing*.5 $spacing;
-  border-top-left-radius: variables.$border-radius-md;
-  border-top-right-radius: variables.$border-radius-md;
+  border-start-start-radius: variables.$border-radius-md;
+  border-start-end-radius: variables.$border-radius-md;
   text-transform: variables.$button-transform;
   font-weight: variables.$button-weight;
   font-size: variables.$button-sm-size;
@@ -48,9 +48,9 @@ $spacing-dense: .5rem;
   &:after {
     content: '';
     position: absolute;
-    right: 0;
-    bottom: -1px;
-    left: 0;
+    inset-inline-end: 0;
+    inset-block-end: -1px;
+    inset-inline-start: 0;
     height: 3px;
   }
 }
@@ -79,8 +79,8 @@ $spacing-dense: .5rem;
     &_controls {
       flex-direction: column;
       width: 10rem;
-      border-bottom: 0;
-      border-right: variables.$border;
+      border-block-end: 0;
+      border-inline-end: variables.$border;
     }
 
     &_panel {
@@ -91,14 +91,14 @@ $spacing-dense: .5rem;
 
   .tab {
     text-align: left;
-    border-top-left-radius: variables.$border-radius-sm;
-    border-top-right-radius: 0 !important;
-    border-bottom-left-radius: variables.$border-radius-sm;
+    border-start-start-radius: variables.$border-radius-sm;
+    border-start-end-radius: 0 !important;
+    border-end-start-radius: variables.$border-radius-sm;
       
     &:after {
-      top: 0;
-      right: -1px;
-      left: auto;
+      inset-block-start: 0;
+      inset-inline-end: -1px;
+      inset-inline-start: auto;
       height: 100%;
       width: 3px;
     }
@@ -117,8 +117,8 @@ $spacing-dense: .5rem;
 
   .tab {
     padding: $spacing-dense*.5 $spacing-dense;
-    border-top-left-radius: variables.$border-radius-sm;
-    border-top-right-radius: variables.$border-radius-sm;
+    border-start-start-radius: variables.$border-radius-sm;
+    border-start-end-radius: variables.$border-radius-sm;
   }
 }
 

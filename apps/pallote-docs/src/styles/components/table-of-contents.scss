@@ -1,7 +1,7 @@
 @use 'pallote-css/styles/common/variables';
 
 [class*="tableOfContents"] {
-  top: 6rem !important;
+  inset-block-start: 6rem !important;
   overflow: visible;
 }
 
@@ -32,7 +32,7 @@
     padding: .125rem .5rem;
     border-radius: variables.$border-radius-sm;
     overflow: hidden;
-    border-left: variables.$border-radius-sm solid transparent;
+    border-inline-start: variables.$border-radius-sm solid transparent;
 
     &:hover {
       color: inherit;
@@ -45,7 +45,7 @@
     &--active {
       color: variables.$primary !important;
       background-color: variables.$hover !important;
-      border-left-color: variables.$primary;
+      border-inline-start-color: variables.$primary;
     }
   }
 }
@@ -64,14 +64,14 @@ button[class*="tocCollapsibleButton_"] {
     .table-of-contents {
       background-color: transparent;
       border: 0;
-      border-top: variables.$border;
+      border-block-start: variables.$border;
       border-radius: 0;
       font-size: variables.$caption-size;
       padding-block-start: 0;
 
       &__link {
         padding: 0;
-        border-left: 0;
+        border-inline-start: 0;
       }
     }
 

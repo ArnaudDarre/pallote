@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { SectionHeader } from './SectionHeader'
 import type { SectionHeaderProps } from './SectionHeader'
 
-type SectionAlign = 'left' | 'center' | 'right'
+type SectionAlign = 'start' | 'center' | 'end'
 type SectionColor = 'default' | 'paper' | 'primary' | 'primaryLight'
 
 export interface SectionProps extends HTMLAttributes<HTMLDivElement> {
@@ -16,7 +16,7 @@ export interface SectionProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const Section = ({
-  align = 'left',
+  align = 'start',
   color = 'default',
   landing,
   className,

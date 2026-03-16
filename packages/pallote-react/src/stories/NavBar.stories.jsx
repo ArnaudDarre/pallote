@@ -73,7 +73,7 @@ export const Align = () => (
       }
     >
     <NavItem label='Align' active />
-      <NavItem label='Left' />
+      <NavItem label='Start' />
     </NavBar>
     <NavBar
       logo={
@@ -84,10 +84,10 @@ export const Align = () => (
           />
         </Link>
       }
-      align="right"
+      logoPosition="end"
     >
       <NavItem label='Align' active />
-      <NavItem label='Right' />
+      <NavItem label='End' />
     </NavBar>
   </Grid>
 )

@@ -12,7 +12,7 @@ table {
     background-color: transparent;
 
     tr {
-      border-bottom-width: 1px !important;
+      border-block-end-width: 1px !important;
       background-color: transparent;
     }
   }
@@ -30,7 +30,7 @@ table {
   }
 
   td {
-    border-top: variables.$border;
+    border-block-start: variables.$border;
   }
 
   code {

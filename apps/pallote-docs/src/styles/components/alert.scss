@@ -4,8 +4,8 @@
 .theme-admonition.alert {
   position: relative;
   max-width: unset;
-  top: 0;
-  right: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
   width: 100%;
   z-index: initial;
 

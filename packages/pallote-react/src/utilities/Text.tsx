@@ -2,7 +2,7 @@ import { ElementType, HTMLAttributes, ReactNode } from 'react'
 import classnames from 'classnames'
 
 type TextVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle' | 'body' | 'caption' | 'overline'
-type TextAlign = 'left' | 'center' | 'right' | 'justify'
+type TextAlign = 'start' | 'center' | 'end' | 'justify'
 type TextWeight = 'regular' | 'bold'
 type TextTransform = 'none' | 'capitalize' | 'uppercase' | 'lowercase' | 'initial' | 'inherit'
 type TextColor = 'default' | 'alt' | 'disabled' | 'contrast' | 'contrastAlt' | 'contrastDisabled' | 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error'

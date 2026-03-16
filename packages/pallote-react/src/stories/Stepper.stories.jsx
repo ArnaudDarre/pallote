@@ -26,11 +26,11 @@ export const Default = () => (
   <Stepper>
     <Step label="Account">
       <Text>Enter your account details</Text>
-      <Input label="Email" type="email" style={{ marginTop: '1rem' }} />
+      <Input label="Email" type="email" style={{ marginBlockStart: '1rem' }} />
     </Step>
     <Step label="Profile">
       <Text>Set up your profile</Text>
-      <Input label="Full name" style={{ marginTop: '1rem' }} />
+      <Input label="Full name" style={{ marginBlockStart: '1rem' }} />
     </Step>
     <Step label="Confirmation">
       <Text>Review and confirm your information</Text>

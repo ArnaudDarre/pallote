@@ -126,9 +126,9 @@ In order to use the correct semantic component, you need to combine it with the 
 ### Align
 
 <div class="docs_block docs_block-portrait">
-  <Text align="left" className="w-full">Align left and rub whiskers on bare skin act innocent. Catto munch salmono while happily ignoring when being called terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry eat from dog's food.</Text>
+  <Text align="start" className="w-full">Align to the start of the inline axis and rub whiskers on bare skin act innocent. Catto munch salmono while happily ignoring when being called terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry eat from dog's food.</Text>
   <Text align="center" className="w-full">Align center and stare at ceiling cough hairball on conveniently placed pants and break lamps and curl up into a ball, so get scared by sudden appearance of cucumber hack step on your keyboard while you're gaming and then turn in a circle.</Text>
-  <Text align="right" className="w-full">Align right lick master's hand at first then bite because im moody chew the plant scratch my tummy actually i hate you now fight me. Sun bathe steal the warm chair right after you get up.</Text>
+  <Text align="end" className="w-full">Align to the end of the inline axis lick master's hand at first then bite because im moody chew the plant scratch my tummy actually i hate you now fight me. Sun bathe steal the warm chair right after you get up.</Text>
   <Text align="justify" className="w-full">Align justify meow in empty rooms mew mew. I love cats i am one wake up scratch humans leg for food then purr then i have a and relax lick master's hand at first then bite because im moody dismember a mouse and then regurgitate parts of it on the family room floor.</Text>
 </div>
 
@@ -136,18 +136,18 @@ In order to use the correct semantic component, you need to combine it with the 
   <TabItem value="react" label="React">
 
 ```jsx
-<Text align="left">Left{/* content */}</Text>
+<Text align="start">Start{/* content */}</Text>
 <Text align="center">Center{/* content */}</Text>
-<Text align="right">Right{/* content */}</Text>
+<Text align="end">End{/* content */}</Text>
 <Text align="justify">Justify{/* content */}</Text>
 ```
   </TabItem>
   <TabItem value="css" label="CSS">
 
 ```html
-<p class="text-left"><!-- content --></p>
+<p class="text-start"><!-- content --></p>
 <p class="text-center"><!-- content --></p>
-<p class="text-right"><!-- content --></p>
+<p class="text-end"><!-- content --></p>
 <p class="text-justify"><!-- content --></p>
 ```
   </TabItem>
@@ -371,7 +371,7 @@ In order to use the correct semantic component, you need to combine it with the 
 | - | - | - |
 | variant | `h1` `h2` `h3` `h4` `h5` `h6` <br></br> `subtitle` `body` `caption` `overline` | `body` |
 | component | `h1` `h2` `h3` `h4` `h5` `h6`<br></br>  `p` `span` `label` `legend` | `p` |
-| align | `left` `center` `right` `justify` | `left` |
+| align | `start` `center` `end` `justify` | `start` |
 | weight | `regular` `bold` | `regular` |
 | transform | `none` `capitalize` `uppercase` `lowercase` `initial` `inherit` | |
 | underline | `bool` | `false` |

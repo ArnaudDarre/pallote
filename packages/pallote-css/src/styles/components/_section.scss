@@ -109,14 +109,14 @@
   }
 }
 
-.section-right .section_container,
-.section-right .section_header,
-.section_content-right {
+.section-end .section_container,
+.section-end .section_header,
+.section_content-end {
   align-items: flex-end;
   text-align: right;
 }
 
-.section-right {
+.section-end {
 
   .section_titleWrapper {
     flex-direction: row-reverse;

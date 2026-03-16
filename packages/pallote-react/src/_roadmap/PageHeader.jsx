@@ -32,9 +32,9 @@ export const PageHeader = ({
 
 PageHeader.propTypes = {
   align: PropTypes.oneOf([
-    'left',
+    'start',
     'center',
-    'right'
+    'end'
   ]),
   label: PropTypes.string,
   title: PropTypes.string.isRequired,

@@ -5,13 +5,13 @@
 $sidebar-width: 200px;
 
 .sidebar {
-  transition: left variables.$transition-md;
+  transition: inset-inline-start variables.$transition-md;
   @include mixins.calc(height, '100vh - 'variables.$navbar-height);
   position: sticky;
   flex-shrink: 0;
-  border-right: variables.$border;
+  border-inline-end: variables.$border;
   width: $sidebar-width;
-  top: variables.$navbar-height;
+  inset-block-start: variables.$navbar-height;
   padding: 1rem;
   overflow-y: scroll;
   scrollbar-color: light;  
@@ -19,14 +19,14 @@ $sidebar-width: 200px;
   background-color: variables.$background-default;
   
   &.js-opened {
-    left: 0;
+    inset-inline-start: 0;
   }
   
   @include mixins.responsive(down, tablet) {
     position: fixed;
     height: 100vh;
-    top: 0;
-    left: -$sidebar-width;
+    inset-block-start: 0;
+    inset-inline-start: -$sidebar-width;
     padding-block-start: variables.$navbar-height-sm;
     z-index: 13;
   }
@@ -45,8 +45,8 @@ $sidebar-width: 200px;
 
     &-close {
       position: absolute;
-      top: variables.$navbar-height-sm*0.5;
-      left: variables.$navbar-height-sm*0.5;
+      inset-block-start: variables.$navbar-height-sm*0.5;
+      inset-inline-start: variables.$navbar-height-sm*0.5;
       transform: translateY(-50%) rotate(135deg);
     }
   }

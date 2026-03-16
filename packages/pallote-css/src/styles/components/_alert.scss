@@ -21,8 +21,8 @@ $spacing-alert: .5rem;
   border-radius: $spacing-alert;
   padding: $spacing-alert;
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  inset-block-start: 1rem;
+  inset-inline-end: 1rem;
   width: 100%;
   max-width: 20rem;
   z-index: 20;
@@ -34,8 +34,8 @@ $spacing-alert: .5rem;
 
   @include mixins.responsive(down, mobile) {
     @include mixins.calc(max-width, '100vw - '1rem);
-    right: .5rem;
-    top: .5rem;
+    inset-inline-end: .5rem;
+    inset-block-start: .5rem;
   }
   
   @include mixins.responsive(down, mobile-sm) {
@@ -45,8 +45,8 @@ $spacing-alert: .5rem;
   &:before {
     content: "";
     position: absolute;
-    top: $spacing-alert;
-    left: $spacing-alert;
+    inset-block-start: $spacing-alert;
+    inset-inline-start: $spacing-alert;
     height: $spacing-alert*3;
     width: $spacing-alert*3;
     background-size: cover;
@@ -74,8 +74,8 @@ $spacing-alert: .5rem;
   &_close {
     transition: opacity variables.$transition-md;
     position: absolute;
-    top: .5rem;
-    right: .5rem;
+    inset-block-start: .5rem;
+    inset-inline-end: .5rem;
     line-height: 0;
 
     svg {
@@ -131,8 +131,8 @@ $spacing-alert: .5rem;
     position: relative;
     max-width: none;
     z-index: 1;
-    top: 0;
-    right: 0;  
+    inset-block-start: 0;
+    inset-inline-end: 0;  
   }
 }
 
@@ -144,14 +144,13 @@ $spacing-alert: .5rem;
   
   &-bar {
     position: fixed;
-    top: 0;
-    right: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
     max-width: none;
     width: 100%; // needed for small devices to not overflow the container
     z-index: 1;
     border-radius: 0;
-    border-left: 0;
-    border-right: 0;
+    border-inline: 0;
     text-align: center;
   }
 }
@@ -164,8 +163,8 @@ $spacing-alert: .5rem;
   padding: $spacing-alert*0.5;
 
   &:before {
-    top: $spacing-alert*0.5;
-    left: $spacing-alert*0.5;
+    inset-block-start: $spacing-alert*0.5;
+    inset-inline-start: $spacing-alert*0.5;
     height: 1rem*1.25;
     width: 1rem*1.25;
   }

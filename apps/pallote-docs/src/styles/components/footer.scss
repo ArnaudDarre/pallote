@@ -19,7 +19,7 @@
     @extend %caption;
     font-weight: variables.$weight-bold;
     color: variables.$primary-light;
-    border-bottom: variables.$border-contrast;
+    border-block-end: variables.$border-contrast;
     padding-block-end: .5rem;
   }
 
@@ -41,7 +41,7 @@
     @include mixins.clamp(margin-block-start, 2rem, 8vw, 4rem);
     @extend %caption;
     text-align: left;
-    border-top: variables.$border-contrast;
+    border-block-start: variables.$border-contrast;
     padding-block-start: 1rem;
   }
 

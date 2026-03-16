@@ -1,5 +1,5 @@
 import React from 'react'
-import { Coffee, Moon, Sun } from '@phosphor-icons/react'
+import { CoffeeIcon, MoonIcon, SunIcon } from '@phosphor-icons/react'
 
 import { Text } from '../utilities/Text'
 import { Button } from '../components/Button'
@@ -17,8 +17,8 @@ export default {
     }
   },
   argTypes: {
-    iconLeft: { control: false },
-    iconRight: { control: false },
+    iconStart: { control: false },
+    iconEnd: { control: false },
     className: { control: false },
     children: { control: false }
   }
@@ -47,7 +47,7 @@ Component.parameters = {
 export const Kind = () => (
   <Grid gap={4}>
     <Button>Text</Button>
-    <Button kind="icon"><Coffee /></Button>
+    <Button kind="icon"><CoffeeIcon /></Button>
   </Grid>
 )
 
@@ -122,15 +122,15 @@ Disabled.parameters = {
 
 export const Icons = () => (
   <Grid gap={4}>
-    <Button iconLeft={<Sun />}>Icon left</Button>
-    <Button iconRight={<Moon />}>Icon right</Button>
+    <Button iconStart={<SunIcon />}>Icon start</Button>
+    <Button iconEnd={<MoonIcon />}>Icon end</Button>
   </Grid>
 )
 
 Icons.parameters = {
   docs: {
     description: {
-      story: 'Add icons to the left or right of the content with the `iconLeft` and `iconRight` props.'
+      story: 'Add icons to the start or end of the inline axis with the `iconStart` and `iconEnd` props.'
     }
   }
 }

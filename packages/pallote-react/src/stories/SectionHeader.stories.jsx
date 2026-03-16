@@ -71,18 +71,18 @@ export const ActionsPosition = () => (
   <>
     <Section>
       <SectionHeader
-        title="Actions on the right"
-        subtitle="Actions appear at the right of the title on desktop, below the title on mobile"
+        title="Actions inline"
+        subtitle="Actions appear inline with the title on desktop, below the title on mobile"
         actions={<Button>Action</Button>}
-        actionsPosition="right"
+        actionsPosition="inline"
       />
     </Section>
     <Section>
       <SectionHeader
-        title="Actions on the bottom"
+        title="Actions at the end of the block axis"
         subtitle="Actions appear below the subtitle"
         actions={<Button>Action</Button>}
-        actionsPosition="bottom"
+        actionsPosition="end"
       />
     </Section>
   </>
@@ -91,7 +91,7 @@ export const ActionsPosition = () => (
 ActionsPosition.parameters = {
   docs: {
     description: {
-      story: 'Controls where actions are placed. `right` places them inline with the title (stacks on mobile), `bottom` places them below the subtitle.'
+      story: 'Controls where actions are placed. `inline` places them inline with the title (stacks on mobile), `end` places them below the subtitle.'
     }
   }
 }

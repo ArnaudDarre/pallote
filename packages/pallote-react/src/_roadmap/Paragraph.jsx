@@ -49,9 +49,9 @@ Paragraph.propTypes = {
     'overline'
   ]),
   align: PropTypes.oneOf([
-    'left',
+    'start',
     'center',
-    'right',
+    'end',
     'justify'
   ]),
   weight: PropTypes.oneOf([

@@ -58,7 +58,7 @@
   &_error {
     font-weight: variables.$weight-bold;
     color: variables.$error;
-    border-left: .25rem solid variables.$error;
+    border-inline-start: .25rem solid variables.$error;
     padding-inline-start: .5rem;
   }
 
@@ -114,8 +114,8 @@
     padding: .2rem;
     transform: rotate(45deg);
     position: absolute;
-    bottom: variables.$input-height*.45;
-    right: 1rem;
+    inset-block-end: variables.$input-height*.45;
+    inset-inline-end: 1rem;
   }
     
   .input_control {
@@ -353,8 +353,8 @@ input[type='radio']:checked {
   &.select {
 
     &:after {
-      bottom: 0.9rem;
-      right: 0.625rem;
+      inset-block-end: 0.9rem;
+      inset-inline-end: 0.625rem;
       padding: 0.15rem;
     }
  
@@ -417,7 +417,7 @@ input[type='radio']:checked {
   } 
 }
 
-// remove right padding to allow native input trigger
+// remove inline-end padding to allow native input trigger
 input[type="date"],
 input[type="time"],
 input[type="number"] {
@@ -430,12 +430,12 @@ input[type="number"] {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  inset-block-end: 0;
+  inset-inline-end: 0;
   width: variables.$input-height;
   height: variables.$input-height;
   pointer-events: none;
-  border-left: variables.$border;
+  border-inline-start: variables.$border;
 
   svg {
     width: 50%;

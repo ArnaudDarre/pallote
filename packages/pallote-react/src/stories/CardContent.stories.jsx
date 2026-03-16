@@ -41,7 +41,7 @@ export const FullWidth = () => (
   <Grid colmd={4} colsm={12}>
     <Card>
       <CardHeader
-        title="Full width content (remove left and right padding)"
+        title="Full width content (remove inline padding)"
       />
       <CardContent fullWidth>
         Edible mushrooms are the fleshy and edible fruit bodies of several species of macrofungi (fungi which bear fruiting structures that are large enough to be seen with the naked eye).

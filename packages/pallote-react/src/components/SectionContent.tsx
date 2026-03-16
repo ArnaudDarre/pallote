@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode } from 'react'
 import classnames from 'classnames'
 
-type SectionContentAlign = 'left' | 'center' | 'right'
+type SectionContentAlign = 'start' | 'center' | 'end'
 
 export interface SectionContentProps extends HTMLAttributes<HTMLDivElement> {
   align?: SectionContentAlign
@@ -10,7 +10,7 @@ export interface SectionContentProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const SectionContent = ({
-  align = 'left',
+  align = 'start',
   className,
   children,
   ...props

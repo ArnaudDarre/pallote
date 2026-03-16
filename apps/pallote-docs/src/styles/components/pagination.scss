@@ -5,7 +5,7 @@
   margin-block-start: 3rem;
   @include mixins.clamp(margin-block-end, 2rem, 8vw, 4rem);
   padding-block-start: 2rem;
-  border-top: variables.$border;
+  border-block-start: variables.$border;
 
   &__link {
     border-radius: variables.$border-radius-md !important;
@@ -30,4 +30,8 @@
       display: none;
     }
   }
+}
+
+.docs_block .navbar {
+  position: relative;
 }

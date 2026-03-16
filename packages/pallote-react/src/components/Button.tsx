@@ -14,8 +14,8 @@ export interface ButtonProps extends Omit<ComponentPropsWithoutRef<'button'>, 't
   size?: ButtonSize
   color?: ButtonColor
   fullWidth?: boolean
-  iconLeft?: ReactNode
-  iconRight?: ReactNode
+  iconStart?: ReactNode
+  iconEnd?: ReactNode
   type?: ButtonType
   to?: string
   [key: string]: unknown
@@ -29,8 +29,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   color = 'primary',
   fullWidth,
   disabled,
-  iconLeft,
-  iconRight,
+  iconStart,
+  iconEnd,
   className,
   children = 'button',
   type = 'button',
@@ -45,9 +45,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   } else {
     content = (
       <>
-        {iconLeft && iconLeft}
+        {iconStart && iconStart}
         {children}
-        {iconRight && iconRight}
+        {iconEnd && iconEnd}
       </>
     )
   }

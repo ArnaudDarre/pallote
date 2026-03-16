@@ -88,9 +88,9 @@ export const Direction = () => (
 
 export const Align = () => (
   <Grid gap={4}>
-    <Grid colsm={4}><CardExample title="Left (default)" /></Grid>
+    <Grid colsm={4}><CardExample title="Start (default)" /></Grid>
     <Grid colsm={4}><CardExample title="Center" align="center" /></Grid>
-    <Grid colsm={4}><CardExample title="Right" align="right" /></Grid>
+    <Grid colsm={4}><CardExample title="End" align="end" /></Grid>
   </Grid>
 )
 

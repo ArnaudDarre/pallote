@@ -12,7 +12,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Container for the card buttons. If there is one direct child, it will always be on the right side of the card. If there is two direct children, they will be placed on the left and right side.'
+        component: 'Container for the card buttons. If there is one direct child, it will always be on the end of the inline axis. If there is two direct children, they will be placed on the start and end of the inline axis.'
       }
     }
   },

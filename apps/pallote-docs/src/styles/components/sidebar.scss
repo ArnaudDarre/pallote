@@ -31,7 +31,7 @@
       }
       
       .navbar-sidebar__back {
-        top: -1rem;
+        inset-block-start: -1rem;
         width: calc(100% + 2rem);
         margin-inline-start: -1rem;
         margin-inline-end: -1rem;
@@ -43,7 +43,7 @@
 .theme-doc-sidebar {
 
   &-container {
-    border-right: variables.$border !important;
+    border-inline-end: variables.$border !important;
     background-color: variables.$background-paper;
   }
 
@@ -92,8 +92,8 @@ nav.menu {
       & > .menu__link--active:before {
         content: "";
         position: absolute;
-        left: 0;
-        top: 0;
+        inset-inline-start: 0;
+        inset-block-start: 0;
         height: 100%;
         width: .25rem;
         background-color: variables.$primary;

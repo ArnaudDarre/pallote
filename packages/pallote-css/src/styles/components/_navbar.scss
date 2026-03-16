@@ -50,11 +50,11 @@ header {
 }
 
 .navbar {
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 100%;
   background-color: variables.$background-paper;
-  border-bottom: variables.$border;
+  border-block-end: variables.$border;
   z-index: 13;
   
   @include mixins.responsive(up, tablet) {
@@ -214,9 +214,9 @@ header {
       @include mixins.responsive(up, tablet) {
         
         .nav_target {
-          @include mixins.calc(top, '100% +' variables.$nav-item*0.5);
+          @include mixins.calc(inset-block-start, '100% +' variables.$nav-item*0.5);
           position: absolute;
-          left: -(variables.$nav-item*.5);
+          inset-inline-start: -(variables.$nav-item*.5);
           width: 10rem;
           padding: variables.$nav-item*.5;
           border-radius: variables.$border-radius-md;
@@ -233,7 +233,7 @@ header {
 // align
 // —————————————————————————————————————————————————————————————————
 
-.navbar-right {
+.navbar-end {
 
   .section_container {
 

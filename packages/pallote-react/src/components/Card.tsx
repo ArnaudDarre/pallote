@@ -6,7 +6,7 @@ import { Color } from '../utilities/Color'
 type CardSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 type CardFill = 'default' | 'paper' | 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error'
 type CardDirection = 'portrait' | 'landscape'
-type CardAlign = 'left' | 'center' | 'right'
+type CardAlign = 'start' | 'center' | 'end'
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   size?: CardSize
@@ -23,7 +23,7 @@ export const Card = ({
   size = 'md',
   fill = 'paper',
   direction = 'portrait',
-  align = 'left',
+  align = 'start',
   hasShadow = false,
   transparent = false,
   className,

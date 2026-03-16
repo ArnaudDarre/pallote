@@ -45,9 +45,9 @@
   &:not(:last-child)::after {
     content: '';
     position: absolute;
-    top: 1rem;
-    left: calc(50% + 1.25rem);
-    right: calc(-50% + 1.25rem);
+    inset-block-start: 1rem;
+    inset-inline-start: calc(50% + 1.25rem);
+    inset-inline-end: calc(-50% + 1.25rem);
     height: 2px;
     background-color: variables.$border-color;
     z-index: 0;

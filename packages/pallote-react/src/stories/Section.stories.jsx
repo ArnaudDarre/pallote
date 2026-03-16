@@ -49,8 +49,8 @@ export const Align = () => (
   <>
     <Section>
       <SectionHeader
-        title="Left"
-        subtitle="Align all content and text to the left"
+        title="Start"
+        subtitle="Align all content and text to the start of the inline axis"
       />
     </Section>
     <Section align="center">
@@ -59,10 +59,10 @@ export const Align = () => (
         subtitle="Align all content and text to the center"
       />
     </Section>
-    <Section align="right">
+    <Section align="end">
       <SectionHeader
-        title="Right"
-        subtitle="Align all content and text to the right"
+        title="End"
+        subtitle="Align all content and text to the end of the inline axis"
       />
     </Section>
   </>

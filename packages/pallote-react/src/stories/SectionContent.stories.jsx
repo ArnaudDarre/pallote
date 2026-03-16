@@ -33,13 +33,13 @@ Playground.args = {
 export const Align = () => (
   <>
     <SectionContent>
-      <Text>Align all content and text to the left.</Text>
+      <Text>Align all content and text to the start of the inline axis.</Text>
     </SectionContent>
     <SectionContent align="center">
       <Text>Align all content and text to the center.</Text>
     </SectionContent>
-    <SectionContent align="right">
-      <Text>Align all content and text to the right.</Text>
+    <SectionContent align="end">
+      <Text>Align all content and text to the end of the inline axis.</Text>
     </SectionContent>
   </>
 )

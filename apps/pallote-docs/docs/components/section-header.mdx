@@ -82,33 +82,33 @@ Controls the heading level and visual hierarchy of the title.
 
 Controls where actions are placed relative to the title.
 
-- `right` — inline with the title on desktop, stacks below on mobile
-- `bottom` (default) — below the subtitle
+- `inline` — inline with the title on desktop, stacks below on mobile
+- `end` (default) — below the subtitle
 
 <div class="docs_block">
   <SectionHeader
-    title="Actions on the right"
-    subtitle="Actions appear at the right of the title on desktop, below the title on mobile"
+    title="Actions inline"
+    subtitle="Actions appear inline with the title on desktop, below the title on mobile"
     actions={<Button>Action</Button>}
-    actionsPosition="right"
+    actionsPosition="inline"
   />
   <SectionHeader
-    title="Actions on the bottom"
+    title="Actions at the end of the block axis"
     subtitle="Actions appear below the subtitle"
     actions={<Button>Action</Button>}
-    actionsPosition="bottom"
+    actionsPosition="end"
   />
 </div>
 
 ```jsx
 <SectionHeader
-  title="Actions on the right"
+  title="Actions inline"
   actions={<Button>Action</Button>}
-  actionsPosition="right"
+  actionsPosition="inline"
 />
 <SectionHeader
-  title="Actions on the bottom"
+  title="Actions at the end of the block axis"
   actions={<Button>Action</Button>}
-  actionsPosition="bottom"
+  actionsPosition="end"
 />
 ```

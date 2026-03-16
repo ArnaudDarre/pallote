@@ -30,7 +30,7 @@ $spacing-switch: 1rem;
       background-color: variables.$primary-light;
       
       .switch_toggle {
-        @include mixins.calc(left, '100% -'($spacing-switch));
+        @include mixins.calc(inset-inline-start, '100% -'($spacing-switch));
         background-color: variables.$primary;
       }
     }
@@ -59,7 +59,7 @@ $spacing-switch: 1rem;
 
   &_toggle {
     position: absolute;
-    left: -.25rem;
+    inset-inline-start: -.25rem;
     width: $spacing-switch*1.25;
     height: $spacing-switch*1.25;
     border-radius: $spacing-switch*1.25;

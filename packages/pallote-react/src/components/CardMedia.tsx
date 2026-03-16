@@ -25,7 +25,7 @@ export const CardMedia = ({ width, height, image, fullWidth, className, ...props
         className={'card_mediaInner'}
         style={{
           width: width ? width + 'px' : undefined,
-          paddingBottom: height,
+          paddingBlockEnd: height,
           backgroundImage: `url(${image})`
         }}
       ></div>

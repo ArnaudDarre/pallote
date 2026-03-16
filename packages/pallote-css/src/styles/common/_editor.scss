@@ -139,10 +139,10 @@
     tr:first-child {
 
       th {
-        border-top: none;
+        border-block-start: none;
 
-        &:first-of-type { border-top-left-radius: variables.$border-radius-sm; }
-        &:last-of-type { border-top-right-radius: variables.$border-radius-sm; }
+        &:first-of-type { border-start-start-radius: variables.$border-radius-sm; }
+        &:last-of-type { border-start-end-radius: variables.$border-radius-sm; }
       }
     }
   }
@@ -153,18 +153,18 @@
 
       th, td {
 
-        &:first-of-type { border-bottom-left-radius: variables.$border-radius-sm; }
-        &:last-of-type { border-bottom-right-radius: variables.$border-radius-sm; }
+        &:first-of-type { border-end-start-radius: variables.$border-radius-sm; }
+        &:last-of-type { border-end-end-radius: variables.$border-radius-sm; }
       }
     }
   }
 
   td,
   th {
-    border-top: variables.$border;
+    border-block-start: variables.$border;
     
     &:not(:first-child) {
-      border-left: variables.$border;
+      border-inline-start: variables.$border;
     }
   }
 

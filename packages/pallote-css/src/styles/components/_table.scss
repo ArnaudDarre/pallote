@@ -58,7 +58,7 @@ $padding-dense-horizontal: .5rem;
     justify-content: space-between;
     width: 100%;
     padding: $padding-vertical $padding-horizontal;
-    border-top: variables.$border;
+    border-block-start: variables.$border;
   }
 
   &_paginationInfo {
@@ -92,7 +92,7 @@ $padding-dense-horizontal: .5rem;
   }
 }
 
-td.table_cell { border-top: variables.$border; }
+td.table_cell { border-block-start: variables.$border; }
 th.table_cell { background-color: rgba(variables.$contrast, 0.05); }
 
 // —————————————————————————————————————————————————————————————————
@@ -151,12 +151,11 @@ th.table_cell { background-color: rgba(variables.$contrast, 0.05); }
   border-radius: variables.$border-radius-md;
   
   ~ .table_pagination {
-    border-top: 0;
-    border-left: variables.$border;
-    border-bottom: variables.$border;
-    border-right: variables.$border;
-    border-bottom-right-radius: variables.$border-radius-md;
-    border-bottom-left-radius: variables.$border-radius-md;
+    border-block-start: 0;
+    border-block-end: variables.$border;
+    border-inline: variables.$border;
+    border-end-start-radius: variables.$border-radius-md;
+    border-end-end-radius: variables.$border-radius-md;
   }
 }
 
