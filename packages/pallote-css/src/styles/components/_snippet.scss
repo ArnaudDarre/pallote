@@ -34,6 +34,7 @@
 
   .tag {
     font-family: variables.$font, variables.$font-fallback;
+    float: right;
     float: inline-end;
     margin-block-start: 1px;
     margin-inline-end: -.25rem;
@@ -50,6 +51,7 @@
     @extend %overline;
     content: "Default";
     font-family: variables.$font, variables.$font-fallback;
+    float: right;
     float: inline-end;
     margin-block-start: 1px;
     margin-inline-end: -.25rem;
