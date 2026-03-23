@@ -13,7 +13,7 @@ export const GridExample = ({
   content,
 }: GridExampleProps) => {
   return (
-    <Color fill={fill ? fill : 'default'} stroke="grey20" className={'ph-1 pv-½ br-sm w-full'}>
+    <Color fill={fill ? fill : 'default'} stroke="grey20" className={'ph-1 pv-1-2 br-sm w-full'}>
       <Text variant="caption">{content}</Text>
     </Color>
   )

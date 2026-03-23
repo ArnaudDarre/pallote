@@ -6,7 +6,7 @@ export const GridExample = ({
 }) => {
 
   return (
-    <Color fill={fill ? fill : 'default'} stroke="border" className={'ph-1 pv-½ br-sm w-full'}>
+    <Color fill={fill ? fill : 'default'} stroke="border" className={'ph-1 pv-1-2 br-sm w-full'}>
       <Text variant="caption">{content}</Text>
     </Color>
   )

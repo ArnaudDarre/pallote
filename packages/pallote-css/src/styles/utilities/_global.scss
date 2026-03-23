@@ -73,12 +73,12 @@ $fractions: ( "1-4": 0.25, "1-2": 0.5, "3-4": 0.75 );
   .mr-#{$i} { margin-inline-end: #{$i}rem !important; }
 
   .p-#{$i} { padding: #{$i}rem !important; }
-  .pv-#{$i} { margin-block: #{$i}rem !important; }
-  .pt-#{$i} { margin-block-start: #{$i}rem !important; }
-  .pb-#{$i} { margin-block-end: #{$i}rem !important; }
-  .ph-#{$i} { margin-inline: #{$i}rem !important; }
-  .pl-#{$i} { margin-inline-start: #{$i}rem !important; }
-  .pr-#{$i} { margin-inline-end: #{$i}rem !important; }
+  .pv-#{$i} { padding-block: #{$i}rem !important; }
+  .pt-#{$i} { padding-block-start: #{$i}rem !important; }
+  .pb-#{$i} { padding-block-end: #{$i}rem !important; }
+  .ph-#{$i} { padding-inline: #{$i}rem !important; }
+  .pl-#{$i} { padding-inline-start: #{$i}rem !important; }
+  .pr-#{$i} { padding-inline-end: #{$i}rem !important; }
 
   @each $symbol, $value in $fractions {
 
