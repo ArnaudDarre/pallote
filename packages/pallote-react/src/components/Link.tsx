@@ -35,7 +35,7 @@ export const Link = ({
         { [`text-${color}`]: color },
         className
       ])}
-      href={isExternal ? href : undefined}
+      href={href}
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener noreferrer' : undefined}
       {...props}

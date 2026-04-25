@@ -48,6 +48,13 @@
 .h-full { height: 100% !important; }
 .h-fit { height: fit-content !important; }
 
+.maxw-desktop-lg { max-width: variables.$desktop-lg; }
+.maxw-desktop { max-width: variables.$desktop; }
+.maxw-tablet { max-width: variables.$tablet; }
+.maxw-laptop { max-width: variables.$laptop; }
+.maxw-mobile { max-width: variables.$mobile; }
+.maxw-mobile-sm { max-width: variables.$mobile-sm; }
+
 .m-auto { margin: auto !important; }
 .mv-auto { margin-block: auto !important }
 .mt-auto { margin-block-start: auto !important; }
