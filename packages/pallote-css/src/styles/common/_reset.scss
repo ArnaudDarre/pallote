@@ -81,9 +81,8 @@ iframe,
 [contentEditable=true] {
   outline: revert;
   
-  &:focus {
-    outline: 2px solid currentColor;
-  }
+  &:focus { outline: none; }
+  &:focus-visible { outline: 2px solid currentColor; }
 }
 
 // —————————————————————————————————————————————————————————————————

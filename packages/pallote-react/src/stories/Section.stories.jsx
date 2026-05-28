@@ -94,6 +94,18 @@ export const Color = () => (
         subtitle="Change the background colour to primary light"
       />
     </Section>
+    <Section color="secondary">
+      <SectionHeader
+        title="Secondary"
+        subtitle="Change the background colour to secondary"
+      />
+    </Section>
+    <Section color="secondaryLight">
+      <SectionHeader
+        title="Secondary Light"
+        subtitle="Change the background colour to secondary light"
+      />
+    </Section>
   </>
 )
 

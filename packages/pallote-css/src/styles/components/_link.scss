@@ -42,7 +42,7 @@
   text-decoration: underline currentColor;
 
   &:hover {
-    text-decoration: underline 3px;
+    text-decoration: underline 0.15em;
   }
 
   &.text-default { color: variables.$text; }

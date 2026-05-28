@@ -55,17 +55,34 @@ $text-contrast: $main !default;
 $text-contrast-alt: rgba($text-contrast, 0.6) !default;
 $text-contrast-disabled: rgba($text-contrast, 0.3) !default;
 
+// others
+
+$border-color: rgba($text, 0.2) !default;
+$border: 1px solid $border-color !default;
+$border-color-contrast: rgba($text-contrast, 0.3) !default;
+$border-contrast: 1px solid $border-color-contrast !default;
+
+$hover: rgba($text, 0.08) !default;
+$hover-contrast: rgba($text-contrast, 0.08) !default;
+
+$overlay: rgba($text-contrast, 0.8) !default;
+$overlay-contrast: rgba($text, 0.2) !default;
+
+$input-background: rgba($text, 0.05);
+
 // brand
 
 $primary: #3C6BF4 !default;
 $primary-light: color.mix($main, $primary, 70%) !default;
 $primary-dark: color.mix($contrast, $primary, 50%) !default;
 $primary-contrast: $text-contrast !default;
+$primary-border-color: $border-color-contrast !default;
 
 $secondary: #9E6D04 !default;
 $secondary-light: color.mix($main, $secondary, 70%) !default;
 $secondary-dark: color.mix($contrast, $secondary, 50%) !default;
 $secondary-contrast: $text-contrast !default;
+$secondary-border-color: $border-color-contrast !default;
 
 // feedback
 
@@ -88,21 +105,6 @@ $error: #EB5757 !default;
 $error-light: color.mix($main, $error, 80%) !default;
 $error-dark: color.mix($contrast, $error, 60%) !default;
 $error-contrast: $text-contrast !default;
-
-// others
-
-$border-color: rgba($text, 0.2) !default;
-$border: 1px solid $border-color !default;
-$border-color-contrast: rgba($text-contrast, 0.3) !default;
-$border-contrast: 1px solid $border-color-contrast !default;
-
-$hover: rgba($text, 0.08) !default;
-$hover-contrast: rgba($text-contrast, 0.08) !default;
-
-$overlay: rgba($text-contrast, 0.8) !default;
-$overlay-contrast: rgba($text, 0.2) !default;
-
-$input-background: rgba($text, 0.05);
 
 // —————————————————————————————————————————————————————————————————
 // spacing

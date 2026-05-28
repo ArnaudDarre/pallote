@@ -149,6 +149,22 @@
   .snippet {
     border-color: $border-color;
   }
+
+  a[href],
+  area[href],
+  input,
+  input[type="checkbox"],
+  input[type='radio'],
+  select,
+  textarea,
+  button,
+  iframe,
+  [tabindex],
+  [contentEditable=true] {
+
+    &:focus-visible { outline-color: $color; }
+  }
+  
 }
 
 .section {
@@ -159,15 +175,29 @@
     variables.$primary-contrast, // title-color
     variables.$primary-contrast, // color
     variables.$hover-contrast, // paper-color
-    variables.$border-color-contrast // border-color
-  );}
+    variables.$primary-border-color // border-color
+  ); }
   &-primaryLight { @include section-color(
     variables.$primary-light, // background-color
     variables.$text, // title-color
     variables.$text, // color
     variables.$hover-contrast, // paper-color
-    variables.$border-color-contrast // border-color
-  );}
+    variables.$border-color // border-color
+  ); }
+  &-secondary { @include section-color(
+    variables.$secondary, // background-color
+    variables.$secondary-contrast, // title-color
+    variables.$secondary-contrast, // color
+    variables.$hover-contrast, // paper-color
+    variables.$secondary-border-color // border-color
+  ); }
+  &-secondaryLight { @include section-color(
+    variables.$secondary-light, // background-color
+    variables.$text, // title-color
+    variables.$text, // color
+    variables.$hover-contrast, // paper-color
+    variables.$border-color // border-color
+  ); }
 }
 
 // —————————————————————————————————————————————————————————————————
